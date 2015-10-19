@@ -30,7 +30,7 @@ for u in urls:
 
 		for line in response.content.split("\n"):
 			if "<img" in line:
-				imgs.append(re.findall('src="([^"]+)"', line))
+				imgs.append(re.findall('src="([^"]+)"', line.lower()))
 
 		for x in imgs:
 			for i in x:
