@@ -1,0 +1,309 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Description" content="Introductory economics tutorial on elasticity">
+	<meta name="Keywords" content="economics, elasticity">
+   <title>Economics Interactive Tutorial:  Elasticity</title>
+   <style>
+   body { font-family : sans-serif }
+   body { background-color : #ffffff }
+   h1, h2, h3, h4 { color : #993333 }
+   .warn { COLOR: #ee3300; font-size: 100%; background-color: #ffffcc }
+
+.correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+
+.question {
+	color: DarkBlue;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="elast.try.js" ></script>
+
+</head>
+<body>
+
+<h6>
+ 
+<a href="..">Economics Interactive Tutorials</a> Aug. 4, 2013</h6>
+
+
+<h1>
+Elasticity</h1>
+Copyright &copy; 1985, 1988, 1991, 1996, 1998, 2006 Samuel L. Baker
+<p>Elasticity is a measure of responsiveness. It tells how much one thing
+changes when you change something else that affects it.
+<p>For example, the elasticity of demand tells us how much the quantity
+demanded changes when the price changes. The elasticity of demand measures
+the responsiveness of quantity demanded to changes in the price charged.
+<p><i>Elasticity = Responsiveness</i>
+<p>The following discussion mostly uses the elasticity of demand for its
+examples. The elasticity concept can be used for other things, too, like
+supply or income.
+<h2>
+Elastic and Inelastic</h2>
+Elasticity is a noun. The adjective form, "elastic," means something is
+highly responsive to changes in something else. For example, elastic demand
+means that the quantity demanded changes a lot when the price changes.
+Inelastic demand means that the quantity demanded does not change much
+when the price changes. In class, we'll get more precise about where to
+draw the line between elastic and inelastic. For now, though, let's start
+with the qualitative idea:
+<p>Elastic = Responsive
+<p>Inelastic = Unresponsive
+<p>By the way, if this usage of "elasticity" as "responsiveness" seems
+peculiar, it's because it is peculiar. Economists are about the only people
+who use "elasticity" this way. But, if you want to understand economists,
+you need to understand "elasticity." I suppose you could find an analogy
+between the elasticity of demand and the elasticity of rubber, but that
+would be stretching it.
+<p>"Elastic" and "inelastic" can be used to describe supply or demand.
+Let's use them with demand.</p>
+<p>In each of the following examples, choose whether you would expect demand
+to be elastic or inelastic.  
+<p>Don't worry, for now, about the precise mathematical definition of what's elastic and what's inelastic.  
+Choose "Elastic demand" if you think that buyers will buy somewhat less if the price goes up, or somewhat more if the price
+goes down.  Choose "Inelastic demand" if you think that the buyers will buy about the same amount if the price goes up or down.
+</p>
+
+<p class="question">A patient is given a presciption for a drug to control high blood pressure.
+The patient's insurance doesn't cover drugs, or has a high deductible, so the patient must pay out
+of pocket for the drug.
+<br>
+<input type="radio" name="q2" value="elastic">Elastic demand</input>
+<input type="radio" name="q2" value="inelastic">Inelastic demand</input>
+<div id="q2-answers"></div>
+
+
+<p class="question">An unconscious bleeding man is brought to a hospital emergency room.
+
+<br><input type="radio" name="q1" value="elastic">Elastic demand</input>
+<input type="radio" name="q1" value="inelastic">Inelastic demand</input>
+<div id="q1-answers"></div>
+
+<p class="question">A family has a high-deductible health insurance policy.  This means that the family must pay all its medical bills until it has spent, maybe, $6000.  Suppose that the family has not spent that much on medical care yet, and now one of the children has an earache.  What would their demand be like
+for an office visit to get this checked out?
+<br>
+<input type="radio" name="q3" value="elastic">Elastic demand</input>
+<input type="radio" name="q3" value="inelastic">Inelastic demand</input>
+<div id="q3-answers"></div>
+<p class="question">In general, if the decision-maker has an incentive to spend less on some product
+<br>and
+<br>if there is a lower-price alternative or substitute for that product, then demand is more ...
+<br>
+<input type="radio" name="q4" value="elastic">Elastic</input>
+<input type="radio" name="q4" value="inelastic">Inelastic</input>
+<div id="q4-answers"></div>
+<p class="question">If the decision-maker is spending somebody else's money, 
+<br>or
+<br>if there is no lower-price alternative or substitute for the product, then demand is more ...
+<br>
+<input type="radio" name="q5" value="elastic">Elastic</input>
+<input type="radio" name="q5" value="inelastic">Inelastic</input>
+<div id="q5-answers"></div>  
+<h2>What difference does demand elasticity make?</h2>
+Consider the following graph and table.
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INELASTIC DEMAND
+
+
+
+Price
+
+&nbsp;6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+&nbsp;5|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E
+&nbsp;4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+&nbsp;3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+&nbsp;2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+&nbsp;1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; :....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40</pre>
+<p class="question">Is the title "INELASTIC DEMAND" correct? 
+<br><input type="radio" name="q6" value="yes">Yes</input>
+<input type="radio" name="q6" value="no">No</input>
+<div id="q6-answers"></div>
+<p>The graph and table again:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INELASTIC DEMAND
+
+
+
+Price
+
+&nbsp;6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+&nbsp;5|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E
+&nbsp;4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+&nbsp;3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+&nbsp;2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+&nbsp;1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; :....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40</pre>
+<p>On the above graph, the points on the graph form a vertical line. This
+line definitely does not slope gradually down from left to right. Regardless
+of whether the price is $1 or $6 or anything between, the amount sold will
+be the same, 40 units. Like any extreme, it's hard to find a real life
+example, but emergency medical treatment for severe trauma in the sole
+hospital in a region might fit this model. Lower health care prices will not encourage
+people to go get themselves shot or run over, nor will higher prices keep
+customers away.
+
+<p>The traditional medical model, also known as the Rule of Rescue, implies that demand should be inelastic. If health
+care professionals provide what they judge that the patient "needs" regardless
+of cost, and if the patient is unable to object or is fully insured or
+both, then demand will be inelastic.
+<h2>Pricing when demand is price-inelastic</h2>
+<p>If demand for your product is inelastic, what should you do with your
+price? 
+<p class="question">For example, suppose the demand curve in the graph above applies to you, and right now you're charging $2. <i>If</i> your
+sole goal is profit, should you raise your price, keep it the same, or
+lower it?
+<br><input type="radio" name="q7" value="raise">Raise the price.</input>
+<input type="radio" name="q7" value="same">Keep the price at $2.</input>
+<input type="radio" name="q7" value="lower">Lower the price.</input>
+<div id="q7-answers"></div>
+<br>Let's see why that's so:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------------------------------------------------------
+Revenue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $120&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $240</pre>
+Revenue -- how much money you bring in -- equals Price times Quantity.
+<p>If your demand is inelastic, the more you charge, the more revenue
+you take in, since the amount you sell doesn't go down.&nbsp; Therefore,
+if profit is your goal, you should raise price when demand is inelastic.
+<p>Even if profit is not your only goal, if you need to support yourself partly through sales, you will be tempted to raise the price on any service for which the demand is inelastic.
+<p>This shows the problem with relying on the free give and take of supply and demand to set prices for health care services for which the demand is inelastic.  With inelastic demand, there's always a reward for raising prices.  That is why emergency department prices are so high.  
+<h2>
+Making Demand More Elastic</h2>
+A way to have free choice for buyers and sellers but keep prices from rising forever is to make demand more elastic.  In a market system, demand becomes elastic if consumers are price conscious and if they have
+an alternative. Here's an example of how this works to temper price increases:
+<p>Suppose that the market in our example above gets a new competitor 
+who charges $3.50. Let us go to the extreme of supposing also that price is the consumer's only consideration.  There is no quality difference and no customer loyalty to a particular company. Then
+the your demand might look like this.
+<pre>&nbsp;&nbsp;&nbsp; Demand -- One Competitor Who Charges $3.50 -- Price Only Consideration
+Price
+&nbsp;6|F
+&nbsp;5|E
+&nbsp;4|D
+&nbsp;3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+&nbsp;2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+&nbsp;1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; :....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</pre>
+If you charge less than your competitor's price, you get all of the business.
+If you charge more than $3.50, you get no business. Your demand is now
+highly elastic near the competitor's price.  If there is a competitor in your market, and
+if the consumers care about price, then there's a definite limit to how
+high you can raise your price.
+<p>This can be a highly unstable market because your competitor faces the
+same situation. You can cut your price to $3.49 and take away all of the
+business. Your competitor can then charge $3.48 and take it all back. Each
+of you has the temptation to cut price on the other until one of you goes
+broke. You see something like this when neighboring gasoline stations have
+a price war.
+
+<p class="question">Click on each of these radio buttons to display its graph.
+
+<br><input type="radio" name="q8" value="inelastic">Inelastic demand.</input><br>
+<input type="radio" name="q8" value="elastic350">There's a competitor who charges $3.50.  There is no product differentiation.  
+If buyers can't tell your product from your competitor's (that's what "no product differentiation" means) demand will be elastic near the competitor's price.</input><br>
+<input type="radio" name="q8" value="elasticsome">Demand is somewhat elastic.  There's a competitor who charges $3.50, but there is product differentiation.
+Some customers will buy your product even if its price is a
+little higher.  The same goes for your competitor.</input>
+<div id="q8-answers">A graph will appear here when you click a button above.</div>
+<p>When there is some product differentiation, which you can also think of as some 
+customer loyalty, the market is more stable. A price war is less likely.  
+<p class="question">Click the "Demand is somewhat elastic" button above.  Then answer this:  What price gives you the highest revenue? (By the way, Revenue is Price multiplied by Quantity.)
+<br><input type="radio" name="q9" value="1">$1.</input>
+<input type="radio" name="q9" value="2">$2.</input>
+<input type="radio" name="q9" value="3">$3.</input>
+<input type="radio" name="q9" value="4">$4.</input>
+<input type="radio" name="q9" value="5">$5.</input>
+<input type="radio" name="q9" value="6">$6.</input>
+<div id="q9-answers"></div>
+<p>In this market with product differentiation,
+your highest revenue comes when you charge a price a bit higher than your
+competitor. You are not going to start a price war by cutting your price below your competitor's price.  (This works this way because of how I rigged the numbers, of course.)
+<p>For providers of health care, such as physicians, other practitioners, and hospitals,
+there is a lot of product differentiation.  Hospitals encourage this with their advertising.  Their billboards say, "We're the best!"  You never see a hospital billboard that says, "We're the cheapest!"   Patient loyalty reduces the elasticity of demand and helps keep prices up.
+
+<h2>Managed care and demand elasticity</h2>
+
+<p>Managed care health insurance companies buy service from providers and sell it to patients.
+They stand in the market between the providers and the patients. For managed
+care companies, patient loyalty to providers is a problem. Managed care
+companies prefer that the patients be loyal to them, not to particular
+providers. That way the companies can switch providers whenever they want.
+Managed care companies want providers' (doctors and hospitals)
+demand to be elastic, but their own demand to be inelastic.
+
+<p>This is why managed care companies have been so interested in developing measures
+of quality and means of quality control. If a managed care company can
+document something that it can credibly call "quality," then providers are more interchangeable.  That makes the providers' demand more elastic.
+
+
+<h2>Copayments by patients and demand elasticity</h2>
+
+<p>The currently trendy idea in health care finance is high-deductible health insurance.  Under Obamacare, the basic mandated insurance plan is expected to have a deductible around $6000 and a 20% copay above that up to a limit.  
+To make this decidedly uncomprehensive insurance more palatable to consumers, 
+the Federal government allows Health Savings Accounts, which make some of what consumers spend on health care deductible from taxable income.  
+As a gift to the banking industry, this tax deductibility is implemented by employees and employers 
+putting money into these accounts, which banks get paid to administer.
+
+<p>Near the top of this tutorial there is a question about how a deductible can make demand more elastic.</p>
+
+<p>Advocates of high-copay insurance this "consumer driven" health care.  
+But, really, is the consumer driving?  Or is the consumer being driven?</p>
+
+<p>In pharmaceuticals, for example, the U.S. Department of Veterans Affairs (V.A.) buys drugs at prices much lower than
+what seniors in Medicare Part D are paying.  The difference is because the Medicare drug benefit law 
+fragments the buyers, while the V.A. negotiates on behalf of veterans as a group.</p>
+
+<p>The American Medical Association has been advocating Health Savings Accounts for years.  
+The advantage from their point of view is that each patient negotiates with the provider as an individual.  
+There is no group buying power.</p>
+
+<p>What really empowers health care consumers?
+<br><input type="radio" name="q10" value="individual">Negotiating with providers on your own when you need care</input>
+<input type="radio" name="q10" value="group">Being part of a big group, such as all veterans served by the V.A., and having the V.A. negotiate for you.</input>
+<div id="q10-answers"></div>
+
+<p>Imagine a pharmaceutical company that is deciding what price to set for a new drug.
+Which of these two would make the demand for that drug more price-elastic?
+<br><input type="radio" name="q11" value="individual">Each of us buys with money from our own Health Savings Account.</input>
+<input type="radio" name="q11" value="group">Medicare evaluates drugs and bargains for prices.</input>
+<div id="q11-answers"></div>
+
+
+<br>
+<hr WIDTH="100%">
+<br>Thanks for participating!  Go to the <a href="..">tutorial menu page</a> for a link to a  
+tutorial with a more numerical approach to elasticity.
+<p>Please e-mail comments to <script language="Javascript" type="text/javascript">
+<!--
+var name="sam"+"&#x002E;"+"baker"+"&#x0040;"+"sc"+"&#x002E;"+"edu";
+document.writeln('<a href="mai'+'lto:'+name+'">'+name+'</a>');
+//-->
+</script></span>
+<noscript><img src="../../sbemail.gif" alt="" width="148" height="10" border="0"></noscript>
+
+</body>
+</html>

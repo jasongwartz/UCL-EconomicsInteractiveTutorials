@@ -1,0 +1,772 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Description" content="Introductory economics tutorial on present value and discounting future income">
+	<meta name="Keywords" content="economics, present value, discounting future income">
+   <title>Economics Interactive Tutorial:  Discounting Future Income</title>
+<STYLE>
+body {
+	background-color : #ffffee ;
+	font-family : sans-serif;
+	
+	max-width: 60em;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto; 
+	
+}
+H4 { COLOR: #003366 }
+H3 { COLOR: #003366 }
+H2 { COLOR: #003366 }
+H1 { COLOR: #003366 }
+
+.hehe {
+    background-color : Pink;
+    color: Purple;
+}
+  .correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: Green;
+}
+.morelineheight {
+	line-height:200%;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="dis.js" ></script>
+
+</head>
+<body>
+<h6><a href="..">Economics Interactive Tutorial</a></h6>
+
+
+
+<h1>
+Discounting Future Income and Present Value</h1>
+Copyright &copy; 1997-2002 Samuel L. Baker.  Last modified 8/24/2013.
+<h5>Bonus for you:
+<br>Calculate your own net present values with the spreadsheet template available for you to copy at the end of this tutorial!</h5>
+<p>Here's the basic point about discounting future income, in the form of a question:
+<p><a NAME="radio button question"></a>Which is worth more to you, according
+to economic theory:
+<br>$200 given to you today, or <br>$200 given to you one year from now?
+<blockquote>Suppose that there is no risk. You absolutely, positively,
+will get the money at the time you choose. Also suppose that there is no
+inflation. $200 in one year will have the same buying power as $200 does
+today.</blockquote>
+<p  class="question">Which is worth more?
+<br>
+<input type="radio" name="dis1" value="today">$200 today is worth more.</input>
+<br><input type="radio" name="dis1" value="year">$200 in one year is worth more.</input>
+<br><input type="radio" name="dis1" value="same">No difference.  The two are worth the same, as long as I am protected against price inflation.</input>
+<div id="dis1-answer"></div>
+<div id="dis1A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>
+<center>
+<h3>
+Time Preference</h3></center>
+In my reply to the above question,
+I emphasized the existence of interest-paying bank accounts. There's a
+more fundamental reason why present income is worth more than future income: time preference.
+<p><b>Time preference</b> is preferring income today to getting the same
+income in the future. Economists assume that pretty much everybody has
+time preference, and here is why: 
+<p>Life is short. Suppose you're broke (for
+many students, that's not too hard to imagine) and you need a car today
+to be able to drive to the job you want. Working and saving to buy a car
+someday may not be your best option. If the job you want pays better, you'll
+be better off borrowing money to buy a car now, even though you'll have
+to pay interest to the lender. Because there are always people in this
+circumstance, for whom borrowing is a good idea, there is a market for
+loanable funds, and that's why there are bank accounts that pay interest.
+The existence of these bank accounts in turn means that even if you don't
+have a pressing need for money now, you're still better off getting it
+now than getting it later.
+<p>(One exception to the time preference rule is that some people like
+to have their future money held for them so they don't spend it carelessly
+now. Here at USC, years ago, some faculty who got paid only from August to May asked
+the payroll office to take a slice out of each paycheck and hold it until the following summer. These faculty didn't trust themselves
+to save for the summer on their own.  At first, the University paid no interest
+on the deferred income. Even so, many faculty signed up.  Only some years later 
+did the University offer a plan that paid interest on this deferred salary.)
+<p>
+<center>
+<h3>
+Bank Account Math</h3></center>
+
+Let's go over the math of bank accounts:
+
+<p>Suppose we put $200 in a bank account and leave it there for a year.
+The bank account pays 5% interest at the end of each full year.  
+<blockquote>Nowadays, 1% would be more realistic, but I'll use 5% to get more nice round numbers in the calculations.  <br>5% is 1/20, by the way, so 5% of 200 is 200/20.</blockquote>
+After one year, after the 5% interest is paid, <span class="question">how much will be in the account?</span>
+<br><input id="dis2-response" name="dis2" type="text"></input>
+<button id="dis2-button">Type a number in the box.  Then click this.</button>
+<div id="dis2-answer">Do not type a $ sign.  Just a plain number.</div>
+<div id="dis2A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>
+We can do the calculation this way:
+<!--br><font color="#3366FF"><font size=-1>In case your browser won't render
+the multiplication and exponent symbols, this print will tell you what
+each formula is supposed to say.</font></font-->
+<p>Adding 5% is the same as multiplying by 1.05.
+<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH="73%" >
+<tr>
+<td ALIGN=CENTER VALIGN=TOP WIDTH="53%">$200 &times;(1.05)&nbsp;
+<!--br><font color="#3366FF"><font size=-1>$200 times 1.05</font></font--></td>
+
+<td VALIGN=TOP WIDTH="46%">= $210</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1 + Interest Rate )&nbsp;
+<!--br><font color="#3366FF"><font size=-1>Present Value times (1 + Interest
+Rate)</font></font--></td>
+
+<td VALIGN=TOP>= Future Value in One Year</td>
+</tr>
+</table>
+At 5% interest, $200 in the bank today will grow to $210 in one year.
+
+<p>Let's go to two years.  If we leave in the bank all the money, that is, the original $200 plus the interest we earn, <span class="question">how much will we have at the end of two years?
+<br>
+<input type="radio" name="dis3" value="220">$220.00</input>
+<br><input type="radio" name="dis3" value="22050">$220.50</input></span>
+<div id="dis3-answer"></div>
+<div id="dis3A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>
+We can write the calculation like this:
+<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH="73%" >
+<tr>
+<td ALIGN=CENTER VALIGN=TOP WIDTH="53%">$200 &times;(1.05)&sup2;&nbsp;
+<!--br><font color="#3366FF"><font size=-1>$200 times (1.05 squared)</font></font--></td>
+
+<td VALIGN=TOP WIDTH="46%">= $220.50</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&sup2;&nbsp;
+<!--br><font color="#3366FF"><font size=-1>Present Value times&nbsp;</font></font>
+<br><font color="#3366FF"><font size=-1>( 1+Interest Rate ) squared</font></font--></td>
+
+<td VALIGN=TOP>= Future Value in Two Years</td>
+</tr>
+</table>
+To calculate how much we'll have in two years, we multiply by 1.05 twice,
+once for the first year and once for the second year.
+<p>Now, let's do three years.  <span class="question">If we leave all the money in the bank for three years, we multiply by (1 + Interest Rate) how many times?</span>
+<br><input id="dis4-response" name="dis4" type="text"></input>
+<button id="dis4-button">Type a number in the box.  Then click this.</button>
+<div id="dis4-answer"></div>
+<div id="dis4A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>By now, you can probably guess the <b>general formula for any number
+of years</b>:
+<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH="73%" >
+<tr>
+<td ALIGN=CENTER VALIGN=TOP WIDTH="53%">$200 &times;1.05&#8319;&nbsp;
+<!-- br><font color="#3366FF"><font size=-1>$200 times (1.05 to the <i>a </i>power)</font></font--></td>
+
+<td VALIGN=TOP WIDTH="46%"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&#8319;&nbsp;
+<!--br><font color="#3366FF"><font size=-1>Present Value times&nbsp;</font></font>
+<br><font color="#3366FF"><font size=-1>( 1+Interest Rate ) to the <i>a</i>
+power</font></font--></td>
+
+<td VALIGN=TOP>= Future Value in <i>n</i> Years</td>
+</tr>
+</table>
+To calculate how much we'll have after <i>n</i> years, we multiply $200 by 1.05
+<i>n</i> times, once for each year.
+<blockquote>If interest is paid and compounded more frequently than once a year,
+the formula gets more complicated, but the basic idea is the same.</blockquote>
+<!--p><font color="#3366FF"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+( 1 + Interest Rate ) to the <i>n </i>power</font></font-->
+
+Using that, we can construct this table, based on a present value of $200 and an annual interest rate of 5%:
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%"></td>
+
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="6" WIDTH="14%">Years in the future
+(<i>n</i>)</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">6</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$210</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$220.50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$231.52</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$243.10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$255.26</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$268.02</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="6">What $200 grows to at 5% interest per
+year, compounded annually. ($200&times;1.05&#8319;)&nbsp;
+<!--br><font color="#3366FF"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+($200 times 1.05 to the <i>n</i> power)</font></font--></td>
+</tr>
+</table>
+<p>That is a lot to take in if you have not seen it before.
+<p>You might need to take a break before continuing with the next part -- 
+<p>-- because we are going to run that reasoning backwards to answer this next question: 
+<p class="question">How much would you need today to have $200 in your bank account in one year?
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%"></td>
+
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="6" WIDTH="14%">Years in the future</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">6</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>????</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+</table>
+<br>
+<input type="radio" name="dis5" value="200">$200.</input>
+<br><input type="radio" name="dis5" value="190">$200 less 5% = $200 minus $10 = $190.</input>
+<br><input type="radio" name="dis5" value="19048">$200 divided by 1.05 = $190.48</input>
+<div id="dis5-answer"></div>
+<div id="dis5A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+
+<center>
+<h3>
+Present Value</h3></center>
+$200 divided by 1.05 equals $190.48 (rounded to the nearest penny). $190.48
+is the <b>present value</b> of $200 one year from now,
+<blockquote>if putting money
+in a 5% bank account is our best investment. </blockquote>
+Thanks to the bank, we
+are equally well off getting $190.48 now or $200 in one year. Either gives us the same amount of
+money next year.
+<p>In general, the <b>present value</b> of an amount at a certain future time is the amount that,
+if we had it today, would grow to equal that amount at that future time.
+<p>In our example, $200 is the "future value" and $190.48 is the "present value."
+<p class="question">What is the present value of $200 two years from now?
+
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%"></td>
+
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="6" WIDTH="14%">Years in the future</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">6</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>????</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+</table>
+
+
+<input type="radio" name="dis6" value="200">$200.</input>
+<br><input type="radio" name="dis6" value="180">$200 less 10% = $200 minus $20 = $180.</input>
+<br><input type="radio" name="dis6" value="18182">$200 &divide; 1.10 = $181.82</input>
+<br><input type="radio" name="dis6" value="18141">$200 &divide; 1.05&sup2; = $181.41</input>
+<br><input type="radio" name="dis6" value="18050">$200 &times; .95&sup2;= $180.50</input>
+<div id="dis6-answer"></div>
+<div id="dis6A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+
+<p>Notice that the present value of $200 in two years ($181.41) is less than the present value of $200 in one year ($190.48).
+<p class="question">To calculate the present value of $200 <i>three</i>
+years in the future, how many times do you divide by 1.05?
+<br><input id="dis7-response" name="dis7" type="text"></input>
+<button id="dis7-button">Type a number in the box.  Then click this.</button>
+<div id="dis7-answer"></div>
+<div id="dis7A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%"></td>
+
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="6" WIDTH="14%">Years in the future</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">6</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>$172.77</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$181.41</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+</table>
+<p>The general formula for the present value of a future income amount <i>n</i>
+years in the future is:
+<p>Present Value = (Future Value) / ( 1 + Interest Rate )&#8319;
+<p>Notice how this correspondents with the formula given earlier for the future value of an amount in the present:
+<br>Future Value = (Present Value) &times; ( 1 + Interest Rate )&#8319;
+<!--br><font color="#3366FF"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+times&nbsp; (1 + Interest Rate) to the <i>a </i>power</font></font-->
+<br>&nbsp;
+<center>
+<h3>
+The Discount Rate is the Interest Rate Used in Reverse</h3></center>
+When an interest rate is used in reverse like this, to calculate how much
+you need now to have a certain amount later, economists conventionally
+use the term <b>discount rate</b> rather than interest rate. The two terms
+mean the same thing. A reason for using the term "discount rate" when you
+calculate a present value is that you are taking a larger number, the future
+value, and calculating from it a smaller number, the present value.
+<p>In the literature, I have found two ways to define "discount rate."
+<p>One way is to just call the interest rate the discount rate.
+<br>That makes our general formula Present Value = (Future Value) / ( 1
++ Discount Rate )&#8319;.
+<p>The U.S.'s central bank, the Federal Reserve, says on its web site, "The discount rate is the interest rate charged to commercial banks and other depository institutions on loans they receive from their regional Federal Reserve Bank's lending facility--the discount window."  That is the first definition of "discount rate."   
+<p>The alternative definition of the discount rate, used in some textbooks, is Discount rate = 1/(1 + interest rate).
+<br>This makes the general formula Present Value = (Future Value) &times; (Discount Rate)&#8319;.
+<p>If the interest rate is 5%, the discount rate, by this second definition, is about 0.9524, what 1/1.05 equals. 
+<p>The two definitions lead to exactly the same results.  I think the first definition is more intuitive.
+<p>It is usually easy to tell which definition is being used from the number that they quote.  If the number is a little more than 0, they are using the first definition.  If the number is a little less than 1, they are using the second definition.  For example, the Federal Reserve's discount rate for Primary Credit is 0.75% (at this writing).  That confirms that they are using the first definition.  By the second definition, that would be a discount rate of 99.256%.
+<p>Either way, the discount rate measures the opportunity cost of capital -- how much interest you could earn if you put your money in an interest-bearing safe investment.
+<center><h3>Bond Values</h3>
+</center>
+<p>Bond values use present value calculations.  
+<blockquote>A <b>bond</b> is an I.O.U., a promise to pay a certain
+amount at a certain time in the future.</blockquote>
+The simplest bonds are <b>zero coupon</b> bonds.  These pay
+only at the end of the time, at "maturity," with no payments along the way. U.S. Savings
+Bonds are examples of zero-coupon bonds, because they pay no monthly or
+annual interest. If you have one, you get all your money the day you cash it in.
+<p>Imagine that there is for sale a $200 zero-coupon bond that matures
+in five years. That means the bond pays $200 in 5 years.&nbsp; If your discount
+rate is 5%, how valuable is that bond to you today?
+(Ignore sales expenses
+like a broker's commission.  Also, assume that there is no risk that the bond will not be paid.  I have another tutorial about risk, which discusses the effect of risk on a bond price.)
+<p class="question">In the table below, click the button for the most that you would be willing to pay for a $200 zero-coupon bond that matures in five years when your discount rate is 5%.</p>
+<p><table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="7" WIDTH="14%">Years in the future
+(<i>n</i>)&nbsp;
+<br><font size=-1>In this table's upper row, the <i>n</i> numbers are in
+descending order.</font></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">0</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="6">$149.24</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="5">$156.71</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="4">$164.54</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="3">$172.77</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="2">$181.41</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="1">$190.48</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis8" value="0">$200</input></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="7" WIDTH="14%">The numbers in the
+row just above show $200 / (1 + .05)&#8319;, the present value of $200 in <i>n</i> years, at a 5%
+discount rate.
+<!--br><font color="#3366FF"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$200/(1 + .05) to the <i>a </i>power</font></font--></td>
+</tr>
+</table>
+<div id="dis8-answer"></div>
+<div id="dis8A-answer"></div>
+
+<p>Suppose you bought the bond two years ago. <span class="question">The bond now has three years to maturity.  If everybody's discount rate is 5%, how much should you expect to get for selling
+your bond?  (Ignore sales
+expenses, such as the broker's commission.) Click a button in the table below.</span>
+<p><table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="7" WIDTH="14%">Years in the future
+(<i>n</i>)&nbsp;
+<br><font size=-1>In this table's upper row, the <i>n</i> numbers are in
+descending order.</font></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH="14%">0</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="6">$149.24</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="5">$156.71</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="4">$164.54</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="3">$172.77</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="2">$181.41</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="1">$190.48</input></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><input type="radio" name="dis9" value="0">$200</input></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER VALIGN=TOP COLSPAN="7" WIDTH="14%">The numbers in the
+row just above show $200 / (1 + .05)&#8319;, the present value of $200 in <i>n</i> years, at a 5%
+discount rate.
+<!--br><font color="#3366FF"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$200/(1 + .05) to the <i>a </i>power</font></font--></td>
+</tr>
+</table>
+<div id="dis9-answer"></div>
+<div id="dis9A-answer"></div>
+
+<center>
+<h3>
+How Present Value Changes When the Discount Rate Changes</h3></center>
+So far, we've done everything with a discount rate of 5%. Now let's see
+how the changes in the discount rate affect the present value.
+<p>For variety, let us use a $1000 face-value bond with a maturity of 10 years and no risk that it won't be paid.  (You can actually buy a U.S. Treasury bond like that.  The only risk is that someday Republicans in Congress may block the Treasury from paying out money.)
+<p>If the discount rate for bond-buying people and institutions is <span id="dis10percent">5%</span>, the present value of that bond will be   
+<p><span id="dis10value1">$613.91</span> = $1000 / ( 1<span id="dis10rate">.05</span> )<sup>10</sup>.  The bond will sell for <span id="dis10value2">$613.91</span> on the day it is newly issued.
+<p class="question">Try some different discount rates.
+<br><input type="radio" name="dis10" value="0">0%</input>
+<input type="radio" name="dis10" value="3">2.75%</input>
+<input type="radio" name="dis10" value="5">5%</input>
+<input type="radio" name="dis10" value="15">15.8%</input>
+<div id="dis10-answer">The bond's price goes up when the discount rate goes down, and vise-versa.</div> 
+<center><h3>The Net Present Value of an Income Stream</h3></center>
+<p>Suppose you have an investment that pays off on several occasions, not just once at the end.  To get the total present value of such an "income stream," to use the economics jargon, you calculate the present value of each payment and then add them up:
+<p>Present value = <br>(Income in year 0)  / ( 1 + discount rate )<sup>0</sup> <br>+ (Income in year 1)  / ( 1 + discount rate )<sup>1</sup> <br>+ (Income in year 2)  / ( 1 + discount rate )<sup>2</sup> + ... and so forth.  
+<p>If Income in year 0 includes your initial cost, as a negative, 
+<blockquote>(For that matter, all of your yearly income numbers should include any outlays during those years.)</blockquote>
+then you have:
+<p>Net Present value = <br>(Net income in year 0)  / ( 1 + discount rate )<sup>0</sup> <br>+ (Net income in year 1)  / ( 1 + discount rate )<sup>1</sup> <br>+ (Net income in year 2)  / ( 1 + discount rate )<sup>2</sup> + ... and so forth.  
+
+<p>If your incomes and expenses come at other intervals, monthy, for example, then you would use monthly discount rates rather than annual.
+
+<p>The net present value is used for deciding whether to do an investment or not.  
+
+<p>For example, if a 10-year zero-coupon $1000 Treasury bond is selling for $762.40, the net present value is:
+<p>-762.40 / ( 1 + discount rate )<sup>0</sup> + 10000  / ( 1 + discount rate )<sup>10</sup>
+<p>Plug your discount rate into that formula.  If the net present value is positive, buy the bond.  If it is negative, don't.
+<blockquote>If you have cash lying around, your discount rate is the interest rate you could get by lending the cash to somebody.  If you do not have spare cash, your discount rate is interest rate that you would pay to borrow from somebody.</blockquote>
+<center>
+<a name="spreadsheet"></a><h3>Spreadsheet for calculating net present value</h3>
+</center>
+The box below this paragraph has a spreadsheet set-up for calculating the
+net present value of an income stream. To use it, select the contents of
+the box (right-click in the box and chose Select All, in most browsers).
+Copy, then paste to the upper left corner of a blank worksheet in 
+Microsoft Excel
+or other spreadsheet program. 
+The discount rate and income stream numbers are samples, of course, 
+that you can change.
+Row 5 has two sum formulas, one for Excel 
+and one for Lotus and Quattro Pro. To extend the spreadsheet for a longer income 
+stream, copy E2:E4 and paste across row 2 as far as needed.
+<form >
+<textarea rows="5" cols="80">
+Discount rate	0.05			
+Year	0	=B2+1	=C2+1	=D2+1
+Income stream	-1000	100	100	100
+Present value	=B3/(1+$B1)^B2	=C3/(1+$B1)^C2	=D3/(1+$B1)^D2	=E3/(1+$B1)^E2
+Net present value	=SUM(B4:E4)	@SUM(B4..E4)			
+</textarea>
+</form>
+
+<center>
+<h3>
+Summary</h3></center>
+
+<center>The key concepts of this interactive tutorial are:</center>
+
+<ul>
+<li>
+Income received in the future is worth less now than income received now.</li>
+
+<li>
+That's because income you get now can earn interest and grow.</li>
+
+<li>
+The future value of an amount you get now is</li>
+
+<br>Future Value = Present Value &times;( 1 + Interest Rate )&#8319;, where
+<i>n</i> is the number of years it grows.
+<br><font color="#3366FF"><font size=-1>Future Value = Present Value times (
+1 + Interest Rate ) to the <i>n</i> power</font></font>
+<li>
+Therefore, the present value of a future income amount <i>n</i> years in
+the future is:</li>
+
+<br>Present Value = (Future Value) / ( 1 + Interest Rate )&#8319;
+<br><font color="#3366FF"><font size=-1>Present Value = (Future Value)
+/ ( 1 + Interest Rate ) to the <i>n</i> power</font></font>
+<li>
+The discount rate is another name for the interest rate, so</li>
+
+<br>Present Value = (Future Value) / ( 1 + Discount Rate )&#8319;
+<br><font color="#3366FF"><font size=-1>Present Value = (Future Value)
+/ ( 1 + Discount Rate ) to the <i>n</i> power</font></font>
+<li>
+When the discount rate goes up, present values go down. When the discount
+rate goes down, present values go up.</li>
+</ul>
+
+<h3>
+Epilogue</h3>
+You get a fortune cookie with this fortune inside:
+<br><img SRC="fortune.gif" ALT="It is better to have a hen tomorrow than an egg today." height=52 width=320>
+<p class="question">Do you agree?
+<br><input type="radio" name="dis11" value="yes">I agree.  I'll wait for the hen.</input>
+<br><input type="radio" name="dis11" value="no">I disagree.  Give me the egg!</input>
+<br><input type="radio" name="dis11" value="depends">Maybe.  It depends on my discount rate and my rate of time preference.</input>
+<br><input type="radio" name="dis11" value="numbers">It depends on the lucky numbers on the back of the fortune.</input>
+<div id="dis11-answer"></div> 
+<p>That's all for now. Thanks for participating!&nbsp;
+<br><a href="..">To
+the list of tutorials</a>
+</body>
+</html>

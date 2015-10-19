@@ -1,0 +1,303 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Description" content="Introductory economics tutorial on elasticity">
+	<meta name="Keywords" content="economics, elasticity">
+   <title>Economics Interactive Tutorial:  Elasticity II</title>
+   <style>
+   body { font-family : sans-serif;
+   		background-color : #ffffff }
+   h1, h2, h3, h4 { color : #993333 }
+   .warn { 
+   		color: #EE3300; background-color: #ffffcc
+   }
+.correct {
+    background-color : GreenYellow;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: ForestGreen;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="elas2.js" ></script>
+</head>
+
+<body>
+<h6><a href="..">Economics Interactive Tutorials</a></h6>
+
+<h2>
+Economics Interactive Tutorial </h2>
+
+<h1>
+Elasticity -- A Quantitative Approach</h1>
+Copyright &copy; 1996-1999 Samuel L. Baker.  Last modified 8/19/2013.
+<p>The <a href="../elast/elast.html">first elasticity tutorial</a> took a qualitative approach to elasticity.
+The idea conveyed was
+<p>Elasticity = Responsiveness
+<p>The elasticity of Q with respect to P is the responsiveness of Q to
+changes in P.
+<blockquote>Q is the quantity demanded.  P is the price per unit.</blockquote>
+<p>Elasticity has a quantitative meaning, too. Elasticity is a specific way of measuring responsiveness.
+<p>Suppose P changes, and Q changes as a result. <br>
+The <b>elasticity of Q with respect to P</b> is the <i>relative</i> change in Q divided by the corresponding <i>relative</i> change in P.
+<p>You can also say:<br>
+The <b>elasticity of Q with respect to P</b> is the <i>percentage</i> change in Q divided by the corresponding <i>percentage</i> change in P.
+<p>For example, if the price of something goes up by 1% and 
+sales fall by 2%, the elasticity of quantity demanded with respect to price
+is -2%/1% = -2.
+<br>
+<strong>Don't neglect the minus sign.</strong> For demand, the elasticity number is negative, because price and quantity move
+in opposite directions.
+<p>You can write the elasticity formula this way:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in Q) / (level of Q)
+Elasticity = ---------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in P) / (level of P)</pre>
+The numerator of this fraction is the change in Q relative to the level
+of Q.
+<br>The denominator of the fraction is the change in P relative to the
+level of P.
+<p>The elasticity concept can be applied to other things besides Quantity and Price.  You can use the concept whenever changing one thing makes something else change. For example, some researchers
+have estimated the elasticity of population health status with
+respect to the population's medical care expenditure. This elasticity is
+the percentage difference in health status divided by the percentage difference
+in medical care expenditure. (This elasticity usually comes out small,
+by the way.)&nbsp; In this example, health status goes in the place of Q and medical care spending goes in the place of P.&nbsp; In the formula, you can consider Q and P as placeholders for anything
+that changes in response to changes in something else.
+<p>There's a shorter way to say "the elasticity of Q with respect to P."
+You can say "the P elasticity of Q," as in "the price elasticity of demand"
+or "the income elasticity of demand." Here's the formula again for the
+P elasticity of Q:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in Q) / (level of Q)&nbsp;
+Elasticity = ---------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in P) / (level of P)</pre>
+Let's try to apply this. Suppose that a medical practice finds that when the
+price of a certain test is is $10, the quantity demanded is 100 tests per month, while if the price is $30, the quantity demanded is only  60 tests per
+month.
+<br>
+What's the price elasticity of demand? Let's take this one step at
+a time, because I have some points to make.
+<p>The first point is that, when you figure the changes in Q and P, you
+do both in the same direction of time. Let's call the $10 price
+and 100 quantity the &quot;before&quot; situation, and the $30 price and 60 quantity the "after" situation. To be consistent, you have to calculate all changes as &quot;after&quot; minus &quot;before&quot; or &quot;before&quot; minus &quot;after.&quot;   Let's calculate all changes as "after" minus "before."
+<p class="question">What is the change in Q, "after" minus "before"?  (The "after" quantity is 60.  The "before" quantity is 100.) 
+<br>
+<input id="Elas201-response" name="Elas201" type="text"></input>
+<button id="Elas201-button">Type a number in the box.  Then click this.</button>
+<div id="Elas201-answer"></div>
+<p>Now for the "levels" in the elasticity formula.  
+<p class="question">What number do you think you should use for the level of Q in the numerator of the fraction? 
+<br>
+<input type="radio" name="q2" value="100">100</input>
+<input type="radio" name="q2" value="60">60</input>
+<input type="radio" name="q2" value="Not">I'm not sure.</input>
+<div id="q2-answers">
+<p>(I'm leaving some space here, so you won't be influenced by the discussion that follows. This space will go away if you pick the answer I like.)
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Here is the formula again.
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in Q) / (level of Q)&nbsp;
+Elasticity = ---------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in P) / (level of P)</pre>
+
+<p>You have a choice of what level of Q should go into the formula.  There is no one right answer. The phrase "level of Q" is ambiguous. 
+You could use the "before" level of Q, which is 100 in our example. You could use the "after" level of Q, which is 60 in our example.  You could use something in between.</p> 
+<p>Whichever you use, be consistent between the top of the fraction and the bottom.  If you use the "before" level of Q in the top, use the "before" level of P in the bottom.</p>
+<p>If the change in Q is small relative to the levels of Q, it doesn't matter much which Q you use for the level of Q. The elasticity
+  comes out about the same regardless.</p>
+<p>If you want a middle choice use the "arc elasticity."  It uses values halfway between "before" and "after." Let's show that.
+<p>Here's the definition of arc elasticity:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in Q) / (average of Q's)&nbsp;
+Arc Elasticity = ------------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in P) / (average of P's)</pre>
+To get the average of the Q's, add them and divide by 2. The same goes
+for the average of the P's.
+<p>Let's use that in the calculation. 
+<p>The data again are:
+  <br>
+  If the price is $10, demanded quantity is 100 tests per month.
+  <br>
+  If the price is $30, demanded quantity is 60 tests per month.
+  <br>
+  
+<p class="question">What is the average of the Q's?
+<br><input id="Elas203-response" name="Elas203" type="text"></input>
+<button id="Elas203-button">Type a number in the box.  Then click this.</button>
+<div id="Elas203-answer">(When you answer the above question correctly, you'll be able to answer this next question.)</div>
+<p class="question">... so the (Change in Q) / (average of Q's) is what?
+<br><input id="Elas204-response" name="Elas204" type="text"></input>
+<button id="Elas204-button">Type a decimal number, not a percent, in the box.  Then click this.</button>
+<div id="Elas204-answer">
+<p>Leaving some space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<br>That's the numerator of the Arc Elasticity fraction. Next, we calculate
+the denominator.
+<p>Repeating the data:
+<p>If the price is $10, demanded quantity is 100 tests per month.
+<br>If the price changes to $30, demanded quantity is 60 tests per month.
+<p>This is our arc elasticity fraction so far:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.5&nbsp;
+Arc Elasticity = ------------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Change in P) / (average of P's)</pre>
+<p class="question">Tackling the denominator, what is the change in P, "after" minus "before"?
+<br><input id="Elas205-response" name="Elas205" type="text"></input>
+<button id="Elas205-button">Type a number in the box.  Then click this.</button>
+<div id="Elas205-answer"></div>
+<p class="question">And the average of the P's?
+<br><input id="Elas206-response" name="Elas206" type="text"></input>
+<button id="Elas206-button">Type a number in the box.  Then click this.</button>
+<div id="Elas206-answer"></div>
+<p class="question">So, (Change in P) / (average of P's) is:
+<br><input id="Elas207-response" name="Elas207" type="text"></input>
+<button id="Elas207-button">Type a number in the box.  Then click this.</button>
+<div id="Elas207-answer"><p>The full elasticity fraction will show here when this question is answered correctly.</div>
+<p class="question">Last step:  Based on the above fraction, what is the arc elasticity?
+<br><input id="Elas208-response" name="Elas208" type="text"></input>
+<button id="Elas208-button">Type a number in the box.  Then click this.</button>
+<div id="Elas208-answer"></div>
+<p>Good! That's how you calculate an arc elasticity.
+<h3>Elastic and Inelastic</h3>
+<p>The terms "elastic" and "inelastic" can be given a precise meaning in
+terms of the number that comes out of the elasticity fraction.&nbsp; The
+divider between elastic and inelastic demand is -1.&nbsp;
+(For elasticities where you expect a positive relationship between Q and
+P, such as for elasticities of supply, the divider is +1.)
+<p>
+If the demand elasticity is more negative than -1, the demand is elastic.
+<br>If the demand elasticity is between -1 and 0, the demand is inelastic.
+<blockquote>I avoided saying "higher" and "lower" in the above definition, because economists say that the elasticity of demand is "high" when it's a big negative number.  
+They say that the elasticity of demand is "low" when it's a small negative number, meaning close to 0. The elasticity of demand for oil is low. The elasticity of demand for cubic zirconia (imitation diamond) is high.</blockquote>
+<p>In our example, we got a price elasticity of demand of -0.5. <span class="question">Is this
+elastic or inelastic demand?</span>
+<br>
+<input type="radio" name="q9" value="elastic">Elastic demand</input>
+<input type="radio" name="q9" value="inelastic">Inelastic demand</input>
+<div id="q9-answers"></div>
+<h3>When does raising your price bring in more money?</h3>
+<p>For demand, there's a relationship between the elasticity and what happens
+to total revenue from customers when you change your price:
+<table><tr valign="top"><td>If demand is elastic</td>
+<td>(if the elasticity is more negative than -1)</td>
+<td>then if the
+price goes up,<br>the total amount customers spend goes down.</td></tr>
+<tr valign="top"><td>If demand is inelastic</td>
+<td>(if the elasticity is between -1 and 0)</td>
+<td>then if the
+price goes up,<br>the total amount customers spend goes up.</td></tr>
+<tr valign="top"><td>If you have unitary elasticity</td>
+<td>(if the elasticity of demand is exactly -1)</td>
+<td>then if the
+price goes up,<br>the total amount customers spend stays the same.</td></tr>
+</table>
+
+<p>Let's see how this works in our example: At a price of $10, you
+sell 100 tests per month. <span class="question">What is the total revenue (price times quantity)?</span>
+<br><input id="Elas210-response" name="Elas210" type="text"></input>
+<button id="Elas210-button">Type a number in the box.  Then click this.</button>
+<div id="Elas210-answer"></div>
+<p>When the price is $30, you do 60 tests per month. <span class="question">What is that total
+revenue?</span>
+<br><input id="Elas211-response" name="Elas211" type="text"></input>
+<button id="Elas211-button">Type a number in the box.  Then click this.</button>
+<div id="Elas211-answer"></div>
+<br>So, raising the price from $10 to $30 does what to total revenue? 
+<br><input type="radio" name="q12" value="up">Revenue goes up.</input>
+<input type="radio" name="q12" value="down">Revenue goes down.</input>
+<div id="q12-answers"></div>
+
+<p>Our calculated elasticity was -0.5, which we called "inelastic" because
+its absolute value was less than 1. <span class="question">Is this consistent with the idea that revenue
+going up when the price goes up?</span> 
+<br><input type="radio" name="q13" value="yes">Yes</input>
+<input type="radio" name="q13" value="no">No</input>
+<div id="q13-answers"></div>
+<p>This is how elasticity of demand relates to pricing strategy. <span class="question">If your demand is
+inelastic, how would you change your price to bring in more money? </span>
+<br><input type="radio" name="q14" value="raise">Raise price if demand is inelastic.</input>
+<br><input type="radio" name="q14" value="lower">Lower price if demand is inelastic.</input>
+<div id="q14-answers"></div>
+<p>Suppose that you were in charge of setting prices at a hospital.  You offer trauma services in your emergency department.  You also offer counseling for weight control in your education department.  Each of those services has an incremental cost, mainly for personnel and supplies to provide the service.  Your hospital also has overhead costs, like the construction loan for your building and your salary as an administrator.  To get the revenue to cover the overhead costs, you will have to mark up the prices on some services to levels well above what is needed to cover just the incremental costs.  Think about the price elasticity of demand for emergency department services and for education department services.  
+<br><span class="question">Which department's prices will you mark up by a lot?</span>
+<br><input type="radio" name="q15" value="emergency">Emergency department</input>
+<br><input type="radio" name="q15" value="education">Education department</input>
+<div id="q15-answers"></div>
+<p>We have said that demand is called "inelastic" if the price-elasticity is between 0 and -1.  Suppose the demand is perfectly inelastic.  No response of quantity to price differences.  <span class="question">What is the elasticity number if demand is perfectly inelastic?</span>
+<br><input type="radio" name="q16" value="0">0</input>
+<input type="radio" name="q16" value="-1">-1</input>
+<input type="radio" name="q16" value="-infinity">&minus;&infin;</input>
+<div id="q16-answers"></div>
+
+<p>What if demand were elastic? <span class="question">How would you change your price to bring
+in more money?</span> 
+<br><input type="radio" name="q17" value="raise">Raise price if demand is elastic.</input>
+<br><input type="radio" name="q17" value="lower">Lower price if demand is elastic.</input>
+<div id="q17-answers"></div>
+
+<p>Elastic demand typically happens when you are a small player in a big
+market, and there's a going market price. Undercut that price, and you
+attract business. Whether you make a profit depends on your costs, but
+that's a subject for another tutorial.
+<p>The extreme form of elastic demand is perfectly elastic demand.  Perfectly elastic demand means you can sell as much as you want at the going market price.  People will buy a practically unlimited amount at the current price, with no need for price cuts to get people to take more.
+<p clsas="question">What is the elasticity number if demand is perfectly elastic?
+<br><input type="radio" name="q18" value="0">0</input>
+<input type="radio" name="q18" value="-1">-1</input>
+<input type="radio" name="q18" value="-infinity">&minus;&infin;</input>
+<div id="q18-answers"></div>
+<p>
+Small sellers of commodities (standardized products) in big markets can have demand that is perfectly elastic.  A small farmer, for example, may find that the market will take all he or she can produce at the going price.
+
+<p>That's all for now. Thanks for participating!
+<br>For more use of the elasticity of demand concept, see the <a href="../monopoly/mon.html">tutorial on monopoly</a>.
+<hr WIDTH="100%">
+
+<br>Please e-mail comments to <script language="Javascript" type="text/javascript">
+<!--
+var name="sam"+"&#x002E;"+"baker"+"&#x0040;"+"sc"+"&#x002E;"+"edu";
+document.writeln('<a href="mai'+'lto:'+name+'">'+name+'</a>');
+//-->
+</script></span>
+<noscript><img src="../../sbemail.gif" alt="" width="148" height="10" border="0"></noscript><br><a href="..">To the list of tutorials</a>
+
+</body>
+</html>

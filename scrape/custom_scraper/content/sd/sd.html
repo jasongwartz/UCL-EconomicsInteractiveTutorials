@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.61 [en] (Win95; I) [Netscape]">
+  <title>Economics Interactive Lecture: Supply and Demand</title>
+  <style>
+body {
+	background-color : #ffffdd ;
+	font-family : Georgia, serif;
+	
+	max-width: 50em;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto; 
+	
+}
+.warn { color:#CC0000 }
+#rightcontent {
+	float:right;
+	width:19%;
+	padding-left:5px;
+	background-color: white;
+	
+}
+  .correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: DarkBlue;
+}
+.morelineheight {
+	line-height:200%;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="sd.js" ></script>
+
+</head>
+<body>
+<h6>
+<a href="http://www.sc.edu/">University of South Carolina</a>, <a
+ href="http://www.sph.sc.edu/">Arnold School
+of Public Health</a>, Dept. of
+Health Services Policy and Management 
+
+</h6>
+<h3>
+Economics Interactive Lecture </h3>
+
+<h1>
+Supply and Demand</h1>
+Copyright &copy; 1996-2003 Samuel L. Baker
+<p>Revised August 23, 2013.</p>
+<p>This program discusses supply and demand. It shows, with a
+simplified
+numerical example, how supply and demand in a market interact to
+determine
+how much of something is sold and bought, and what the price is.
+</p>
+<p>The crucial economic theory ideas are:
+<ol><li> Supply and demand are determined
+separately.</li>
+<li>The <span style="color:brown; font-weight:bold">sellers</span> determine the <span style="color:brown; font-weight:bold">supply</span>. The <span style="color:green; font-weight:bold">buyers</span> determine the <span style="color:green; font-weight:bold">demand</span>.</li>
+<li>In a free competitive market, there is, at any time, a price at which the good or service is being bought and sold.  Potential buyers decide whether they want to buy at that price.  Potential sellers decide whether they want to sell at that price.</li>
+<li> In a
+free competitive market, the price of whatever it is moves up or down
+until
+the amount supplied equals the amount demanded. When the price stops
+moving,
+you have what is called <b>equilibrium</b>.</li></ol>
+</p>
+<h3>Supply and demand as the two sides of a market</h3>
+<p>Let's consider, for example, a market for local primary care services.
+<p class="question">
+On which side of this market are primary care physicians in
+office-based
+practices? Are they on the Demand side or the Supply side?
+<br>
+<input type="radio" name="sd1" value="demand">Demand</input>
+<input type="radio" name="sd1" value="supply">Supply</input>
+<div id="sd1-answers"></div>
+
+<blockquote>When doing these tutorials, clicking the wrong answer can sometimes get you
+information that you don't see if you get it right every time.  Whether you want to explore that is up to you!</blockquote>
+<p class="question">
+On which side of this market would be a person with a bad sore throat?
+<br>
+<input type="radio" name="sd2" value="demand">Demand</input>
+<input type="radio" name="sd2" value="supply">Supply</input>
+<div id="sd2-answers"></div>
+
+<p class="question">
+BlueCross BlueShield of SC (an insurer)?
+<br>
+<input type="radio" name="sd3" value="demand">Demand</input>
+<input type="radio" name="sd3" value="supply">Supply</input>
+<div id="sd3-answers"></div>
+
+<p class="question">
+Palmetto Richland's emergency department?
+<br>
+<input type="radio" name="sd4" value="demand">Demand</input>
+<input type="radio" name="sd4" value="supply">Supply</input>
+<div id="sd4-answers"></div>
+
+<p class="question">
+Providence Hospital's outpatient surgery center?
+<br>
+<input type="radio" name="sd5" value="demand">Demand</input>
+<input type="radio" name="sd5" value="supply">Supply</input>
+<input type="radio" name="sd5" value="neither">Neither side</input>
+<div id="sd5-answers"></div>
+
+
+<p>When they have illnesses or
+injuries, or fears of illness, 
+people decide whether to seek medical attention. Presumably,
+they
+base their decisions on their assessments of how much they are likely
+to
+benefit from being seen by a medical professional, versus how much it
+will
+cost to be seen. 
+<p>The cost to them includes 
+<ul><li>what the provider makes them
+pay
+<li>transportation expense
+<li>any foregone wages or business income
+<li>whatever else they might have done with their time.</li>
+</ul>
+</p>
+<p>I will simplify that when I talk about demand in this tutorial.  I will just look at what people have to pay and how that affects how much they want to buy.  I
+will hold constant all the other costs that consumers incur to obtain primary care.</p>
+<h3>Equilibrium of supply and demand</h3>
+<p>Here is a made-up demand schedule for primary care visits in an imaginary small city. The
+table
+below shows what quantities will be demanded at various prices.
+</p>
+<span class="morelineheight"><pre>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount Demanded<br>&nbsp;$ 55 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100 visits per day<br>&nbsp;$ 50 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200 visits per day<br>&nbsp;$ 45 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 300 visits per day<br>&nbsp;$ 40 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 400 visits per day<br>&nbsp;$ 35 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 500 visits per day<br>&nbsp;$ 30 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 600 visits per day<br>&nbsp;$ 25 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 700 visits per day<br>&nbsp;$ 20 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 800 visits per day<br>&nbsp;$ 15 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 900 visits per day<br>&nbsp;$ 10 per visit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000 visits per day</pre></span>
+I've ordered the prices from highest to lowest. This way, the higher
+prices
+are higher up on your screen. Just to be sure you understand the table,
+please answer this: <span class="question">If the going price for an urgent visit is $10, how
+many visits per day will be demanded? </span>
+<br><input id="sd6-response" name="sd6" type="text"></input>
+<button id="sd6-button">Type a number in the box.  Then click this.</button>
+<div id="sd6-answer"></div>
+
+<p>The $10 price is evidently
+attractive
+to consumers, since so many patients show up at that price.&nbsp; Let
+us
+imagine, however, that a $10 per visit price is not attractive to
+providers.
+Imagine that doctors and other providers would accept 0 visits if the
+price were only $10.  If that is so, <span class="question">would this market be in
+equilibrium if the price were $10?</span>
+<br>
+<input type="radio" name="sd7" value="yes">Yes, in equilibrium</input>
+<input type="radio" name="sd7" value="no">No, not in equilibrium</input>
+<div id="sd7-answers"></div>
+<div id="sd7A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Excess demand is the amount demanded minus the amount supplied. At
+a $10 price, there are 1000 visits per day of excess demand. 
+<p>Excess supply occurs if the amount supplied is bigger than the amount
+demanded.  That happens at high prices.
+</p>
+<p>In a market that conforms to the economic theory of a free market,
+excess demand or excess supply 
+encourage competition among the buyers or sellers.
+This tends to make the price change. 
+<p>Excess
+demand
+tends to induce competition among the buyers, which forces prices up.
+Excess
+supply tends to induce competition among the sellers, which forces prices
+down. 
+<p>Equilibrium is reached when there is no tendency for the price to
+move either way. At equilibrium there is no excess demand or excess
+supply.
+</p>
+<p>Let's add a supply schedule on the table. <span class="question">Click the button next to the price at which this market is in equilibrium.</span>
+<span class="morelineheight">
+<pre>
+   Price        Amount Demanded         Amount Supplied<br>
+<input type="radio" name="sd8" value="55">$55       100 visits/day demanded    900 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="50">$50       200 visits/day demanded    800 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="45">$45       300 visits/day demanded    700 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="40">$40       400 visits/day demanded    600 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="35">$35       500 visits/day demanded    500 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="30">$30       600 visits/day demanded    400 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="25">$25       700 visits/day demanded    300 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="20">$20       800 visits/day demanded    200 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="15">$15       900 visits/day demanded    100 visits/day supplied</input><br>
+<input type="radio" name="sd8" value="10">$10      1000 visits/day demanded      0 visits/day supplied</input>
+</pre></span>
+<div id="sd8-answers"></div>
+<p class="question">In the table below, click the button next to the price at which there is an excess demand of 400 visits/day.
+<span class="morelineheight"><pre>
+   Price        Amount Demanded         Amount Supplied<br>
+<input type="radio" name="sd9" value="55">$55       100 visits/day demanded    900 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="50">$50       200 visits/day demanded    800 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="45">$45       300 visits/day demanded    700 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="40">$40       400 visits/day demanded    600 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="35">$35       500 visits/day demanded    500 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="30">$30       600 visits/day demanded    400 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="25">$25       700 visits/day demanded    300 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="20">$20       800 visits/day demanded    200 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="15">$15       900 visits/day demanded    100 visits/day supplied</input><br>
+<input type="radio" name="sd9" value="10">$10      1000 visits/day demanded      0 visits/day supplied</input>
+</pre></span>
+<div id="sd9-answers"></div>
+
+<p class="question">In the table below, click the button next to the price at which there is an excess supply of 200 visits/day.
+<span class="morelineheight"><pre>
+   Price        Amount Demanded         Amount Supplied<br>
+<input type="radio" name="sd10" value="55">$55       100 visits/day demanded    900 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="50">$50       200 visits/day demanded    800 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="45">$45       300 visits/day demanded    700 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="40">$40       400 visits/day demanded    600 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="35">$35       500 visits/day demanded    500 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="30">$30       600 visits/day demanded    400 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="25">$25       700 visits/day demanded    300 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="20">$20       800 visits/day demanded    200 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="15">$15       900 visits/day demanded    100 visits/day supplied</input><br>
+<input type="radio" name="sd10" value="10">$10      1000 visits/day demanded      0 visits/day supplied</input>
+</pre></span>
+<div id="sd10-answers"></div>
+<p>Suppose we have excess supply, as in this last example. <span class="question">The price will tend to go which way?</span>
+<input type="radio" name="sd11" value="up">Up</input>
+<input type="radio" name="sd11" value="down">Down</input>
+<div id="sd11-answers"></div>
+<div id="sd11A-answers"><p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Why does the price go that way when there is excess supply?  Here are three possible reasons:
+<ol>
+<li><span class="question">Some sellers notice that they have a lot of their stuff piling up.  They decide that, if they offer to sell for a little less than the going price, maybe they can get some sales away from their competitors.</span>
+<br><input type="radio" name="sd12" value="true">This might be a reason why the price would fall in a free market with excess supply.</input>
+<br><input type="radio" name="sd12" value="false">This does not sound like a reason for the price to fall in a free market with excess supply.</input>
+<div id="sd12-answers"></div>
+</li>
+<br>
+<li><span class="question">Buyers notice that the sellers' stuff is piling up.  These buyers start looking for sellers willing to sell at a little less than the going price.</span>
+<br><input type="radio" name="sd13" value="true">This might be a reason why the price would fall in a free market with excess supply.</input>
+<br><input type="radio" name="sd13" value="false">This does not sound like a reason for the price to fall in a free market with excess supply.</input>
+<div id="sd13-answers"></div>
+</li>
+<br>
+<li><span class="question">The government sees that there is a surplus and orders that the price be lowered.</span>
+<br><input type="radio" name="sd14" value="true">This might be a reason why the price would fall in a free market with excess supply.</input>
+<br><input type="radio" name="sd14" value="false">This does not sound like a reason for the price to fall in a free market with excess supply.</input>
+<div id="sd14-answers"></div>
+</li>
+<br>
+</ol>
+<h3>When equilibrium moves</h3>
+
+<p>When prices or quantities change, that can be because the market is moving from disequilibrium to equilibrium.
+<p>Typically, though, when prices or quantities change, economists seek an explanation
+in movements of the demand or supply curves. Economists like to assume that markets are naturally in equilibrium.  If they see something change, they figure that supply or demand must have changed.
+</p>
+<p>This video shows an animated supply and demand diagram.  The demand curve moves up and down while the supply curve stays still.  (You may need to click the play indicator near the bottom left of the frame.)</p>
+<!--p><iframe width="220" height="240" src="http://www.youtube.com/embed/A0Lh_Z8MY9Q?feature=player_detailpage" frameborder="0" allowfullscreen></iframe-->
+<p><iframe width="220" height="240" src="MovingDemand.mp4" frameborder="0">The YouTube-standard Flash player is needed to see the video.</iframe>
+
+<p>In the diagram, when demand grows, the demand curve moves up and to the right.  In supply-demand diagrams, to the right is up when you are talking about movements of the curves.  That is because when one of the curves moves to the right, it means a bigger quantity at every price.
+<p>When the demand curve moves up and the supply curve stays still, both the equilibrium price and the equilibrium quantity go up.
+</p>
+<p>This next video shows the supply curve moving while the demand curve holds still.</p>
+<!--p><iframe width="220" height="240" src="http://www.youtube.com/embed/1SSulMEPLK4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe-->
+<p><iframe width="220" height="240" src="MovingSupply.mp4" frameborder="0" allowfullscreen></iframe>
+<p class="question">Why do the words "Supply Rising" sometimes move from higher to lower in the picture?
+<br><input type="radio" name="sd14a" value="mess">I messed up.</input>
+<br><input type="radio" name="sd14a" value="ok">Up is to the right, when you're talking about movement of the curves.</input>
+<div id="sd14a-answers"></div>
+
+<p>In the movie just above, when supply is rising, ...  
+<p class="question">What happens to the quantity sold?
+<br><input type="radio" name="sd14b" value="up">Quantity sold goes up.</input>
+<br><input type="radio" name="sd14b" value="down">Quantity sold goes down.</input>
+<div id="sd14b-answers"></div>
+<p class="question">What happens to the price?
+<br><input type="radio" name="sd14c" value="up">The price goes up.</input>
+<br><input type="radio" name="sd14c" value="down">The price goes down.</input>
+<div id="sd14c-answers"></div>
+<h3>Adjusting the Equilibrium Quantity to Equal the "Need"</h3>
+Sometimes, in public health, you may decide that some people
+"need" to use a certain amount of some service. For example, you might
+set a goal that everyone should get immunized, or that every pregnant
+woman
+should get prenatal care.
+<p>We can represent that in the supply and demand diagram with a
+vertical
+line at the quantity that we think people need. It's a vertical line
+because
+"need" is the same regardless of the price.
+<p><iframe width="220" height="240" src="DemandAndNeed.mp4" frameborder="0" allowfullscreen></iframe>
+When the supply-demand intersection point is to the left of the "need"
+level, then the amount actually bought or sold is less than the "need."
+One way to raise the actual amount bought and sold is to raise demand. The diagram
+above
+shows that if you raise demand, you can move the equilibrium quantity out to
+the "needed" level. As the diagram also shows, this tends to raise the
+price.
+</p>
+<p>For this to work, the supply curve can't be so steep that it does not reach the Need line.  
+In real life, this would mean that raising demand works if the supply will be forthcoming if the price goes high enough.</p>
+<p>The alternative way to get the equilibrium quantity out to the need is to raise supply.  This means moving the supply
+curve
+to the right. As the preceding video showed, raising the supply curve makes 
+quantity go up and makes the price go down.
+</p>
+<p>For example, suppose that the President decides that war veterans need more health care services than they are currently getting.</p>
+<ol>
+<li>The President and Congress could give veterans health insurance that would pay for health care services from the doctors and hospitals that the general public uses.  <span class="question">Would that move the demand curve or the supply curve?</span>
+<br><input type="radio" name="sd15a" value="demand">Demand.  This would make demand move to the right as in the movie above.</input>
+<br><input type="radio" name="sd15a" value="supply">Supply.  This would move the supply curve to the right.</input>
+<div id="sd15a-answers"></div></li>
+<br>
+<li>The President could order the Veterans Health Administration (a U.S. government agency) to expand and revamp the its medical services for veterans.
+<span class="question">Would that move the demand curve or the supply curve?</span>
+<br><input type="radio" name="sd17a" value="demand">Demand.  This would make demand move to the right as in the movie above.</input>
+<br><input type="radio" name="sd17a" value="supply">Supply.  This would move the supply curve to the right.</input>
+<div id="sd17a-answers"></div></li>
+
+</ol>
+
+<p>Here are some more tactics for manipulating where the supply and demand
+curves
+cross. See if you can tell which do that by changing demand and which
+by changing supply.
+</p>
+<p>You run advertisements telling men that they need get their
+prostates
+tested. <span class="question">What does this change in the market for prostate examinations?</span>
+<br>
+<input type="radio" name="sd15" value="demand">Raises demand</input><br>
+<input type="radio" name="sd15" value="supply">Raises supply</input>
+<div id="sd15-answers"></div>
+<p>You give pregnant women coupons for free fast food after they complete
+a
+certain number of prenatal visits. (Laugh if you like, but this was
+actually done in South
+Carolina in the 1990s.) <span class="question">What does this change in the market for
+prenatal care visits?</span>
+<br>
+<input type="radio" name="sd16" value="demand">Raises demand</input><br>
+<input type="radio" name="sd16" value="supply">Raises supply</input>
+<div id="sd16-answers"></div>
+<p>You give doctors free vaccine. <span class="question">What does this change in the market for
+inoculations?</span>
+<br>
+<input type="radio" name="sd17" value="demand">Raises demand</input><br>
+<input type="radio" name="sd17" value="supply">Raises supply</input>
+<div id="sd17-answers"></div>
+<p>The same ideas work in reverse if you think people are buying more
+of
+something than they need. For example...
+</p>
+<p>You put a scary message of every pack of cigarettes. What does this
+change in the market for cigarettes?
+<br>
+<input type="radio" name="sd19" value="demand">Lowers demand</input><br>
+<input type="radio" name="sd19" value="supply">Lowers supply</input>
+<div id="sd19-answers"></div>
+
+<p>You put a tax on every pack of cigarettes. What does this change in the
+market for cigarettes?
+<br>
+<input type="radio" name="sd20" value="demand">Lowers demand</input><br>
+<input type="radio" name="sd20" value="supply">Lowers supply</input>
+<div id="sd20-answers"></div>
+
+<p>You forbid smoking in many places that are open to the public. 
+<br>
+<input type="radio" name="sd21" value="demand">Changes demand</input><br>
+<input type="radio" name="sd21" value="supply">Changes supply</input>
+<div id="sd21-answers"></div>
+
+<p>In the movie above, I have the demand curve stopping its move to the right when the equilibrium quantity gets to the Need.  If the demand curve kept going to the right, the equilibrium quantity would be greater than the Need.  Some economists argue that health insurance with no copayment moves the demand curve so far to the right that the equilibrium quantity of services exceeds what people really need.</p>
+<p>For an example of how you might use a supply-demand diagram to figure something out, here is a digression about sin taxes, like the cigarette tax ...</p> 
+<p><img src="sd.gif" align="right" height="182"
+ width="183">You can regard the cigarette tax as increasing the cost
+of supplying the
+cigarettes. Adding a tax raises the cost per pack by the amount of the
+tax. The diagram here shows the effect. The supply curve moves down,
+which is to the
+left in this diagram. The vertical distance between the old supply
+curve (shown in black) and the new supply curve (shown in red) is the
+amount of the tax per pack. The equilibrium quantity supplied and
+demanded is lower (more to the left).
+That is the intended goal of the tax increase.
+</p>
+<p>If the supply curve has a positive slope ...
+<blockquote>so that it's not horizontal =
+<br>so that supply is not completely elastic</blockquote>
+... then the price increase ... 
+<blockquote>(the distance
+between the blue and red lines)</blockquote>  
+... will be less than the tax increase.
+<p>This means that the customers and the sellers will share paying the tax
+on each pack bought. 
+<p>Another digression ...
+<p>Why should a supply curve has an upward slope?  In theory, it is because some sellers have higher costs than other sellers, or that individual sellers have some facilities that are more productive than others.  A farmer may have some fields that are better than others.  So might an oil company. At higher prices, the less productive facilities can operate at a profit.  At lower prices, they can't, so they shut down, which means less stuff offered for sale.
+When the tax is imposed, some high-cost sellers drop out of the market.
+The lower-cost sellers who stay in make less profit.</p>
+<hr width="100%"><br>
+That's all for now. Thanks for participating!
+<p>
+<br>Please e-mail comments to 
+<script language="Javascript" type="text/javascript">
+<!--
+var name="sam"+"&#x0040;"+"sa"+"mbaker"+"&#x002E;"+"com";
+document.writeln('<a href="mai'+'lto:'+name+'">'+name+'</a>');
+-->
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1698 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Description" content="Introductory economics tutorial on the internal rate of return (IRR)">
+	<meta name="Keywords" content="economics, internal rate of return, IRR">   <title>Economics Interactive Lecture:  Internal Rate of Return</title>
+  <style>
+	BODY { font-family: arial, helvetica, sans-serif } 
+
+	H1, H2, H3, H4 { color: #000066 }
+
+.correct {
+    background-color : GreenYellow;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: ForestGreen;
+}
+.morelineheight {
+	line-height:200%;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="irr.js" ></script>
+
+
+</head>
+
+
+
+
+<h2>
+Economics Interactive Lecture </h2>
+
+<h1>
+The Internal Rate of Return</h1>
+Copyright &copy; 1997-2013 Samuel L. Baker
+<p>When you are evaluating an investment, a useful number number to know
+is the <b>internal rate of return</b>.
+<p>For some investments, like bank accounts, the internal rate of return
+is easy to figure because the bank tells you what it is. For example, a
+5% simple interest bank account has an internal rate of return of 5%.
+<p>For other investments, you have to do some work to calculate the internal
+rate of return. This is especially true of investments like building a
+factory or getting an education. These kinds of investments generally don't
+pay money in nice even amounts like a bank account does. Nevertheless,
+you can calculate an internal rate of return for these investments, and
+use it to decide which investments pay best.
+<p>To evaluate investments and calculate an internal rate of return, we
+need the concept of <b>income stream</b>.</p>
+
+<center>
+<h3>
+Income Stream</h3></center>
+In the grubby world of economic theory, where money is everything, any
+investment can be expressed as an income stream. An income stream lists
+years (or months or whatever) and the amounts of money that flow in or
+<h4>
+An Income Stream Example</h4>
+
+<p>Here is the income stream for what you get if you
+<ol>
+<li>Put $1000 in a 5% simple interest bank account
+<li>Take out the $50 interest each year.  ($50 is 5% of $1000.)
+<li>Take all the money out at the end of the sixth year.
+</ol>
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>-$1000</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+</tr>
+</table>
+In Year 0, which represents Now, we put $1000 in the bank. We put a negative
+number, -$1000 in for Income in Year 0, because the $1000 flows out from
+us.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$50</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$50</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$50</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$50</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$50</b></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+</tr>
+</table>
+In years 1 through 5, we will get paid $50, 5% of $1000. The 50s above
+are positive numbers, showing that the money flows to us.
+<p>Note: To keep things simple, we imagine that interest is paid annually.
+Most real life bank accounts pay interest monthly. Also, we imagine that
+we withdraw each year's interest payment from the bank. We don't leave
+it in the bank to compound (earn interest on the accumulated interest)
+during the following years.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP><b>$1050</b></td>
+</tr>
+</table>
+Imagine that at the end of year 6 we take our $1000 back. Our total income
+in year 6 is $1050, the $1000 principal plus the $50 interest we get in
+year 6. <img src="TwoIncomeStreams.gif" alt="" width="383" height="298" border="0" align="right">
+<h4>An Alternative Investment</h4>
+Now let's consider an investment that our financial vice president has
+proposed as an alternative to putting our $1000 in the bank for six years.
+This investment involves buying a machine that will cost $1000. It will
+give us $200 in operating profit per year for six years, starting the year
+after we buy it. At the end of six years, the machine will have no value,
+due to wear and obsolescence. There's no lump of money waiting for us at
+the end, as there is with the bank account.
+<p>This table shows the bank income stream and the machine income stream.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Bank</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Machine</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+</tr>
+</table>
+It's not obvious which investment is better, is it? We could try adding
+up the income streams ...
+<p>Bank Account: -1000 + 50 + 50 + 50 + 50 + 50 +1050 = 300
+<p>Machine: -1000 +200 +200 +200 +200 +200 + 200 = 200
+<p class="question">The income stream from the bank account adds up to $300. The income
+stream from the machine adds up to $200. Does this make the bank account
+better?
+<br>
+<input type="radio" name="irr1" value="yes">Yes.  Why make a simple problem complicated?</input>
+<br><input type="radio" name="irr1" value="maybe">No, not necessarily.  We need a more complicated calculation.</input>
+<div id="irr1-answer"></div>
+
+<p>The key is "present value" concept.&nbsp; This concept is reviewed below,
+but it is introduced in its own <a href="../dis/Dis.html">
+Interactive Tutorial on Discounting Future Income</a>. Please try that tutorial now if the above question
+puzzled you.
+<p>Why we need that concept: The bank account income stream pays more money in
+total, but most of that income is in the big lump of $1050 in year 6. The
+machine pays less in total, but it pays more money per year in the years
+that come sooner.&nbsp; Getting the money sooner may give the machine's
+income stream a higher present value than the bank's.</p>
+
+<center><h3>The Present Value of an Income Stream</h3></center>
+
+<center>The <b>present value of a future amount of income</b> is:
+<p>Present Value = (Future Value)/(1 + Discount Rate)&ordf;,
+<p>where the exponent &ordf; is the number of years in the future that
+the future value will be received. The discount rate is the same as the
+interest rate.</center>
+
+<p>An income stream is a series of future values. The <b>present value
+of an income stream</b> is calculated by adding up the present values of
+all the items in the income stream.
+<p>To calculate a present value, we need to pick a discount rate. Since
+one of our alternative investments is a 5% per year bank account, let's
+pick 5% per year as the discount rate.
+<table BORDER CELLSPACING=2 CELLPADDING=5 >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year (<em>a</em> in the formula)</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Machine income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>1.05&ordf;</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.0000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.0500</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.1025</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.1576</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.2155</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.2763</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.3401</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present values, at a 5% discount rate.<br>2nd row divided by 3rd row</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$181.41</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$172.77</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$164.54</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$156.71</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$149.24</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$15.14</td>
+</tr>
+</table>
+
+<p>The total of the present values is $15.14. This is the present value
+of the machine income stream at a 5% discount rate. 
+<blockquote>(If you check the addition,
+using the numbers shown in the table, you'll get $15.15.  The .01 difference is due to round-off error.)</blockquote>  The tutorial on discounting future 
+income has a nifty <a href="../dis/dis.html#spreadsheet">spreadsheet setup for calculating present values</a> that 
+you can copy and use in your own spreadsheet.  
+<p>Let's use the same method on the 5%-interest bank account.
+<table BORDER CELLSPACING=2 CELLPADDING=5 >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>5% bank account income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+</tr>
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>1.05&ordf;</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.0000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.0500</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.1025</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.1576</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.2155</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.2763</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.3401</td>
+</tr>
+
+
+<tr>
+<td VALIGN=TOP>Present values, 5% discount rate<br>2nd row divided by 3rd row</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$47.62</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$45.35</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$43.19</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$41.14</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$39.18</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$783.53</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$0.00</td>
+</tr>
+</table>
+<p>These present values add up to $0. <blockquote>(Actually, they add to $0.01, but that's
+due to round-off error.)</blockquote> </p>
+<p>The present value of an 5% bank account, evaluated
+    at an 5% discount rate, will always turn out to be $0.  Whenever the discount rate equals the interest rate, you will get $0 for the present value.</p>
+<p>When we compare, we find that, at a 5% discount rate, the machine has a higher present value ($15.14)
+than the 5% bank account ($0).  The machine wins!
+<p>The primitive method of adding up the income streams ...
+
+<p>Bank Account: -1000 + 50 + 50 + 50 + 50 + 50 +1050 = 300
+<p>Machine: -1000 +200 +200 +200 +200 +200 + 200 = 200
+<p>... would be valid if the interest rate were 0%. That would be if you could borrow money and pay it back without any extra for interest. 
+<p>So, now we have a way to compare investments and choose the better ones.  A drawback of the method is that we have to specify a discount rate first and do the calculation second.  Another method, the internal rate of return, lets us calculate a number for the investment first and compare that with our discount rate second.   
+</p>
+
+
+<center>
+<h3>
+Calculating the Internal Rate of Return</h3></center>
+One way to evaluate an investment is to calculate an internal rate of return. The calculation we just made for the bank account gives us an idea of what we want to do. Recall that the bank account's interest rate (5%) was the discount rate that made the 
+present value of its income stream total zero.
+<p>That is how we define the <strong>internal rate of return</strong>.  It is <strong>the discount rate that makes the net present value of the investment equal zero</strong>. 
+<p>Consider this table.  It shows the present value of the machine at two interest rates, 5% and 6%:
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a 5% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$181.41</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$172.77</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$164.54</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$156.71</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$149.24</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$15.14</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a 6% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$188.68</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$178.00</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$167.92</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$158.42</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$149.45</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$140.99</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$16.54</td>
+</tr>
+</table>
+<p>At a 6% per year discount rate, the machine investment's present value
+is less than $0. At a 5% discount rate, the present value is greater than $0. 
+<p>Mathematically, the present value is a continuous function of the discount rate.  The Intermediate Value Theorem implies that there must be a discount rate between 5% and 6% at which the present value is $0. 
+<p>Let's find that discount
+rate.  <p class="question">Type a number between .0500 and .0600 in the box.  Click the button to see what comes out for the present value.
+<br><input id="irr2-response" name="dis2" type="text"></input>
+<button id="irr2-button">Type a number in the box.  Then click this.</button>
+<span id="irr2-answer">If you type a number starting with 5, I'll move the decimal point to where it is supposed to be.  Don't type a % sign.</span><br>
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a <span id="irr2-drate">5.000</span>% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv1">190.48</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv2">181.41</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv3">172.77</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv4">164.54</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv5">156.71</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv6">149.24</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-total">15.14</span></td>
+</tr>
+
+<tr>
+</table>
+
+<div id="irr2A-answer">
+<p class="question">Please get to within $0.10 of a $0 total before moving on.<br><br>If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.  
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>You can get a present value $0.06 with a discount rate of .0547 or 5.47%.  That is as close to a $0 total as you can get unless you go to the next digit after the decimal point. 
+<p>The internal rate of return for the machine is therefore 5.47%.   
+<p>Comparing the internal rates of return of the two investments, we see that the machine's 5.47% internal rate of return is higher than the bank account's 5% internal rate of return. This tells us that the machine is a better-paying investment.
+<p>Two cautionary notes:
+<ol>
+<li>
+The idea that better investments have higher internal rates of return is
+appropriate for comparing investments that have their costs first and their
+positive incomes later, and which have about the same initial costs. Our
+imaginary bank account and machine fit this criterion, so we are OK to
+use the internal rate of return for comparison. More on this issue at the
+end of this tutorial.</li>
+
+<li>
+<b>Risk</b> can complicate the comparison of investments. For this tutorial
+let us assume that the risks of our alternative investments are the same.
+In particular, we will assume that the machine is just as safe as the bank
+account.</li>
+
+<br>In real life, investments that offer better payback generally carry
+greater risks that the future income won't be paid. If the machine is riskier
+than the bank account, you may prefer the bank account, even if its internal
+rate of return is lower. Even so, the internal rate of return is useful
+to know. It tells you how much caution would cost you, or how much reward
+there is if you choose to assume some risk.</ol>
+Let's look at the two investments again.&nbsp; Here are the income streams
+and each investment's internal rate of return (IRR):
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Machine</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.47%</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>5% bank account</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.00%</td>
+</tr>
+</table>
+A student once asked: Suppose you don't need any money until year 6? Doesn't
+that make the bank account better? The total of the income stream (not
+discounted) is higher for the bank, and it gives you the money when you
+need it.
+<p>The answer is: Even if the times when you'll need money don't match
+when the investment pays, you should still go by the internal rate of return.
+That's especially true if the investment pays you money <i>before</i> you
+need it.
+<p>That's because you can use the bank, even if you buy the machine. You
+can deposit the extra income from the machine into a 5% account. At the
+end of Year 6, you'll have a bigger lump of money than you would have had
+if you had put your $1000 in the bank.
+<p>Here's how it works, in laborious detail, after you buy the machine in year 0 for $1000:</p>
+
+<table BORDER  >
+<tr>
+<td width="62%">At the end of Year 1, you get $200.
+You keep $50 for spending, just like you would do for the bank account
+(according to what we assumed).  You have $150 left over.  You put the extra $150 into the bank.</td>
+
+<td ALIGN=RIGHT width="38%"><b>End of year 1:</b>
+<br>Starting bank balance is $0.00.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>You take $50.00.&nbsp;
+<br>You add to bank account $150.00.&nbsp;
+<br>Bank balance is $150.00.&nbsp;</td>
+</tr>
+
+<tr>
+<td>At the end of Year 2, the bank pays you 5% interest on your $150. That
+makes your bank balance $157.50. At the same time, you get another $200
+from the machine. You keep $50 of that for spending, and put $150 in the
+bank. Your bank balance is $157.50 + $150 = $307.50.</td>
+
+<td ALIGN=RIGHT><b>End of year 2:</b>
+<br>Bank adds 5% of $150.00, which is $7.50.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>You take $50.00.&nbsp;
+<br>You add to bank account $150.00.&nbsp;
+<br>Bank balance is $307.50.&nbsp;</td>
+</tr>
+
+<tr>
+<td>At the end of Year 3, the bank pays you 5% interest on your $307.50.
+That makes your bank balance $322.88. The machine pays you another $200.
+You keep $50 and put $150 in the bank. Your bank balance is $322.88 + $150
+= $472.88.&nbsp;</td>
+
+<td ALIGN=RIGHT><b>End of year 3:</b>
+<br>Bank adds 5% of $307.50, which is $15.38.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>You take $50.00.&nbsp;
+<br>You add to bank account $150.00.&nbsp;
+<br>Bank balance is $472.88.</td>
+</tr>
+
+<tr>
+<td>At the end of Year 4, the bank pays you 5% interest on your $472.88.
+That makes your bank balance $496.52. The machine pays you another $200.
+You keep $50 and put $150 in the bank. Your bank balance is $496.52 + $150
+= $646.52.&nbsp;</td>
+
+<td ALIGN=RIGHT><b>End of year 4:</b>
+<br>Bank adds 5% of $472.88, which is $23.64.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>You take $50.00.&nbsp;
+<br>You add to bank account $150.00.&nbsp;
+<br>Bank balance is $646.52.&nbsp;</td>
+</tr>
+
+<tr>
+<td>At the end of Year 5, the bank pays you 5% interest on your $646.52.
+That makes your bank balance $678.84. The machine pays you another $200.
+You keep $50 and put $150 in the bank. Your bank balance is $678.84 + $150
+= $828.84.&nbsp;</td>
+
+<td ALIGN=RIGHT><b>End of year 5:</b>
+<br>Bank adds 5% of $646.52, which is $32.32.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>You take $50.00.&nbsp;
+<br>You add to bank account $150.00.&nbsp;
+<br>Bank balance is $828.84.&nbsp;</td>
+</tr>
+
+<tr>
+<td>Finally, at the end of Year 6, the bank pays you 5% interest on your
+$828.84 That makes your bank balance $870.28. The machine pays you its
+last $200. Your withdraw the $870.28 from the bank, and you have $870.28
++ $200 = $1070.28. By comparison, at the end of six years with the bank
+alone you get $1050. With the machine, you're ahead by $20.28. OK, it's
+not that much, but it does show that even if you don't need most of your
+money until Year 6, you wind up with more if you buy the machine.</td>
+
+<td ALIGN=RIGHT><b>End of year 6:</b>
+<br>Bank adds 5% of $828.84, which is $41.44.&nbsp;
+<br>Bank balance is $870.28.&nbsp;
+<br>The machine pays you $200.00.&nbsp;
+<br>The total you finish with is $1070.28.&nbsp;</td>
+</tr>
+</table>
+<p>Buy the machine, take out $50 a year from the proceeds, and you finish with $1070.28.  Using the bank alone, you finish with $1050.</p>
+<p>So, if you need $50 a year for five years, and then all the money after six years, the machine/bank combination is a better investment than the bank alone.  You are better off buying the machine and then use the bank to earn interest on the money that you don't need right away each year. </p>
+<p>If the machine investment pays you money <i>after</i> you need it (for
+  instance, if you need $300 in Year 1) then you should compare the interest
+  rate you'd pay to <i>borrow</i> money with the machine's internal rate
+  of return.
+</p>
+<blockquote>
+<blockquote>A digression:&nbsp; We keep talking about the "internal" rate
+of return.&nbsp; Were you wondering if there is such a thing as an "external"
+rate of return?&nbsp; There is, and the above analysis is an example, because
+it takes into account the interest that you can earn from machine's payments
+in the bank, which is an investment separate from, and thus "external"
+to, the machine investment itself. (Thanks to H.E.M. for putting me onto
+this.)
+<br>&nbsp;
+<center>
+<h3>
+Internal Rate of Return Summary (so far)</h3></center>
+</blockquote>
+</blockquote>
+The internal rate of return is the interest rate that makes the present
+value of the investment's income stream -- its costs and payoffs, discounted to the present -- add
+up to 0.
+<p>The internal rate of return is a measure of the worth of an investment.  Ignoring differences of risk, an investment with a higher internal rate of return is a better money-maker than an investment with a lower internal rate of return.
+<blockquote>That generality has some exceptions.  We come back to this at the end of this tutorials.</blockquote>
+<center>
+<h3>
+Some Applications</h3></center>
+
+<center>Let's look at three applications of the internal rate of return.</center>
+
+<p>1. Evaluating a bond sold at a discount.
+<p>2. Detecting an economic shortage.
+<p>3. The effect of regulation on innovation.
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<h4>
+Application 1. Evaluating a bond sold at a discount.</h4></center>
+
+<center>Here's a common type of investment, a bond sold at a discount.</center>
+
+<p>The Sam's Software Corporation (a fictitious entity) is selling 5-year
+$1000 bonds that pay 1% interest per year. The bonds are selling at $800.
+<p class="question">How do you evaluate the bonds as an investment?
+<br>
+<input type="radio" name="irr3" value="help">Help!  Please explain what a bond is.</input>
+<br><input type="radio" name="irr3" value="irr">Calculate the internal rate of return.  That tells you the yield to maturity.</input>
+<br><input type="radio" name="irr3" value="why">Why bother with math?  The rate of return is 1%, the interest rate.</input>
+<div id="irr3-answer">
+<p>Leaving space until you answer the above question correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>The first step is to write out the income stream. I'll expand that compressed description of the bond:
+<ul>
+<li>In year 0, you pay out $800 to buy the bond.
+<li>In years 1 through 4, you get 1% of $1000 (which is $10) as an interest payment.
+<li>In year 5, you get a $10 interest payment, and you get the $1000 face value of the bond.
+</ul>
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP><span class="question">Type an income stream number in this row:</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year0response" name="irr4-year0response" type="text" size="5"></input>
+</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year1response" name="irr4-year0response" type="text" size="5"></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year2response" name="irr4-year0response" type="text" size="5"></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year3response" name="irr4-year0response" type="text" size="5"></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year4response" name="irr4-year0response" type="text" size="5"></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<input id="irr4-year5response" name="irr4-year0response" type="text" size="5"></td>
+</tr>
+<tr>
+<td VALIGN=TOP><span class="question">Click the corresponding button:</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year0button">Check<br>what's<br>above.</button></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year1button">Check<br>what's<br>above.</button></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year2button">Check<br>what's<br>above.</button></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year3button">Check<br>what's<br>above.</button></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year4button">Check<br>what's<br>above.</button></td>
+
+<td ALIGN=RIGHT VALIGN=TOP><button id="irr4-year5button">Check<br>what's<br>above.</button></td>
+</tr>
+</table>
+<div id="irr4-answer"></div>
+
+<div id="irr4A-answer">
+<p>Leaving space while you work on this.
+<p><button id="irr4A-button">When you have them all, or when you have had enough, click this.</button>
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Here is what you should have above.  It is the income stream for a $1000 5-year bond, paying 1% interest annual, selling at $800.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+</tr>
+</table>
+<p>Let's do a net present value calculation with this.
+<p>Let's use a discount rate of 1%.  That equals the bond's nominal rate of interest, in that it pays 1% of the face value in interest each year.  
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td VALIGN=TOP WIDTH="16%">Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+</tr>
+<tr>
+<td VALIGN=TOP>... divided by ...</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>0</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>1</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>2</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>3</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>4</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>5</sup></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income discounted at 10%</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.90</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.80</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.71</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.61</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$960.98</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200.00</td>
+</tr>
+</table>
+The present value of this bond, evaluated at a 1% discount rate, is $200.
+Notice that this equals the amount of the initial price discount. The $800 price is $200 less than the $1000 maturity value.  It works this way whenever the discount rate equals a bond's nominal rate of interest.  
+<p>Let's find the internal rate of return for this bond. 
+<p>You know that the internal rate of return is bigger than 1%, because the present value at a 1% discount rate is bigger than 0.
+<p>See how close you can get the total present value to $0. The discount
+rate at that the present value closest to $0 will be our approximation
+of the internal rate of return. As before, make a mental note of this discount
+rate, then go on.
+<p>Let's find that discount
+rate.  <p class="question">Type a number between .010 and .090 (which is way too big) in the box.  Click the button to see what comes out for the present value.
+<br><input id="irr5-response" name="irr5" type="text"></input>
+<button id="irr5-button">Type a number in the box.  Then click this.</button>
+<span id="irr5-answer">If you type a number starting with 1, 2, 3, etc., I'll move the decimal point to where it is supposed to be.  Don't type a % sign.</span><br>
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a <span id="irr5-drate">1.00</span>% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv1">9.90</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv2">9.80</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv3">9.71</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv4">9.61</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv5">960.98</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-total">200.00</span></td>
+</tr>
+
+<tr>
+</table>
+
+<div id="irr5A-answer">
+<p class="question">Please get to within $0.50 of a $0 total before moving on.<br><br>If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.  
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+
+<p>
+
+The discount rate that zeroes -- approximately -- the total present value is 0.057, or 5.7%.  Being able to buy this bond at a discount made the internal rate of return much higher than this bond's 1% coupon rate.
+<p>If a bond is risky, it will sell at a discount like this.  That gives the buyers a bigger return, which rewards them for assuming the risk that the bond will default.  The perceived riskiness determines the size of the discount.
+<center>
+<h4>
+Application 2: Detecting an Economic Shortage</h4></center>
+
+Economists use the term <i>economic shortage</i> to mean a situation
+in which the quantity supplied of some good or service is less than what
+it would be if the market were functioning freely and competitively.  In other words, "economic" shortages or supluses happen when the market fails to equilibrate.
+
+<p>Shortages can manifest themselves two ways. One is with long lines of
+buyers and empty store shelves. The other is with prices higher than cost
+plus normal profit. (More on "normal profit" later.)
+<p>Detecting the first type of shortage is easy -- you just observe the
+lines or empty shelves. Detecting the second type is harder.
+<p>How do you judge when prices are high? Use the internal rate of return!
+We'll illustrate this with our machine investment example.
+<p>Suppose that there are two investments available to large numbers of
+investors. One is machines that currently pay off like this:
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.47%</td>
+</tr>
+</table>
+<p>The other is the 5% bank account. 
+<p>The machine has a higher internal rate
+of return, at 5.47%, than the bank's 5%. What happens? Firms like yours
+take money out of the bank to buy machines.
+<p class="question">As more and more firms buy machines, put them to work, and try to sell
+the machine's products, what would you expect to happen to the typical
+machine's income stream?
+<br>
+<input type="radio" name="irr6" value="same">The income amounts should <font color=blue>not change.</font></input>
+<br><input type="radio" name="irr6" value="up">The income amounts should go <font color=green>up.</font></input>
+<br><input type="radio" name="irr6" value="down">The income amounts should go <font color=red>down.</font></input>
+<div id="irr6-answer"></div>
+<div id="irr6A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>As the supply of the machine's products expands, the amount of income earned in years 2-6 should shrink, on average.
+That will make the internal rate of return fall.
+<p>For example, suppose that annual income falls by just $1 to $199.<p>
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$199</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.31%</td>
+</tr>
+</table>
+The internal rate of return falls to 5.31%, from the 5.47% it was before, if the expected annual payout falls by $1.
+<p class="question">How far would you expect the income amounts to fall?
+<br>
+<input type="radio" name="irr7" value="0income">Until the income amounts are all $0.</input>
+<br><input type="radio" name="irr7" value="0irr">Until the internal rate of return is 0%.</input>
+<br><input type="radio" name="irr7" value="5irr">Until the internal rate of return matches the bank's 5%.</input>
+<div id="irr7-answer"></div>
+<div id="irr7A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Market equilibrium income stream for the machine under competition, if banks are paying 5% interest:
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$197.02</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.00%</td>
+</tr>
+</table>
+Once income falls this far, people will no longer want to take money out
+of the bank to buy machines. The supply of machine products will stop expanding,
+and the income you can get from a machine will stop falling. (Given the
+time lag in decision-making, income may fall further than this and then
+later come back up. Equilibrium will be reached when there's no incentive
+to shift money either from bank to machine or from machine to bank.)
+<p>How economic shortage fits with this:
+<p>If an investment has a high rate of return that persists over a long
+period of time, economists infer that competition must not be working as
+it should to lower income and equalize rates of return.
+<p><b>Normal profit</b> is profit equivalent to what you could earn in
+the bank. No business would persist that didn't earn normal profit. Why
+put money into a business if you can do better in a no-effort bank account?
+But if the return to an investment stays higher than normal for a long
+time, that's an indication of an economic shortage, and some kind of monopoly
+restriction.
+<p>Speaking of above-normal profit and economic shortages, medical equipment makers are notorious for selling equipment in the U.S. at a generous markup over cost.
+<p>If there is competition in the machines' products' market, and incomes fall to where the incentive to buy more machines is gone, then the demand for machines will now be elastic.  A reduction in the price of the machine to $985 would put the IRR back up to 5.47%.  Machine manufacturers would start making money again, until the IRR for the machines' users got back down to 5%.
+<p>Looking at this from the opposite direction, if there is no competition in the market for the machine's product, the price of the machine can stay high.
+<p>Medical school, internship, and residency are, for the individual doctor, an investment with an IRR.  In the past, surgical specialty education had a higher IRR than primary care education.  This helped induce new M.D.s to go into specialties.  If, with more government payment control, the IRR for specialties drops, that may turn off the incentive that lures doctors into specialties.  If doctors' incomes get so low that the IRRs are less than student loan rates, there could be shortages of doctors in the future.  
+<p>In other countries, they solve this by making medical education practically free for the student.  Lowering the initial cost raises the IRR for a medical career.  This also helps the medical schools compete with other professions' schools for students.   
+<center>
+<h4>
+Application 3: Regulation Delays and the Internal Rate of Return</h4></center>
+
+<p>Changing the timing of future payoffs changes the internal rate
+of return.
+
+<p>Let's go back to our original machine investment again. Imagine that
+we have a patent to protect us against competitors.  Our payoffs look like this (as above):
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>5.47%</td>
+</tr>
+</table>
+<p>Suppose that Congress enacts a new law regulating machine safety.  The Food and Drug Administration now requires that the manufacturer prove that the machine is safe.  That will take time, causing a delay
+in the start of the use of the machine, even if you buy it now. The income stream might change
+to this:
+
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >7</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >IRR</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>?????</td>
+</tr>
+</table>
+The amounts in the income stream are the same, but the income is shifted later by one year.
+
+<p>Let's find the internal rate of return for this machine now. <p class="question">Type a number between .0100 and .0547 in the box.  Click the button to see what comes out for the present value.
+<br><input id="irr9-response" name="irr9" type="text"></input>
+<button id="irr9-button">Type a number in the box.  Then click this.</button>
+<span id="irr9-answer">If you type a number starting with 1, 2, 3, etc., I'll move the decimal point to where it is supposed to be.  Don't type a % sign.</span><br>
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >7</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a <span id="irr9-drate">5.47</span>% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv1">0</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv2">179.79</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv3">170.47</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv4">161.63</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv5">$153.24</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv6">145.30</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-pv7">137.76</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr9-total">-51.81</span></td>
+</tr>
+
+<tr>
+</table>
+
+<div id="irr9A-answer">
+<p class="question">Please get to within $0.10 of a $0 total before moving on.<br><br>If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.  
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+
+<p>The discount rate that makes the total present value as close as you can
+get to $0 with this number of decimal places is 4.19%. The regulatory delay
+drops the internal rate of return to below what you can get from the bank.
+No one will invest in one of these machines now.
+<p>One way this machine's products could come to market would be if the
+prices for the machine's products go up. The prices would have to rise
+enough to make the internal rate of return as high as the bank's 5%. In
+this way, consumers wind up paying for the regulatory delay in higher prices.
+Notice that I didn't add any paperwork or testing cost to the calculations.
+The higher prices are purely because of the delay and the need to compete
+with other investments. Adding in the paperwork cost of complying with
+regulations would make the internal rate of return even lower.
+<p>Another way this machine's products could come to market would be if
+the price of the machine goes down. Like the discounted bond, a discount
+in the price of the machine would raise the internal rate of return. In
+this circumstance, the machine's manufacturer would pay the delay cost
+of the regulation.  The numbers here imply that the price would have to drop to $967 from $1000 to get the IRR up to just over 5%.
+</p>
+<p>Suppose that the machine manufacturer had been expecting to sell 10,000 machines this year.  Would it spend $100,000 on lawyers who would tie up the FDA and prevent the regulations from being written for six years?
+<br><input type="radio" name="irr10" value="yes">You betcha!</input>
+<br><input type="radio" name="irr10" value="no">They could, "<a href="http://www.pbs.org/newshour/bb/white_house/july-dec97/nixon_11-26.html">but it would be wrong</a>."</input>
+<div id="irr10-answer"></div>
+<div id="irr10A-answer">
+
+
+<!--h4>
+Does Regulation Discourage Research and Innovation?</h4></center>
+The pharmaceutical industry argues that something much like this happened
+to them after 1962, when Congress tightened regulation of new drugs. New
+drug applications began taking longer, putting off the start of the payoffs
+from research. The regulations also made research more expensive, by adding
+requirements, and shortened the whole income stream by taking up time,
+cutting into the period of patent-protected high profits. The rate of return
+to research fell. By the above reasoning, that should cause less to be
+spent on research, so fewer new drugs would be developed.
+<p>There are two problems with this argument. One is that drug industry
+research spending has increased since 1962, even allowing for inflation.
+The rate of return is evidently still good enough to attract money into
+research.
+<p>The second problem is that regulation is there for a purpose: to keep
+unsafe and ineffective drugs off of the market. The industry's record is
+not spotless. "Research" is not necessarily good, unless it's research
+that might lead to safe and effective products.
+<p>Any testing system, whether adopted voluntarily by industry or imposed
+by government, discourages investment. The price you pay for safety and
+effectiveness assurance is a reduction in innovation. How much assurance
+do we get? Is the price too high?
+<p>These are issues that are better handled in class discussion than on
+a computer. I hope that you now understand what the internal rate of return
+is and how the concept figures in the controversy.
+<br>&nbsp;
+<br-->&nbsp;
+<center>
+<h3>
+Internal Rate of Return -- Review and Summary</h3></center>
+An income stream for an investment is all of the investment's costs and
+payoffs, along with when each cost and payoff will happen.
+<p>The present value of an investment is the amount of money you'd need
+now to be able to duplicate the investment's income stream. The present
+value is calculated using a discount rate which you set to equal your bank's
+interest rate or the rate of return of your best alternative investment.
+<p>The internal rate of return is the discount rate that makes the present
+value of the investment's costs and payoffs add up to 0.</p>
+<center>
+<h4>
+From the applications:</h4></center>
+The yield to maturity of a discounted bond equals its internal rate of
+return.
+<p>Investments with higher internal rates of return attract money away
+from investments with lower internal rates of return.
+<p>If a kind of investment has a persistently high internal rate of return,
+something is preventing the market from reaching a competitive equilibrium.
+<p>Regulation can reduce the rate of return to innovation, just by delaying
+the payoffs. How to protect the public without stifling innovation is a
+major problem of regulation, in pharmaceuticals, for example.
+<br>&nbsp;
+<center>
+<h4>
+Perils of Using the Internal Rate of Return</h4></center>
+The internal rate of return is <i>not</i> a good way evaluate an investment
+that has costs later rather than just earlier.&nbsp; An example of that
+would be an investment that generates an environmental problem that will
+require a cleanup at the end of the income stream.&nbsp; For some such
+investments, the <i>worse</i> investments have the higher internal rates
+of return.&nbsp; Please see the <a href="../Invest/invest.html">next tutorial</a>.
+<p>That's all for now. Thanks for participating!&nbsp;
+<hr>
+Comments?  Please e-mail me at 
+<script language="Javascript" type="text/javascript">
+<!--
+var name="sam"+"&#x0040;"+"sambaker"+"&#x002E;"+"com";
+document.writeln('<a href="mai'+'lto:'+name+'">'+name+'</a>');
+-->
+</script>
+<br><a href="..">To the list of tutorials</a></body>
+</html>

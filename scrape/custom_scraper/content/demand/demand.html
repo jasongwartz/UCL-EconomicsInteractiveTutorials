@@ -1,0 +1,312 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="Description" content="Introductory economics tutorial on demand">
+	<meta name="Keywords" content="economics, demand">
+   <title>Economics Interactive Tutorial:  Demand</title>
+<style>
+body {
+	font-family:sans-serif;
+	max-width: 50em;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+h1, h2, h3 {
+	color:#006600;
+}
+.correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: DarkBlue;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="Demand.js" ></script>
+
+</head>
+<body>
+
+<h5>
+<a href="..">Economics
+Interactive Tutorial</a> modified August 19, 2013 <font size=-1><a href="../Instruct.html">(Instructions)</a></font></h5>
+
+<h1>
+Demand</h1>
+Copyright &copy; 1985, 1988, 1991, 1996, 1998 Samuel L. Baker. 
+<div id="rightcontent"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Economics tutorials</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="sambaker.com" property="cc:attributionName" rel="cc:attributionURL">Samuel L. Baker</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</div>
+ 
+<p>This tutorial introduces the concept of demand. We'll include some numerical
+examples to give you practice in interpreting demand charts and graphs.
+<p>Let's start with a definition.
+<h2>
+ECONOMICS DEFINITION OF DEMAND</h2>
+<p>"Demand" is the relationship between the price that is charged and the
+amount that will be bought at that price.
+<p>From this definition, demand is not a single quantity. Rather, it is
+a table or graph showing some prices that might be charged and the corresponding
+amounts that buyers will want to buy.
+<p>"Quantity demanded" is the amount that will be bought at a particular
+given price.
+<p>Here's an example:
+<p>Suppose that the table below shows the demand for your small company's
+disposable surgical gowns. (Please forgive me if the prices are unrealistic.)
+<b>The
+key idea</b>, again, is that the <b>demand</b> is the <b>entire table</b>,
+not any one number in the table.
+<h2>
+Demand for Disposable Hospital Gowns</h2>
+<p>The table below shows some possible prices for gowns. Under each price is the
+corresponding number of gowns that buyers would buy per day at that price.</p>
+<font face="sans-serif"><table cellspacing="2" cellpadding="2" border="2" align="left">
+<tr align="right">
+    <td align="left">Price per gown:</td>
+    <td>$1</td>
+    <td>$2</td>
+    <td>$3</td>
+    <td>$4</td>
+    <td>$5</td>
+    <td>$6</td>
+</tr>
+<tr align="right">
+    <td align="left">Quantity of Gowns Demanded per Day:</td>
+    <td>60</td>
+    <td>30</td>
+    <td>20</td>
+    <td>15</td>
+    <td>12</td>
+    <td>10</td>
+</tr>
+</table>
+</font>
+<br clear=all>
+<p class="question">Based on this table, how many gowns will be bought per day if you charge $4 each?
+<br>
+<input id="D1-response" name="D1" type="text"></input>
+<button id="D1-button">Type a number in the box.  Then click this.</button>
+<div id="D1-answer"></div>
+
+<p>That question asked for the quantity demanded at that particular price
+of $4. <br><span class="question">Suppose that you raise your price to $5 or $6. Does the quantity demanded go
+up or down?</span>
+<br><input type="radio" name="D2" value="up">Up</input>
+<input type="radio" name="D2" value="down">Down</input>
+<div id="D2-answer"></div>
+ 
+
+<p>Please notice that the table (<i>repeated below</i>) says "... Gowns Demanded per Day". Demand quantities always have a time frame. If you charge $4
+you can sell:
+<br>15 gowns per day, or
+<br>75 gowns per 5-day week, or
+<br>3750 gowns per 50-week year.
+<br>To put a Quantity number in a demand table like this, you must have a time frame in mind.  Demand quantities are "flows," in economics jargon.
+</p>
+<font face="sans-serif"><table cellspacing="2" cellpadding="2" border="2" align="left">
+<tr align="right">
+    <td align="left">Price per gown:</td>
+    <td>$1</td>
+    <td>$2</td>
+    <td>$3</td>
+    <td>$4</td>
+    <td>$5</td>
+    <td>$6</td>
+</tr>
+<tr align="right">
+    <td align="left">Quantity of Gowns Demanded per Day:</td>
+    <td>60</td>
+    <td>30</td>
+    <td>20</td>
+    <td>15</td>
+    <td>12</td>
+    <td>10</td>
+</tr>
+</table>
+</font>
+<br clear=all>
+<p>You can also use the demand table to go from a quantity to sell to a price
+to charge. For example, <br><span class="question">if you want to sell 30 gowns per day, what price
+should you charge?</span>
+<br><input id="D3-response" name="D3" type="text"></input>
+<button id="D3-button">Type a number in the box. Then click this.</button>
+<div id="D3-answer"><span class="question">Do not type a $ sign.  Just the number.</span></div>
+
+<h2>
+DEMAND GRAPHS</h2>
+<p>In textbooks, demand relations are often presented as graphs rather than
+tables. Mathematically the two are equivalent. Some people can't stand
+graphs, but many others find that graphs are easier to take in at a glance
+than tables are. So, for those of you who like graphs, here is that demand
+relation graphed:</p>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEMAND FOR DISPOSABLE GOWNS
+
+Price
+$6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+$5|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+$4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+$3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+$2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+
+$1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;&nbsp; ....:....:....:....:....:....:....:....:....:....:....:....:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity</pre>
+<p>The points form a line that slopes downward from left to right. Most demand
+graphs do this. The downward slope means that at higher prices less is
+sold, while at lower prices more is sold.
+<p>Each * on the graph corresponds to a price-quantity pair in the table.
+This is shown in the graph below by labelling with A through F the points
+on the graph and the corresponding columns in the table.</p>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEMAND FOR DISPOSABLE GOWNS
+
+Price
+
+$6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+$5|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E
+$4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+$3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+$2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+$1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; ....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10</pre>
+<p class="question">Which point on this graph tells you the quantity demanded when the price
+you charge is $2?
+<br><input type="radio" name="D4" value="a">A</input>
+<input type="radio" name="D4" value="b">B</input>
+<input type="radio" name="D4" value="c">C</input>
+<input type="radio" name="D4" value="d">D</input>
+<input type="radio" name="D4" value="e">E</input>
+<input type="radio" name="D4" value="f">F</input>
+<div id="D4-answer"></div>
+<!--p>Here's the graph again:</p>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEMAND FOR DISPOSABLE GOWNS
+
+Price
+
+$6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+$5|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E
+$4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+$3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+$2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+$1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; ....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10</pre-->
+<p>When you change your price, you move along the demand graph from one point
+to another. <p class="question">Suppose your price was $2 and you change it to $4. <br>You move
+along the demand graph to what point? 
+<br><input type="radio" name="D41" value="a">A</input>
+<input type="radio" name="D41" value="b">B</input>
+<input type="radio" name="D41" value="c">C</input>
+<input type="radio" name="D41" value="d">D</input>
+<input type="radio" name="D41" value="e">E</input>
+<input type="radio" name="D41" value="f">F</input>
+<div id="D41-answer"></div>
+<h2>
+DEMAND SHIFTS</h2>
+<p>Demand can shift. A shift in demand means that the relationship between
+price and quantity demanded changes. In the graph, all the quantities shift
+up (which is to the right) or down (which is to the left). In the table,
+shifting up means that all the quantity demanded numbers get bigger, while
+the prices stay the same. Shifting down means all the quantities demanded
+get smaller at the same prices. For example, suppose some customers hear a rumor
+that your gowns are not 100% waterproof. <span class="question">Which way will your demand
+probably shift? </span>
+
+<br><input type="radio" name="D5" value="up">Up</input>
+<input type="radio" name="D5" value="down">Down</input>
+<div id="D5-answer"></div>
+
+<p>Let's animate this.  
+<p><input type="radio" name="D51" value="before">Graph of demand before the rumor.</input>
+<br><input type="radio" name="D51" value="after">Graph of demand with the rumor.</input>
+<div id="D51-answer"><span class="question">Click the radio buttons above to show your demand before and after the bad rumor spreads.</span></div>
+
+<p>The bad rumor makes each point move to the left, which is "down." At
+every price, there are fewer buyers than there used to be. This is what
+economists mean by a "fall in demand."  The whole curve shifts to the left.
+<!--pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEMAND FOR DISPOSABLE GOWNS
+
+Price
+&nbsp;6|&nbsp;&nbsp;&nbsp; F
+&nbsp;5|&nbsp;&nbsp;&nbsp;&nbsp; E
+&nbsp;4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+&nbsp;3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+&nbsp;2|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B
+&nbsp;1|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp; ....:....:....:....:....:....:....:....:....:....:....:....:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 10&nbsp;&nbsp; 15&nbsp;&nbsp; 20&nbsp;&nbsp; 25&nbsp;&nbsp; 30&nbsp;&nbsp; 35&nbsp;&nbsp; 40&nbsp;&nbsp; 45&nbsp;&nbsp; 50&nbsp;&nbsp; 55&nbsp;&nbsp; 60&nbsp; Quantity
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F
+Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $6
+Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</pre-->
+<p>At the old higher demand, you could sell 30 gowns a day at $2. <br><span class="question">At
+the new lower demand -- click the "Graph of demand with the rumor" button above to see this -- how many can you sell at a price of $2?</span>
+<br><input id="D6-response" name="D6" type="text"></input>
+<button id="D6-button">Type a number in the box. Then click this.</button>
+<div id="D6-answer"></div>
+<p>When your demand shifts down, the amount you sell doesn't necessarily
+go down. It depends on what you do with your price. For example, you can
+keep on selling 30 gowns per day if you cut your price to what?
+<br><input id="D7-response" name="D7" type="text"></input>
+<button id="D7-button">Type a number in the box. Then click this.</button>
+<div id="D7-answer"><span class="question">Do not type a $ sign.  Just the number.</span></div>
+
+<h2>
+Moving Along the Demand Graph versus Shifts in the Demand Graph</h2>
+<p>In general parlance, statements like "Demand went up" or "Demand will go down" are ambiguous.
+They can mean a movement along the demand graph, as price changes, or
+they can mean a shift of the whole demand graph.
+<p>Here are some situations where someone might say the demand changed.
+Which ones are changes in the quantity demanded, moving along the demand
+curve in response to price changes? Which ones are changes in the demand
+curve itself? 
+<p class="question">As HIV-AIDS spread, sales of rubber gloves skyrocketed.
+<br><input type="radio" name="D8" value="along">That was movement ALONG the demand curve for gloves.</input>
+<br><input type="radio" name="D8" value="shift">That was movement OF the demand curve for gloves.</input>
+<div id="D8-answer"></div>
+<p class="question">A wellness clinic hires a handsome receptionist. More patients come.
+<br><input type="radio" name="D9" value="along">That is movement ALONG the demand curve for clinic visits.</input>
+<br><input type="radio" name="D9" value="shift">That is movement OF the demand curve for clinic visits.</input>
+<div id="D9-answer"></div>
+<p class="question">You cut your price on routine physical examinations. More patients come.
+<br><input type="radio" name="D10" value="along">That is movement ALONG the demand curve for exams.</input>
+<br><input type="radio" name="D10" value="shift">That is movement OF the demand curve for exams.</input>
+<div id="D10-answer"></div>
+<p class="question">You double what you charge for an organ transplant.
+It makes little difference in patients per year.
+<br><input type="radio" name="D13" value="along">That is movement ALONG the demand curve for transplants.</input>
+<br><input type="radio" name="D13" value="shift">That is movement OF the demand curve for transplants.</input>
+<div id="D13-answer"></div>
+<h2>
+SUMMARY</h2>
+<p class="question">Demand is ...
+<br><input type="radio" name="D15" value="bought">... how much gets bought and sold.</input>
+<br><input type="radio" name="D15" value="curve">... a curve, or a table, showing prices and the corresponding quantities demanded.</input>
+<div id="D15-answer"></div>
+
+<hr>That's all for now. Thanks for participating!
+<p><a href="..">Economics
+Interactive Tutorials</a>
+</body>
+</html>

@@ -1,0 +1,984 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win95; U) [Netscape]">
+      <meta name="Description" content="Introductory economics tutorial on marginal cost and the optimal output rate for a price-taking firm">
+	<meta name="Keywords" content="economics, marginal cost">
+   <title>Economics Interactive Tutorial:  Marginal Cost and the Optimal Output Rate</title>
+<style>
+BODY { 
+	font-family: arial, helvetica, sans-serif;  
+	background-color: #FFFFFF; 	
+	max-width: 50em;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto; 
+	}
+
+H1 { color: #990000 }
+H2 { color: #990000 }
+H3 { color: #990000 }
+UL { list-style : square }
+UL.sub { list-style : circle }
+
+.correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: DarkBlue;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="mcost.js" ></script>
+
+</body>
+
+<h5>
+Economics Interactive Tutorial (<a href="..">List</a>)
+</h5>
+<h1>
+Marginal Cost and the Output Rate Under Competition</h1>
+Copyright &copy; 1985-2000 Samuel L. Baker
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Economics tutorials</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="sambaker.com" property="cc:attributionName" rel="cc:attributionURL">Samuel L. Baker</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+
+<br>Revised August 19, 2013
+<p>This tutorial shows how, in theory, a business firm in a competitive
+industry can use the marginal cost concept developed in the previous tutorial
+to decide how much to produce and sell.
+<p>The big idea:  A <b>marginal decision rule</b> applies to firms in competitive industries.
+<ul><li></a>A "competitive industry," in economics jargon, is an industry in which
+each firm must sell at the going price, take it or leave it. In the economist's
+theoretical idea of a competitive industry, there are so many firms that
+the market price does not go up if any one firm sells less output, nor
+does the price go down if the one firm sells more output. Farming is a
+good example.</ul>
+<p>The marginal decision rule theory also applies to any firm that is a "price taker," not a "price maker."
+<ul><li></a>A health care provider is a "price taker" if it must sell its services at a price fixed
+by the government, or other major payor.  For example, a hospital that takes Medicare patients has to take the price that the U.S. Centers for Medicare and Medicaid Services sets.  All the hospital can do is decide how much service capacity to have.</ul>
+<p>The marginal decision rule theory assumes that the firm's only goal is maximum profit. A health
+care organization with a community service orientation has other goals,
+but we ignore them for the time being.
+<p>We'll be working again with the imaginary Joan's Home Care Co., using
+the same cost numbers as in the preceding tutorial. We'll assume that Joan's
+is a price taker, so the only decision to be made is how many patients
+to treat per year, based on whatever the going price is.
+<h2>
+The Marginal Decision Rule</h2>
+The marginal decision rule is:
+<p><b>Expand production if and only if the price is greater than the marginal
+cost.</b>
+<p>The idea here is simple, once you get used to the jargon. Increasing
+production makes both total cost and total revenue go up. If the revenue
+goes up more than the cost, profit goes up. (Profit = total revenue - total
+cost.) Marginal cost is how much cost goes up from making one more. The
+price is how much revenue goes up from selling one more. (This is where
+the price-taker assumption comes in -- you don't have to cut your price
+to sell more.) If the price is bigger than the marginal cost, then what
+you gain in revenue is greater than what you lose in added cost. That makes
+your profit higher, so you should go ahead and expand production.
+<p>On the other hand, if price is less than marginal cost, increasing production
+costs you more than the revenue you gain. You should not expand production.
+<p>Let's see how this works. Here is Joan's cost table, showing the total
+cost and the marginal cost for each number of patients. Assume as before
+that patients sign one year contracts, so we don't have to bother with
+fractions of patients.
+<div id="MC1A-answer">
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>0</td>
+
+<td>$1000</td>
+
+<td>--</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$4500</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>2</td>
+
+<td>$7500</td>
+
+<td>$3000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>3</td>
+
+<td>$10000</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>4</td>
+
+<td>$12000</td>
+
+<td>$2000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14500</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td>$3000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>7</td>
+
+<td>$21000</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>8</td>
+
+<td>$25000</td>
+
+<td>$4000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>9</td>
+
+<td>$30000</td>
+
+<td>$5000</td>
+</tr>
+</table></div>
+<p>In each row of this table, the marginal cost number is how much total
+cost increases when going up to that rate of production from the next lower rate. You can think
+of the Marginal Cost here as meaning "the marginal cost of adding <i>this</i>
+patient." For example, the $3500 for marginal cost in the row for
+1 patient means that serving 1 patient costs $3500 more than serving 0
+patients.
+<p>Just to be sure you are with me, please answer this: 
+<br><span class="question">What is the marginal
+cost of the 8th patient in the table above?
+<br>
+<input id="MC1-response" name="MC1" type="text"></input>
+<button id="MC1-button">Type a number in the box.  Then click this.</button>
+<div id="MC1-answer">Do not type a $ sign or a comma with your number.</div>
+<p>Here's the top of that cost table again:
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>0</td>
+
+<td>$1000</td>
+
+<td>--</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$4500</td>
+
+<td>$3500</td>
+</tr>
+</table>
+<p>Suppose the going price is $3700. At that price, you can get
+patients to sign contracts for your service.</p>
+<p>We're going to work our way up to finding the number of patients that gives
+you the most profit, starting from 0 patients.
+<p>
+To start, assume you are currently treating 0 patients -- no patients
+at all. <span class="question">Would adding 1 patient make you better off?  If that patient would pay you $3700?</span>
+<br><input type="radio" name="MC2" value="yes">Yes.</input>
+<input type="radio" name="MC2" value="no">No.</input>
+<div id="MC2-answers"></div>
+<p>"Wait a second," you might say, "the table says my total cost of seeing one patient is $4500.  The patient is paying me only $3700, so I'm losing $800!  <span class="question">Shouldn't I see 0 patients?"</span>
+<br><input type="radio" name="MC3" value="0">0 is better than 1.</input>
+<input type="radio" name="MC3" value="1">1 is better than 0.</input>
+<div id="MC3-answers"></div>
+
+<p>Let's look at the second and third rows of the cost table:
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$4500</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>2</td>
+
+<td>$7500</td>
+
+<td>$3000</td>
+</tr>
+</table>
+The price is still $3700. You are currently treating one patient. <span class="question">Should
+you add a 2nd?</span>
+<br><input type="radio" name="MC4" value="yes">Yes.</input>
+<input type="radio" name="MC4" value="no">No.</input>
+<div id="MC4-answers">For best continuity of text, click the correct answer to the above question before going on.</div>
+
+
+<p>We got this far solely by comparing the marginal cost
+with the price. We haven't had to do any other calculating to decide whether
+or not to expand output. We haven't needed the total cost numbers.
+<p>Nevertheless, I'm going to leave the total cost column in the table,
+just to see if I can confuse you.
+<p>Here is the cost table again.  
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>0</td>
+
+<td>$1000</td>
+
+<td>--</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$4500</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>2</td>
+
+<td>$7500</td>
+
+<td>$3000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>3</td>
+
+<td>$10000</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>4</td>
+
+<td>$12000</td>
+
+<td>$2000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14500</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td>$3000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>7</td>
+
+<td>$21000</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>8</td>
+
+<td>$25000</td>
+
+<td>$4000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>9</td>
+
+<td>$30000</td>
+
+<td>$5000</td>
+</tr>
+</table>
+
+<p>We are developing a <strong>marginal decision rule</strong>:  Starting from 0, add patients whose marginal cost is less than the $3700 price.  When you come to a marginal cost that is higher than the $3700 price, stop before adding that patient.
+<p class="question">Which patient is the last one that you add?  What is the highest number patient that has a marginal cost less than the price?
+<br><input id="MC5-response" name="MC6" type="text"></input>
+<button id="MC5-button">Type a number in the box.  Then click this.</button>
+<div id="MC5-answer">Do not type a "th" or anything like that.  Just a plain number.</div>
+<p class="question">Therefore, what is the profit-maximizing number of patients 
+if the price is $3700?
+<br><input id="MC6-response" name="MC6" type="text"></input>
+<button id="MC6-button">Type a number in the box.  Then click this.</button>
+<div id="MC6-answer">Do not type a "th" or anything like that.  Just a plain number.</div>
+<div id="MC6A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>We have found the number of patients that gives us the greatest profit,
+just by comparing the price with the numbers in the marginal cost column.
+No arithmetic is needed.
+<p>Now I'll do the arithmetic for you, to verify that this answer is correct.
+<p>Total Revenue = $3700 times the Number of Patients.&nbsp; Profit =
+Total Revenue minus Total Cost.
+<br>&nbsp;
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number
+<br>of Patients
+<br><b>n</b></td>
+
+<td>Total&nbsp;
+<br>Cost
+<br>of <b>n</b></td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th
+<br>patient</td>
+
+<td>Total&nbsp;
+<br>Revenue
+<br>for <b>n</b></td>
+
+<td ALIGN=CENTER>Profit
+<br>(Total Revenue minus 
+<br>Total Cost)</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>0</td>
+
+<td>$1000</td>
+
+<td>--</td>
+
+<td>$0</td>
+
+<td>-$1000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$4500</td>
+
+<td>$3500</td>
+
+<td>$3700</td>
+
+<td>-$800</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>2</td>
+
+<td>$7500</td>
+
+<td>$3000</td>
+
+<td>$7400</td>
+
+<td>-$100</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>3</td>
+
+<td>$10000</td>
+
+<td>$2500</td>
+
+<td>$11100</td>
+
+<td>$1100</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>4</td>
+
+<td>$12000</td>
+
+<td>$2000</td>
+
+<td>$14800</td>
+
+<td>$2800</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14500</td>
+
+<td>$2500</td>
+
+<td>$18500</td>
+
+<td>$4000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td>$3000</td>
+
+<td>$22200</td>
+
+<td>$4700</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER><strong>7</strong></td>
+
+<td><strong>$21000</strong></td>
+
+<td>$3500</td>
+
+<td><strong>$25900</strong></td>
+
+<td><strong>$4900</strong></td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>8</td>
+
+<td>$25000</td>
+
+<td>$4000</td>
+
+<td>$29600</td>
+
+<td>$4600</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>9</td>
+
+<td>$30000</td>
+
+<td>$5000</td>
+
+<td>$33300</td>
+
+<td>$3300</td>
+</tr>
+</table>
+
+<p>Sure enough, profit is greatest when you serve 7 patients. The marginal
+decision rule told you that without having to calculate out the whole table.
+<p>On the other hand, the marginal decision rule didn't tell you how much
+profit (or loss) you have if you server 7 patients. For that you do need
+the calculations, and we see that profit at 7 patients is $4900.
+<p>A trick question:
+<p class="question">
+The marginal decision rule says you should set your price to be equal
+to your marginal cost.
+<br>
+<input type="radio" name="MC7" value="true">True.</input>
+<input type="radio" name="MC7" value="false">False.</input>
+<div id="MC7-answers"></div>
+
+<h3>Competitive conditions worsen</h3>
+Let us imagine that new competitors
+enter the market. Why might they do this? Because there is profit to be made
+in this industry. Joan's is making $4900 a year. Others can figure that
+out, and start their own companies just like Joan's.
+<p>The result is that supply expands for the whole industry. If the industry
+demand curve doesn't change, the equilibrium price will fall. 
+<ul class="sub"><li>In a market
+where the government sets the price, this won't happen automatically,
+but the government may catch on that it can cut the price and still get the service provided.  This happened after the Affordable Care Act cut the payment that the government was making to Medicare Advantage (Medicare managed care) plans.</ul>
+<p>Suppose the price in Joan's market falls to $3300. How many patients does Joan's serve
+now? We'll figure this out by starting where we are now (at 7 patients per year) and using the marginal
+decision rule. 
+<p>Here are the relevant lines in the cost table:
+
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td>$3000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>7</td>
+
+<td>$21000</td>
+
+<td>$3500</td>
+</tr>
+</table>
+
+<p class="question">Should Joan's continue to serve 7 patients, if the price is $3300?
+<br>
+<input type="radio" name="MC8" value="yes">Yes.</input>
+<input type="radio" name="MC8" value="no">No.</input>
+<div id="MC8-answers"></div>
+<div id="MC8A-answer">
+<p>Leaving space until the above question is answered correctly.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>If the going price drops from $3700 to $3300, the old output rate of 7 is too high, if we want the greatest profit.  Let's look at one line up in the Joan's cost table.</p>
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14500</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td>$3000</td>
+</tr>
+</table>
+
+<p>How about 6? Should Joan's serve 6 patients if the price is $3300?
+<br>
+<input type="radio" name="MC9" value="yes">Yes.</input>
+<input type="radio" name="MC9" value="no">No.</input>
+<div id="MC9-answers"></div>
+<div id="MC9A-answer">
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>We now have the new profit-maximizing output rate.
+<p>Let's figure out how much profit Joan's makes now:
+<p>Total revenue is 6 times $3300, which equals $19800.
+<p>Total cost from the table above is $17500.
+<p>Profit is $19800 - $17500 = $2300.
+<p>This is less profit than before, but it's the most Joan's can make at the current price.
+<!--p>2. Calculate the average cost and compare it with the price.
+<br>The <b>average cost</b> is the total cost divided by the number produced.
+Here, it's $17500/6 = $2917 (rounded to the nearest dollar). That's less
+than $3300 revenue per patient, so Joan's makes $383 on average per patient.
+<p>True or false:
+<br>A business should produce at the output rate that makes its average
+cost the lowest it can be. That way it makes the most profit per item,
+and the most profit overall.
+<br><applet CODE="MCost09.class" CODEBASE="./" WIDTH="500" HEIGHT="120" ALIGN="TOP"></applet-->
+<h3>The Effect of Entry</h3>
+<p>As each firm, assuming they are all like Joan's, cuts back on the number
+of patients it takes, the total industry supply will shrink and the price
+may go part way back up.
+<p>At a price of $3300 or more, there will still be profit to be made in this business.  This will attract more firms to enter the market.
+<p>As the new firms enter, supply will expand some more and the price will fall again.
+
+<p>Here is part of the cost table:
+
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>4</td>
+
+<td>$12000</td>
+
+<td>$2000</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14500</td>
+
+<td>$2500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$17500</td>
+
+<td><span id="MC10A-answer">$3000</span></td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>7</td>
+
+<td>$21000</td>
+
+<td>$3500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>8</td>
+
+<td>$25000</td>
+
+<td>$4000</td>
+</tr>
+</table>
+
+<p class="question">Suppose the price falls to $2900. Will Joan's still want to serve
+6 patients?
+<input type="radio" name="MC10" value="yes">Yes.</input>
+<input type="radio" name="MC10" value="no">No.</input>
+<div id="MC10-answers"></div>
+
+
+<p class="question">If the price is $2900, how many patients should Joan's serve?
+<br><input id="MC11-response" name="MC11" type="text"></input>
+<button id="MC11-button">Type a number in the box.  Then click this.</button>
+<div id="MC11-answer"></div>
+<div id="MC11A-answer">
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>Joan's total revenue is now 5 times $2900, which equals $14500.  Her total cost at 5 is in the table above.
+<p>How much profit is Joan's making now?
+<br><input id="MC12-response" name="MC12" type="text"></input>
+<button id="MC12-button">Type a number in the box.  Then click this.</button>
+<div id="MC12-answer">Don't type a $ sign.</div>
+
+<p>Joan is not too happy now, unless she is paying herself handsomely 
+out of overhead (fixed cost), as Sarah Palin does with her Super PAC.
+<p>Unless there is profit like that masquerading as cost, the
+incentive to enter this industry is gone. No more firms would enter, so
+the price would stop falling.
+<p>At this point, competition has forced the price down to
+its minimum. All excess profit is squeezed out. The firms have been forced to be just the right size to minimize cost.
+The customer gets the most possible value
+per dollar spent.
+<ul><li>This example works as it does because 
+there are diminishing returns to scale at higher output rates.
+Joan's marginal cost rises when her output rate is above 5.  If Joan's costs fell as her firm got bigger,
+competition would force her firm to grow and grow.
+</ul>
+<p>Getting back the circumstance we have, what can Joan's do about her $0 profit? One possibility is to innovate, to change how she
+operates. She can hire cheaper personnel, lowering marginal cost but raising
+fixed cost due to the need for more supervision.
+<p>Joan's can also buy new equipment that allows the visiting nurse or
+technician to tend to each patient in less time. This also lowers marginal
+cost but raises fixed cost.
+<p>With less qualified personnel spending less time with each patient,
+Joan's may hire a think tank to do a study showing that her quality is not
+significantly worse than before and may be better in some ways. The study's
+cost add to fixed cost, but may help stimulate some demand.
+<p>Here's Joan's new cost table. Fixed cost is higher. Marginal cost is
+generally lower than before.
+<br>&nbsp;
+<table CELLSPACING=5 >
+<tr>
+<td ALIGN=CENTER>Number of Patients
+<br><b>n</b></td>
+
+<td>Total Cost
+<br>of <b>n</b> patients</td>
+
+<td>Marginal Cost
+<br>of the <b>n</b>th patient</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>0</td>
+
+<td>$2000</td>
+
+<td>--</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>1</td>
+
+<td>$5600</td>
+
+<td>$3600</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>2</td>
+
+<td>$8500</td>
+
+<td>$2900</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>3</td>
+
+<td>$10700</td>
+
+<td>$2200</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>4</td>
+
+<td>$12200</td>
+
+<td>$1500</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>5</td>
+
+<td>$14000</td>
+
+<td>$1800</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>6</td>
+
+<td>$16100</td>
+
+<td>$2100</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>7</td>
+
+<td>$18500</td>
+
+<td>$2400</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>8</td>
+
+<td>$21200</td>
+
+<td>$2700</td>
+</tr>
+
+<tr ALIGN=RIGHT>
+<td ALIGN=CENTER>9</td>
+
+<td>$24700</td>
+
+<td>$3500</td>
+</tr>
+</table>
+
+<p class="question">Now how many patients does Joan's serve if the price is $2900?
+<br><input id="MC13-response" name="MC12" type="text"></input>
+<button id="MC13-button">Type a number in the box.  Then click this.</button>
+<div id="MC13-answer"></div>
+<p>Joan's is making profit again. This starts the competition cycle again,
+though, as other firms enter the market and start driving prices down again.
+<p>We're almost done. Just one more point to make.
+<h3>A different application of the marginal decision rule</h3>
+<p>The idea of comparing marginal cost with the price can be applied to
+cost-effectiveness analysis. For example, here are figures from a study about how often women should get Pap tests.  
+<blockquote>The study is Eddy, D.M., "Screening for Cervical Cancer," <i>Annals of Internal Medicine,</i>
+August 1, 1990, <i>113</i>(3), pp. 214-226.</blockquote>
+The study showed that the more often the test is done, the more lives are saved. 
+However, the more often the test is done, the higher is the cost per year of life saved.
+The Law of Diminishing Returns is at work.
+</p>
+<table>
+<tr>
+<td>Pap test every&nbsp;
+<br>this many years</td>
+
+<td ALIGN=RIGHT>&nbsp; Marginal cost</td>
+
+<td>per year of life saved</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>4</td>
+
+<td ALIGN=RIGHT>$10,000</td>
+
+<td>compared with no testing at all</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>3</td>
+
+<td ALIGN=RIGHT>$180,000</td>
+
+<td>compared with testing every 4 years</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>2</td>
+
+<td ALIGN=RIGHT>$260,000</td>
+
+<td>compared with testing every 3 years</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>1</td>
+
+<td ALIGN=RIGHT>$1,200,000</td>
+
+<td>compared with testing every 2 years</td>
+</tr>
+</table>
+
+<p>Suppose we put a price on life. We decide that a year
+of life saved is worth $200,000. (How we decided that is a whole other discussion!)
+<p>Once we have that number, we can use it to decide how often women should get PAP tests.  The logic starts like this, at the top of the table:  Testing once every four years, as compared with never testing at all, adds $10,000 to total medical care costs for each year of life saved.  $10,000 is less than $200,000, which is what we say a year of life is worth.  Therefore, we should test once every four years, if the alternative is not testing at all.  </p> 
+<p class="question">Using that logic, how often should a woman have a Pap test?  
+<br><input type="radio" name="MC14" value="1">Every year.</input>
+<input type="radio" name="MC14" value="2">Every 2nd year.</input>
+<input type="radio" name="MC14" value="3">Every 3rd year.</input>
+<input type="radio" name="MC14" value="4">Every 4th year.</input>
+
+<div id="MC14-answers"></div>
+<p>The Affordable Care Act requires that preventive services be offered free of copayment.  What will the standard be for PAP tests?  We will see.
+<p>Also, as more people get the HPV vaccine, there will be fewer cervical cancers for the PAP test to detect.  That will make higher the numbers for the marginal costs per year of life saved.  This logic may then imply doing PAP tests less frequently.
+
+<hr width="100%">
+That's all for now. Thanks for participating!
+<br><a href="..">The economics tutorials list</a>
+</body>
+</html>

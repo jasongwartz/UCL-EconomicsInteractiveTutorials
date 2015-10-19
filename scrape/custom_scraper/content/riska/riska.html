@@ -1,0 +1,655 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Sam Baker">
+      <meta name="Description" content="Introductory economics tutorial on risk aversion">
+	<meta name="Keywords" content="economics, risk aversion, insurance">
+   <title>Risk Aversion</title>
+</head>
+<style>
+body { 
+	color : #000000;
+	background : #FFFFFF;
+	font-family : Verdana; sans-serif;
+	max-width: 50em;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.small {
+	font-size : 75%
+}
+.correct {
+    background-color : Chartreuse;
+    color: Blue;
+}
+
+.incorrect {
+	background-color : Yellow;
+    color: Brown;
+}
+.question {
+	color: Green;
+}
+.morelineheight {
+	line-height:200%;
+}
+   </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="riska.js" ></script>
+
+
+<body>
+
+<h2>
+Economics Interactive Tutorial </h2>
+
+<h1>
+Risk Aversion and Insurance</h1>
+Copyright &copy; 1999-2001 Samuel L. Baker
+<br>Revised Sept. 8, 2013
+<p>The <a href="../risk/risk.html">interactive tutorial on risk</a>
+calculated the expected values of some games and securities. It made
+a connection between the expected value of a security and its market price.
+This use of the expected value is based on the Law of Large Numbers, which
+is a statement about what happens when a game is repeated over and over
+and over again. If a game can be repeated many times, good luck and
+bad luck tend to wash out.
+<p>What happens, though, if the game isn't going to be repeated over and
+over?&nbsp; What if it's only played once, or a few times, in your life?&nbsp;
+What if the stakes are very high, so that you are gambling with something
+that you really do not want to lose? That's when <b>risk aversion</b> comes
+in.
+<p><b>Risk averse</b> means being willing to pay money to avoid playing
+a risky game, even when the expected value of the game is in your favor.
+<p>Let's find out how risk averse you are. If you are a student, I'm guessing
+that $10,000 is a lot of money for you. A gift of $10,000 would make your
+life noticeably easier. Losing $10,000 would make your life noticeably
+harder. If you're a well-paid executive or professor (Ha! Ha!), multiply
+my dollar numbers by ten, or a hundred.
+<p>Imagine that you're a contestant on a TV game show. You have just won
+$10,000. The host offers you a choice: You can quit now and keep the $10,000,
+or you can play again. If you play again, there is a 0.5 probability that
+you will win again, and wind up with $20,000. If you play again and lose,
+you lose your $10,000 and take home nothing. You quickly calculate that
+the expected value of playing again is $10,000, the same as sticking with
+the $10,000 you have won so far. <span class="question">Which do you chose?</span>
+<br>
+<input type="radio" name="riska1" value="keep">Keep the $10,000.  Don't take the 50-50 chance to get $20,000.
+<br><input type="radio" name="riska1" value="play">Play again, with an 0.5 chance of getting $20,000, and an 0.5 chance of going back to $0.</input>
+<br><input type="radio" name="riska1" value="either">I could go either way.  They are worth the same to me.</input>
+<div id="riska1-answer" class="question"></div>
+<p>Did your answer to the question above show risk aversion?  If it did, 
+let's try to measure how risk averse you are. We can
+do this by changin the game in one of two ways:
+<ol>
+<li>
+We can raise the payoff for winning on the second play above $20,000, and
+see if you still choose to stick with the sure $10,000.</li>
+
+<li>
+Alternatively, we can raise the probability of winning on the second play,
+and see if that changes your choice.</li>
+</ol>
+Either of those alternatives raises the expected value of playing again,
+so that it's above $10,000.&nbsp; If we raise the expected value of playing
+again, will that induce you to take a chance?&nbsp; Let's see...
+<p>For example, would raising the payoff to $22,000 for winning the second
+time enough to get you to take the risk and play?  <span class="question">Which would you choose?"</span>
+<br>
+    <input type="radio" name="riska2" value="keep">Stop with $10,000.</input>
+<br><input type="radio" name="riska2" value="play">Play again, with an 0.5 chance of getting $22,000, and an 0.5 chance of going back to $0.</input>
+<div id="riska2-answer" class="question"></div>
+<p>Let's take the next step: How high would the payoff on the second
+game have to be to entice you to take the risk, rather than keep the sure
+$10,000?
+<p class="question">You would risk losing $10000 in return for a 50-50 chance of finishing with <br>$<input id="riska3-response" name="riska3" type="text"></input>.  
+<br><button id="riska3-button">Type a number in the box.<br>No commas, please.<br>Then click this.</button>
+<div id="riska3-answer" class="question"></div>
+<p>The higher your answer was to that question, the more risk averse you are.
+<h3>
+The Von Neumann-Morgenstern Theory</h3>
+<p>In my comment on your answer above, I snuck in the Von Neumann-Morgenstern
+theory of risk aversion.  I wrote that the amount you typed in "is worth
+twice as much to you as $10000." What could that mean? 
+<p>Conventional economic
+theory imagines that each of us is always maximizing our "utility." Utility
+is like a meter in your head. The meter goes up when you acquire more stuff
+that you want. Economists imagine that utility is a quantity that has units,
+so it makes sense to say that alternative A has twice as much utility as
+alternative B. John Von Neumann and Oskar Morgenstern, co-authors of the
+pioneering <i>The Theory of Games and Economic Behavior</i> in 1944, developed
+the idea of risk aversion. They explained it by saying that money (income)
+has a declining marginal utility. Money, in other words, obeys the Law
+of Diminishing Returns: The more you have, the less utility you gain from
+getting a set amount more.
+<p>In this case, their theory would say that getting $10,000 from winning
+the first time brought you a certain amount of utility. Let's say it's
+1 unit of utility. Winning $10,000 more dollars on top of that would not
+add 1 more utility unit to your utility. Instead, it would add X utility
+units, X being less than 1.
+<blockquote>X is bigger than 0.  The second $10,000 is worth something to you, but it is worth less than your first $10,000.  This is an application of what economists' call the Law of Diminishing Returns.  </blockquote>
+<p>If the second $10,000 is worth less than the first $10,000, risk averse behavior can be explained as "rational."
+<blockquote>"Rational" is more economics jargon.  It means being motivated solely by maximizing one's utility.</blockquote> The utility for you of
+the $20,000 that you might win is <i>not</i> twice as much
+as the value of your first $10,000. The value of $20,000 is 1 + X, which is less than 2.
+The expected value of a 0.5 chance of winning $20,000 becomes (1 + X)/2
+utility units, which is less than 1. Thinking in terms of utility, rather
+than dollars, the expected value of playing again is less than value of
+keeping your $10,000.
+<p>Suppose a $30,000 payoff in the second game would be just enough to
+make you undecided between playing again versus taking the sure $10,000.
+Von Neumann and Morgenstern would say that, for you, it takes an additional
+$20,000 to add as much to your utility as the first $10,000 did. In other
+words, if $10,000 is worth 1 "util" (short for the maginary utility unit)
+to you, then $30,000 must be worth 2 utils.&nbsp; That way, both standing
+pat and playing again have the same expected value, 1 util.
+<p>Let me illustrate the idea of diminishing marginal utility of money with a graph.
+
+<p>For the graph, I arbitrarily assign a utility value of 0 to having no
+income. I assign a utility value of 1 to $10,000. When you click a button to a dollar
+amount that would tempt you to play again, I give that amount the utility
+value of 2. The Von Neumann-Morgenstern theory that
+if you are indifferent between a a 100% chance
+of a $10,000 prize and 50% chance of getting a certain bigger prize, then the utility of the bigger prize must be twice the utility of
+$10,000.
+<p>That gives me three points, ($0, 0), ($10000, 1), and ($X, 2), which
+I plot on the graph with black dots. Then I draw the red curve, through
+the points, to try to represent the utility to you of all amounts of money
+from $0 to the bigger prize you picked.
+<blockquote>The red curve has this formula:<img SRC="powerfunction.gif" BORDER=0 height=33 width=96 align=ABSCENTER>
+Here, X is income, Y is utility, and A is a scaling constant determined
+by my assignment of a utility of 1 to a $10,000 income amount. b is the
+elasticity of utility with respect to changes in income. (We'll explain
+what this means shortly.) This power function form is arbitrary, but
+it's as good as any.</blockquote>
+<p>The slope of this curve at any point represents the marginal utility
+of income.&nbsp; In other words, the slope represents the addition to utility
+that results from an additional dollar of income at that point. If the
+curve is concave down (bends down), you have a declining marginal utility of income.
+<blockquote>(The pictures say "Applet" because they are screen shots from the Java applet that used to be here.)</blockquote>
+<p class="question">Click the button below the graph for what would tempt you to risk your $10,000 in return for a &frac12; chance of winning that amount.</p>
+<div id="riska4-answer"><img src="riska420.jpg" height="452" width="800"></div>
+<br><!--img src="riska4spacer.jpg" height="12" width="120"--><span class="question">The buttons:</span>
+<button id="riska420-button">$20000</button>
+<button id="riska430-button">$30000</button>
+<button id="riska440-button">$40000</button>
+<button id="riska450-button">$50000</button>
+<button id="riska460-button">$60000</button>
+<button id="riska470-button">$70000</button>
+<button id="riska480-button">$80000</button>
+<button id="riska490-button">$90000</button>
+<button id="riska4100-button">$100000</button>
+
+
+
+<p>Note:  If, for example, you click $40000, the graph says, "Getting 1% more income raises your utility by only 0.5%."  This is the <a href="../Elast/Elast.html">elasticity</a> idea.  
+The elasticity is how many percentage points one thing changes when something
+that affects it changes by 1%. 
+<p>In the power function, <img SRC="powerfunction.gif" BORDER=0 height=33 width=96 align=ABSCENTER>, b is the elasticity of Y with respect to X. When X 
+changes by 1%, Y changes by b%. For risk averse people, b is
+less than 1, so utility is relatively inelastic with respect to changes
+in income.
+<p>On this graph, the slope changes as you go from left to right, but the elasticity is the same everywhere, thanks to our using the power function.  
+<p>To summarize, Von Neumann and Morgenstern recast your choice from being
+about different amounts of dollars to being about different amounts of
+utility. This lets them preserve the principle that one should always
+choose the alternative with the highest expected value.&nbsp; The down
+side is that they have to bring in an imaginary quantity, "utility," that is
+impossible to observe directly.
+<p>Maurice Allais, an economics Nobel winner, pointed out that people don't
+always behave as the Von Neumann-Morgenstern theory says. Here's a version
+of one of his examples:
+<p>Imagine that you may spin one of two Wheels of Fortune, A and B. Each
+has 100 numbers on it. For each wheel, the probability that any particular
+number will come up on any one one spin is 1/100. You only get to play
+this game once. The wheels pay off like this:
+<br>&nbsp;
+<table BORDER COLS=2 WIDTH="100%" >
+<tr>
+<td><strong>Wheel A</strong></td>
+
+<td><strong>Wheel B</strong></td>
+</tr>
+
+<tr>
+<td>
+<img src="WheelA.png" width=377 height=213></td>
+
+<td>
+<img src="WheelB.png" width=377 height=213></td>
+</tr>
+
+<tr>
+<td>Numbers 1 through 10 pay $1 million
+<br>Numbers 11 through 100 pay nothing</td>
+
+<td>Numbers 1 through 9 pay $5 million
+<br>Numbers 10 through 100 pay nothing</td>
+</tr>
+</table>
+Wheel A offers a slightly better chance of getting rich. Wheel B
+offers a lot more money if you win. Which would you choose?
+<br>
+    <input type="radio" name="riska5" value="A">A: 10% chance at $1 million.</input>
+<br><input type="radio" name="riska5" value="B">B: 9% chance at $5 million.</input>
+<div id="riska5-answer" class="question"></div>
+<p><p>Now consider this game, which you would also get to play only once:
+<table BORDER COLS=2 WIDTH="100%" >
+<tr>
+<td><strong>Wheel C</strong></td>
+
+<td><strong>Wheel D</strong></td>
+</tr>
+
+<tr>
+<td>
+<img src="WheelC.png"></td>
+
+<td>
+<img src="WheelD.png"></td>
+</tr>
+
+<tr>
+<td>Numbers 1 through 100 pay $1 million.&nbsp;
+<br>You are sure to win $1 million.</td>
+<td>Numbers 1 through 9 pay $5 million.
+<br>10 pays nothing.
+<br>11 through 100 pay $1 million.</td>
+</tr>
+
+</table>
+Which would you choose now?
+<br>
+    <input type="radio" name="riska6" value="C">C: 100% chance at $1 million.</input>
+<br><input type="radio" name="riska6" value="D">D: 90% chance at $1 million.  9% chance at $5 million.  1% chance of no prize.</input>
+<div id="riska6-answer" class="question">I'm leaving some space here so you won't be influenced by what Von Neumann, Morgenstern, or Allais would have expected you to pick.
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+<p>&uArr;
+</div>
+<p>The Von Neumann-Morgenstern theory implies that you'd choose the first
+wheel both times or the second wheel both times. 
+<p>Wheel C is what you would get if you started with Wheel A and added 90 chances to win $1 million. 
+<p>Wheel D is what you would get if you started with Wheel B and added 90 chances to win $1 million. 
+<p>Standard theory
+says that if you like a certain something, call it
+A, better than something else, call it B, then you will like A + X better
+than B + X, regardless of what X is, as long as it's the same X added for both.
+<p>Allais observed that this doesn't always work with risk, because people
+have a different attitude toward small risks.  Wheel D has a very small risk that you will get nothing, but many people will choose D anyway, even after choosing A for the first game.  
+<p>Think
+of the small risks you take, like crossing streets when you're walking
+near campus. Allais doesn't dispute the idea of risk aversion.
+He just questions whether people are as "rational" about the risks they
+face as the Von Neumann-Morgenstern theory assumes. Allais's ideas have
+relevance to the analysis of the politics of health and safety regulation.
+<h3>
+Insurance and Risk Aversion</h3>
+Enough fun and games. Back to something serious -- insurance.
+<p>The theory of risk aversion was developed largely to explain why people
+buy insurance.
+<p>Buying insurance is hard to justify using the theory of expected value.
+That's because buying insurance is a gamble with a negative expected value,
+in dollar terms.
+<p>Regular indemnity insurance specifies that you get money if certain
+things happen. If those things don't happen, you don't get any money.
+So far, that's just like playing roulette.
+<p>In return for the chance to get some money, you bet some money by paying the insurance company a "premium."  The insurance company keeps your premium if you don't have a claim.  So far, that's still just like
+playing roulette.
+<p>Over the large number of people who sign up for insurance, the insurance company pays out less money in claims than it takes in. If it doesn't, it can't stay in business. Your expected payoff is therefore less than your premium, unless you can fool (or legally force) the insurance company into selling you a policy with odds are in your favor. Buying insurance has a negative expected value. Still just like playing roulette.
+<p>Except that insurance is worse than roulette. Roulette's expected value is about -5% of the amount bet. The expected value
+of a private health insurance policy is about -15%, relative to the amount bet, the insurance premium paid. This is what Obamacare requires for large health insurance plans, like Blue Cross. It's what the insurers mean when they say that their "medical loss ratio" is 85%. 
+<p>Before Obamacare, some insurers sold policies to individuals or small groups with medical loss ratios of 60% or less.  These policies' expected values were -40% of the amount bet, or worse. 
+<p>We have this, therefore:
+<table border cellspacing="2" cellpadding="4" border="0">
+<tr>
+    <td><strong>Type of Gamble</strong></td>
+    <td><strong>Expected value,<br>relative to amount bet</strong></td>
+</tr>
+
+<tr>
+    <td>Health insurance</td>
+    <td>You lose 15% of each bet, on average.</td>
+</tr>
+<tr>
+    <td>Roulette</td>
+    <td>You lose 5% of each bet, on average.</td>
+</tr>
+</table>
+
+
+<p class="question">We conclude that roulette is much better deal than health insurance. <br>Right?
+<br>
+    <input type="radio" name="riska7" value="right">Right.</input>
+<br><input type="radio" name="riska7" value="wrong">Wrong!  It's smart to buy insurance.</input>
+<div id="riska7-answer" class="question"></div>
+
+<p>Let's go through a numerical example.
+<p>Suppose you face a 1/100 chance
+of losing $10,000.  If you are risk averse, you will pay more than
+$100 (the expected or "actuarially fair" value) for an insurance policy
+that would reimburse you for that $10,000 loss, if it happens.
+<p>Suppose there are many people like you, and you'd each be willing to
+pay $110 to avoid that risk of losing $10,000. You all could join together
+to form a mutual insurance company, collect $110 from each member, pay
+$10,000 to anyone who is unlucky and loses, and come out ahead, probably.
+The more participants in your mutual insurance company, the more likely
+it is that you'll have money left over for administrative costs and profit.&nbsp;
+That's how insurance companies with "Mutual" in their name got started.
+<p>How can an insurance company assume all these risks?&nbsp; Isn't it
+risk averse, too?
+<p>The insurance company can do what an individual can't: Play the game
+many times and get the benefit of the Law of Large Numbers.&nbsp; The larger
+an insurance company is, the better it can do this.
+<h4>
+Insurance Spreads Risk</h4>
+Suppose you and four friends each face a 0.01 chance of losing $10,000.
+If you can trust each other, you can form a risk pool. You agree that if
+any of the five of you suffer the $10,000 loss, every one of you will give
+the loser $2,000, one-fifth of $10,000.
+<blockquote>You may also pay fee to join this.  That would cover paperwork cost.  We will not include that in the risk pool money.</blockquote>
+<p>This arrangement helps you reduce your risk. You can only lose $10,000
+if all five members of the group get unlucky and lose the $10,000. The
+probability of that is .01 times .01 times .01 times .01 times .01, which
+equals .0000000001, or one chance in ten billion.
+<p>The tradeoff is that you now have a bigger chance that you will lose a smaller amount of money.
+The table below shows the probabilities that you face, as a member of the
+risk pool. (The probabilities in the 4th column are calculated using the binomial distribution.  
+The assumption is that bad events are independent of each other.)
+<table BORDER width="100%"><caption>Probabilities of losing different amounts in a 5-person risk pool</caption>
+<tr>
+<td VALIGN=top NOWRAP>Claims
+<div class="small">How many people in the pool
+<br>get unlucky and lose $10,000</div></td>
+
+<td VALIGN=top NOWRAP>Total claim cost to the pool
+<div class="small">$10,000 times the number of claims</div></td>
+
+<td VALIGN=top NOWRAP>Cost per pool member
+<div class="small">Total cost divided by 5,<br>the number of pool members</div></td>
+
+<td VALIGN=top NOWRAP>Probability
+<div class="small">of this much cost</div></td>
+
+<td VALIGN=top NOWRAP>Running total probabilty
+<div class="small">The probability of this much cost or less</div></td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9509900499</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9509900499</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$2,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0480298005</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9990198504</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>2</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$20,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$4,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0009702990</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999901494</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>3</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$30,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$6,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000098010</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999999504
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>4</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$40,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$8,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000000495</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999999999</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>5</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$50,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000000001</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1.0000000000</td>
+</tr>
+</table>
+<p>The row for 1 claim tells us that there is about a 5% chance
+that you will lose $2,000.  
+The cell on the right end of that row says that the chance of losing $2000 or less is 0.9990198504.  
+Subtract that from 1, and we get that the probability of losing $4,000 or more is 0.0009801496.  This is about one chance in a thousand. 
+From the row for 3 claims, we can similarly calculate that the chance of losing $6,000 or more is about 1 in 100,000. </p>
+
+<p>This risk pool of five is better than being on your own, but you can
+do even better if you can get more people to join.
+<p>Expand the pool to 100 members, and the probability that you will lose
+as much as $2,000 drops to 0.000000000000000000024.&nbsp; That's small!&nbsp;
+There is less than 1 chance in 10,000 that you will lose $700 or more.
+<table BORDER >
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>Claims</td>
+
+<td VALIGN=BOTTOM NOWRAP>Total Cost&nbsp;
+<br>to Group</td>
+
+<td VALIGN=BOTTOM NOWRAP>Cost per member&nbsp;
+<br><font size=-1>(100 members)</font></td>
+
+<td VALIGN=BOTTOM NOWRAP>Probability</td>
+
+<td VALIGN=BOTTOM NOWRAP>Running total&nbsp;
+<br>of probabilities</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.366032</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.366032</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$100</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.369730</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.735762</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>2</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$20,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.184865</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.920627</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>3</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$30,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$300</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.060999</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.981626</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>4</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$40,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$400</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.014942</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.996568</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>5</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$50,000</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$500</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.002898</td>
+
+<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.999465</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT>6</td>
+
+<td ALIGN=RIGHT>$60,000</td>
+
+<td ALIGN=RIGHT>$600</td>
+
+<td ALIGN=RIGHT>0.000463</td>
+
+<td ALIGN=RIGHT>0.999929</td>
+</tr>
+</table>
+
+<p>The bigger the pool, the smaller your risk of losing a large amount
+of money.&nbsp; At the same time, the bigger the pool, the more likely
+it is that you'll have to come up with a small amount of money, because
+somebody in the pool will be unlucky and you'll have to pay your share.
+<p>On top of your share of other pool members' losses, you'll also have
+to pay your share of the cost of operating the pool.&nbsp; If the pool
+is a profit-making business, you'll also have to pay your share of profit
+sufficient to attract entrepreneurs to the insurance business.&nbsp; Those
+administrative costs and profits are not included in the tables above.
+<p>Most insurance companies do not require
+you to pay more money if they have unusual losses (other than by raising
+the premium for the following year, which you can decline to pay if another
+insurance company can offer you a better deal).&nbsp; Instead, the company
+takes the risk.&nbsp; The advantage of size, though, is similar.&nbsp;
+The bigger a company is, the less "reserves" of money it needs, relative
+to the value of its business, to have any specified probability of being
+able to pay all its claims from those reserves.
+<p><b>Mutual funds</b> are risk pools, too.&nbsp; For an individual, buying
+"junk bonds" -- bonds with a high yield but a significant risk of not paying
+off -- is risky.&nbsp; Mutual funds spread the risk, by holding junk bonds,
+or risky stocks, of a wide variety of companies.&nbsp; By buying shares
+in a mutual fund, you get, in effect, small holdings in many companies.&nbsp;
+Unless there is some general market collapse, you are safe from financial
+disaster.&nbsp; Risky companies benefit, too.&nbsp;&nbsp; They can sell
+their stocks and bonds to mutual funds without having to pay as much extra
+to compensate for the risk as they would if selling to risk averse individuals.
+<h3>
+Government Insurance</h3>
+What is the nature of the risk you face when you buy insurance?&nbsp; Economists
+often regard risks like those of having to pay big medical bills as simply
+part of life.&nbsp; But in a country with a stable government and economy,
+the risks for which we must buy insurance are the risks that the government
+chooses not to cover.
+<p>The risk of illness and death is part of the nature of life.&nbsp; However,
+the risks of financial loss, or of needing medical care that one cannot
+finance oneself, these risks are socially determined.
+<p>We can and do buy health insurance for which our expected loss is 10%
+of what we pay.&nbsp; If the cost of operating the insurance system could
+be reduced to 5% of premiums or less, we could afford to buy more insurance,
+and get more peace of mind.&nbsp; Or we could just pocket the difference
+in cost.&nbsp; Cost and profit shares below about 10% are hard to achieve
+in private insurance companies, because private insurance must be sold
+and premiums collected.&nbsp; This requires a sales force, office staff,
+and equipment.
+<p>In the U.S., Medicare, which serves the elderly nearly universally,
+has administrative costs below 5% of what it pays out.&nbsp; Medicare piggy-backs
+on the Internal Revenue Service's tax collection operation for collecting
+its premiums.&nbsp; No one has to be sold on Medicare, and Medicare doesn't
+need its own premium-collecting system.&nbsp; That saves money.
+<p>Other countries' national health insurance or national health services
+save even more through the financing simplification that universal coverage
+makes possible.&nbsp; In Canada, hospitals do not have to generate bills,
+and the government insurance does not have to process them, nor do individuals
+have to deal with the paperwork.&nbsp; (The main exceptions are vistors
+from the U.S.)&nbsp; Instead, hospitals are paid by global operating and
+capital budgets, essentially a lump sum each year.
+<p>This makes a public system more efficient.&nbsp; The "house" can take
+a smaller percentrage.&nbsp; People can cover more risks for less cost.&nbsp;
+That's part of why Canada's system, which covers everybody there, costs
+less than the U.S. system.&nbsp; Competition among private firms can reduce
+some costs, but not the costs of competition itself.&nbsp; Our private
+market can't get to that level of efficiency by itself.&nbsp; It'll take
+legislative action.
+<p>Thanks for participating!&nbsp;
+<hr WIDTH="100%">
+Comments?  Please e-mail me at 
+<script language="Javascript" type="text/javascript">
+<!--
+var name="sam"+""+"&#x0040;"+"sam"+"baker"+"&#x002E;"+"com";
+document.writeln('<a href="mai'+'lto:'+name+'">'+name+'</a>');
+-->
+</script>
+<br><a href="..">To the list of tutorials</a>
+</body>
+</html>
