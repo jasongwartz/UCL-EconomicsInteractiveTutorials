@@ -60,6 +60,14 @@ p {
 
 .b {
 
+	border: solid 5px #31B0D5;
+	background-color: #f3f3f3;
+
+}
+
+.c {
+	border: solid 5px #EC971F;
+	background-color: #f3f3f3;
 }
 
 input {
