@@ -34,9 +34,9 @@
 
     <script src="http://sambaker.com/econ/mcost/mcost.js" ></script>
   </head>
-  <body style="padding-top: 70px">
+  <body style="padding-bottom: 70px;">
 
-    <nav class="navbar navbar-default navbar-fixed-top navstyle">
+    <nav class="navbar navbar-default navbar-top navstyle">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -53,18 +53,20 @@
 
     </nav>
       <div class="container">
+        <span class="label label-success">Section 1</span>
         <div class="row">
           <div class="col-md-12">
-            <div class="home-entry">
-              <h1>Economics Interactive Tutorial:  Marginal Cost and the Optimal Output Rate</h1>
+              <div class="page-header">
+              <h1>Economics Interactive Tutorial:  <small>Marginal Cost and the Optimal Output Rate</small></h1>
             </div>
-          </div>
         </div>
         
-        <p>This tutorial shows how, in theory, a business firm in a competitive
+        <h1><small>This tutorial shows how, in theory, a business firm in a competitive
 industry can use the marginal cost concept developed in the previous tutorial
-to decide how much to produce and sell.
-<p>The big idea:  A <b>marginal decision rule</b> applies to firms in competitive industries.
+to decide how much to produce and sell.</small></h1>
+<h3><span class="label label-default">The big idea</span></h3>
+<div class="well">
+<p> A <b>marginal decision rule</b> applies to firms in competitive industries.
 <ul><li></a>A "competitive industry," in economics jargon, is an industry in which
 each firm must sell at the going price, take it or leave it. In the economist's
 theoretical idea of a competitive industry, there are so many firms that
@@ -77,15 +79,18 @@ by the government, or other major payor.  For example, a hospital that takes Med
 <p>The marginal decision rule theory assumes that the firm's only goal is maximum profit. A health
 care organization with a community service orientation has other goals,
 but we ignore them for the time being.
+</div>
 <p>We'll be working again with the imaginary Joan's Home Care Co., using
 the same cost numbers as in the preceding tutorial. We'll assume that Joan's
 is a price taker, so the only decision to be made is how many patients
 to treat per year, based on whatever the going price is.
 <h2>
 The Marginal Decision Rule</h2>
+<div class="well">
 The marginal decision rule is:
 <p><b>Expand production if and only if the price is greater than the marginal
 cost.</b>
+</div>
 <p>The idea here is simple, once you get used to the jargon. Increasing
 production makes both total cost and total revenue go up. If the revenue
 goes up more than the cost, profit goes up. (Profit = total revenue - total
@@ -101,11 +106,107 @@ costs you more than the revenue you gain. You should not expand production.
 cost and the marginal cost for each number of patients. Assume as before
 that patients sign one year contracts, so we don't have to bother with
 fractions of patients.
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Joan's cost table</div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Number of Patients (n)
+      </th>
+      <th>Total Cost
+of n patients
+        </th>
+        <th>Marginal Cost
+of the nth patient</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>5
+      </td>
+      <td>$14500
+        </td>
+        <td>$2500</td>
+      </tr>
+      <tr>
+      <td>5
+      </td>
+      <td>$14500
+        </td>
+        <td>$2500</td>
+      </tr>
+      <tr>
+      <td>5
+      </td>
+      <td>$14500
+        </td>
+        <td>$2500</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
         
         <canvas id="canvas" height="450" width="600"></canvas>
 
+       
+
         
+
+        <input type="text" name="question1"></input>
+
+        <button class="btn checkresult" data-toggle="modal" data-target="#myModal">Check Result</button>
+        
+
+        <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Correct!</h4>
+                </div>
+                <div class="modal-body">
+                  This is the solution! Show solution below:
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Next Section</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
+
+      <nav class="navbar navbar-default navbar-fixed-bottom footerstyle">
+      <div class="container">
+        <div class="row"  style="padding-top: 20px;">
+          <div class="col-md-2">
+            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous Section</button>
+          </div>
+          <div class="col-md-1">
+            <span class="label label-success">Section 1</span>
+          </div>
+          <div class="col-md-7">
+            <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
+              33%
+            </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-success" style="float:right;">Next Section<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+
+
+    </nav>
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
