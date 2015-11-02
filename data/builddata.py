@@ -5,7 +5,7 @@ import json
 while True:
 	
 	print "\n\nOKAY NEXT\n\nQuestion number?"
-	num = raw_input(">>> "))
+	num = raw_input(">>> ")
 	if num == "0":
 		break
 	
