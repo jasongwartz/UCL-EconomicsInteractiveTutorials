@@ -16,6 +16,8 @@ while True:
 	qtype = types[int(raw_input(">>> "))]
 	print "Question text:"
 	text = raw_input(">>> ")
+	print "Correct answer is:"
+	a = raw_input(">>> ")
 	print "Correct message:"
 	correct = raw_input(">>> ")
 	print "Incorrect message:"
@@ -25,5 +27,5 @@ while True:
 		data = json.loads(fp.read())
 	with open("data.json", "wb") as fw:
 		data.append({"id":num,"type":qtype,"text":text,
-			"correct":correct,"incorrect":incorrect})
+			"correct":correct,"incorrect":incorrect,"answer":a})
 		json.dump(data, fw)
