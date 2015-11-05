@@ -58,4 +58,4 @@ while True:
 		data = json.loads(fp.read())
 	with open("data.json", "wb") as fw:
 		data.append(entry)
-		json.dump(data, fw)
+		json.dump(data, fw, indent=4)
