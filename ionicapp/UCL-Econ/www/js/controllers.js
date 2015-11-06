@@ -32,13 +32,22 @@ angular.module('app.controllers', [])
       // return a 2-element array of [boolean, stringMessage]
       if (response[0]) {
         var alertPopup = $ionicPopup.alert({
-          title: "Correct!",
-          template: response[1]
+          title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+    + response[1] + "</div>",
+          
+          okText: 'Next Section',
+          okType: 'button-balanced'
         });
       } else {
         var alertPopup = $ionicPopup.alert({
-          title: "Incorrect!",
-          template: response[1]
+          title: "<div class='bar bar-calm'><h1 class='title'>Incorrect!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+    + response[1] + "</div>",
+          okText: 'Try Again',
+          okType: 'button-assertive'
         }
           );
       };
