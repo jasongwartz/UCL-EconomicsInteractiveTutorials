@@ -1,0 +1,16 @@
+{
+	"name":"Question Set",
+	
+	"q3":{
+		"correctAnswer" : 500,
+		"correctMessage" : "Great job!",
+		"incorrectMessage" : "You suck!"
+	},
+	
+	"q4":{
+		"correctAnswer" : 200,
+		"correctMessage" : "Wonderful!",
+		"incorrectMessage" : "Terrible!"
+	}
+	
+}
