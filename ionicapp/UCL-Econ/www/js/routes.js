@@ -26,7 +26,12 @@ angular.module('app.routes', [])
       controller: 'lesson1Ctrl'
     })
         
-      
+      .state('lesson2', {
+      url: '/lesson2',
+      templateUrl: 'templates/lesson2.html',
+      controller: 'lesson2Ctrl'
+    })
+       
     ;
 
   // if none of the above states are matched, use this as the fallback
