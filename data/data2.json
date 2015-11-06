@@ -1,0 +1,90 @@
+[
+	{
+		"answer": "10001",
+		"incorrect": "The average cost of one toy is the total cost divided by 1.  Add the fixed cost (10000) to the marginal cost of the first toy (1) to get the total cost.  Then divide by 1.",
+		"type": "SingleAnswer",
+		"id": "AC1",
+		"correct": "Correct!  The average cost of 1 is the total cost, 10001, divided by 1."
+	},
+	{
+		"answer": "5001",
+		"incorrect": "The average cost of two toys is the total cost divided by 2.  Add the fixed cost (10000) to the marginal cost of the two toys (1 each) to get the total cost.  Then divide by 2.",
+		"type": "SingleAnswer",
+		"id": "Ac2",
+		"correct": "Correct!  The average cost of 2 is the total cost, 10002, divided by 2."
+	},
+	{
+		"answer": "3333",
+		"incorrect": "Use the column in the table for an output of 3.  Use the average cost row of numbers.  If you do the calculation yourself, round off to the nearest whole number.",
+		"type": "SingleAnswer",
+		"id": "AC3",
+		"correct": "Correct!"
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "AC4",
+		"choices": {
+			"yes": {
+				"message": "Correct!  The $3700 price is more than the $3000 marginal cost.  You gain $700 by accepting the 2nd patient.  <p><p>So far, we have figured out that we want to contract with at least 2 patients.",
+				"solution": "y"
+			},
+			"no": {
+				"message": "Compare what the 2nd patient pays you with the cost of adding that 2nd patient, which is the the marginal cost of the 2nd patient.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"highmessage": "At this output rate, your total cost is less than your total revenue.  However, there is a lower output rate for which that is also true.",
+		"lowmessage": "At this output rate, the total cost is greater than the total revenue.  You are not breaking even.",
+		"correct": "Correct!",
+		"answer": "4",
+		"type": "Range",
+		"id": "AC5"
+	},
+	{
+		"highmessage": "At this output rate, your total cost is less than your total revenue.  You are not breaking even.",
+		"lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.",
+		"id": "AC6",
+		"answer": "8",
+		"type": "Range",
+		"correct": "Correct!"
+	},
+	{
+		"highmessage": "At this output rate, you are more than breaking even.  However, there is a lower output rate that also more than breaks even.",
+		"lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.",
+		"correct": "Correct!",
+		"answer": "2",
+		"type": "Range",
+		"id": "AC7"
+	},
+	{
+		"answer": "5",
+		"incorrect": "There is another output rate with a lower average cost.",
+		"type": "SingleAnswer",
+		"id": "AC8",
+		"correct": "Correct!  Joan's average cost bottoms out at 5 patients per year."
+	},
+	{
+		"answer": "false",
+		"incorrect": "Not correct.  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the $4200 price.",
+		"type": "SingleAnswer",
+		"id": "AC9",
+		"correct": "Correct!  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the $4200 price.<p>The break-even point, the minimum average cost point, and the profit maximizing point are three different points!"
+	},
+	{
+		"answer": "8",
+		"incorrect": "Use the marginal decision rule.  You want the highest output rate that has a marginal cost less than $4200.",
+		"type": "SingleAnswer",
+		"id": "AC10",
+		"correct": "Correct!  This is the highest output rate for which the marginal cost is less than $4200"
+	},
+	{
+		"highmessage": "Your average cost is less than the price, but there is a lower output rate for which that is also true.",
+		"lowmessage": "Your costs exceed your revenues at this output rate.  You can tell because your average cost is more than $3200.",
+		"correct": "Correct!  This is the lowest output rate for which the average cost is less than $3200.  You have to have at least 4 patients to break even.",
+		"answer": "4",
+		"type": "Range",
+		"id": "AC11"
+	}
+]

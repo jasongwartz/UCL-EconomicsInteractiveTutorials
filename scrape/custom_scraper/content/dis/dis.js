@@ -7,19 +7,14 @@ $(document).ready(function(){
        $("#dis1-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("Not correct.  If you wait until next year to "
-                               +"get your $200, you'll lose one year's worth of "
-                               +"interest that you could have earned in a bank.");
+       .html("Not correct.  If you wait until next year to get your $200, you'll lose one year's worth of interest that you could have earned in a bank.");
     });
 
     $('[name=dis1][value=today]').click(function() {
        $("#dis1-answer")
        .addClass("correct")
        .removeClass("incorrect")
-       .html("Correct!  $200 today is worth more than "
-                               +"$200 a year from now.  If you get $200 "
-                               +"now, you can put it in a bank account.  In a year, you'll "
-                               +"have your $200, plus the interest it will earn. <p>In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.");
+       .html("Correct!  $200 today is worth more than $200 a year from now.  If you get $200 now, you can put it in a bank account.  In a year, you'll have your $200, plus the interest it will earn. <p>In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.");
        $("#dis1A-answer")
        .html("");
     });
@@ -27,10 +22,7 @@ $(document).ready(function(){
        $("#dis1-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("Even with no inflation and no risk of non-payment, "
-                               +"getting the money sooner is better, "
-                               +"because you can put money you get now in a "
-                               +"bank and earn interest.");
+       .html("Even with no inflation and no risk of non-payment, getting the money sooner is better, because you can put money you get now in a bank and earn interest.");
     });
 
 
@@ -58,10 +50,7 @@ $(document).ready(function(){
        $("#dis3-answer")
        .addClass("correct")
        .removeClass("incorrect")
-       .html("Correct!  After one year you have $210.  "
-                               +"After the second year, you get 5% of $210, "
-                               +"which is $10.50, in interest.  Your final "
-                               +"total is $210 + $10.50 = $220.50.");
+       .html("Correct!  After one year you have $210.  After the second year, you get 5% of $210, which is $10.50, in interest.  Your final total is $210 + $10.50 = $220.50.");
         $("#dis3A-answer")
             .html(""); 
     });
@@ -70,10 +59,7 @@ $(document).ready(function(){
        $("#dis3-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("Not quite.  Your original $200 will earn "
-                               +"another $10 interest, but you'll also get interest "
-                               +"on the first year's $10 interest. "
-                               +"Getting interest on interest is called 'compounding.'");
+       .html("Not quite.  Your original $200 will earn another $10 interest, but you'll also get interest on the first year's $10 interest. Getting interest on interest is called 'compounding.'");
     });
     
 	$("#dis4-button").click(function(){
@@ -97,29 +83,19 @@ $(document).ready(function(){
        .addClass("correct")
        .removeClass("incorrect")
        .html("Correct!");
-       $("#dis5A-answer").html("<p>You want the amount that will "
-                               +"grow to $200 in one year.  <br>You want X such that "
-                               +"<br>X \u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: "
-                               +"<br>X = $200/1.05 <br>which calculates to"
-                               +"<br>X = $190.48.");
+       $("#dis5A-answer").html("<p>You want the amount that will grow to $200 in one year.  <br>You want X such that <br>X \u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: <br>X = $200/1.05 <br>which calculates to<br>X = $190.48.");
     });
     $('[name=dis5][value=190]').click(function() {
        $("#dis5-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("$190 is not quite enough.  Subtracting 5% of $200 "
-                               +"does not give the right answer.  If you did start "
-							   +"with $190, your interest would be 5% of $190, which "
-							   +"is $9.50.  You'd have $199.50 next year, not $200.");
+       .html("$190 is not quite enough.  Subtracting 5% of $200 does not give the right answer.  If you did start with $190, your interest would be 5% of $190, which is $9.50.  You'd have $199.50 next year, not $200.");
     });
     $('[name=dis5][value=200]').click(function() {
        $("#dis5-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("You don't need $200 now."
-                               +"You only need the amount that will "
-                               +"grow to $200 if you leave it in the "
-                               +"bank and earn interest for a year.");
+       .html("You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for a year.");
     });
 
     $('[name=dis6][value=18141]').click(function() {
@@ -141,10 +117,7 @@ $(document).ready(function(){
        $("#dis6-answer")
        .addClass("incorrect")
        .removeClass("correct")
-       .html("You don't need $200 now."
-                               +"You only need the amount that will "
-                               +"grow to $200 if you leave it in the "
-                               +"bank and earn interest for two years.");
+       .html("You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for two years.");
     });
     
     
@@ -267,9 +240,7 @@ $(document).ready(function(){
        .removeClass("correct")
        .removeClass("incorrect")
        .addClass("hehe")
-       .html("Your lucky numbers are 2 44 26 3 8 37.<br>"
-                               +"If these win the state lottery,<br>"
-					 +"you can buy the hen and the egg!");
+       .html("Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!");
     });
 
 

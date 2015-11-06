@@ -60,12 +60,12 @@ $(document).ready(function(){
             .text("Correct!");
         } else {
             $("#AC5-answer").addClass("incorrect")
-       		.removeClass("correct").text("At an output rate of "+response+", the total cost is greater than the total revenue.  You are not breaking even.");
+       		.removeClass("correct").text("At this output rate, the total cost is greater than the total revenue.  You are not breaking even.");
         }
        if( response > 4) {
 			$("#AC5-answer").addClass("incorrect")
        		.removeClass("correct")
-            .text("At an output rate of "+response+", your total cost is less than your total revenue.  However, there is a lower output rate for which that is also true.");
+            .text("At this output rate, your total cost is less than your total revenue.  However, there is a lower output rate for which that is also true.");
         } 
         if(isNaN(response)) {
         	$("#AC5-answer").addClass("incorrect")
@@ -90,12 +90,12 @@ $(document).ready(function(){
         if( response > 8) {
 			$("#AC6-answer").addClass("incorrect")
        		.removeClass("correct")
-            .text("At an output rate of "+response+", your total cost is less than your total revenue.  You are not breaking even.");
+            .text("At this output rate, your total cost is less than your total revenue.  You are not breaking even.");
         } 
         if( response < 4) {
 			$("#AC6-answer").addClass("incorrect")
        		.removeClass("correct")
-            .text("At an output rate of "+response+", your total cost is more than your total revenue.  You are not breaking even.");
+            .text("At this output rate, your total cost is more than your total revenue.  You are not breaking even.");
         } 
         if(isNaN(response)) {
         	$("#AC6-answer").addClass("incorrect")
@@ -117,12 +117,12 @@ $(document).ready(function(){
         } else {
         	$("#AC7-answer").addClass("incorrect")
        		.removeClass("correct")
-            .text("At an output rate of "+response+", you are more than breaking even.  However, there is a lower output rate that also more than breaks even.");
+            .text("At this output rate, you are more than breaking even.  However, there is a lower output rate that also more than breaks even.");
         }
         if( response < 2) {
 			$("#AC7-answer").addClass("incorrect")
        		.removeClass("correct")
-            .text("At an output rate of "+response+", your total cost is more than your total revenue.  You are not breaking even.");
+            .text("At this output rate, your total cost is more than your total revenue.  You are not breaking even.");
         } 
         if(isNaN(response)) {
         	$("#AC7-answer").addClass("incorrect")
