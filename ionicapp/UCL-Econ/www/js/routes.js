@@ -15,15 +15,11 @@ angular.module('app.routes', [])
     })
         
     .state('economicsInteractiveTutorials', {
-      url: '/page1',
+      url: '/sambaker',
       templateUrl: 'templates/economicsInteractiveTutorials.html',
       controller: 'economicsInteractiveTutorialsCtrl'
     })
-        
-      
-    
-      
-        
+
     .state('lesson1', {
       url: '/lesson1',
       templateUrl: 'templates/lesson1.html',

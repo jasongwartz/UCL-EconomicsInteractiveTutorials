@@ -2327,6 +2327,7 @@ a, button, :focus, a:focus, button:focus, a:active, a:hover {
  * Remove tap highlight color
  */
 a {
+  text-decoration: none;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent; }
