@@ -3,13 +3,89 @@
         <form class="list">
             <button class="button button-balanced button-block button-large">Marginal Costs</button>
         </form>
-        <div>
+
             <p>This tutorial shows how, in theory, a business firm in a competitive industry can use the marginal cost concept developed in the previous tutorial to decide how much to produce and sell.</p>
-        </div>
+        
         <button class="button button-light button-block ">The big idea: A marginal decision rule applies to firms in competitive industries.</button>
-        <div>
+        
             <p>The marginal decision rule theory also applies to any firm that is a "price taker," not a "price maker."</p>
+        <div class="col text-center">
+            <h2>Single Answer</h2>
+        <form name="AC1" novalidate ng-submit="thisAlert(AC1.$name)">
+              <div class="list">
+              
+                    <label class="item item-input">
+                      <span class="input-label">Answer</span>
+                      <input type="text" ng-model="answer.submission" required name="answer"></input>
+                    </label>
+
+                    <button class="button button-balanced" type="submit" ng-disabled="AC1.$invalid" value="submit">Submit</button>
+                </div>
+
+          </form>
+          <br /><br />
+          <h2>Multiple Choice</h2>
+          <form name="dis5" novalidate ng-submit="thisAlert(dis5.$name)">
+              <div class="list">
+              
+                    <div class="list">
+
+                      <label class="item item-radio">
+                        <input type="radio" ng-model="answer.submission" value="200" name="answer">
+                            <div class="item-content">
+                              200
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </input>
+                      </label>
+
+                      <label class="item item-radio">
+                        <input type="radio" ng-model="answer.submission" value="190" name="answer">
+                            <div class="item-content">
+                              190
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </input>
+                      </label>
+
+                      <label class="item item-radio">
+                        <input type="radio" ng-model="answer.submission" value="19048" name="answer">
+                            <div class="item-content">
+                              19048
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </input>
+                      </label>
+
+                    </div>
+
+                    <button class="button button-balanced" type="submit" ng-disabled="dis5.$invalid" value="submit">Submit</button>
+                </div>
+
+          </form>
+          <br /><br />
+          <h2>Range</h2>
+          <form name="AC11" novalidate ng-submit="thisAlert(AC11.$name)">
+          
+
+                    <div class="list">
+                      <div class="item range range-positive">
+                        <i class="icon ion-ios-minus-outline"></i>
+                        <input type="range" ng-model="answer.submission" name="answer" min="0" max="10" value="5">
+                        <i class="icon ion-ios-plus-outline"></i>
+
+                      </div>
+
+                </div>
+                <div class="list">
+                    <label class="item item-input text-center">
+                    Your Submission: {{answer.submission}}
+                    </label>
+                </div>
+                <button class="button button-balanced" type="submit" ng-disabled="dis5.$invalid" value="submit">Submit</button>
+            </form>
         </div>
+      <br /><br />
         <div class="bar bar-footer">
             <button class="button button-clear">Prev</button>
             <div class="title">. . . . . . .</div>

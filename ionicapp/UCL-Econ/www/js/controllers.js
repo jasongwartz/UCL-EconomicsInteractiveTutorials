@@ -19,8 +19,47 @@ angular.module('app.controllers', [])
 
   })
 
-  .controller('lesson1Ctrl', function ($scope) {
+   .controller('lesson1Ctrl', function ($scope, QuestionFactory, $ionicPopup) {
 
+      $scope.answer = {
+        submission:""
+      }
+
+      $scope.returned = {
+
+      }
+
+      $scope.thisAlert = function(questionName) {
+        console.log(questionName);
+      $scope.data = {}
+      $scope.returned = QuestionFactory.questionChecker(questionName, $scope.answer.submission);
+
+      if($scope.returned[0] == true){
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+          + $scope.returned[1] + "</div>",
+          
+          okText: 'Next Section',
+          okType: 'button-balanced'
+        });
+      }
+      else if($scope.returned[0] == false){
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Incorrect!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+          + $scope.returned[1] + "</div>",
+          
+          okText: 'Try Again',
+          okType: 'button-assertive'
+        });
+      }
+       alertPopup.then(function(res) {
+         console.log('Thank you for not eating my delicious ice cream cone');
+       });
+       };
   })
 
   .controller('lesson2Ctrl', function ($scope, $ionicPopup) {
