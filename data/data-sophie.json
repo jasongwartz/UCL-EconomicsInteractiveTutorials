@@ -1,0 +1,711 @@
+[
+	{
+		"incorrect": "No, doctors are on the Supply side.  Patients are on the Demand side.  True, doctors do influence their demand, because patients rely on them for guidance about what medical services to buy.  At the first level of analysis, though, doctors are on the supply sides of medical services markets.",
+		"correct": "Correct! The 'providers' are sellers in this market.",
+		"answer": "Supply",
+		"type": "TrueFalse",
+		"id": "sd1"
+	},
+	{
+		"incorrect": "No. Patients, or potential patients, are buyers. Buyers are on the demand side of a market.",
+		"text": "",
+		"answer": "Demand",
+		"type": "TrueFalse",
+		"correct": "Correct! Patients, or potential patients, are buyers in this market."
+	},
+	{
+		"incorrect": "No. It does not sell these medical services.",
+		"correct": "Correct!  Health insurance companies help or hinder patients who want to buy health care.",
+		"answer": "Demand",
+		"type": "TrueFalse",
+		"id": "sd3"
+	},
+	{
+		"incorrect": "No, emergency departments are on the Supply side.  Patients are on the Demand side.",
+		"id": "sd4",
+		"answer": "Correct!  Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere.",
+		"type": "TrueFalse",
+		"correct": "Correct!  Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere."
+	},
+	{
+		"incorrect": "No.  It is not in the primary care market.",
+		"correct": "Correct!  It does not sell primary care services.  It is a supplier in a different market.",
+		"answer": "Neither",
+		"type": "MultipleChoice",
+		"id": "sd5"
+	},
+	{
+		"incorrect": "Find the line in the table for a price of $10 per visit.",
+		"id": "sd6",
+		"answer": "1000",
+		"type": "TrueFalse",
+		"correct": "Correct!  This is from the bottom line of the table."
+	},
+	{
+		"incorrect": "No.  Equilibrium requires that supply and demand be in balance.",
+		"correct": "No",
+		"answer": "Correct!  Demand quantity exceeds supply quantity at this price.",
+		"type": "TrueFalse",
+		"id": "sd7"
+	},
+	{
+		"incorrect": "Not this row.  Equilibrium requires the supplied and the demanded quantities be equal.",
+		"id": "sd8",
+		"answer": "35",
+		"type": "MultipleChoice",
+		"correct": "Correct!  At $35, the demand quantity and the supply quantity are both 500."
+	},
+	{
+		"incorrect": "",
+		"correct": "TODO",
+		"answer": "",
+		"type": "MultipleChoice",
+		"id": "sd9"
+	},
+	{
+		"incorrect": "",
+		"id": "sd10",
+		"answer": "",
+		"type": "MultipleChoice",
+		"correct": "TODO"
+	},
+	{
+		"incorrect": "If there is excess supply, there is a surplus on the market.  Unless something peculiar is going on, that should not make the price up.  ('Something peculiar' would be if people think a product is more valuable if it is expensive.  Perfumes may work that way.)",
+		"correct": "Correct!  If there is excess supply, the price should tend to go down.<br><br>Let's look in to why.",
+		"answer": "Down",
+		"type": "TrueFalse",
+		"id": "sd11"
+	},
+	{
+		"incorrect": "I like this reason.  Check the other answer for why.",
+		"id": "sd12",
+		"answer": "True",
+		"type": "TrueFalse",
+		"correct": "Correct!  If there is excess supply, and if there is competition among the sellers for scarce customers, the price should tend to go down."
+	},
+	{
+		"incorrect": "I would say Yes here.  Check the other answer for why.",
+		"correct": "Correct!  Again, it is the combination of excess supply and competition among the sellers.",
+		"answer": "True",
+		"type": "TrueFalse",
+		"id": "sd13"
+	},
+	{
+		"incorrect": "I would say No here.  Check the other answer for why.",
+		"correct": "Correct!  I suppose that the government could do that, but now we're not talking about a free market.",
+		"answer": "False",
+		"type": "TrueFalse",
+		"id": "sd14"
+	},
+	{
+		"answer": "Ok",
+		"incorrect": "The diagram could have been better designed, but it is properly labelled.  See the other answer for why.",
+		"type": "SingleAnswer",
+		"id": "sd14a",
+		"correct": "Correct!  Even when the supply curve appears to be moving down in the picture, the equilibrium quantity is moving to the right, indicating a higher quantity.  Imagine a horizontal line running through the middle of the graph.  You can hold a piece of paper up to the screen, so that the top edge of the paper goes horizontally through the middle of the graph.  You will see that the place where the supply curve touches the paper moves to the right when the words Supply Rising are moving down.  That means that you are getting more quantity supplied at a given price."
+	},
+	{
+		"answer": "Up",
+		"incorrect": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.",
+		"type": "SingleAnswer",
+		"id": "sd14b",
+		"correct": "Correct!  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.  That indicates a higher quantity.  As the supply curve moves to the left, the point where it crosses the demand curve also moves to the left.  That indicates a lower quantity."
+	},
+	{
+		"answer": "Up",
+		"incorrect": "   ",
+		"type": "SingleAnswer",
+		"id": "sd14c",
+		"correct": "Correct!  For price, up is up and down is down.  As the supply curve moves to the right, the point where it crosses the demand curve moves down.  That indicates a lower price.  As the supply curve moves to the left, the point where it crosses the demand curve moves up, towards the top of the page.  That indicates a higher price.\");"
+	},
+	{
+		"answer": "Up",
+		"incorrect": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.",
+		"type": "SingleAnswer",
+		"id": "sd14c",
+		"correct": "Correct!  For price, up is up and down is down.  As the supply curve moves to the right, the point where it crosses the demand curve moves down.  That indicates a lower price.  As the supply curve moves to the left, the point where it crosses the demand curve moves up, towards the top of the page.  That indicates a higher price."
+	},
+	{
+		"answer": "Demand",
+		"incorrect": "No, insurance works on the demand side.",
+		"type": "SingleAnswer",
+		"id": "sd15a",
+		"correct": "Correct!  Insurance works on the demand side.  More insurance would mean that veterans could buy more care at the same prices, because the insurance would help pay the prices.  Supply-demand theory says that this would tend to further drive up the prices of health care services to the general public."
+	},
+	{
+		"answer": "Supply",
+		"incorrect": "No. Expanding service capacity works on the supply side.",
+		"type": "SingleAnswer",
+		"id": "sd17a",
+		"correct": "Correct!  <p>This is what President Clinton chose to do, twenty years ago.  The result is that war veterans get the best health care in the U.S., according to standard quality measures.  Meanwhile, expanding supply this way kept the price pressure off of the general public's system.  </p><p>At this writing, there is a big backlog of veterans' applications to get into the system, but that is not the fault of the hospitals and the medical personnel. </p>"
+	},
+	{
+		"answer": "Demand",
+		"incorrect": "No, not unless the advertisements affect the providers' attitudes.",
+		"type": "SingleAnswer",
+		"id": "sd15",
+		"correct": "Correct!  Changing the buyers' thinking changes the demand."
+	},
+	{
+		"answer": "Demand",
+		"incorrect": "No, not unless the doctors want their patients to eat more fries. They have to want that enough to lower their fees.",
+		"type": "SingleAnswer",
+		"id": "sd16",
+		"correct": "Correct! This works on the buyer, the woman."
+	},
+	{
+		"answer": "Supply",
+		"incorrect": "No. The free vaccine goes to the doctor, who is selling inoculations to patients.",
+		"type": "SingleAnswer",
+		"id": "sd17",
+		"correct": "Correct!  Free vaccine lowers the cost of operating for the sellers of inoculations.  The supply curve should move up, which is to the right in the standard diagram."
+	},
+	{
+		"answer": "Demand",
+		"incorrect": "No.  The message is there to influence buyers, not sellers.  The tobacco companies kept on making cigarettes even after they had to put the messages on the boxes.",
+		"type": "SingleAnswer",
+		"id": "sd19",
+		"correct": "Correct! A scary message may make smokers want to smoke less, even if the price of cigarettes does not change."
+	},
+	{
+		"answer": "Supply",
+		"incorrect": "People will demand fewer cigarettes, but that will be because the price is higher.  That is a movement along the demand curve.  It is not a movement of the demand curve.  The 'demand curve' and the 'quantity demanded' are two different concepts.",
+		"type": "SingleAnswer",
+		"id": "sd20",
+		"correct": "Correct!  The tax adds to the cost of offering the cigarettes for sale.  The store includes the tax in the price that it quotes to the buyers.  That's why I say that the tax is on the supply side."
+	},
+	{
+		"answer": "Demand",
+		"incorrect": "These restrictions do not <em>directly</em> affect the makers of cigarettes.  They do not move the supply curve.",
+		"type": "SingleAnswer",
+		"id": "sd21",
+		"correct": "Correct!  These restrictions reduce demand.  They move the demand curve to the left.  When smoking is less convenient, and when smokers see fewer other smokers, they will buy fewer packs of cigarettes."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "riska1",
+		"correct": ""
+	},
+	{
+		"answer": "Keep",
+		"incorrect": "You are not very risk averse.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to risk your $10,000 to get $1000 in expected additional value.",
+		"type": "SingleAnswer",
+		"id": "riska2",
+		"correct": "This is risk aversion, definitely.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to forgo $1000 in expected value to avoid risking your $10,000."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "riska3-button",
+		"correct": ""
+	},
+	{
+		"answer": "A",
+		"incorrect": "B is your choice.  A 9% chance at $5 million.",
+		"type": "SingleAnswer",
+		"id": "riska5",
+		"correct": "A is your choice.  A 10% chance at $1 million."
+	},
+	{
+		"answer": "C",
+		"incorrect": "D is your choice.   A 1% chance of nothing.  A 9% chance at $5 million. A 90% chance at $1 million.",
+		"type": "SingleAnswer",
+		"id": "riska6",
+		"correct": "C is your choice.  A sure $1 million."
+	},
+	{
+		"answer": "Right",
+		"incorrect": "It can be smart to buy health insurance, even though the insurance company takes a bigger percentage than the casino does.  <br>It's about risk and risk aversion.  Insurance reduces your risk.  It may be worth your while to pay them for that.  <br>When you play roulette, you are increasing your risk, and you are paying the casino to increase your risk!",
+		"type": "SingleAnswer",
+		"id": "riska7",
+		"correct": "Right.  Insurance is a worse gamble than roulette, in terms of expected value and actuarial fairness.  However, it can still make sense to buy insurance.  See the other answer for why."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "risk1-button",
+		"correct": ""
+	},
+	{
+		"answer": "Repeat",
+		"incorrect": "You would be right if you bet each of your dollars just once and then quit.",
+		"type": "SingleAnswer",
+		"id": "risk2",
+		"correct": "Correct!  As you bet your dollars over and over again, you will probably find yourself betting way more than ten times.  When you have bet 190 times, your expected loss is 190 times 2/38, which is $10.  Keep betting long enough, and you will lose everything."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "risk2-button",
+		"correct": ""
+	},
+	{
+		"answer": "Repeat",
+		"incorrect": "A game can be unfair even if it is not rigged.  Of course, if a game is rigged, so that the probabilities are not what you think they are, then the game is almost surely unfair.",
+		"type": "SingleAnswer",
+		"id": "risk3",
+		"correct": "Correct!"
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "Correct! Insurance cannot be fair, the way we are using that word, because no insurance company could stay in business if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.",
+		"type": "SingleAnswer",
+		"id": "risk4",
+		"correct": "Insurance cannot be fair, the way we are using that word, because the insurance company would not make any money if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums."
+	},
+	{
+		"answer": "Down",
+		"incorrect": "If the probability of default goes up, and therefore the probability of getting paid goes down, then the expected present value of the security will be less.  No one will buy the security for less than what he or she thinks the expected present value is.",
+		"type": "SingleAnswer",
+		"id": "risk5",
+		"correct": "Correct! No one will buy the security for less than what he or she thinks the expected present value is."
+	},
+	{
+		"answer": "Do",
+		"incorrect": "AIG (American International Group) took that attitude in the mid-2000s.  They agreed to pay Goldman Sachs if the mortgage-backed securities it held became worthless.  AIG charged premiums based on past default rates and some seemingly harmless assumptions about independence.  Then housing collapsed, many homeowners defaulted on their mortgages, and AIG owed more money than it had.  Bankruptcy loomed for AIG and for Goldman Sachs, which needed the money from AIG.  The U.S. government bailed out AIG. That indirectly bailed out Goldman Sachs.  AIG officials paid themselves bonuses.  Maybe they judged it right after all!",
+		"type": "SingleAnswer",
+		"id": "risk6",
+		"correct": "Correct! We seem to learn this lesson over and over again, the hard way.  (Try the other answer for a story.)"
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "MC1-button",
+		"correct": ""
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "Compare what the first patient pays you with the cost of adding that first patient.  The cost of adding the first patient is the marginal cost of the 1st patient.",
+		"type": "SingleAnswer",
+		"id": "MC2",
+		"correct": "Correct!  The $3700 price is more than the $3500 marginal cost.  You gain $200 by accepting the first patient."
+	},
+	{
+		"answer": "1",
+		"incorrect": "Not correct.  You reduce your loss from $1000 to $800 by taking the 1st patient.  We assume that you can't get out of your fixed cost.",
+		"type": "SingleAnswer",
+		"id": "MC3",
+		"correct": "Correct!  You are losing money either way.  You reduce your loss from $1000 to $800 by taking the 1st patient. We assume that you are stuck with the fixed cost."
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "Compare what the 2nd patient pays you with the cost of adding that 2nd patient, which is the the marginal cost of the 2nd patient",
+		"type": "SingleAnswer",
+		"id": "MC4",
+		"correct": "Correct!  The $3700 price is more than the $3000 marginal cost.  You gain $700 by accepting the 2nd patient.  <p><p>So far, we have figured out that we want to contract with at least 2 patients."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "MC5-button",
+		"correct": ""
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "MC6-button",
+		"correct": ""
+	},
+	{
+		"answer": "False",
+		"incorrect": "A trick question.  The marginal decision rule is not about setting your price.  It is about how to react when the market sets the price and your are what is called a 'price-taker'.",
+		"type": "SingleAnswer",
+		"id": "MC7",
+		"correct": "Correct!  The marginal decision rule is not about setting your price.  It is about how to react when the market sets the price and your are what is called a 'price-taker'."
+	},
+	{
+		"answer": "No",
+		"incorrect": "Compare the marginal cost of the 7th patient with the price, which is now $3300.",
+		"type": "SingleAnswer",
+		"id": "mc8",
+		"correct": "Correct!  The marginal cost of the 7th patient is higher than the $3300 price.  Joan's loses money on that patient."
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "Compare the marginal cost of the 6th patient with the price, which is $3300.",
+		"type": "SingleAnswer",
+		"id": "MC9",
+		"correct": "Correct!  The marginal cost of the 6th patient is less than the $3300 price.  Joan's should accept that patient."
+	},
+	{
+		"answer": "No",
+		"incorrect": "Compare the marginal cost of the 6th patient with the price, which is now $2900.",
+		"type": "SingleAnswer",
+		"id": "MC10",
+		"correct": "Correct!  The marginal cost of the 6th patient is higher than the $2900 price.  Joan's loses money on that patient."
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "MC11",
+		"correct": ""
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "MC12-button",
+		"choices": {
+			"1": {
+				"message": "Correct!  Her revenue and her total cost are equal.  No profit.",
+				"solution": "y"
+			},
+			"2": {
+				"message": "Profit is Revenue minus Total Cost at 5 patients.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"highmessage": "",
+		"lowmessage": "TODO",
+		"correct": "Correct! At 8, the marginal cost is less than $2900.  Above that, the marginal cost is more than $2900.",
+		"answer": "8",
+		"type": "Range",
+		"id": "MC13-button"
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "MC14",
+		"choices": {
+			"1": {
+				"message": "This is what independent doctors often recommend.  It requires that the value of a life year be more than $1.2 million.  That is higher than the $200,000 number that I asked you to use.",
+				"solution": "n"
+			},
+			"3": {
+				"message": "This is the implied choice if the value of a life year is between $180,000 and $260,000.  Some insurance companies have decided that this is an appropriate range for the value of a life year, so they only pay for PAP tests every three years.",
+				"solution": "y"
+			},
+			"2": {
+				"message": "This requires that the value of a life year be more than $260,000.  That is higher than the $200,000 number that I asked you to use.",
+				"solution": "n"
+			},
+			"4": {
+				"message": "This the choice if value of a life year is between $10,000 and $180,000.  That is lower than the $200,000 number that I asked you to use.  Some insurance companies have decided that this is an appropriate range for the value of a life year, so they only pay for PAP tests every four years.  Good thing that four years is the longest interval that Eddy considered!",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"answer": "Maybe",
+		"incorrect": "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.",
+		"type": "SingleAnswer",
+		"id": "irr1",
+		"correct": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future."
+	},
+	{
+		"answer": "irr",
+		"incorrect": "No, it's not that easy, because the bond is not selling at its face value.",
+		"type": "SingleAnswer",
+		"id": "irr3",
+		"correct": "You're right!  Let's do it!"
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "irr6",
+		"choices": {
+			"1": {
+				"message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<ol><li>Each seller will sell fewer products.<li>The price of the product will fall.</ol>This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were.  (I have tutorials about elasticity at sambaker.com/econ )<p>I also assume that the demand curve does not move outward.",
+				"solution": "y"
+			},
+			"3": {
+				"message": "If more sellers flood the market, can the revenue that each seller makes go up?",
+				"solution": "n"
+			},
+			"2": {
+				"message": "If more sellers flood the market, can the revenue that each seller makes stay the same?",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"answer": "5irr",
+		"incorrect": "Too drastic.  New firms will stop entering the market well before it gets that bad.",
+		"type": "SingleAnswer",
+		"id": "irr7",
+		"correct": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing."
+	},
+	{
+		"answer": "no",
+		"incorrect": "Correct!  A price cut of $33 each on 10,000 machines is $330,000.  More than enough to cover the $100,000. TODO",
+		"type": "SingleAnswer",
+		"id": "irr10",
+		"correct": "\tYes, they could.  A price cut of $33 each on 10,000 machines is $330,000.  More than enough to make delaying the regulations a profitable strategy."
+	},
+	{
+		"answer": "Inelastic",
+		"incorrect": "This patient will be presumed to want care regardless of what he will be charged.  Demand is inelastic, therefore.<br>As for what the hospital does, that is a supply side question.",
+		"type": "SingleAnswer",
+		"id": "q1",
+		"correct": "Correct!  The demand will be inelastic with respect to price.  This patient will be presumed to want care regardless of what he will be charged.<br>As for what the hospital does, that is a supply side question."
+	},
+	{
+		"answer": "Elastic",
+		"incorrect": "Not inelastic, because the patient may or may not buy the prescribed drug, depending on the price.",
+		"type": "SingleAnswer",
+		"id": "q2",
+		"correct": "Correct!  The demand will be elastic.  If the price is high, the patient may forgo buying the drug."
+	},
+	{
+		"answer": "Elastic",
+		"incorrect": "Not inelastic, because the family may or may not go see the doctor, depending on the price charged.",
+		"type": "SingleAnswer",
+		"id": "q3",
+		"correct": "Correct!  The demand will be elastic.  If the price for an office visit is high, the parents may hesitate to go to the doctor, and hope that the earache goes away by itself."
+	},
+	{
+		"answer": "inelastic",
+		"incorrect": "No, it is not elastic.  Elastic demand means that buyers change what they buy, or how much they buy, when prices are different or change.",
+		"type": "SingleAnswer",
+		"id": "q5",
+		"correct": "Correct!  Inelastic demand means that price differences do not affect what buyers buy."
+	},
+	{
+		"answer": "Elastic",
+		"incorrect": "No, it is not inelastic.  Inelastic demand means that price differences do not affect buyer behavior.",
+		"type": "SingleAnswer",
+		"id": "q4",
+		"correct": "Correct!  If how much buyers buy responds to price differences, demand is elastic."
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "No, this does not show elastic.  Elastic demand would mean that buyers would buy less at higher prices.  Here, they buy the same at all prices.",
+		"type": "SingleAnswer",
+		"id": "q6",
+		"correct": "Correct!  The graph and table say that the same amount is sold at high prices and at low prices.  There is no response of quantity to price."
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "q7",
+		"choices": {
+			"TODO": {
+				"message": "",
+				"solution": ""
+			}
+		}
+	},
+	{
+		"answer": "TODO",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "Elas201-button",
+		"correct": ""
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "Elasq2",
+		"choices": {
+			"1": {
+				"message": "You're right to be unsure!  You could use 100, 60, or something between.",
+				"solution": "y"
+			},
+			"3": {
+				"message": "Correct, maybe.  Are you sure you shouldn't use 100?",
+				"solution": "n"
+			},
+			"2": {
+				"message": "Correct, maybe. Are you sure you shouldn't use 60?",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "Elas203-button",
+		"choices": {
+			"TOD": {
+				"message": "",
+				"solution": "TODO"
+			}
+		}
+	},
+	{
+		"answer": "Inelastic",
+		"incorrect": "If our number were something like -2, we would call the demand elastic.",
+		"type": "SingleAnswer",
+		"id": "Elasq9",
+		"correct": "Correct!  -0.5 is between 0 and -1, so we can call this demand inelastic."
+	},
+	{
+		"answer": "Up",
+		"incorrect": "$1800 is bigger than $1000.",
+		"type": "SingleAnswer",
+		"id": "Elasq12",
+		"correct": "Correct!  Revenue goes up, from $1000 to $1800."
+	},
+	{
+		"answer": "Yes",
+		"incorrect": "It is consistent.  Our demand is inelastic and our higher price brings more revenue.",
+		"type": "SingleAnswer",
+		"id": "Elasq13",
+		"correct": "Correct!  Our demand is inelastic and our higher price brings more revenue."
+	},
+	{
+		"answer": "Raise",
+		"incorrect": "You are throwing money away!  You must be one of those &#9786;Liberals.",
+		"type": "SingleAnswer",
+		"id": "Elasq14",
+		"correct": "Correct!  Charge 'what the market will bear' to bring in more money."
+	},
+	{
+		"answer": "Emergency",
+		"incorrect": "The demand for education services is probably very elastic.  If you make classes or consultations expensive, no one will come.  This is not where you can make a lot of revenue by raising the price.",
+		"type": "SingleAnswer",
+		"id": "Elasq15",
+		"correct": "Correct!  The demand for emergency services is price-inelastic.  Those are prices you can raise and bring in more revenue.<p>You will implement the price increase by assigning a lot of overhead cost to the emergency department.  That way, you don't show a big profit, which might raise eyebrows with the public.  If somebody gets emergency services who has no means to pay, you will show a big financial loss.  That loss will be exaggerated, to the extent that it includes the overhead costs that you tacked on.</p>"
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "Elasq16",
+		"choices": {
+			"1": {
+				"message": "Correct!  No response to price changes makes the numerator of the elasticity fraction zero, which makes the whole fraction equal zero.",
+				"solution": "y"
+			},
+			"3": {
+				"message": "An elasticity of minus infinity would be for a huge fall in quantity demanded when the price goes up by almost nothing.  That is highly responsive demand.",
+				"solution": "n"
+			},
+			"2": {
+				"message": "No response to price changes makes the numerator of the elasticity fraction zero.  A fraction can't be -1 if its numerator is 0.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"answer": "Lower",
+		"incorrect": "With elastic demand, raising the price drives customers away.  What you gain from a higher price per item does not compensate for your selling fewer items.",
+		"type": "SingleAnswer",
+		"id": "Elasq17",
+		"correct": "\tCorrect!  With elastic demand, your gain from selling more items is more than your loss from making less money on each item."
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "Elasq18",
+		"choices": {
+			"1": {
+				"message": "Correct!  The tiniest price increase wipes out all your sales.  At the limit, that makes the elasticity number minus infinity.",
+				"solution": "y"
+			},
+			"3": {
+				"message": "An elasticity of 0 is for perfectly <strong>in</strong>elastic demand.",
+				"solution": "n"
+			},
+			"2": {
+				"message": "A tiny price reduction will give you a huge increase in sales quantity.  The elasticity fraction for such a price reduction is a big number divided by a small negative number.  The quotient is going to be way more negative than -1.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"answer": "Down",
+		"incorrect": "No, higher prices make the quantity demanded go down.",
+		"type": "SingleAnswer",
+		"id": "D2",
+		"correct": "Correct!  Higher prices make the quantity demanded lower."
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "D4",
+		"choices": {
+			"1": {
+				"message": "Correct!",
+				"solution": "y"
+			},
+			"3": {
+				"message": "No, F is the point for a price of $6.",
+				"solution": "n"
+			},
+			"2": {
+				"message": "No, A is the point for a price of $1.",
+				"solution": "n"
+			},
+			"5": {
+				"message": "No, D is the point for a price of $4.",
+				"solution": "n"
+			},
+			"4": {
+				"message": "No, C is the point for a price of $3.",
+				"solution": "n"
+			},
+			"6": {
+				"message": "No, E is the point for a price of $5.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"type": "MultipleChoice",
+		"id": "D41",
+		"choices": {
+			"1": {
+				"message": "Correct!  You move from B to D, along the curve.",
+				"solution": "y"
+			},
+			"3": {
+				"message": "No.  B is where we start.  Where do we finish?",
+				"solution": "n"
+			},
+			"2": {
+				"message": "No, that is not the point where the price is $4.",
+				"solution": "n"
+			}
+		}
+	},
+	{
+		"answer": "Down",
+		"incorrect": "No, a nasty rumor is not going to increase your sales at a given price",
+		"type": "SingleAnswer",
+		"id": "D5",
+		"correct": "Correct!  A nasty rumor makes demand shift down.  At any given price, you will sell fewer gowns."
+	},
+	{
+		"answer": "Before",
+		"incorrect": "",
+		"type": "SingleAnswer",
+		"id": "D51",
+		"correct": "TODO"
+	},
+	{
+		"answer": "Shift",
+		"incorrect": "No.  More gloves were bought, even at the same prices.",
+		"type": "SingleAnswer",
+		"id": "D8",
+		"correct": "Correct!  More gloves were bought, even at the same prices."
+	},
+	{
+		"answer": "Shift",
+		"incorrect": "No.  More patients come in, even at the same prices, means that the demand curve shifted out.",
+		"type": "SingleAnswer",
+		"id": "D9",
+		"correct": "Correct!  More patients come in, even at the same prices."
+	},
+	{
+		"answer": "Along",
+		"incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.",
+		"type": "SingleAnswer",
+		"id": "D10",
+		"correct": "Correct!  Changing your prices moves you along your demand curve."
+	},
+	{
+		"answer": "Along",
+		"incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.",
+		"type": "SingleAnswer",
+		"id": "D13",
+		"correct": "Correct!  Changing your prices moves you along your demand curve.  Your demand is inelastic, so your demand curve is close to a vertical line.  You move up that line when you raise your price."
+	},
+	{
+		"answer": "Curve",
+		"incorrect": "No.  Demand is the price-quantity relationship of the buyers.",
+		"type": "SingleAnswer",
+		"id": "D15",
+		"correct": "Correct!  Demand is the buyers' price-quantity relationship."
+	}
+]
