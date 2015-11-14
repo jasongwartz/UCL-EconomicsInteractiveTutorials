@@ -1,0 +1,105 @@
+<ion-view>
+	<ion-content>
+		
+		<h3>
+Roulette Simulation</h3>
+Below, after this explanation, is a roulette simulation.  
+Before you try it, let me tell you how it works and what it is supposed to show.
+<p>We will pretend that we are playing roulette.  We will bet on Odd. This means we will win when the little ball
+on the roulette wheel lands on an odd number. We lose if the ball finishes
+on an even number. We also lose if the ball finishes on 0 or 00 because,
+in roulette, 0 and 00 are neither even nor odd.
+<p>There is no little ball or wheel inside this computer, of course.  Instead, we use a random number generator to simulate spins of the wheet.  
+<p>If we bet on Odd, there are 18 numbers that win for us: 1, 3, 5, 7, 9, and so forth, up through 35.
+Twenty numbers lose for us: 2, 4, 6, 8, and so forth through 36, plus 0 and 00, which are neither even nor odd in roulette. 
+Winning pays 1-1, meaning that we get $1 if we win and lose $1 if we don't.  
+Our expected loss per bet is (18-20)/38 = $-0.0528 per dollar bet.  The law of large numbers implies that, the more times we spin, the closer we should get to $-0.0528 per dollar bet.
+<div id="right38content"><button id="spin1">Click to spin once.</button><br><button id="spin10">Click to spin 10 times.</button><br><button id="spin1000">Click to spin 1000 times.</button><br><button id="spin1000000">Click to spin 1 million times. <br>May slow your computer.</button></div>  
+<table border>
+<tr>
+<td>The number that last came up</td><td><span id="num"></span></td></tr>
+<tr><td>How many times we won</td><td><span id="win">0</span></td></tr>
+<tr>
+<td>How many times we lost</td><td><span id="loss">0</span></td></tr>
+<tr>
+<td>Our net gain (minus means loss)</td><td><span id="net">0</span></td></tr>
+<tr>
+<td>Total bets</td><td><span id="bets">0</span></td></tr>
+<tr><td>Gain per dollar bet</td><td><span id="ratio"></span></td></tr></table>
+
+
+<p>If you spin once, you will either win or lose.  Your net gain per dollar bet will be either 1 or -1.
+<p>If you press the spin 10 button several times, your net gain per dollar bet will vary, but it won't go nearly all the way to 1 or -1.  
+<p>If you press the spin 1000 button several times, your net gain per dollar bet will vary, but not by nearly as much as for spinning 10 times.
+<p>If you press the spin 1 million button several times, the net gain per dollar spent will come out between -0.510 and -0.0540 almost every time.  Suppose a roulette wheel in a casino gets two bets every thirty seconds, 12 hours a day.  The casino is very likely to make between $51,000 and $54,000 on that roulette wheel.
+<p>The more spins, the smaller is the bracket around -2/38.
+
+<p>To further test your understanding of probability concepts, I have 
+<a href="riskdoubletest.html">another roulette 
+simulation.  This one has the bettor use a doubling system</a>, a sure fire way to beat the
+odds?  (This simulation uses a Java applet.)
+<h3>
+Evaluating Securities</h3>
+The application of this roulette model to evaluating financial securities is almost straightforward.
+<p>I say "almost" is because of the important phenomenon of <b>risk
+aversion</b>. A risk averse person is one who is willing to pay money to
+avoid taking a risk. We discuss that in detail another interactive
+tutorial. (<a href="../RiskA/RiskA.html">This is a link</a>, but I recommend working through the rest of this tutorial first.)
+Leaving risk aversion aside, the application of the roulette model is straightforward.
+<p>Suppose you have the opportunity to buy a treasury bill from some country.
+<blockquote>A treasury bill is a simple I.O.U.,
+a promise to pay a certain amount of money at a certain time. A typical
+treasury bill might promise to pay $10,000 in one year. When you buy such a treasury bill, you are lending money, in effect.
+You give the country some money today. The country promises to give you $10,000 in a year.</blockquote>
+<p>If there is no risk that the country won't pay off the bill, then the
+value of the bill today depends on the current interest rate on no-risk loans.  Investors considering buying the bill will
+offer an amount of money that is less than $10,000.  They will offer at most the amount of money $X such that $X would grow to $10,000 in one year if invested in some other no-risk loan.  
+In other words, the investor will offer the present value of a sure $10,000 one year from now. 
+<p>Let's say that the current interest rate on short-term treasury securities is 2% per year. For this no-risk treasury bill, you would offer at most the amount of money $X such that $X times 1.02 equals $10,000.
+<p>We can write this equation:  X times 1.02 = 10000.  Divide both sides by 1.02 to get X = 10000/1.02 = $9803.92. (For more on this type
+of calculation, see the <a href="../dis/Dis.html">interactive
+tutorial on discounting future income</a>.) 
+<p>This is why it is said that
+treasury bills sell "at a discount." You get the 2% interest by giving the treasury an amount that is less than the face value or future value.  You give the treasury $9803.92 now. A year from now, they will give you $10,000.  You will have earned 2% interest.
+
+<p>Now let's suppose that another country is also selling $10,000 one-year 
+treasury bills.  This country's finances are shaky.  You estimate that the probability is 90% that the country will actually pay the $10,000
+when the year is up. There is a 10% probability that
+it will pay $0. 
+
+<p>Let us calculate the expected present value of that risky treasury bill.
+<p>We can start with the present value if there were no risk.  It is, $9803.92, if the interest rate on no-risk loans is 2%.
+<p>Let us say that there are two possibilities:
+<ol>
+<li>The bond will pay $10,000 in one year.
+<li>The bond will pay $0 in one year.
+</ol> 
+From the paragraph above, we have that the probability of paying in full is 90%, and that the probability of paying nothing is 10%. <blockquote>90% + 10% = 100%, so there are no other possible outcomes.</blockquote>
+<span class="question">Place the decimal forms of 90% and 10% in the table below. In other words, type 0.9 and 0.1 in the boxes below.  The only thing to figure out is which number goes in which box.</span>
+<br><button id="risk2-button">Type a number in each box.<br>Then click this.</button>
+<table border>
+<tr>
+<td>Outcome</td>
+<td>Present value<br>of payoff</td>
+<td>Probability<br>of outcome</td>
+    <td><span id="product-answer"></td>
+</tr>
+<tr>
+<td>The bond will pay <br>$10,000 next year.</td>
+<td align=right>$9803.92</td>
+<td><input id="risk2Y-response" name="risk2Y" type="text" size="5"></input></td>
+<td align=right><span id="productY"></span></td>
+</tr>
+<tr>
+<td>The bond will pay <br>$0 next year.</td>
+<td align=right>$0.00</td>
+<td><input id="risk2N-response" name="risk2N" type="text" size="5"></input></td>
+<td align=right><span id="productN"></span></td>
+</tr>
+</table> 
+
+    <div id="risk2Y-answer"></div><div id="risk2N-answer"><br></div><div id="risk2A-answer">
+<p>Leaving some space you have the right numbers above.
+	
+	</ion-content>
+	</ion-view>

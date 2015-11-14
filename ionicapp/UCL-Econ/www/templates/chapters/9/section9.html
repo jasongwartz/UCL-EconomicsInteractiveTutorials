@@ -1,0 +1,60 @@
+<ion-view>
+	<ion-content>
+		
+		<center>
+<h3>
+How Present Value Changes When the Discount Rate Changes</h3></center>
+So far, we've done everything with a discount rate of 5%. Now let's see
+how the changes in the discount rate affect the present value.
+<p>For variety, let us use a $1000 face-value bond with a maturity of 10 years and no risk that it won't be paid.  (You can actually buy a U.S. Treasury bond like that.  The only risk is that someday Republicans in Congress may block the Treasury from paying out money.)
+<p>If the discount rate for bond-buying people and institutions is <span id="dis10percent">5%</span>, the present value of that bond will be   
+<p><span id="dis10value1">$613.91</span> = $1000 / ( 1<span id="dis10rate">.05</span> )<sup>10</sup>.  The bond will sell for <span id="dis10value2">$613.91</span> on the day it is newly issued.
+<p class="question">Try some different discount rates.
+<br><input type="radio" name="dis10" value="0">0%</input>
+<input type="radio" name="dis10" value="3">2.75%</input>
+<input type="radio" name="dis10" value="5">5%</input>
+<input type="radio" name="dis10" value="15">15.8%</input>
+<div id="dis10-answer">The bond's price goes up when the discount rate goes down, and vise-versa.</div> 
+<center><h3>The Net Present Value of an Income Stream</h3></center>
+<p>Suppose you have an investment that pays off on several occasions, not just once at the end.  To get the total present value of such an "income stream," to use the economics jargon, you calculate the present value of each payment and then add them up:
+<p>Present value = <br>(Income in year 0)  / ( 1 + discount rate )<sup>0</sup> <br>+ (Income in year 1)  / ( 1 + discount rate )<sup>1</sup> <br>+ (Income in year 2)  / ( 1 + discount rate )<sup>2</sup> + ... and so forth.  
+<p>If Income in year 0 includes your initial cost, as a negative, 
+<blockquote>(For that matter, all of your yearly income numbers should include any outlays during those years.)</blockquote>
+then you have:
+<p>Net Present value = <br>(Net income in year 0)  / ( 1 + discount rate )<sup>0</sup> <br>+ (Net income in year 1)  / ( 1 + discount rate )<sup>1</sup> <br>+ (Net income in year 2)  / ( 1 + discount rate )<sup>2</sup> + ... and so forth.  
+
+<p>If your incomes and expenses come at other intervals, monthy, for example, then you would use monthly discount rates rather than annual.
+
+<p>The net present value is used for deciding whether to do an investment or not.  
+
+<p>For example, if a 10-year zero-coupon $1000 Treasury bond is selling for $762.40, the net present value is:
+<p>-762.40 / ( 1 + discount rate )<sup>0</sup> + 10000  / ( 1 + discount rate )<sup>10</sup>
+<p>Plug your discount rate into that formula.  If the net present value is positive, buy the bond.  If it is negative, don't.
+<blockquote>If you have cash lying around, your discount rate is the interest rate you could get by lending the cash to somebody.  If you do not have spare cash, your discount rate is interest rate that you would pay to borrow from somebody.</blockquote>
+<center>
+<a name="spreadsheet"></a><h3>Spreadsheet for calculating net present value</h3>
+</center>
+The box below this paragraph has a spreadsheet set-up for calculating the
+net present value of an income stream. To use it, select the contents of
+the box (right-click in the box and chose Select All, in most browsers).
+Copy, then paste to the upper left corner of a blank worksheet in 
+Microsoft Excel
+or other spreadsheet program. 
+The discount rate and income stream numbers are samples, of course, 
+that you can change.
+Row 5 has two sum formulas, one for Excel 
+and one for Lotus and Quattro Pro. To extend the spreadsheet for a longer income 
+stream, copy E2:E4 and paste across row 2 as far as needed.
+<form >
+<textarea rows="5" cols="80">
+Discount rate	0.05			
+Year	0	=B2+1	=C2+1	=D2+1
+Income stream	-1000	100	100	100
+Present value	=B3/(1+$B1)^B2	=C3/(1+$B1)^C2	=D3/(1+$B1)^D2	=E3/(1+$B1)^E2
+Net present value	=SUM(B4:E4)	@SUM(B4..E4)			
+</textarea>
+</form>
+
+
+</ion-content>
+</ion-view>

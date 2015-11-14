@@ -1,0 +1,92 @@
+<ion-view>
+	<ion-content>
+		
+		<h4>An Alternative Investment</h4>
+Now let's consider an investment that our financial vice president has
+proposed as an alternative to putting our $1000 in the bank for six years.
+This investment involves buying a machine that will cost $1000. It will
+give us $200 in operating profit per year for six years, starting the year
+after we buy it. At the end of six years, the machine will have no value,
+due to wear and obsolescence. There's no lump of money waiting for us at
+the end, as there is with the bank account.
+<p>This table shows the bank income stream and the machine income stream.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >6</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Bank</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Machine</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+</tr>
+</table>
+It's not obvious which investment is better, is it? We could try adding
+up the income streams ...
+<p>Bank Account: -1000 + 50 + 50 + 50 + 50 + 50 +1050 = 300
+<p>Machine: -1000 +200 +200 +200 +200 +200 + 200 = 200
+<p class="question">The income stream from the bank account adds up to $300. The income
+stream from the machine adds up to $200. Does this make the bank account
+better?
+<br>
+<input type="radio" name="irr1" value="yes">Yes.  Why make a simple problem complicated?</input>
+<br><input type="radio" name="irr1" value="maybe">No, not necessarily.  We need a more complicated calculation.</input>
+<div id="irr1-answer"></div>
+
+<p>The key is "present value" concept.&nbsp; This concept is reviewed below,
+but it is introduced in its own <a href="../dis/Dis.html">
+Interactive Tutorial on Discounting Future Income</a>. Please try that tutorial now if the above question
+puzzled you.
+<p>Why we need that concept: The bank account income stream pays more money in
+total, but most of that income is in the big lump of $1050 in year 6. The
+machine pays less in total, but it pays more money per year in the years
+that come sooner.&nbsp; Getting the money sooner may give the machine's
+income stream a higher present value than the bank's.</p>
+
+
+</ion-content>
+</ion-view>

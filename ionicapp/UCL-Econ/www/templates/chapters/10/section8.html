@@ -1,0 +1,183 @@
+<ion-view>
+	<ion-content>
+		
+		<p>Here is what you should have above.  It is the income stream for a $1000 5-year bond, paying 1% interest annual, selling at $800.
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+</tr>
+</table>
+<p>Let's do a net present value calculation with this.
+<p>Let's use a discount rate of 1%.  That equals the bond's nominal rate of interest, in that it pays 1% of the face value in interest each year.  
+<table BORDER CELLSPACING=2 CELLPADDING=5 WIDTH="99%" >
+<tr>
+<td VALIGN=TOP WIDTH="16%">Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+</tr>
+<tr>
+<td VALIGN=TOP>... divided by ...</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>0</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>1</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>2</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>3</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>4</sup></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>1.01<sup>5</sup></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income discounted at 10%</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.90</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.80</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.71</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$9.61</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$960.98</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$200.00</td>
+</tr>
+</table>
+The present value of this bond, evaluated at a 1% discount rate, is $200.
+Notice that this equals the amount of the initial price discount. The $800 price is $200 less than the $1000 maturity value.  It works this way whenever the discount rate equals a bond's nominal rate of interest.  
+<p>Let's find the internal rate of return for this bond. 
+<p>You know that the internal rate of return is bigger than 1%, because the present value at a 1% discount rate is bigger than 0.
+<p>See how close you can get the total present value to $0. The discount
+rate at that the present value closest to $0 will be our approximation
+of the internal rate of return. As before, make a mental note of this discount
+rate, then go on.
+<p>Let's find that discount
+rate.  <p class="question">Type a number between .010 and .090 (which is way too big) in the box.  Click the button to see what comes out for the present value.
+<br><input id="irr5-response" name="irr5" type="text"></input>
+<button id="irr5-button">Type a number in the box.  Then click this.</button>
+<span id="irr5-answer">If you type a number starting with 1, 2, 3, etc., I'll move the decimal point to where it is supposed to be.  Don't type a % sign.</span><br>
+<table BORDER CELLSPACING=2 CELLPADDING=5  >
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >0</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >1</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >2</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >3</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >4</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >5</td>
+
+<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Income stream</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$10</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$1010</td>
+
+<td ALIGN=RIGHT VALIGN=TOP></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>Present value, at a <span id="irr5-drate">1.00</span>% discount rate</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>-$800</td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv1">9.90</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv2">9.80</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv3">9.71</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv4">9.61</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-pv5">960.98</span></td>
+
+<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr5-total">200.00</span></td>
+</tr>
+
+<tr>
+</table>
+
+<div id="irr5A-answer">
+<p class="question">Please get to within $0.50 of a $0 total before moving on.<br><br>If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.  
+
+</ion-content>
+</ion-view>
