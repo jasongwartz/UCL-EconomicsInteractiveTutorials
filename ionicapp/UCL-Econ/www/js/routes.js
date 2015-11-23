@@ -42,10 +42,20 @@ angular.module('app.routes', [])
     
 
 var lengthsDict = [
-    // [chapterNumber,sectionNumber]
+    // [chapterNumber,sectionCount]
     ["1",2],
-    ["2",4],
-    ["3",14]
+    ["2",6],
+    ["3",5],
+    ["4",5],
+    ["5",5],
+    ["6",5],
+    ["7",7],
+    ["8",12],
+    ["9",10],
+    ["10",14],
+    ["11",9],
+    ["12",8],
+    ["13",8]
 ]
 
 var populateStates = function () {
@@ -53,7 +63,7 @@ var populateStates = function () {
     
  
     var chapter = chapterArray[0];
-    var num = chapterArray[1];
+    var num = chapterArray[1]; // num = number of sections in this chapter
     
     for (var i=1; i<=num; i++) {
       $stateProvider.state("chapter" + chapter + "section" + i,
