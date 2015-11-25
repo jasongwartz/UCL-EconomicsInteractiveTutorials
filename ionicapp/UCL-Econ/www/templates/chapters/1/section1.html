@@ -1,8 +1,8 @@
-<ion-view title="Lesson 2">
+<ion-view title="Cost Concepts">
     <ion-content padding="true" class="has-header">
-        <form class="list">
+       
 
-
+<h1>Cost Concepts</h1>
 <p>
 We'll use for illustration an imaginary firm, Joan's
 Home Care Services,
@@ -39,7 +39,7 @@ For those of you who like graphs, here is a graph
 illustrating total, variable, and fixed cost for Joan's Home Care. In
 this tutorial, we will be working with the numbers in this graph.
 <br>
-<img src="costbargraph.gif" width="377" height="338" border="0"
+<img src="img/costbargraph.gif" width="377" height="338" border="0"
  alt="cost bar graph">
 <p>
 Which costs are fixed and which costs are variable depends on your time horizon. 
@@ -68,31 +68,104 @@ simpler.)
 </p>
 <pre>Number of Patients&nbsp;&nbsp; Total Cost<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $&nbsp; 1000<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $&nbsp; 4500<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $&nbsp; 7500<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 10000<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 12000<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 14500<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 17500<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 21000<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 25000<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 30000</pre>
 
+<br><br>
 
-<h1>INSERT QUESTIONS C1 - C4</h1>
+<form name="C1" novalidate ng-submit="thisAlert(C1.$name)">
+  
+                <div class="list list-inset">
+                  <div class="item item-divider item-text-wrap">
+                    <h2>How much is the fixed cost?</h2></p>
+                
+                <label class="item item-input">
+                      <span class="input-label">Answer</span>
+                      <input type="text" ng-model="answer.submission" required></input>
+                      </label>
+            <button class="button button-balanced button-full" type="submit" ng-disabled="C1.$invalid" value="submit" >Submit</button>
+                    
+                  </div>
+                </div>
+  </form>
+  
+<br />
 
-<p class="question">How much is the fixed cost? <br>
+<form name="C2" novalidate ng-submit="thisAlert(C2.$name)">
+  
+                <div class="list list-inset">
+                  <div class="item item-divider item-text-wrap">
+              <h2>Now
+let's do variable cost. The variable cost is that portion of total
+cost that varies when the rate of output varies. 
+How much is the variable cost of having one patient? </h2>
+                
+                <label class="item item-input">
+                      <span class="input-label">Answer</span>
+                      <input type="text" ng-model="answer.submission" required></input>
+                      </label>
+            <button class="button button-balanced button-full" type="submit" ng-disabled="C2.$invalid" value="submit" >Submit</button>
+                    
+                  </div>
+                </div>
+  </form>
+
+
+
+  
+  
+  <form name="C3" novalidate ng-submit="thisAlert(C3.$name)">
+  
+                <div class="list list-inset">
+                  <div class="item item-divider item-text-wrap">
+              <h2>How much is the variable cost of having 4 patients?</h2>
+                
+                <label class="item item-input">
+                      <span class="input-label">Answer</span>
+                      <input type="text" ng-model="answer.submission" required></input>
+                      </label>
+            <button class="button button-balanced button-full" type="submit" ng-disabled="C3.$invalid" value="submit" >Submit</button>
+                    
+                  </div>
+                </div>
+  </form>
+  
+  
+  
+
+  <form name="C4" novalidate ng-submit="thisAlert(C4.$name)">
+  
+                <div class="list list-inset">
+                  <div class="item item-divider item-text-wrap">
+              <h2>How much is the variable cost of having 9 patients?</h2>
+                
+                <label class="item item-input">
+                      <span class="input-label">Answer</span>
+                      <input type="text" ng-model="answer.submission" required></input>
+                      </label>
+            <button class="button button-balanced button-full" type="submit" ng-disabled="C4.$invalid" value="submit" >Submit</button>
+                    
+                  </div>
+                </div>
+  </form>
+
+<!--
+<!--
 $<input id="C1-response" name="C1" type="text"></input>
 <button id="C1-button">Type a number (no commas) in the box.  Then click this.</button>
 <div id="C1-answer"></div>
-<p>Now
-let's do variable cost. The variable cost is that portion of total
-cost that varies when the rate of output varies. 
-<p class="question">How much is the variable cost of having one patient? <br>
+
 $<input id="C2-response" type="text"></input>
 <button id="C2-button">Type a number (no commas) in the box.  Then click this.</button>
 <div id="C2-answer"></div>
 
-<p class="question">How much is the variable cost of having 4 patients? <br>
 $<input id="C3-response" type="text"></input>
 <button id="C3-button">Type a number (no commas) in the box.  Then click this.</button>
 <div id="C3-answer"></div>
 
-<p class="question">How much is the variable cost of having 9 patients? <br>
 $<input id="C4-response" type="text"></input>
 <button id="C4-button">Type a number (no commas) in the box.  Then click this.</button>
-<div id="C4-answer"></div>
+<div id="C4-answer"></div>-->
+<br />
 
+<div class="card">
 <blockquote>
 In practice, a firm would probably proceed in the reverse order from
 the way we did. It would understand that total cost is made up of fixed
@@ -100,6 +173,7 @@ cost and variable cost. It would figure out what its fixed cost is and
 what its variable costs are at different rates of output. Then it would
 add the fixed and variable cost to get the total cost.
 </blockquote>
+</div>
 
 </ion-content>
 </ion-view>

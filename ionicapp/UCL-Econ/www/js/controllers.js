@@ -5,8 +5,8 @@ angular.module('app.controllers', [])
     $scope.showAlert = function () {
       $scope.data = {}
       var alertPopup = $ionicPopup.alert({
-        title: 'About This App',
-        template: 'UCL Econ is brought to you by the wonderful folks listed below: <br><br>Dan "Obi-Wan" Sturgess<br>Jason "Indiana" Gwartz<br>Sophie "Lara Croft" Mugridge White<br><br>UCL MSc CS'
+        title: '<b>About:</b>',
+        template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc CS</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
       });
       alertPopup.then(function (res) {
         console.log('Thank you for not eating my delicious ice cream cone');
@@ -14,8 +14,66 @@ angular.module('app.controllers', [])
     };
   })
 
+.controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, $ionicModal) {
 
-  .controller('economicsInteractiveTutorialsCtrl', function ($scope) {
+            $scope.modalResults = {}
+
+            $scope.modal = {}
+
+            $scope.currentChapterID = {}
+
+            // Chapter Clicker Listener
+            $scope.chapterClicker = function(chapterID){
+              console.log("clicked");
+              $scope.currentChapterID = chapterID;
+              $scope.modalResults = SectionNavigation.navigation(chapterID);
+
+              $scope.modal.show();
+
+            }
+
+            // Modal Pop Up
+            $ionicModal.fromTemplateUrl('templates/modal.html', {
+              scope: $scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              $scope.modal = modal;
+            });
+            $scope.openModal = function() {
+              $scope.modal.show();
+            };
+            $scope.closeModal = function() {
+              $scope.modal.hide();
+            };
+            //Cleanup the modal when we're done with it!
+            $scope.$on('$destroy', function() {
+              $scope.modal.remove();
+            });
+            // Execute action on hide modal
+            $scope.$on('modal.hidden', function() {
+              // Execute action
+            });
+            // Execute action on remove modal
+            $scope.$on('modal.removed', function() {
+              // Execute action
+            });
+
+    $scope.chapterTitles = [
+      "Total Cost, Variable Cost, and Marginal Cost",
+      "Marginal Cost and the Price-Taking Firm's Optimal Output Rate",
+      "Average Cost and the Break-Even Output Rate Java applets",
+      "Demand",
+      "Elasticity I",
+      "Elasticity II",
+      "Supply, Demand, and Equilibrium",
+      "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate Java applets",
+      "Discounting Future Income",
+      "The Internal Rate of Return",
+      "Perils of the Internal Rate of Return Java applets",
+      "Risk",
+      "Risk Aversion and Insurance"
+    ]
+
 
   })
   
@@ -26,16 +84,15 @@ angular.module('app.controllers', [])
       $scope.answer = {
         submission:""
       }
-
-      $scope.returned = {
-
-      }
-
+      
       $scope.thisAlert = function(questionName) {
-        console.log(questionName);
-      $scope.data = {}
+        
+      console.log(questionName);
+
       $scope.returned = QuestionFactory.questionChecker(questionName, $scope.answer.submission);
 
+      console.log($scope.returned)
+      
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({
           title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",

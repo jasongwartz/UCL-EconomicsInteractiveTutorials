@@ -1,103 +1,30 @@
 <ion-view title='<img class="title-image" src="img/ucl-logo.png" style="height:44px" />'>
 
 
-  
+
   <ion-content class="has-header">
+    
+    <div class="row row-wrap responsive-md">
+      <div ng-repeat="n in chapterTitles" class="col-33">
+          <div class="card">
+          <a href="" ng-click="chapterClicker($index+1)">
 
 
-    <div class="container">
-       <div class="row responsive-md">
-
-        <div class="col">
-            <a href="#lesson1" class="card">
-              <div class="item item-divider">
-                <button class="button button-block button-positive">
-                  Chapter 1
-                </button>
-                <div class="card">
-                  <div class="item item-text-wrap text-center">
-                    Marginal Costs
-                  </div>
-                </div>
+              <button class="button button-block button-calm">
+               <b> Chapter {{$index+1}} </b>
+              </button>
+            
+                <div class="item item-text-wrap text-center">
+                    {{chapterTitles[$index]}}
               </div>
-            </a>
+          </a>
           </div>
-
-          <div class="col">
-            <a href="#lesson2" class="card">
-              <div class="item item-divider">
-                <button class="button button-block button-calm">
-                  Chapter 2
-                </button>
-                <div class="card">
-                  <div class="item item-text-wrap text-center">
-    Demand
-  </div>
         </div>
+        
+        
+        
         </div>
-        </a>
-</div>
-
-        <div class="col">
-          <a href="#chapter1section2" class="card ">
-           <div class="item item-divider ">
-           <button class="button button-balanced button-block ">Chapter 3</button>
-        <div class="card ">
-  <div class="item item-text-wrap text-center">
-                    Discounting Future Values
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-       </div>
-       
-      <div class="row responsive-md">
-          
-          <div class="col">
-          <a href="#asdf" class="card ">
-           <div class="item item-divider ">
-           <button class="button button-energized button-block">Chapter 4</button>
-        <div class="card ">
-  <div class="item item-text-wrap text-center ">
-                    An amazing economics victory
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          <div class="col">
-          <a href="#lesson1 " class="card ">
-           <div class="item item-divider ">
-           <button class="button button-assertive button-block ">Chapter 5</button>
-        <div class="card ">
-  <div class="item item-text-wrap text-center ">
-                    Money makes the world go round
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          <div class="col">
-          <a href="#lesson1 " class="card ">
-           <div class="item item-divider ">
-           <button class="button button-royal button-block ">Chapter 6</button>
-        <div class="card ">
-  <div class="item item-text-wrap text-center ">
-                    Can't afford to eat, get out
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
+      
 
 
 

@@ -71,9 +71,10 @@ var populateStates = function () {
         {
           url: "/chapter" + chapter + "section" + i,
           templateUrl: "templates/chapters/" + chapter + "/section" + i + ".html",
-          controller: function($scope) {
-              $scope.items = ["a"];
-          }// "chapter" + chapter + "section" + i + "Ctrl"
+          controller: "lesson1Ctrl"
+          //function($scope) {
+            //  $scope.items = ["a"];
+          // "chapter" + chapter + "section" + i + "Ctrl"
         }
 
         );
