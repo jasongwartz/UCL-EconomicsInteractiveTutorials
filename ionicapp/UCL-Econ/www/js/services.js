@@ -3,12 +3,23 @@ angular.module('app.services', [])
 .factory('QuestionFactory', [function($scope){
 	var questions;
         
-    $.getJSON('data/data-jason.json', function(response){
+    $.getJSON('data/datatest.json', function(response){
        questions = response;
     });
 
-
 return {
+    
+    questionText: function(question) {
+       
+        for(var i = 0; i < 30; i++){
+			if(questions[i].id == question){
+                
+                return questions[i].text;
+                
+            }
+        }
+    },
+    
 	questionChecker: function(question, submission){
         
 		console.log("carried question id " + question);

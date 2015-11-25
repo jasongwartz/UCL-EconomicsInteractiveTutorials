@@ -77,21 +77,22 @@ angular.module('app.controllers', [])
 
   })
   
-
-
-   .controller('lesson1Ctrl', function ($scope, QuestionFactory, $ionicPopup) {
-
+  
+  .controller("QuestionController", function ($scope, $timeout, QuestionFactory, $ionicPopup) {
+      $timeout(function(){
+        $scope.name = $scope.qid;
+       $scope.text = QuestionFactory.questionText($scope.qid);
+       //$scope.submission = $scope.qid + '.submission';
+      });
+      
       $scope.answer = {
         submission:""
       }
       
-      $scope.thisAlert = function(questionName) {
-        
-      console.log(questionName);
+      $scope.thisAlert = function(questionName, submission) {
 
-      $scope.returned = QuestionFactory.questionChecker(questionName, $scope.answer.submission);
-
-      console.log($scope.returned)
+       
+      $scope.returned = QuestionFactory.questionChecker(questionName, submission);
       
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({
@@ -100,7 +101,7 @@ angular.module('app.controllers', [])
           "<div class='card has-header'><div class='item item-text-wrap'>"
           + $scope.returned[1] + "</div>",
           
-          okText: 'Next Section',
+          okText: 'OK',
           okType: 'button-balanced'
         });
       }
@@ -119,7 +120,52 @@ angular.module('app.controllers', [])
          console.log('Thank you for not eating my delicious ice cream cone');
        });
        };
-  })
+      
+
+})
+
+
+   .controller('lesson1Ctrl', function ($scope, QuestionFactory, $ionicPopup) {
+
+   })
+  //     $scope.answer = {
+  //       submission:""
+  //     }
+      
+  //     $scope.thisAlert = function(questionName, submission) {
+
+  //       console.log("RAN")
+  //     $scope.returned = QuestionFactory.questionChecker(questionName, submission);
+
+  //     console.log($scope.returned)
+      
+  //     if($scope.returned[0] == true){
+  //       var alertPopup = $ionicPopup.alert({
+  //         title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
+  //         template: "<br>" +
+  //         "<div class='card has-header'><div class='item item-text-wrap'>"
+  //         + $scope.returned[1] + "</div>",
+          
+  //         okText: 'Next Section',
+  //         okType: 'button-balanced'
+  //       });
+  //     }
+  //     else if($scope.returned[0] == false){
+  //       var alertPopup = $ionicPopup.alert({
+  //         title: "<div class='bar bar-calm'><h1 class='title'>Incorrect!</h1></div>",
+  //         template: "<br>" +
+  //         "<div class='card has-header'><div class='item item-text-wrap'>"
+  //         + $scope.returned[1] + "</div>",
+          
+  //         okText: 'Try Again',
+  //         okType: 'button-assertive'
+  //       });
+  //     }
+  //      alertPopup.then(function(res) {
+  //        console.log('Thank you for not eating my delicious ice cream cone');
+  //      });
+  //      };
+  // })
 
 
 

@@ -2,6 +2,10 @@
     <ion-content padding="true" class="has-header">
        
 
+
+
+
+
 <h1>Cost Concepts</h1>
 <p>
 We'll use for illustration an imaginary firm, Joan's
@@ -70,81 +74,12 @@ simpler.)
 
 <br><br>
 
-<form name="C1" novalidate ng-submit="thisAlert(C1.$name)">
-  
-                <div class="list list-inset">
-                  <div class="item item-divider item-text-wrap">
-                    <h2>How much is the fixed cost?</h2></p>
-                
-                <label class="item item-input">
-                      <span class="input-label">Answer</span>
-                      <input type="text" ng-model="answer.submission" required></input>
-                      </label>
-            <button class="button button-balanced button-full" type="submit" ng-disabled="C1.$invalid" value="submit" >Submit</button>
-                    
-                  </div>
-                </div>
-  </form>
-  
-<br />
 
-<form name="C2" novalidate ng-submit="thisAlert(C2.$name)">
-  
-                <div class="list list-inset">
-                  <div class="item item-divider item-text-wrap">
-              <h2>Now
-let's do variable cost. The variable cost is that portion of total
-cost that varies when the rate of output varies. 
-How much is the variable cost of having one patient? </h2>
-                
-                <label class="item item-input">
-                      <span class="input-label">Answer</span>
-                      <input type="text" ng-model="answer.submission" required></input>
-                      </label>
-            <button class="button button-balanced button-full" type="submit" ng-disabled="C2.$invalid" value="submit" >Submit</button>
-                    
-                  </div>
-                </div>
-  </form>
+<question qid="C1"></question>
+<question qid="C2"></question>
+<question qid="C3"></question>
+<question qid="C4"></question>
 
-
-
-  
-  
-  <form name="C3" novalidate ng-submit="thisAlert(C3.$name)">
-  
-                <div class="list list-inset">
-                  <div class="item item-divider item-text-wrap">
-              <h2>How much is the variable cost of having 4 patients?</h2>
-                
-                <label class="item item-input">
-                      <span class="input-label">Answer</span>
-                      <input type="text" ng-model="answer.submission" required></input>
-                      </label>
-            <button class="button button-balanced button-full" type="submit" ng-disabled="C3.$invalid" value="submit" >Submit</button>
-                    
-                  </div>
-                </div>
-  </form>
-  
-  
-  
-
-  <form name="C4" novalidate ng-submit="thisAlert(C4.$name)">
-  
-                <div class="list list-inset">
-                  <div class="item item-divider item-text-wrap">
-              <h2>How much is the variable cost of having 9 patients?</h2>
-                
-                <label class="item item-input">
-                      <span class="input-label">Answer</span>
-                      <input type="text" ng-model="answer.submission" required></input>
-                      </label>
-            <button class="button button-balanced button-full" type="submit" ng-disabled="C4.$invalid" value="submit" >Submit</button>
-                    
-                  </div>
-                </div>
-  </form>
 
 <!--
 <!--
