@@ -61,19 +61,20 @@ angular.module('app.controllers', [])
     $scope.chapterTitles = [
       "Total Cost, Variable Cost, and Marginal Cost",
       "Marginal Cost and the Price-Taking Firm's Optimal Output Rate",
-      "Average Cost and the Break-Even Output Rate Java applets",
+      "Average Cost and the Break-Even Output Rate **",
       "Demand",
       "Elasticity I",
       "Elasticity II",
       "Supply, Demand, and Equilibrium",
-      "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate Java applets",
+      "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate **",
       "Discounting Future Income",
       "The Internal Rate of Return",
-      "Perils of the Internal Rate of Return Java applets",
+      "Perils of the Internal Rate of Return **",
       "Risk",
       "Risk Aversion and Insurance"
     ]
 
+    // ** means we still need to add Java applets in. &&&
 
   })
   

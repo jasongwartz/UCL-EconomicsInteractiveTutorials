@@ -1,10 +1,13 @@
 angular.module('app.directives', [])
 
-.directive("question", function() {
+.directive("question", function(QuestionFactory) {
 
 	return {
 		
 		restrict: "E",
+
+		// if questionType(qid) == 'single' : 
+
 		templateUrl: "partials/question.html",
 		scope: {
 		 	qid:'='
