@@ -40,7 +40,7 @@ angular.module('app.routes', [])
   $urlRouterProvider.otherwise('/home');
 
     
-
+// get this from the FACTORY also!
 var lengthsDict = [
     // [chapterNumber,sectionCount]
     ["1",2],
@@ -57,6 +57,8 @@ var lengthsDict = [
     ["12",8],
     ["13",8]
 ]
+
+
 
 var populateStates = function () {
   angular.forEach(lengthsDict, function(chapterArray) {

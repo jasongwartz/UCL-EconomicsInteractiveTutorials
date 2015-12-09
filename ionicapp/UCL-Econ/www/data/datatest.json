@@ -132,7 +132,7 @@
     }, 
     {
         "incorrect": "The calculation is the cost of one patient minus the cost of zero patients.  Marginal = Total at this output rate minus Total at one less.", 
-        "text": "", 
+        "text": "How much is the marginal cost of the first patient? Type a number (no commas) in the box.  Then click this.", 
         "correct": "Correct! The marginal cost of the first patient is $3500.", 
         "answer": "3500", 
         "type": "SingleAnswer", 

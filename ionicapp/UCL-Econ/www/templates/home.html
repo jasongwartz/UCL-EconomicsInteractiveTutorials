@@ -28,7 +28,7 @@
           <a href="#ucl" class="card">
             <div class="item item-divider">
               <button class="button button-block button-large button-positive">
-                <b>Economic Interactive Tutorials</b>
+                <b>Interactive Tutorials</b>
               </button>
               <img class="full-image" src="img/img1.jpg">
             </div>
@@ -55,14 +55,13 @@
 
       </div>
     </div>
+    
+    <button class="button button-block button-positive button-small" ng-click="checkForUpdates()">
+  Check for App Updates
+</button>
+<button class="button button-block button-positive" ng-if="hasUpdate" ng-click="doUpdate()">Download Update
+</button>
+<br />
 
-<div class="bar bar-footer">
-<button class="button button-primary button-block " ng-click="checkForUpdates()">
-  Check for updates
-</button>
-<button class="button button-stable button-block" ng-if="hasUpdate" ng-click="doUpdate()">Download update
-</button>
-</div>
   </ion-content>
-
 </ion-view>

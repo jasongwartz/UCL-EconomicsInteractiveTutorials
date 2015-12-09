@@ -1,7 +1,7 @@
-<ion-view>
-<ion-content>
-
-<p>The idea here is simple, once you get used to the jargon. Increasing
+<ion-view title="Output Rate Under Competition">
+<ion-content padding="true" class="has-header">
+​
+The idea here is simple, once you get used to the jargon. Increasing
 production makes both total cost and total revenue go up. If the revenue
 goes up more than the cost, profit goes up. (Profit = total revenue - total
 cost.) Marginal cost is how much cost goes up from making one more. The
@@ -10,9 +10,9 @@ the price-taker assumption comes in -- you don't have to cut your price
 to sell more.) If the price is bigger than the marginal cost, then what
 you gain in revenue is greater than what you lose in added cost. That makes
 your profit higher, so you should go ahead and expand production.
-<p>On the other hand, if price is less than marginal cost, increasing production
+On the other hand, if price is less than marginal cost, increasing production
 costs you more than the revenue you gain. You should not expand production.
-<p>Let's see how this works. Here is Joan's cost table, showing the total
+Let's see how this works. Here is Joan's cost table, showing the total
 cost and the marginal cost for each number of patients. Assume as before
 that patients sign one year contracts, so we don't have to bother with
 fractions of patients.
@@ -21,177 +21,177 @@ fractions of patients.
 <tr>
 <td ALIGN=CENTER>Number of Patients
 <br><b>n</b></td>
-
+​
 <td>Total Cost
 <br>of <b>n</b> patients</td>
-
+​
 <td>Marginal Cost
 <br>of the <b>n</b>th patient</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>0</td>
-
+​
 <td>$1000</td>
-
+​
 <td>--</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>1</td>
-
+​
 <td>$4500</td>
-
+​
 <td>$3500</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>2</td>
-
+​
 <td>$7500</td>
-
+​
 <td>$3000</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>3</td>
-
+​
 <td>$10000</td>
-
+​
 <td>$2500</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>4</td>
-
+​
 <td>$12000</td>
-
+​
 <td>$2000</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>5</td>
-
+​
 <td>$14500</td>
-
+​
 <td>$2500</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>6</td>
-
+​
 <td>$17500</td>
-
+​
 <td>$3000</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>7</td>
-
+​
 <td>$21000</td>
-
+​
 <td>$3500</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>8</td>
-
+​
 <td>$25000</td>
-
+​
 <td>$4000</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>9</td>
-
+​
 <td>$30000</td>
-
+​
 <td>$5000</td>
 </tr>
 </table></div>
-<p>In each row of this table, the marginal cost number is how much total
+In each row of this table, the marginal cost number is how much total
 cost increases when going up to that rate of production from the next lower rate. You can think
 of the Marginal Cost here as meaning "the marginal cost of adding <i>this</i>
 patient." For example, the $3500 for marginal cost in the row for
 1 patient means that serving 1 patient costs $3500 more than serving 0
 patients.
-<p>Just to be sure you are with me, please answer this: 
+Just to be sure you are with me, please answer this: 
 <br><span class="question">What is the marginal
 cost of the 8th patient in the table above?
 <br>
 <input id="MC1-response" name="MC1" type="text"></input>
 <button id="MC1-button">Type a number in the box.  Then click this.</button>
 <div id="MC1-answer">Do not type a $ sign or a comma with your number.</div>
-<p>Here's the top of that cost table again:
+Here's the top of that cost table again:
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number of Patients
 <br><b>n</b></td>
-
+​
 <td>Total Cost
 <br>of <b>n</b> patients</td>
-
+​
 <td>Marginal Cost
 <br>of the <b>n</b>th patient</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>0</td>
-
+​
 <td>$1000</td>
-
+​
 <td>--</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>1</td>
-
+​
 <td>$4500</td>
-
+​
 <td>$3500</td>
 </tr>
 </table>
-<p>Suppose the going price is $3700. At that price, you can get
-patients to sign contracts for your service.</p>
-<p>We're going to work our way up to finding the number of patients that gives
+Suppose the going price is $3700. At that price, you can get
+patients to sign contracts for your service.
+We're going to work our way up to finding the number of patients that gives
 you the most profit, starting from 0 patients.
-<p>
+​
 To start, assume you are currently treating 0 patients -- no patients
 at all. <span class="question">Would adding 1 patient make you better off?  If that patient would pay you $3700?</span>
 <br><input type="radio" name="MC2" value="yes">Yes.</input>
 <input type="radio" name="MC2" value="no">No.</input>
 <div id="MC2-answers"></div>
-<p>"Wait a second," you might say, "the table says my total cost of seeing one patient is $4500.  The patient is paying me only $3700, so I'm losing $800!  <span class="question">Shouldn't I see 0 patients?"</span>
+"Wait a second," you might say, "the table says my total cost of seeing one patient is $4500.  The patient is paying me only $3700, so I'm losing $800!  <span class="question">Shouldn't I see 0 patients?"</span>
 <br><input type="radio" name="MC3" value="0">0 is better than 1.</input>
 <input type="radio" name="MC3" value="1">1 is better than 0.</input>
 <div id="MC3-answers"></div>
-
-<p>Let's look at the second and third rows of the cost table:
+​
+Let's look at the second and third rows of the cost table:
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number of Patients
 <br><b>n</b></td>
-
+​
 <td>Total Cost
 <br>of <b>n</b> patients</td>
-
+​
 <td>Marginal Cost
 <br>of the <b>n</b>th patient</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>1</td>
-
+​
 <td>$4500</td>
-
+​
 <td>$3500</td>
 </tr>
-
+​
 <tr ALIGN=RIGHT>
 <td ALIGN=CENTER>2</td>
-
+​
 <td>$7500</td>
-
+​
 <td>$3000</td>
 </tr>
 </table>
@@ -200,7 +200,23 @@ you add a 2nd?</span>
 <br><input type="radio" name="MC4" value="yes">Yes.</input>
 <input type="radio" name="MC4" value="no">No.</input>
 <div id="MC4-answers">For best continuity of text, click the correct answer to the above question before going on.</div>
-
-
+​
+​
 </ion-content>
+​
+<ion-footer-bar align-title="left" class="bar-positive" id="progressFooter">
+<div class="row">
+	<div class="col-10 col-center">
+		    <a href="#chapter2section1"><i class="ion-ios-arrow-thin-left"></i></a>
+	</div>
+  <div class="col-80 col-center">
+	 <div id="progress3">
+	</div>
+  </div>
+  <div class="col-10 col-center" align="right">
+		<a href="#chapter2section3"><i class="ion-ios-arrow-thin-right"></i></a>
+	</div>
+ </div>
+</ion-footer-bar>
+​
 </ion-view>

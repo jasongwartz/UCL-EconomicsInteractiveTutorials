@@ -14,7 +14,7 @@ angular.module('app.controllers', [])
     };
   })
 
-.controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, $ionicModal) {
+.controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
 
             $scope.modalResults = {}
 
@@ -58,24 +58,9 @@ angular.module('app.controllers', [])
               // Execute action
             });
 
-    $scope.chapterTitles = [
-      "Total Cost, Variable Cost, and Marginal Cost",
-      "Marginal Cost and the Price-Taking Firm's Optimal Output Rate",
-      "Average Cost and the Break-Even Output Rate **",
-      "Demand",
-      "Elasticity I",
-      "Elasticity II",
-      "Supply, Demand, and Equilibrium",
-      "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate **",
-      "Discounting Future Income",
-      "The Internal Rate of Return",
-      "Perils of the Internal Rate of Return **",
-      "Risk",
-      "Risk Aversion and Insurance"
-    ]
-
-    // ** means we still need to add Java applets in. &&&
-
+           
+           $scope.chapterTitles = Chapters.getTitles();
+     
   })
   
   
