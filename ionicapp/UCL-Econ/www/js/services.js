@@ -84,57 +84,39 @@ angular.module('app.services', [])
             },
 
             answerMachine: function (question, submission) {
-
-                    q = questions[question]
-                    
-                        if (q.type == "SingleAnswer") {
-                            if (q.answer == submission) {
-                                
-                                var answerArray = [true, q.correct];
-                                return answerArray;
-                            }
-                            else
-                                console.log(q.incorrect);
-                            var answerArray = [false, q.incorrect];
-                            return answerArray;
-                        }
-                        if (q.type == "MultipleChoice") {
-                            console.log(q.choices[submission]);
-                            if (q.choices[submission].solution == "y") {
-                                var answerArray = [true, q.choices[submission].message];
-                                return answerArray;
-                            } else
-                                var answerArray = [false, q.choices[submission].message];
-                            return answerArray;
-
-                        }
-                        if (q.type == "Range") {
-                            if (q.answer == submission) {
-                                console.log(q.correct);
-                                var answerArray = [true, q.correct];
-                                return answerArray;
-                            }
-                            else if (q.answer < submission) {
-                                console.log(q.highmessage);
-                                var answerArray = [false, q.highmessage];
-                                return answerArray;
-                            }
-                            else if (q.answer > submission) {
-                                console.log(q.lowmessage);
-                                var answerArray = [false, q.lowmessage];
-                                return answerArray;
-                            }
-                        }
-
-                    
                 
-                return null;
-
+                var q = questions[question]
+                    
+                    if (q.type == "SingleAnswer") {
+                        if (q.answer == submission) {
+                            return [true, q.correct];  
+                        } else {
+                            return [false, q.incorrect];
+                        }
+                   }
+                    if (q.type == "MultipleChoice") {
+                        if (q.choices[submission].solution == "y") {
+                            return [true, q.choices[submission].message];
+                            
+                        } else {
+                            return [false, q.choices[submission].message];
+                        }
+                    }
+                    if (q.type == "Range") {
+                        if (q.answer == submission) {
+                            return [true, q.correct];
+                            
+                        }
+                        else if (q.answer < submission) {                            
+                            return [false, q.highmessage];                               
+                        }
+                        else if (q.answer > submission) {                             
+                            return [false, q.lowmessage]; 
+                        }
+                    }
+                return null; // if  no match for q
             }
-            
-        
-
-        }
+       }
     }])
 
     .service('SectionNavigation', [function () {
