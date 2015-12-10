@@ -1,0 +1,1096 @@
+{
+    "MC1-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "MC1-button"
+    }, 
+    "D15": {
+        "incorrect": "No.  Demand is the price-quantity relationship of the buyers.", 
+        "text": "", 
+        "correct": "Correct!  Demand is the buyers' price-quantity relationship.", 
+        "answer": "Curve", 
+        "type": "SingleAnswer", 
+        "id": "D15"
+    }, 
+    "irr7": {
+        "incorrect": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
+        "text": "", 
+        "correct": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing.", 
+        "answer": "5irr", 
+        "type": "SingleAnswer", 
+        "id": "irr7"
+    }, 
+    "irr6": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "irr6", 
+        "choices": {
+            "1": {
+                "message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<ol><li>Each seller will sell fewer products.<li>The price of the product will fall.</ol>This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were.  (I have tutorials about elasticity at sambaker.com/econ )<p>I also assume that the demand curve does not move outward.", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "If more sellers flood the market, can the revenue that each seller makes go up?", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "If more sellers flood the market, can the revenue that each seller makes stay the same?", 
+                "solution": false
+            }
+        }
+    }, 
+    "irr3": {
+        "incorrect": "No, it's not that easy, because the bond is not selling at its face value.", 
+        "text": "", 
+        "correct": "You're right!  Let's do it!", 
+        "answer": "irr", 
+        "type": "SingleAnswer", 
+        "id": "irr3"
+    }, 
+    "irr1": {
+        "incorrect": "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.", 
+        "text": "", 
+        "correct": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future.", 
+        "answer": "Maybe", 
+        "type": "SingleAnswer", 
+        "id": "irr1"
+    }, 
+    "D51": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "TODO", 
+        "answer": "Before", 
+        "type": "SingleAnswer", 
+        "id": "D51"
+    }, 
+    "sd19": {
+        "incorrect": "No.  The message is there to influence buyers, not sellers.  The tobacco companies kept on making cigarettes even after they had to put the messages on the boxes.", 
+        "text": "", 
+        "correct": "Correct! A scary message may make smokers want to smoke less, even if the price of cigarettes does not change.", 
+        "answer": "Demand", 
+        "type": "SingleAnswer", 
+        "id": "sd19"
+    }, 
+    "q1": {
+        "incorrect": "This patient will be presumed to want care regardless of what he will be charged.  Demand is inelastic, therefore.<br>As for what the hospital does, that is a supply side question.", 
+        "text": "", 
+        "correct": "Correct!  The demand will be inelastic with respect to price.  This patient will be presumed to want care regardless of what he will be charged.<br>As for what the hospital does, that is a supply side question.", 
+        "answer": "Inelastic", 
+        "type": "SingleAnswer", 
+        "id": "q1"
+    }, 
+    "MC11": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "MC11"
+    }, 
+    "MC10": {
+        "incorrect": "Compare the marginal cost of the 6th patient with the price, which is now $2900.", 
+        "text": "", 
+        "correct": "Correct!  The marginal cost of the 6th patient is higher than the $2900 price.  Joan's loses money on that patient.", 
+        "answer": "No", 
+        "type": "SingleAnswer", 
+        "id": "MC10"
+    }, 
+    "q5": {
+        "incorrect": "No, it is not elastic.  Elastic demand means that buyers change what they buy, or how much they buy, when prices are different or change.", 
+        "text": "", 
+        "correct": "Correct!  Inelastic demand means that price differences do not affect what buyers buy.", 
+        "answer": "inelastic", 
+        "type": "SingleAnswer", 
+        "id": "q5"
+    }, 
+    "q4": {
+        "incorrect": "No, it is not inelastic.  Inelastic demand means that price differences do not affect buyer behavior.", 
+        "text": "", 
+        "correct": "Correct!  If how much buyers buy responds to price differences, demand is elastic.", 
+        "answer": "Elastic", 
+        "type": "SingleAnswer", 
+        "id": "q4"
+    }, 
+    "q7": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "q7", 
+        "choices": {
+            "TODO": {
+                "message": "", 
+                "solution": ""
+            }
+        }
+    }, 
+    "MC14": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "MC14", 
+        "choices": {
+            "1": {
+                "message": "This is what independent doctors often recommend.  It requires that the value of a life year be more than $1.2 million.  That is higher than the $200,000 number that I asked you to use.", 
+                "solution": false
+            }, 
+            "3": {
+                "message": "This is the implied choice if the value of a life year is between $180,000 and $260,000.  Some insurance companies have decided that this is an appropriate range for the value of a life year, so they only pay for PAP tests every three years.", 
+                "solution": true
+            }, 
+            "2": {
+                "message": "This requires that the value of a life year be more than $260,000.  That is higher than the $200,000 number that I asked you to use.", 
+                "solution": false
+            }, 
+            "4": {
+                "message": "This the choice if value of a life year is between $10,000 and $180,000.  That is lower than the $200,000 number that I asked you to use.  Some insurance companies have decided that this is an appropriate range for the value of a life year, so they only pay for PAP tests every four years.  Good thing that four years is the longest interval that Eddy considered!", 
+                "solution": false
+            }
+        }
+    }, 
+    "C8": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "C8", 
+        "choices": {
+            "noteither": {
+                "message": "Correct, but what about the other way of calculating the marginal cost?", 
+                "solution": true
+            }, 
+            "either": {
+                "message": "Correct!  The two ways give the same answer.  The difference in total cost always equals the difference in variable cost.", 
+                "solution": "Y"
+            }
+        }
+    }, 
+    "D13": {
+        "incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.", 
+        "text": "", 
+        "correct": "Correct!  Changing your prices moves you along your demand curve.  Your demand is inelastic, so your demand curve is close to a vertical line.  You move up that line when you raise your price.", 
+        "answer": "Along", 
+        "type": "SingleAnswer", 
+        "id": "D13"
+    }, 
+    "dis10": {
+        "incorrect": "MEMEMEMEME", 
+        "text": "", 
+        "correct": "FIXFIXFIX", 
+        "answer": "FIXME", 
+        "type": "SingleAnswer", 
+        "id": "dis10"
+    }, 
+    "dis11": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "dis11", 
+        "choices": {
+            "yes": {
+                "message": "Correct, probably, but what if you'll starve before you get the hen and it starts laying?\"", 
+                "solution": "Y"
+            }, 
+            "numbers": {
+                "message": "Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!", 
+                "solution": false
+            }, 
+            "depends": {
+                "message": "Correct!  It depends on your rate of time preference, which is about how soon you really need to eat!", 
+                "solution": true
+            }, 
+            "no": {
+                "message": "Correct, if you would starve before you got the hen.", 
+                "solution": false
+            }
+        }
+    }, 
+    "dis1": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "dis1", 
+        "choices": {
+            "today": {
+                "message": "Correct!  $200 today is worth more than $200 a year from now.  If you get $200 now, you can put it in a bank account.  In a year, you'll have your $200, plus the interest it will earn. <p>In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.", 
+                "solution": true
+            }, 
+            "same": {
+                "message": "Even with no inflation and no risk of non-payment, getting the money sooner is better, because you can put money you get now in a bank and earn interest.", 
+                "solution": false
+            }, 
+            "year": {
+                "message": "Not correct.  If you wait until next year to get your $200, you'll lose one year's worth of interest that you could have earned in a bank.", 
+                "solution": false
+            }
+        }
+    }, 
+    "dis2": {
+        "incorrect": "\"No.  We will have $200 plus one year's simple interest.  5% of 200 is 10.", 
+        "text": "", 
+        "correct": "Correct!  We'll have $210.<p>That's the $200 we started with, plus 5% of $200, which is $10.", 
+        "answer": "210.0", 
+        "type": "SingleAnswer", 
+        "id": "dis2"
+    }, 
+    "dis3": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "dis3", 
+        "choices": {
+            "22050": {
+                "message": "Correct!  After one year you have $210.  After the second year, you get 5% of $210, which is $10.50, in interest.  Your final total is $210 + $10.50 = $220.50.", 
+                "solution": true
+            }, 
+            "220": {
+                "message": "Not quite.  Your original $200 will earn another $10 interest, but you'll also get interest on the first year's $10 interest. Getting interest on interest is called 'compounding.'", 
+                "solution": false
+            }
+        }
+    }, 
+    "dis4": {
+        "incorrect": "No.  For the total after one year, we multiplied $200 by 1.05 once.  For two years, we multiplied by 1.05 twice.  For three years, ...", 
+        "text": "", 
+        "correct": "<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH='73%' ><tr><td ALIGN=CENTER VALIGN=TOP WIDTH='53%'>$200 &times;(1.05)&sup3;&nbsp;</font></td><td VALIGN=TOP WIDTH='46%'>= $231.52</td></tr><tr><td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&sup3;&nbsp;</td><td VALIGN=TOP>= Future Value in Three Years</td></tr></table>To calculate how much we will have in three years, we multiply by 1.05 three times, once for the first year, once for the second year, and once for the third year.", 
+        "answer": "3", 
+        "type": "SingleAnswer", 
+        "id": "dis4"
+    }, 
+    "dis5": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "dis5", 
+        "choices": {
+            "200": {
+                "message": "You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for a year.", 
+                "solution": false
+            }, 
+            "190": {
+                "message": "$190 is not quite enough.  Subtracting 5% of $200 does not give the right answer.  If you did start with $190, your interest would be 5% of $190, which is $9.50.  You'd have $199.50 next year, not $200.", 
+                "solution": false
+            }, 
+            "19048": {
+                "message": "Correct! You want the amount that will grow to $200 in one year.  <br>You want X such that <br>X \\u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: <br>X = $200/1.05 <br>which calculates to<br>X = $190.48.", 
+                "solution": true
+            }
+        }
+    }, 
+    "dis6": {
+        "incorrect": "No.  There is only one method that discounts future amounts correctly. You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for two years.", 
+        "text": "", 
+        "correct": "<p>We want to know the amount of money that will grow to $200 in two years at 5% interest. <br>This is the amount X such that<br>X&times;1.05&sup2; = $200.<p>Divide both sides of that by (1.05)&sup2; to solve for X:<br>X = $200/1.05&sup2; = $181.41", 
+        "answer": "<p>18141", 
+        "type": "SingleAnswer", 
+        "id": "dis6"
+    }, 
+    "dis7": {
+        "incorrect": "No.  For the present value of an amount one year in the future, we divided $200 by 1.05 once.  For $200 two years in the future, we divided by 1.05 twice.  For three years in the future, ...", 
+        "text": "", 
+        "correct": "Correct!", 
+        "answer": "3", 
+        "type": "SingleAnswer", 
+        "id": "dis7"
+    }, 
+    "dis8": {
+        "incorrect": "No.  The bond matures in 5 years. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
+        "text": "", 
+        "correct": "<p>Correct!  The most you should be willing to pay is the amount that, if you put it in the bank for 5 years at 5% interest, would grow to $200. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
+        "answer": "5", 
+        "type": "SingleAnswer", 
+        "id": "dis8"
+    }, 
+    "dis9": {
+        "incorrect": "No.  The bond matures in 3 years.", 
+        "text": "", 
+        "correct": "<p>Correct!  With three years to go, the bond should be worth $172.77.  The closer it gets to maturity, the more it is worth.  When it finally gets to maturity, it will be worth the full $200.", 
+        "answer": "3", 
+        "type": "SingleAnswer", 
+        "id": "dis9"
+    }, 
+    "Elasq2": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "Elasq2", 
+        "choices": {
+            "1": {
+                "message": "You're right to be unsure!  You could use 100, 60, or something between.", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "Correct, maybe.  Are you sure you shouldn't use 100?", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "Correct, maybe. Are you sure you shouldn't use 60?", 
+                "solution": false
+            }
+        }
+    }, 
+    "MC6-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "MC6-button"
+    }, 
+    "Elasq9": {
+        "incorrect": "If our number were something like -2, we would call the demand elastic.", 
+        "text": "", 
+        "correct": "Correct!  -0.5 is between 0 and -1, so we can call this demand inelastic.", 
+        "answer": "Inelastic", 
+        "type": "SingleAnswer", 
+        "id": "Elasq9"
+    }, 
+    "sd21": {
+        "incorrect": "These restrictions do not <em>directly</em> affect the makers of cigarettes.  They do not move the supply curve.", 
+        "text": "", 
+        "correct": "Correct!  These restrictions reduce demand.  They move the demand curve to the left.  When smoking is less convenient, and when smokers see fewer other smokers, they will buy fewer packs of cigarettes.", 
+        "answer": "Demand", 
+        "type": "SingleAnswer", 
+        "id": "sd21"
+    }, 
+    "sd20": {
+        "incorrect": "People will demand fewer cigarettes, but that will be because the price is higher.  That is a movement along the demand curve.  It is not a movement of the demand curve.  The 'demand curve' and the 'quantity demanded' are two different concepts.", 
+        "text": "", 
+        "correct": "Correct!  The tax adds to the cost of offering the cigarettes for sale.  The store includes the tax in the price that it quotes to the buyers.  That's why I say that the tax is on the supply side.", 
+        "answer": "Supply", 
+        "type": "SingleAnswer", 
+        "id": "sd20"
+    }, 
+    "riska1": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "riska1"
+    }, 
+    "riska2": {
+        "incorrect": "You are not very risk averse.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to risk your $10,000 to get $1000 in expected additional value.", 
+        "text": "", 
+        "correct": "This is risk aversion, definitely.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to forgo $1000 in expected value to avoid risking your $10,000.", 
+        "answer": "Keep", 
+        "type": "SingleAnswer", 
+        "id": "riska2"
+    }, 
+    "riska5": {
+        "incorrect": "B is your choice.  A 9% chance at $5 million.", 
+        "text": "", 
+        "correct": "A is your choice.  A 10% chance at $1 million.", 
+        "answer": "A", 
+        "type": "SingleAnswer", 
+        "id": "riska5"
+    }, 
+    "riska6": {
+        "incorrect": "D is your choice.   A 1% chance of nothing.  A 9% chance at $5 million. A 90% chance at $1 million.", 
+        "text": "", 
+        "correct": "C is your choice.  A sure $1 million.", 
+        "answer": "C", 
+        "type": "SingleAnswer", 
+        "id": "riska6"
+    }, 
+    "riska7": {
+        "incorrect": "It can be smart to buy health insurance, even though the insurance company takes a bigger percentage than the casino does.  <br>It's about risk and risk aversion.  Insurance reduces your risk.  It may be worth your while to pay them for that.  <br>When you play roulette, you are increasing your risk, and you are paying the casino to increase your risk!", 
+        "text": "", 
+        "correct": "Right.  Insurance is a worse gamble than roulette, in terms of expected value and actuarial fairness.  However, it can still make sense to buy insurance.  See the other answer for why.", 
+        "answer": "Right", 
+        "type": "SingleAnswer", 
+        "id": "riska7"
+    }, 
+    "sd16": {
+        "incorrect": "No, not unless the doctors want their patients to eat more fries. They have to want that enough to lower their fees.", 
+        "text": "", 
+        "correct": "Correct! This works on the buyer, the woman.", 
+        "answer": "Demand", 
+        "type": "SingleAnswer", 
+        "id": "sd16"
+    }, 
+    "sd17": {
+        "incorrect": "No. The free vaccine goes to the doctor, who is selling inoculations to patients.", 
+        "text": "", 
+        "correct": "Correct!  Free vaccine lowers the cost of operating for the sellers of inoculations.  The supply curve should move up, which is to the right in the standard diagram.", 
+        "answer": "Supply", 
+        "type": "SingleAnswer", 
+        "id": "sd17"
+    }, 
+    "sd14": {
+        "incorrect": "I would say No here.  Check the other answer for why.", 
+        "text": "", 
+        "id": "sd14", 
+        "answer": "False", 
+        "type": "TrueFalse", 
+        "correct": "Correct!  I suppose that the government could do that, but now we're not talking about a free market."
+    }, 
+    "sd15": {
+        "incorrect": "No, not unless the advertisements affect the providers' attitudes.", 
+        "text": "", 
+        "correct": "Correct!  Changing the buyers' thinking changes the demand.", 
+        "answer": "Demand", 
+        "type": "SingleAnswer", 
+        "id": "sd15"
+    }, 
+    "sd12": {
+        "incorrect": "I like this reason.  Check the other answer for why.", 
+        "text": "", 
+        "correct": "Correct!  If there is excess supply, and if there is competition among the sellers for scarce customers, the price should tend to go down.", 
+        "answer": "True", 
+        "type": "TrueFalse", 
+        "id": "sd12"
+    }, 
+    "sd13": {
+        "incorrect": "I would say Yes here.  Check the other answer for why.", 
+        "text": "", 
+        "id": "sd13", 
+        "answer": "True", 
+        "type": "TrueFalse", 
+        "correct": "Correct!  Again, it is the combination of excess supply and competition among the sellers."
+    }, 
+    "AC11": {
+        "highmessage": "Your average cost is less than the price, but there is a lower output rate for which that is also true.", 
+        "lowmessage": "Your costs exceed your revenues at this output rate.  You can tell because your average cost is more than $3200.", 
+        "correct": "Correct!  This is the lowest output rate for which the average cost is less than $3200.  You have to have at least 4 patients to break even.", 
+        "text": "", 
+        "answer": "4", 
+        "type": "Range", 
+        "id": "AC11"
+    }, 
+    "AC10": {
+        "incorrect": "Use the marginal decision rule.  You want the highest output rate that has a marginal cost less than $4200.", 
+        "text": "", 
+        "correct": "Correct!  This is the highest output rate for which the marginal cost is less than $4200", 
+        "answer": "8", 
+        "type": "SingleAnswer", 
+        "id": "AC10"
+    }, 
+    "risk2-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "risk2-button"
+    }, 
+    "irr10": {
+        "incorrect": "Correct!  A price cut of $33 each on 10,000 machines is $330,000.  More than enough to cover the $100,000. TODO", 
+        "text": "", 
+        "correct": "\tYes, they could.  A price cut of $33 each on 10,000 machines is $330,000.  More than enough to make delaying the regulations a profitable strategy.", 
+        "answer": "no", 
+        "type": "SingleAnswer", 
+        "id": "irr10"
+    }, 
+    "riska3-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "riska3-button"
+    }, 
+    "MC5-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "MC5-button"
+    }, 
+    "q3": {
+        "incorrect": "Not inelastic, because the family may or may not go see the doctor, depending on the price charged.", 
+        "text": "", 
+        "correct": "Correct!  The demand will be elastic.  If the price for an office visit is high, the parents may hesitate to go to the doctor, and hope that the earache goes away by itself.", 
+        "answer": "Elastic", 
+        "type": "SingleAnswer", 
+        "id": "q3"
+    }, 
+    "q2": {
+        "incorrect": "Not inelastic, because the patient may or may not buy the prescribed drug, depending on the price.", 
+        "text": "", 
+        "correct": "Correct!  The demand will be elastic.  If the price is high, the patient may forgo buying the drug.", 
+        "answer": "Elastic", 
+        "type": "SingleAnswer", 
+        "id": "q2"
+    }, 
+    "Elas203-button": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "Elas203-button", 
+        "choices": {
+            "TOD": {
+                "message": "", 
+                "solution": "TODO"
+            }
+        }
+    }, 
+    "q6": {
+        "incorrect": "No, this does not show elastic.  Elastic demand would mean that buyers would buy less at higher prices.  Here, they buy the same at all prices.", 
+        "text": "", 
+        "correct": "Correct!  The graph and table say that the same amount is sold at high prices and at low prices.  There is no response of quantity to price.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "q6"
+    }, 
+    "sd4": {
+        "incorrect": "No, emergency departments are on the Supply side.  Patients are on the Demand side.", 
+        "text": "", 
+        "id": "sd4", 
+        "answer": "Correct!  Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere.", 
+        "choices": {}, 
+        "type": "TrueFalse", 
+        "correct": "Correct!  Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere."
+    }, 
+    "sd5": {
+        "incorrect": "No.  It is not in the primary care market.", 
+        "text": "", 
+        "correct": "Correct!  It does not sell primary care services.  It is a supplier in a different market.", 
+        "answer": "Neither", 
+        "choices": {}, 
+        "type": "MultipleChoice", 
+        "id": "sd5"
+    }, 
+    "sd6": {
+        "incorrect": "Find the line in the table for a price of $10 per visit.", 
+        "text": "", 
+        "correct": "Correct!  This is from the bottom line of the table.", 
+        "answer": "1000", 
+        "type": "TrueFalse", 
+        "id": "sd6"
+    }, 
+    "sd7": {
+        "incorrect": "No.  Equilibrium requires that supply and demand be in balance.", 
+        "text": "", 
+        "id": "sd7", 
+        "answer": "Correct!  Demand quantity exceeds supply quantity at this price.", 
+        "type": "TrueFalse", 
+        "correct": "No"
+    }, 
+    "D10": {
+        "incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.", 
+        "text": "", 
+        "correct": "Correct!  Changing your prices moves you along your demand curve.", 
+        "answer": "Along", 
+        "type": "SingleAnswer", 
+        "id": "D10"
+    }, 
+    "sd1": {
+        "incorrect": "No, doctors are on the Supply side.  Patients are on the Demand side.  True, doctors do influence their demand, because patients rely on them for guidance about what medical services to buy.  At the first level of analysis, though, doctors are on the supply sides of medical services markets.", 
+        "text": "", 
+        "id": "sd1", 
+        "answer": "Supply", 
+        "type": "TrueFalse", 
+        "correct": "Correct! The 'providers' are sellers in this market."
+    }, 
+    "sd2": {
+        "incorrect": "No. Patients, or potential patients, are buyers. Buyers are on the demand side of a market.", 
+        "text": "", 
+        "id": "sd2", 
+        "answer": "Demand", 
+        "type": "TrueFalse", 
+        "correct": "Correct! Patients, or potential patients, are buyers in this market."
+    }, 
+    "sd3": {
+        "incorrect": "No. It does not sell these medical services.", 
+        "text": "", 
+        "id": "sd3", 
+        "answer": "Demand", 
+        "type": "TrueFalse", 
+        "correct": "Correct!  Health insurance companies help or hinder patients who want to buy health care."
+    }, 
+    "sd8": {
+        "incorrect": "Not this row.  Equilibrium requires the supplied and the demanded quantities be equal.", 
+        "text": "", 
+        "id": "sd8", 
+        "answer": "35", 
+        "choices": {}, 
+        "type": "MultipleChoice", 
+        "correct": "Correct!  At $35, the demand quantity and the supply quantity are both 500."
+    }, 
+    "sd9": {
+        "incorrect": "", 
+        "text": "", 
+        "id": "sd9", 
+        "choices": {}, 
+        "answer": "", 
+        "type": "MultipleChoice", 
+        "correct": "TODO"
+    }, 
+    "sd14c": {
+        "incorrect": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.", 
+        "text": "", 
+        "correct": "Correct!  For price, up is up and down is down.  As the supply curve moves to the right, the point where it crosses the demand curve moves down.  That indicates a lower price.  As the supply curve moves to the left, the point where it crosses the demand curve moves up, towards the top of the page.  That indicates a higher price.", 
+        "answer": "Up", 
+        "type": "SingleAnswer", 
+        "id": "sd14c"
+    }, 
+    "sd14b": {
+        "incorrect": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.", 
+        "text": "", 
+        "correct": "Correct!  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.  That indicates a higher quantity.  As the supply curve moves to the left, the point where it crosses the demand curve also moves to the left.  That indicates a lower quantity.", 
+        "answer": "Up", 
+        "type": "SingleAnswer", 
+        "id": "sd14b"
+    }, 
+    "sd14a": {
+        "incorrect": "The diagram could have been better designed, but it is properly labelled.  See the other answer for why.", 
+        "text": "", 
+        "correct": "Correct!  Even when the supply curve appears to be moving down in the picture, the equilibrium quantity is moving to the right, indicating a higher quantity.  Imagine a horizontal line running through the middle of the graph.  You can hold a piece of paper up to the screen, so that the top edge of the paper goes horizontally through the middle of the graph.  You will see that the place where the supply curve touches the paper moves to the right when the words Supply Rising are moving down.  That means that you are getting more quantity supplied at a given price.", 
+        "answer": "Ok", 
+        "type": "SingleAnswer", 
+        "id": "sd14a"
+    }, 
+    "mc8": {
+        "incorrect": "Compare the marginal cost of the 7th patient with the price, which is now $3300.", 
+        "text": "", 
+        "correct": "Correct!  The marginal cost of the 7th patient is higher than the $3300 price.  Joan's loses money on that patient.", 
+        "answer": "No", 
+        "type": "SingleAnswer", 
+        "id": "mc8"
+    }, 
+    "risk6": {
+        "incorrect": "AIG (American International Group) took that attitude in the mid-2000s.  They agreed to pay Goldman Sachs if the mortgage-backed securities it held became worthless.  AIG charged premiums based on past default rates and some seemingly harmless assumptions about independence.  Then housing collapsed, many homeowners defaulted on their mortgages, and AIG owed more money than it had.  Bankruptcy loomed for AIG and for Goldman Sachs, which needed the money from AIG.  The U.S. government bailed out AIG. That indirectly bailed out Goldman Sachs.  AIG officials paid themselves bonuses.  Maybe they judged it right after all!", 
+        "text": "", 
+        "correct": "Correct! We seem to learn this lesson over and over again, the hard way.  (Try the other answer for a story.)", 
+        "answer": "Do", 
+        "type": "SingleAnswer", 
+        "id": "risk6"
+    }, 
+    "risk4": {
+        "incorrect": "Correct! Insurance cannot be fair, the way we are using that word, because no insurance company could stay in business if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
+        "text": "", 
+        "correct": "Insurance cannot be fair, the way we are using that word, because the insurance company would not make any money if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "risk4"
+    }, 
+    "risk5": {
+        "incorrect": "If the probability of default goes up, and therefore the probability of getting paid goes down, then the expected present value of the security will be less.  No one will buy the security for less than what he or she thinks the expected present value is.", 
+        "text": "", 
+        "correct": "Correct! No one will buy the security for less than what he or she thinks the expected present value is.", 
+        "answer": "Down", 
+        "type": "SingleAnswer", 
+        "id": "risk5"
+    }, 
+    "risk2": {
+        "incorrect": "You would be right if you bet each of your dollars just once and then quit.", 
+        "text": "", 
+        "correct": "Correct!  As you bet your dollars over and over again, you will probably find yourself betting way more than ten times.  When you have bet 190 times, your expected loss is 190 times 2/38, which is $10.  Keep betting long enough, and you will lose everything.", 
+        "answer": "Repeat", 
+        "type": "SingleAnswer", 
+        "id": "risk2"
+    }, 
+    "risk3": {
+        "incorrect": "A game can be unfair even if it is not rigged.  Of course, if a game is rigged, so that the probabilities are not what you think they are, then the game is almost surely unfair.", 
+        "text": "", 
+        "correct": "Correct!", 
+        "answer": "Repeat", 
+        "type": "SingleAnswer", 
+        "id": "risk3"
+    }, 
+    "C3": {
+        "incorrect": "The calculation is the cost of four patients minus the cost of zero patients.  Variable = Total - Fixed.", 
+        "text": "How much is the variable cost of having 4 patients?", 
+        "correct": "Correct! The variable cost for four patients is $11000.", 
+        "answer": "11000", 
+        "type": "SingleAnswer", 
+        "id": "C3"
+    }, 
+    "C2": {
+        "incorrect": "The calculation is the cost of one patient minus the cost of zero patients.  Variable = Total - Fixed.", 
+        "text": "Now let's do variable cost. The variable cost is that portion of total cost that varies when the rate of output varies. How much is the variable cost of having one patient?", 
+        "correct": "Correct! The variable cost for one patient is $3500.", 
+        "answer": "3500", 
+        "type": "SingleAnswer", 
+        "id": "C2"
+    }, 
+    "C1": {
+        "incorrect": "You want what it costs to see 0 patients.", 
+        "text": "How much is the fixed cost?", 
+        "correct": "Correct! The fixed cost is $1000.", 
+        "answer": "1000", 
+        "type": "SingleAnswer", 
+        "id": "C1"
+    }, 
+    "C7": {
+        "incorrect": "The calculation is the cost of nine patients minus the cost of eight patients.  Marginal = Total at this output rate minus Total at one less.", 
+        "text": "", 
+        "correct": "Correct! The marginal cost for the 9th patient is $5000.", 
+        "answer": "5000", 
+        "type": "SingleAnswer", 
+        "id": "C7"
+    }, 
+    "C6": {
+        "incorrect": "The calculation is the cost of four patients minus the cost of three patients.  Marginal = Total at this output rate minus Total at one less.", 
+        "text": "", 
+        "correct": "Correct! The marginal cost of the 4th patient is $2000.", 
+        "answer": "2000", 
+        "type": "SingleAnswer", 
+        "id": "C6"
+    }, 
+    "C5": {
+        "incorrect": "The calculation is the cost of one patient minus the cost of zero patients.  Marginal = Total at this output rate minus Total at one less.", 
+        "text": "How much is the marginal cost of the first patient? Type a number (no commas) in the box.  Then click this.", 
+        "correct": "Correct! The marginal cost of the first patient is $3500.", 
+        "answer": "3500", 
+        "type": "SingleAnswer", 
+        "id": "C5"
+    }, 
+    "C4": {
+        "incorrect": "The calculation is the cost of nine patients minus the cost of zero patients.  Variable = Total - Fixed.", 
+        "text": "How much is the variable cost of having 9 patients?", 
+        "correct": "Correct! The variable cost for nine patients is $29000.", 
+        "answer": "29000", 
+        "type": "SingleAnswer", 
+        "id": "C4"
+    }, 
+    "sd17a": {
+        "incorrect": "No. Expanding service capacity works on the supply side.", 
+        "text": "", 
+        "correct": "Correct!  <p>This is what President Clinton chose to do, twenty years ago.  The result is that war veterans get the best health care in the U.S., according to standard quality measures.  Meanwhile, expanding supply this way kept the price pressure off of the general public's system.  </p><p>At this writing, there is a big backlog of veterans' applications to get into the system, but that is not the fault of the hospitals and the medical personnel. </p>", 
+        "answer": "Supply", 
+        "type": "SingleAnswer", 
+        "id": "sd17a"
+    }, 
+    "Elasq14": {
+        "incorrect": "You are throwing money away!  You must be one of those &#9786;Liberals.", 
+        "text": "", 
+        "correct": "Correct!  Charge 'what the market will bear' to bring in more money.", 
+        "answer": "Raise", 
+        "type": "SingleAnswer", 
+        "id": "Elasq14"
+    }, 
+    "Elas201-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "Elas201-button"
+    }, 
+    "Elasq16": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "Elasq16", 
+        "choices": {
+            "1": {
+                "message": "Correct!  No response to price changes makes the numerator of the elasticity fraction zero, which makes the whole fraction equal zero.", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "An elasticity of minus infinity would be for a huge fall in quantity demanded when the price goes up by almost nothing.  That is highly responsive demand.", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "No response to price changes makes the numerator of the elasticity fraction zero.  A fraction can't be -1 if its numerator is 0.", 
+                "solution": false
+            }
+        }
+    }, 
+    "Elasq17": {
+        "incorrect": "With elastic demand, raising the price drives customers away.  What you gain from a higher price per item does not compensate for your selling fewer items.", 
+        "text": "", 
+        "correct": "\tCorrect!  With elastic demand, your gain from selling more items is more than your loss from making less money on each item.", 
+        "answer": "Lower", 
+        "type": "SingleAnswer", 
+        "id": "Elasq17"
+    }, 
+    "Elasq12": {
+        "incorrect": "$1800 is bigger than $1000.", 
+        "text": "", 
+        "correct": "Correct!  Revenue goes up, from $1000 to $1800.", 
+        "answer": "Up", 
+        "type": "SingleAnswer", 
+        "id": "Elasq12"
+    }, 
+    "Elasq13": {
+        "incorrect": "It is consistent.  Our demand is inelastic and our higher price brings more revenue.", 
+        "text": "", 
+        "correct": "Correct!  Our demand is inelastic and our higher price brings more revenue.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "Elasq13"
+    }, 
+    "Elasq18": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "Elasq18", 
+        "choices": {
+            "1": {
+                "message": "Correct!  The tiniest price increase wipes out all your sales.  At the limit, that makes the elasticity number minus infinity.", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "An elasticity of 0 is for perfectly <strong>in</strong>elastic demand.", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "A tiny price reduction will give you a huge increase in sales quantity.  The elasticity fraction for such a price reduction is a big number divided by a small negative number.  The quotient is going to be way more negative than -1.", 
+                "solution": false
+            }
+        }
+    }, 
+    "AC3": {
+        "incorrect": "Use the column in the table for an output of 3.  Use the average cost row of numbers.  If you do the calculation yourself, round off to the nearest whole number.", 
+        "text": "", 
+        "correct": "Correct!", 
+        "answer": "3333", 
+        "type": "SingleAnswer", 
+        "id": "AC3"
+    }, 
+    "AC1": {
+        "incorrect": "The average cost of one toy is the total cost divided by 1.  Add the fixed cost (10000) to the marginal cost of the first toy (1) to get the total cost.  Then divide by 1.", 
+        "text": "", 
+        "correct": "Correct!  The average cost of 1 is the total cost, 10001, divided by 1.", 
+        "answer": "10001", 
+        "type": "SingleAnswer", 
+        "id": "AC1"
+    }, 
+    "AC7": {
+        "highmessage": "At this output rate, you are more than breaking even.  However, there is a lower output rate that also more than breaks even.", 
+        "lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.", 
+        "correct": "Correct!", 
+        "text": "", 
+        "answer": "2", 
+        "type": "Range", 
+        "id": "AC7"
+    }, 
+    "AC6": {
+        "highmessage": "At this output rate, your total cost is less than your total revenue.  You are not breaking even.", 
+        "lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.", 
+        "id": "AC6", 
+        "text": "", 
+        "answer": "8", 
+        "type": "Range", 
+        "correct": "Correct!"
+    }, 
+    "AC5": {
+        "highmessage": "At this output rate, your total cost is less than your total revenue.  However, there is a lower output rate for which that is also true.", 
+        "lowmessage": "At this output rate, the total cost is greater than the total revenue.  You are not breaking even.", 
+        "correct": "Correct!", 
+        "text": "", 
+        "answer": "4", 
+        "type": "Range", 
+        "id": "AC5"
+    }, 
+    "AC4": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "AC4", 
+        "choices": {
+            "yes": {
+                "message": "Correct!  The $3700 price is more than the $3000 marginal cost.  You gain $700 by accepting the 2nd patient.  <p><p>So far, we have figured out that we want to contract with at least 2 patients.", 
+                "solution": true
+            }, 
+            "no": {
+                "message": "Compare what the 2nd patient pays you with the cost of adding that 2nd patient, which is the the marginal cost of the 2nd patient.", 
+                "solution": false
+            }
+        }
+    }, 
+    "AC9": {
+        "incorrect": "Not correct.  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the $4200 price.", 
+        "text": "", 
+        "correct": "Correct!  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the $4200 price.<p>The break-even point, the minimum average cost point, and the profit maximizing point are three different points!", 
+        "answer": "false", 
+        "type": "SingleAnswer", 
+        "id": "AC9"
+    }, 
+    "AC8": {
+        "incorrect": "There is another output rate with a lower average cost.", 
+        "text": "", 
+        "correct": "Correct!  Joan's average cost bottoms out at 5 patients per year.", 
+        "answer": "5", 
+        "type": "SingleAnswer", 
+        "id": "AC8"
+    }, 
+    "risk1-button": {
+        "incorrect": "", 
+        "text": "", 
+        "correct": "", 
+        "answer": "TODO", 
+        "type": "SingleAnswer", 
+        "id": "risk1-button"
+    }, 
+    "Ac2": {
+        "incorrect": "The average cost of two toys is the total cost divided by 2.  Add the fixed cost (10000) to the marginal cost of the two toys (1 each) to get the total cost.  Then divide by 2.", 
+        "text": "", 
+        "correct": "Correct!  The average cost of 2 is the total cost, 10002, divided by 2.", 
+        "answer": "5001", 
+        "type": "SingleAnswer", 
+        "id": "Ac2"
+    }, 
+    "MC9": {
+        "incorrect": "Compare the marginal cost of the 6th patient with the price, which is $3300.", 
+        "text": "", 
+        "correct": "Correct!  The marginal cost of the 6th patient is less than the $3300 price.  Joan's should accept that patient.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "MC9"
+    }, 
+    "MC7": {
+        "incorrect": "A trick question.  The marginal decision rule is not about setting your price.  It is about how to react when the market sets the price and your are what is called a 'price-taker'.", 
+        "text": "", 
+        "correct": "Correct!  The marginal decision rule is not about setting your price.  It is about how to react when the market sets the price and your are what is called a 'price-taker'.", 
+        "answer": "False", 
+        "type": "SingleAnswer", 
+        "id": "MC7"
+    }, 
+    "MC4": {
+        "incorrect": "Compare what the 2nd patient pays you with the cost of adding that 2nd patient, which is the the marginal cost of the 2nd patient", 
+        "text": "", 
+        "correct": "Correct!  The $3700 price is more than the $3000 marginal cost.  You gain $700 by accepting the 2nd patient.  <p><p>So far, we have figured out that we want to contract with at least 2 patients.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "MC4"
+    }, 
+    "MC3": {
+        "incorrect": "Not correct.  You reduce your loss from $1000 to $800 by taking the 1st patient.  We assume that you can't get out of your fixed cost.", 
+        "text": "", 
+        "correct": "Correct!  You are losing money either way.  You reduce your loss from $1000 to $800 by taking the 1st patient. We assume that you are stuck with the fixed cost.", 
+        "answer": "1", 
+        "type": "SingleAnswer", 
+        "id": "MC3"
+    }, 
+    "MC2": {
+        "incorrect": "Compare what the first patient pays you with the cost of adding that first patient.  The cost of adding the first patient is the marginal cost of the 1st patient.", 
+        "text": "", 
+        "correct": "Correct!  The $3700 price is more than the $3500 marginal cost.  You gain $200 by accepting the first patient.", 
+        "answer": "Yes", 
+        "type": "SingleAnswer", 
+        "id": "MC2"
+    }, 
+    "sd15a": {
+        "incorrect": "No, insurance works on the demand side.", 
+        "text": "", 
+        "correct": "Correct!  Insurance works on the demand side.  More insurance would mean that veterans could buy more care at the same prices, because the insurance would help pay the prices.  Supply-demand theory says that this would tend to further drive up the prices of health care services to the general public.", 
+        "answer": "Demand", 
+        "type": "SingleAnswer", 
+        "id": "sd15a"
+    }, 
+    "D41": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "D41", 
+        "choices": {
+            "1": {
+                "message": "Correct!  You move from B to D, along the curve.", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "No.  B is where we start.  Where do we finish?", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "No, that is not the point where the price is $4.", 
+                "solution": false
+            }
+        }
+    }, 
+    "MC13-button": {
+        "highmessage": "", 
+        "lowmessage": "TODO", 
+        "id": "MC13-button", 
+        "text": "", 
+        "answer": "8", 
+        "type": "Range", 
+        "correct": "Correct! At 8, the marginal cost is less than $2900.  Above that, the marginal cost is more than $2900."
+    }, 
+    "sd10": {
+        "incorrect": "", 
+        "correct": "TODO", 
+        "text": "", 
+        "choices": {}, 
+        "answer": "", 
+        "type": "MultipleChoice", 
+        "id": "sd10"
+    }, 
+    "Elasq15": {
+        "incorrect": "The demand for education services is probably very elastic.  If you make classes or consultations expensive, no one will come.  This is not where you can make a lot of revenue by raising the price.", 
+        "text": "", 
+        "correct": "Correct!  The demand for emergency services is price-inelastic.  Those are prices you can raise and bring in more revenue.<p>You will implement the price increase by assigning a lot of overhead cost to the emergency department.  That way, you don't show a big profit, which might raise eyebrows with the public.  If somebody gets emergency services who has no means to pay, you will show a big financial loss.  That loss will be exaggerated, to the extent that it includes the overhead costs that you tacked on.</p>", 
+        "answer": "Emergency", 
+        "type": "SingleAnswer", 
+        "id": "Elasq15"
+    }, 
+    "sd11": {
+        "incorrect": "If there is excess supply, there is a surplus on the market.  Unless something peculiar is going on, that should not make the price up.  ('Something peculiar' would be if people think a product is more valuable if it is expensive.  Perfumes may work that way.)", 
+        "text": "", 
+        "id": "sd11", 
+        "answer": "Down", 
+        "type": "TrueFalse", 
+        "correct": "Correct!  If there is excess supply, the price should tend to go down.<br><br>Let's look in to why."
+    }, 
+    "D8": {
+        "incorrect": "No.  More gloves were bought, even at the same prices.", 
+        "text": "", 
+        "correct": "Correct!  More gloves were bought, even at the same prices.", 
+        "answer": "Shift", 
+        "type": "SingleAnswer", 
+        "id": "D8"
+    }, 
+    "D9": {
+        "incorrect": "No.  More patients come in, even at the same prices, means that the demand curve shifted out.", 
+        "text": "", 
+        "correct": "Correct!  More patients come in, even at the same prices.", 
+        "answer": "Shift", 
+        "type": "SingleAnswer", 
+        "id": "D9"
+    }, 
+    "MC12-button": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "MC12-button", 
+        "choices": {
+            "1": {
+                "message": "Correct!  Her revenue and her total cost are equal.  No profit.", 
+                "solution": true
+            }, 
+            "2": {
+                "message": "Profit is Revenue minus Total Cost at 5 patients.", 
+                "solution": false
+            }
+        }
+    }, 
+    "D4": {
+        "text": "", 
+        "type": "MultipleChoice", 
+        "id": "D4", 
+        "choices": {
+            "1": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "3": {
+                "message": "No, F is the point for a price of $6.", 
+                "solution": false
+            }, 
+            "2": {
+                "message": "No, A is the point for a price of $1.", 
+                "solution": false
+            }, 
+            "5": {
+                "message": "No, D is the point for a price of $4.", 
+                "solution": false
+            }, 
+            "4": {
+                "message": "No, C is the point for a price of $3.", 
+                "solution": false
+            }, 
+            "6": {
+                "message": "No, E is the point for a price of $5.", 
+                "solution": false
+            }
+        }
+    }, 
+    "D5": {
+        "incorrect": "No, a nasty rumor is not going to increase your sales at a given price", 
+        "text": "", 
+        "correct": "Correct!  A nasty rumor makes demand shift down.  At any given price, you will sell fewer gowns.", 
+        "answer": "Down", 
+        "type": "SingleAnswer", 
+        "id": "D5"
+    }, 
+    "D2": {
+        "incorrect": "No, higher prices make the quantity demanded go down.", 
+        "text": "", 
+        "correct": "Correct!  Higher prices make the quantity demanded lower.", 
+        "answer": "Down", 
+        "type": "SingleAnswer", 
+        "id": "D2"
+    }
+}

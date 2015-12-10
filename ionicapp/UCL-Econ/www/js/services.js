@@ -70,7 +70,7 @@ angular.module('app.services', [])
     .factory('QuestionFactory', [function ($scope) {
         var questions;
 
-        $.getJSON('data/datatest.json', function (response) {
+        $.getJSON('data/questions.json', function (response) {
             questions = response;
         });
 
@@ -78,71 +78,63 @@ angular.module('app.services', [])
 
             questionText: function (question) {
 
-                for (var i = 0; i < 30; i++) {
-                    if (questions[i].id == question) {
+                return questions[question].text;
 
-                        return questions[i].text;
-
-                    }
-                }
+                
             },
 
-            questionChecker: function (question, submission) {
+            answerMachine: function (question, submission) {
 
-                console.log("carried question id " + question);
-                console.log("carried submission " + submission);
-
-                for (var i = 0; i < 30; i++) {
-                    if (questions[i].id == question) {
-
-                        if (questions[i].type == "SingleAnswer") {
-                            if (questions[i].answer == submission) {
-                                console.log(questions[i].correct);
-                                var answerArray = [true, questions[i].correct];
+                    q = questions[question]
+                    
+                        if (q.type == "SingleAnswer") {
+                            if (q.answer == submission) {
+                                
+                                var answerArray = [true, q.correct];
                                 return answerArray;
                             }
                             else
-                                console.log(questions[i].incorrect);
-                            var answerArray = [false, questions[i].incorrect];
+                                console.log(q.incorrect);
+                            var answerArray = [false, q.incorrect];
                             return answerArray;
                         }
-                        if (questions[i].type == "MultipleChoice") {
-                            console.log(questions[i].choices[submission]);
-                            if (questions[i].choices[submission].solution == "y") {
-                                var answerArray = [true, questions[i].choices[submission].message];
+                        if (q.type == "MultipleChoice") {
+                            console.log(q.choices[submission]);
+                            if (q.choices[submission].solution == "y") {
+                                var answerArray = [true, q.choices[submission].message];
                                 return answerArray;
                             } else
-                                var answerArray = [false, questions[i].choices[submission].message];
+                                var answerArray = [false, q.choices[submission].message];
                             return answerArray;
 
                         }
-                        if (questions[i].type == "Range") {
-                            if (questions[i].answer == submission) {
-                                console.log(questions[i].correct);
-                                var answerArray = [true, questions[i].correct];
+                        if (q.type == "Range") {
+                            if (q.answer == submission) {
+                                console.log(q.correct);
+                                var answerArray = [true, q.correct];
                                 return answerArray;
                             }
-                            else if (questions[i].answer < submission) {
-                                console.log(questions[i].highmessage);
-                                var answerArray = [false, questions[i].highmessage];
+                            else if (q.answer < submission) {
+                                console.log(q.highmessage);
+                                var answerArray = [false, q.highmessage];
                                 return answerArray;
                             }
-                            else if (questions[i].answer > submission) {
-                                console.log(questions[i].lowmessage);
-                                var answerArray = [false, questions[i].lowmessage];
+                            else if (q.answer > submission) {
+                                console.log(q.lowmessage);
+                                var answerArray = [false, q.lowmessage];
                                 return answerArray;
                             }
                         }
 
-                    }
-                }
+                    
+                
                 return null;
 
-
             }
+            
+        
+
         }
-
-
     }])
 
     .service('SectionNavigation', [function () {

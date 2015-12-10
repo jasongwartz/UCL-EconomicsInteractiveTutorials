@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
       $scope.thisAlert = function(questionName, submission) {
 
        
-      $scope.returned = QuestionFactory.questionChecker(questionName, submission);
+      $scope.returned = QuestionFactory.answerMachine(questionName, submission);
       
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({

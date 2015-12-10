@@ -43,8 +43,8 @@
 	},
 	{
 		"incorrect": "No.  Equilibrium requires that supply and demand be in balance.",
-		"correct": "No",
-		"answer": "Correct!  Demand quantity exceeds supply quantity at this price.",
+		"correct": "Correct!  Demand quantity exceeds supply quantity at this price.",
+		"answer": "TODO TODO",
 		"type": "TrueFalse",
 		"id": "sd7"
 	},
@@ -53,6 +53,7 @@
 		"id": "sd8",
 		"answer": "35",
 		"type": "MultipleChoice",
+		"choices":{},
 		"correct": "Correct!  At $35, the demand quantity and the supply quantity are both 500."
 	},
 	{
