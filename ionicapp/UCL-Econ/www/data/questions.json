@@ -1,4 +1,11 @@
 {
+    "TrueFalse": {
+        "text":"This is a True or False test.",
+        "correct":"",
+        "incorrect":"",
+        "type":"TrueFalse",
+        "answer":true
+    },
     "MC1-button": {
         "incorrect": "", 
         "text": "", 
