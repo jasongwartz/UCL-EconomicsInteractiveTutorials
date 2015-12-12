@@ -71,6 +71,14 @@ angular.module('app.controllers', [])
        $scope.name = $scope.qid;
        $scope.text = QuestionFactory.questionText($scope.qid);
        $scope.type = QuestionFactory.questionType($scope.qid);
+       if ($scope.type === "MultipleChoice") {
+         $scope.choices = QuestionFactory.questionChoices($scope.qid);
+       }
+       if ($scope.type === "Range") {
+         $scope.qmax = QuestionFactory.rangeMax($scope.qid);
+         $scope.start = ($scope.qmax / 2);
+       }
+       
       });
       
       $scope.answer = {
@@ -79,8 +87,7 @@ angular.module('app.controllers', [])
       
       $scope.thisAlert = function(questionName, submission) {
 
-         
-      $scope.returned = QuestionFactory.answerMachine(questionName, submission);
+          $scope.returned = QuestionFactory.answerMachine(questionName, submission);
    
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({

@@ -64,8 +64,13 @@ angular.module('app.services', [])
                 return questions[question].text; 
             },
             questionType: function (question) {
-                console.log(questions[question].type)
                 return questions[question].type;
+            },
+            questionChoices: function(question) {
+                return questions[question].choices;
+            },
+            rangeMax: function(question) {
+                return questions[question].max;
             },
 
             answerMachine: function (question, submission) {
@@ -89,7 +94,6 @@ angular.module('app.services', [])
                         }
                     }
                     if (q.type == "TrueFalse") {
-                        console.log(q.answer)
                        if (q.answer == submission) {
                             return [true, q.correct];
                             
@@ -100,7 +104,6 @@ angular.module('app.services', [])
                     if (q.type == "Range") {
                         if (q.answer == submission) {
                             return [true, q.correct];
-                            
                         }
                         else if (q.answer < submission) {                            
                             return [false, q.highmessage];                               
