@@ -7,8 +7,15 @@ angular.module('app.services', [])
         // http://stackoverflow.com/questions/684672/loop-through-javascript-object
         // http://api.jquery.com/each/          
         var chapters;
+        var hellothere;
+
+        $.getJSON('data/chapters.json', function (data) {
+            chapters = data;
+        });
+
         function getChapterData() {
             return $.getJSON("data/chapters.json").then(function (data) {
+                chapters = data;
                 return data;
             });
         }
@@ -57,13 +64,14 @@ angular.module('app.services', [])
                 }
                 )
                 return sections;
+            },
+
+            getSectionNumber: function(theSectionID) {
+
+                return chapters[theSectionID].sections;
+                
             }
         }
-
-
-
-
-
 
     }])
 
