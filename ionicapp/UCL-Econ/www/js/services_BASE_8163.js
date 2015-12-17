@@ -7,25 +7,27 @@ angular.module('app.services', [])
         // http://stackoverflow.com/questions/684672/loop-through-javascript-object
         // http://api.jquery.com/each/          
         var chapters;
-        var hellothere;
-
-        $.getJSON('data/chapters.json', function (data) {
-            chapters = data;
-        });
-
         function getChapterData() {
             return $.getJSON("data/chapters.json").then(function (data) {
-                chapters = data;
                 return data;
             });
         }
         return {
             getChapters: function () {
 
+
+
                 getChapterData().then(function (returndata) {
+
+                    console.log(returndata);
                     chapters = returndata;
+                    console.log("getChapters ran");
+                    console.log(chapters)
+
                 })
                 return chapters;
+                console.log(chapters);
+
             },
 
             getTitles: function () {
@@ -36,33 +38,33 @@ angular.module('app.services', [])
                             titles.push( [ key, c[key]["name"] ] )
                         }
                     }
-                })
+                }
+                )
                 return titles;    
             },
 
             getSections: function () {
-                var sections = {};
+                var sections = [];
                 getChapterData().then(function (c) { // c is returned chapter data
                             
                             
                             
                     for (var key in c) {
                         if (c.hasOwnProperty(key)) {
-                            sections[key] = c[key]["sections"]
+                            sections.push( [ key, c[key]["sections"] ] )
                         }
                     }
                 }
                 )
                 return sections;
-            },
-
-            getSectionNumber: function(theSectionID) {
-
-                return chapters[theSectionID].sections;
-
-
             }
         }
+
+
+
+
+
+
     }])
 
     .factory('QuestionFactory', [function ($scope) {
@@ -75,21 +77,13 @@ angular.module('app.services', [])
         return {
 
             questionText: function (question) {
-                return questions[question].text; 
-            },
-            questionType: function (question) {
-                return questions[question].type;
-            },
-            questionChoices: function(question) {
-                return questions[question].choices;
-            },
-            rangeMax: function(question) {
-                return questions[question].max;
+
+                return questions[question].text;
+
+                
             },
 
             answerMachine: function (question, submission) {
-                
-              
                 
                 var q = questions[question]
                     
@@ -101,23 +95,17 @@ angular.module('app.services', [])
                         }
                    }
                     if (q.type == "MultipleChoice") {
-                        if (q.choices[submission].solution) {
-                            return [true, q.choices[submission].message];                   
-                        } else {
-                            return [false, q.choices[submission].message];
-                        }
-                    }
-                    if (q.type == "TrueFalse") {
-                       if (q.answer == submission) {
-                            return [true, q.correct];
+                        if (q.choices[submission].solution == "y") {
+                            return [true, q.choices[submission].message];
                             
                         } else {
-                            return [false, q.incorrect];
+                            return [false, q.choices[submission].message];
                         }
                     }
                     if (q.type == "Range") {
                         if (q.answer == submission) {
                             return [true, q.correct];
+                            
                         }
                         else if (q.answer < submission) {                            
                             return [false, q.highmessage];                               
@@ -126,26 +114,94 @@ angular.module('app.services', [])
                             return [false, q.lowmessage]; 
                         }
                     }
-                return [false, "An error occured."] // if  no match for q
+                return null; // if  no match for q
             }
        }
     }])
 
-    .service('SectionNavigation', [function ($scope) {
+    .service('SectionNavigation', [function () {
+        
+        // &&& this is what we can make a loop
+
+        
+        var locations = [
+            {
+                "id": 1,
+                "sections": [
+                    {
+                        "message": "View Section 1"
+                    }, {
+                        "message": "View Section 2"
+                    },
+                    {
+                        "message": "View All"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "sections": [
+                    {
+                        "message": "View Section 1"
+                    },
+                    {
+                        "message": "View Section 2"
+                    }, {
+                        "message": "View Section 3"
+                    }, {
+                        "message": "View Section 4"
+                    },
+                    {
+                        "message": "View Section 5"
+                    },
+                    {
+                        "message": "View Section 6"
+                    },
+                    {
+                        "message": "View All"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "sections": [
+                    {
+                        "message": "View Section 2"
+                    }, {
+                        "message": "View Section 3"
+                    }, {
+                        "message": "View Section 4"
+                    },
+                    {
+                        "message": "View Section 5"
+                    },
+                    {
+                        "message": "View Section 6"
+                    },
+                    {
+                        "message": "View All"
+                    }
+                ]
+            },
+        ]
 
         return {
-            navigation: function (chapterID, chapterSections) {
-                var chapterData = [];
-                // create "View" messages in range of num of sections in chapter
-                for (var i = 0; i < chapterSections[chapterID]; i++) {
-                    chapterData.push(
-                        {
-                            "message": "View Section " + (i + 1)
-                        }
-                        )
+            navigation: function (chapterID) {
+
+                for (var i = 0; i < 12; i++) {
+
+                    if (chapterID == locations[i].id) {
+
+                        var chapterData = locations[i].sections;
+                        console.log(chapterData);
+                        return chapterData;
+
+                    }
+
+
                 }
-                return chapterData;
             }
+
         }
 
 

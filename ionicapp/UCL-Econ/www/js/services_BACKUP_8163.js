@@ -54,15 +54,20 @@ angular.module('app.services', [])
                 }
                 )
                 return sections;
+<<<<<<< HEAD
             },
 
             getSectionNumber: function(theSectionID) {
 
                 return chapters[theSectionID].sections;
-
-
+                
             }
         }
+
+=======
+            }
+        }
+>>>>>>> master
     }])
 
     .factory('QuestionFactory', [function ($scope) {

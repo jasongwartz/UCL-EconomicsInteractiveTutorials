@@ -16,23 +16,18 @@ angular.module('app.routes', [])
       controller: 'homeCtrl'
     })
         
-    .state('economicsInteractiveTutorials', {
+    .state('sambakerChapters', {
       url: '/sambaker',
-      templateUrl: 'templates/economicsInteractiveTutorials.html',
-      controller: 'economicsInteractiveTutorialsCtrl'
+      templateUrl: 'templates/sambakerChapters.html',
+      controller: 'sambakerChaptersCtrl'
+    })
+    
+    .state('extraChapters', {
+      url: '/extraChapters',
+      templateUrl: 'templates/extraChapters.html',
+      controller: 'extraChaptersCtrl'
     })
 
-    .state('lesson1', {
-      url: '/lesson1',
-      templateUrl: 'templates/lesson1.html',
-      controller: 'lesson1Ctrl'
-    })
-        
-      .state('lesson2', {
-      url: '/lesson2',
-      templateUrl: 'templates/lesson2.html',
-      controller: 'lesson2Ctrl'
-    })
        
     ;
 
@@ -58,36 +53,37 @@ var lengthsDict = [
     ["13",8]
 ]
 
+var uclLengthsDict = [
+    // [chapterNumber,sectionCount]
+    ["1",4],
+    ["2",7],
+    ["3",8]
+]
 
 
-var populateStates = function () {
-  angular.forEach(lengthsDict, function(chapterArray) {
+var populateStates = function (chaptersDict, baseString) {
+  angular.forEach(chaptersDict, function(chapterArray) {
     
  
     var chapter = chapterArray[0];
     var num = chapterArray[1]; // num = number of sections in this chapter
     
     for (var i=1; i<=num; i++) {
-      $stateProvider.state("chapter" + chapter + "section" + i,
-
+      $stateProvider.state(baseString + "chapter" + chapter + "section" + i,
         {
-          url: "/chapter" + chapter + "section" + i,
-          templateUrl: "templates/chapters/" + chapter + "/section" + i + ".html",
-          controller: "lesson1Ctrl"
-          //function($scope) {
-            //  $scope.items = ["a"];
-          // "chapter" + chapter + "section" + i + "Ctrl"
+          url: "/" + baseString + "chapter" + chapter + "section" + i,
+          templateUrl: "templates/" + baseString + "/" + chapter + "/section" + i + ".html",
+       //   controller: "lesson1Ctrl"
         }
 
-        );
-      
+        ); 
     };
-   
   });
 };
 
 
-populateStates();
+populateStates(lengthsDict, "sambakerChapters");
+populateStates(uclLengthsDict, "extraChapters");
 
 
 
