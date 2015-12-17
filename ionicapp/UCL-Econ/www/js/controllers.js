@@ -128,9 +128,9 @@ angular.module('app.controllers', [])
         alertPopup.then(function() {
           $location.url("/sambaker");
         })
-      }
+      };
       
-      <!-- // End the footer stuff -->
+      // End the footer stuff
       
       $scope.thisAlert = function(questionName, submission) {
 
