@@ -73,7 +73,7 @@ var populateStates = function (chaptersDict, baseString) {
         {
           url: "/" + baseString + "chapter" + chapter + "section" + i,
           templateUrl: "templates/" + baseString + "/" + chapter + "/section" + i + ".html",
-       //   controller: "lesson1Ctrl"
+          controller: baseString + "PageCtrl"
         }
 
         ); 

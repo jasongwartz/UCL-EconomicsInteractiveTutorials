@@ -19,7 +19,7 @@
   		<!-- If progress bar == 100%, end of section, 
   		remove next link and provide tick icon to chapters home page -->
 		<div ng-if="progressBar != 100">
-			<a href="#chapter{{chaptID}}section{{nextSection}}"><i class="ion-ios-arrow-thin-right"></i></a>
+			<a href="#{{baseDirectory}}chapter{{chaptID}}section{{nextSection}}"><i class="ion-ios-arrow-thin-right"></i></a>
 		</div>
 		<div ng-if="progressBar == 100">
 			<a ng-click="completeSection()"><i class="ion-ios-checkmark-outline pulse"></i></a>

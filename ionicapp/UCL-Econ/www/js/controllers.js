@@ -64,6 +64,60 @@ angular.module('app.controllers', [])
   })
   
   
+  
+.controller('extraChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
+
+            $scope.chapterTitles = Chapters.getTitles();
+            $scope.chapterSections = Chapters.getSections();
+            $scope.modalResults = {}
+            $scope.modal = {}
+
+            $scope.currentChapterID = {}
+            
+            // Chapter Clicker Listener
+            $scope.chapterClicker = function(chapterID){
+              $scope.currentChapterID = chapterID;
+              $scope.baseDirectory = "sambakerChapters";
+              $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
+
+              $scope.modal.show();
+
+            }
+
+            // Modal Pop Up
+            $ionicModal.fromTemplateUrl('templates/modal.html', {
+              scope: $scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              $scope.modal = modal;
+            });
+            $scope.openModal = function() {
+              $scope.modal.show();
+            };
+            $scope.closeModal = function() {
+              $scope.modal.hide();
+            };
+            //Cleanup the modal when we're done with it!
+            $scope.$on('$destroy', function() {
+              $scope.modal.remove();
+            });
+            // Execute action on hide modal
+            $scope.$on('modal.hidden', function() {
+              // Execute action
+            });
+            // Execute action on remove modal
+            $scope.$on('modal.removed', function() {
+              // Execute action
+            });
+ 
+  })
+  
+  
+  
+  .controller("sambakerChaptersPageCtrl", function ($scope) {
+    //$scope.baseDirectory = "sambakerChapters";
+  })
+  
   .controller("QuestionController", function ($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
 
       $timeout(function(){
@@ -83,10 +137,48 @@ angular.module('app.controllers', [])
       $scope.answer = {
         submission:""
       }
+      
+      $scope.thisAlert = function(questionName, submission) {
 
-      <!-- // Start the footer stuff -->
+          $scope.returned = QuestionFactory.answerMachine(questionName, submission);
+   
+      if($scope.returned[0] == true){
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+          + $scope.returned[1] + "</div>",
+          
+          okText: 'OK',
+          okType: 'button-balanced'
+        });
+      }
+      else if($scope.returned[0] == false){
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Incorrect!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap'>"
+          + $scope.returned[1] + "</div>",
+          
+          okText: 'Try Again',
+          okType: 'button-assertive'
+        });
+      }
+       alertPopup.then(function(res) {
+         console.log('Thank you for not eating my delicious ice cream cone');
+       });
+       };
+      
+
+})
+      
+
+    .controller("FooterController", function($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
+      
+       // Start the footer stuff -->
 
       // Footer nav ng hide variables for section navigtion
+      $scope.baseDirectory = "sambakerChapters"; // GET THIS WORKING DYNAMICALLY &&&
       $scope.prevEnd = false;
       $scope.nextEnd = true;
 
@@ -130,41 +222,11 @@ angular.module('app.controllers', [])
         })
       };
       
-      // End the footer stuff
+      // End the footer stuff    
       
-      $scope.thisAlert = function(questionName, submission) {
-
-          $scope.returned = QuestionFactory.answerMachine(questionName, submission);
-   
-      if($scope.returned[0] == true){
-        var alertPopup = $ionicPopup.alert({
-          title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
-          template: "<br>" +
-          "<div class='card has-header'><div class='item item-text-wrap'>"
-          + $scope.returned[1] + "</div>",
-          
-          okText: 'OK',
-          okType: 'button-balanced'
-        });
-      }
-      else if($scope.returned[0] == false){
-        var alertPopup = $ionicPopup.alert({
-          title: "<div class='bar bar-calm'><h1 class='title'>Incorrect!</h1></div>",
-          template: "<br>" +
-          "<div class='card has-header'><div class='item item-text-wrap'>"
-          + $scope.returned[1] + "</div>",
-          
-          okText: 'Try Again',
-          okType: 'button-assertive'
-        });
-      }
-       alertPopup.then(function(res) {
-         console.log('Thank you for not eating my delicious ice cream cone');
-       });
-       };
-      
-
-})
+    }
+    
+    )
 
 
    .controller('lesson1Ctrl', function ($scope, QuestionFactory, $ionicPopup) {
