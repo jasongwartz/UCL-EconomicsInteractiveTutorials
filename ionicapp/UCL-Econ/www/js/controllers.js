@@ -8,14 +8,12 @@ angular.module('app.controllers', [])
         title: '<b>About:</b>',
         template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc CS</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
       });
-      alertPopup.then(function (res) {
-        console.log('Thank you for not eating my delicious ice cream cone');
-      });
+      alertPopup.then(function (res) {});
     };
   })
 
 .controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
-
+            
             $scope.chapterTitles = Chapters.getTitles();
             $scope.chapterSections = Chapters.getSections();
             $scope.modalResults = {}
@@ -26,7 +24,6 @@ angular.module('app.controllers', [])
             
             // Chapter Clicker Listener
             $scope.chapterClicker = function(chapterID){
-              console.log("clicked");
               $scope.currentChapterID = chapterID;
               $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
