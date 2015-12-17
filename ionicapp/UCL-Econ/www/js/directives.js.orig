@@ -6,6 +6,7 @@ angular.module('app.directives', [])
 
 			restrict: "E",
 
+<<<<<<< HEAD
 		templateUrl: "partials/question.html",
 		scope: {
 		 	qid:'='
@@ -45,4 +46,25 @@ angular.module('app.directives', [])
  	
 	};
 });
+=======
+			// if questionType(qid) == 'single' : 
+
+			templateUrl: "partials/question.html",
+			scope: {
+				qid: '='
+			},
+			transclude: false,
+			controller: "QuestionController",
+			link: function (scope, element, attributes) {
+				attributes.$observe('qid', function (value) {
+					if (value) {
+						scope.qid = value;
+					}
+				});
+			}
+		};
+	}
+
+		);
+>>>>>>> master
 
