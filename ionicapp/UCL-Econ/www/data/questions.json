@@ -1,4 +1,40 @@
 {
+    "Range": {
+         "text":"This is a Range test.",
+        "correct":"Right",
+        "highmessage":"Too High",
+        "lowmessage":"Too Low",
+        "type":"Range",
+        "max":20000,
+        "answer":5
+    },
+    "MultipleChoice": {
+        "text":"This is a MCQ test.",
+        "correct":"",
+        "incorrect":"",
+        "type":"MultipleChoice",
+        "choices":{
+            "Choice1":{
+                "message":"Correct, message1.",
+                "solution":true
+            },
+            "Choice2":{
+                "message":"Incorrect, message2.",
+                "solution":false
+            },
+            "Choice3":{
+                "message":"Incorrect, message3.",
+                "solution":false
+            }
+        }
+    },
+    "TrueFalse": {
+        "text":"This is a True or False test.",
+        "correct":"",
+        "incorrect":"",
+        "type":"TrueFalse",
+        "answer":true
+    },
     "MC1-button": {
         "incorrect": "", 
         "text": "", 
