@@ -8,16 +8,25 @@ angular.module('app.controllers', [])
         title: '<b>About:</b>',
         template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc CS</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
       });
+<<<<<<< HEAD
       alertPopup.then(function (res) {});
     };
   })
 
 .controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
             
+=======
+      alertPopup.then(function (res) {
+       });
+    };
+  })
+
+.controller('sambakerChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
+
+>>>>>>> master
             $scope.chapterTitles = Chapters.getTitles();
             $scope.chapterSections = Chapters.getSections();
             $scope.modalResults = {}
-
             $scope.modal = {}
 
             $scope.currentChapterID = {}
@@ -25,6 +34,7 @@ angular.module('app.controllers', [])
             // Chapter Clicker Listener
             $scope.chapterClicker = function(chapterID){
               $scope.currentChapterID = chapterID;
+              $scope.baseDirectory = "sambakerChapters";
               $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
               $scope.modal.show();
@@ -63,7 +73,8 @@ angular.module('app.controllers', [])
   })
   
   
-  .controller("QuestionController", function ($scope, $timeout, QuestionFactory, $ionicPopup) {
+  .controller("QuestionController", function ($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
+
       $timeout(function(){
        $scope.name = $scope.qid;
        $scope.text = QuestionFactory.questionText($scope.qid);
@@ -81,6 +92,54 @@ angular.module('app.controllers', [])
       $scope.answer = {
         submission:""
       }
+
+      // Start the footer stuff -->
+
+      // Footer nav ng hide variables for section navigtion
+      $scope.prevEnd = false;
+      $scope.nextEnd = true;
+
+      // Get the last character of the URL - basically the current section number
+      $scope.absUrl = $location.absUrl().slice(-1);
+
+      // Get current section number and use it to calculate the next and previous sections
+      // These variables are placed in the footer.html file
+      $scope.nextSection = parseInt($scope.absUrl) + 1;
+      $scope.prevSection = parseInt($scope.absUrl) - 1;
+      $scope.progressBar;
+
+      // Get the entered Chapter ID (<footer sid="..."></footer>) from the footer directive
+      // Use the entered Chapter ID to get the number of sections in that chapter from Chapters .factory
+      $timeout(function(){
+        $scope.chaptID = $scope.sid;
+         $scope.totalSections = parseInt(Chapters.getSectionNumber($scope.sid));
+
+         // progressBar variable is used in footer/html to set the progress bar length. Round to nearest integer.
+         $scope.progressBar = Math.round((100 / $scope.totalSections) * parseInt($scope.absUrl));
+      });
+
+      // Hide previous section arrow in footer when in section 1
+      if($scope.prevSection < 1){
+        $scope.prevEnd = true;
+      } else {
+        $scope.prevEnd = false;
+      }
+
+      // When the user hits the tick icon in the footer to navigate beyond the final section, show this :)
+      $scope.completeSection = function () {
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Congratulations!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap' style='text-align:center;'><div class='row centerIcons expandUp'><i class='ion-ios-checkmark-outline balanced'></i></div><div class='row'>You've completed Chapter " + $scope.chaptID + "</div></div>",
+          okText: 'Chapter Overview',
+          okType: 'button-balanced'
+        });
+        alertPopup.then(function() {
+          $location.url("/sambaker");
+        })
+      };
+      
+      // End the footer stuff
       
       $scope.thisAlert = function(questionName, submission) {
 
