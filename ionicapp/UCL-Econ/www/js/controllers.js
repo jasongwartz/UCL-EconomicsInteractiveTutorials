@@ -16,17 +16,19 @@ angular.module('app.controllers', [])
 
 .controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
 
+            $scope.chapterTitles = Chapters.getTitles();
+            $scope.chapterSections = Chapters.getSections();
             $scope.modalResults = {}
 
             $scope.modal = {}
 
             $scope.currentChapterID = {}
-
+            
             // Chapter Clicker Listener
             $scope.chapterClicker = function(chapterID){
               console.log("clicked");
               $scope.currentChapterID = chapterID;
-              $scope.modalResults = SectionNavigation.navigation(chapterID);
+              $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
               $scope.modal.show();
 
@@ -59,7 +61,7 @@ angular.module('app.controllers', [])
             });
 
            
-           $scope.chapterTitles = Chapters.getTitles();
+           
      
   })
   
@@ -67,9 +69,17 @@ angular.module('app.controllers', [])
   .controller("QuestionController", function ($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
 
       $timeout(function(){
-        $scope.name = $scope.qid;
+       $scope.name = $scope.qid;
        $scope.text = QuestionFactory.questionText($scope.qid);
-       //$scope.submission = $scope.qid + '.submission';
+       $scope.type = QuestionFactory.questionType($scope.qid);
+       if ($scope.type === "MultipleChoice") {
+         $scope.choices = QuestionFactory.questionChoices($scope.qid);
+       }
+       if ($scope.type === "Range") {
+         $scope.qmax = QuestionFactory.rangeMax($scope.qid);
+         $scope.start = ($scope.qmax / 2);
+       }
+       
       });
       
       $scope.answer = {
@@ -126,9 +136,8 @@ angular.module('app.controllers', [])
       
       $scope.thisAlert = function(questionName, submission) {
 
-       
-      $scope.returned = QuestionFactory.answerMachine(questionName, submission);
-      
+          $scope.returned = QuestionFactory.answerMachine(questionName, submission);
+   
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({
           title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
