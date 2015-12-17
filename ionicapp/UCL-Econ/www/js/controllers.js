@@ -6,7 +6,7 @@ angular.module('app.controllers', [])
       $scope.data = {}
       var alertPopup = $ionicPopup.alert({
         title: '<b>About:</b>',
-        template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc CS</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
+        template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc Computer Science</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
       });
       alertPopup.then(function (res) {
        });
@@ -165,7 +165,6 @@ angular.module('app.controllers', [])
         });
       }
        alertPopup.then(function(res) {
-         console.log('Thank you for not eating my delicious ice cream cone');
        });
        };
       

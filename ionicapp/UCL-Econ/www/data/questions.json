@@ -185,17 +185,21 @@
         }
     }, 
     "C8": {
-        "text": "", 
+        "text": "By the way, when you calculate the marginal cost, do you take the difference between the total cost numbers or do you take the difference between the variable cost numbers?", 
         "type": "MultipleChoice", 
         "id": "C8", 
         "choices": {
-            "noteither": {
+            "Total Cost. You take the difference between the total cost at that output rate and the total cost at the next lower output rate.": {
                 "message": "Correct, but what about the other way of calculating the marginal cost?", 
                 "solution": true
             }, 
-            "either": {
+            "Variable Cost. You take the difference between the variable cost at that output rate and the variable cost at the next lower output rate.": {
+                "message": "Correct, but what about the other way of calculating the marginal cost?", 
+                "solution": true
+            }, 
+            "Either": {
                 "message": "Correct!  The two ways give the same answer.  The difference in total cost always equals the difference in variable cost.", 
-                "solution": "Y"
+                "solution": true
             }
         }
     }, 
@@ -744,7 +748,7 @@
     }, 
     "C7": {
         "incorrect": "The calculation is the cost of nine patients minus the cost of eight patients.  Marginal = Total at this output rate minus Total at one less.", 
-        "text": "", 
+        "text": "How much is the marginal cost of the 9th patient?", 
         "correct": "Correct! The marginal cost for the 9th patient is $5000.", 
         "answer": "5000", 
         "type": "SingleAnswer", 
@@ -752,7 +756,7 @@
     }, 
     "C6": {
         "incorrect": "The calculation is the cost of four patients minus the cost of three patients.  Marginal = Total at this output rate minus Total at one less.", 
-        "text": "", 
+        "text": "How much is the marginal cost of the 4th patient?", 
         "correct": "Correct! The marginal cost of the 4th patient is $2000.", 
         "answer": "2000", 
         "type": "SingleAnswer", 
