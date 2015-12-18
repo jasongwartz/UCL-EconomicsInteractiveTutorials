@@ -16,7 +16,6 @@ angular.module('app.directives', [])
   			 attributes.$observe('qid', function(value) {
    			  if (value) {
    			   scope.qid = value;
-			   scope.submission = "asdfasdf"
     			}
 			});
 		}
@@ -33,12 +32,11 @@ angular.module('app.directives', [])
 		 	sid:'='
 		 },
 		transclude: false,
-		controller: "QuestionController",
+		controller: "FooterController",
 		link: function(scope, element, attributes) {
   			 attributes.$observe('sid', function(value) {
    			  if (value) {
-   			   scope.sid = value;
-			   scope.submission = "asdfasdf"
+//   			   scope.sid = value; &&& not sure why this is needed
     			}
   			});
 		}
