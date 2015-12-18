@@ -63,5 +63,21 @@
         "base": "sambakerChapters", 
         "sections": 12, 
         "name": "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate **"
+    },
+    "14": {
+        "base": "extraChapters", 
+        "sections": 4, 
+        "name": "Demand"
+    },
+    "15": {
+        "base": "extraChapters", 
+        "sections": 7, 
+        "name": "Elasticity"
+    },
+    "16": {
+        "base": "extraChapters", 
+        "sections": 8, 
+        "name": "Supply"
     }
+
 }
