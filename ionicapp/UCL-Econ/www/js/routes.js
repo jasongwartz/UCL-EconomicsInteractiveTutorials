@@ -34,57 +34,30 @@ angular.module('app.routes', [])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');
 
-    
-// get this from the FACTORY also!
-var lengthsDict = [
-    // [chapterNumber,sectionCount]
-    ["1",2],
-    ["2",6],
-    ["3",5],
-    ["4",5],
-    ["5",5],
-    ["6",5],
-    ["7",7],
-    ["8",12],
-    ["9",10],
-    ["10",14],
-    ["11",9],
-    ["12",8],
-    ["13",8]
-]
-
-var uclLengthsDict = [
-    // [chapterNumber,sectionCount]
-    ["1",4],
-    ["2",7],
-    ["3",8]
-]
 
 
-var populateStates = function (chaptersDict, baseString) {
-  angular.forEach(chaptersDict, function(chapterArray) {
+var populateStates = function (chaptersDict) {
+  
+  angular.forEach(chaptersDict, function(chapterData, chapterNumber) {
     
- 
-    var chapter = chapterArray[0];
-    var num = chapterArray[1]; // num = number of sections in this chapter
-    
+    var num = chapterData.sections; // num = number of sections in this chapter
+    var base = chapterData.base;
     for (var i=1; i<=num; i++) {
-      $stateProvider.state(baseString + "chapter" + chapter + "section" + i,
+   
+      $stateProvider.state(base + "chapter" + chapterNumber + "section" + i,
         {
-          url: "/" + baseString + "chapter" + chapter + "section" + i,
-          templateUrl: "templates/" + baseString + "/" + chapter + "/section" + i + ".html",
-          controller: baseString + "PageCtrl"
+          url: "/" + base + "chapter" + chapterNumber + "section" + i,
+          templateUrl: "templates/" + base + "/" + chapterNumber + "/section" + i + ".html",
+          controller: base + "PageCtrl"
         }
 
         ); 
+      
     };
   });
 };
 
-
-populateStates(lengthsDict, "sambakerChapters");
-populateStates(uclLengthsDict, "extraChapters");
-
-
-
-});
+$.getJSON("data/chapters.json").then(function (c) {
+  populateStates(c);
+})
+  });
