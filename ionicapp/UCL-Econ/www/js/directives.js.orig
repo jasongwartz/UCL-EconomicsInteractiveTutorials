@@ -6,6 +6,7 @@ angular.module('app.directives', [])
 
 			restrict: "E",
 
+<<<<<<< HEAD
 		templateUrl: "partials/question.html",
 		scope: {
 		 	qid:'='
@@ -16,6 +17,7 @@ angular.module('app.directives', [])
   			 attributes.$observe('qid', function(value) {
    			  if (value) {
    			   scope.qid = value;
+			   scope.submission = "asdfasdf"
     			}
 			});
 		}
@@ -32,15 +34,37 @@ angular.module('app.directives', [])
 		 	sid:'='
 		 },
 		transclude: false,
-		controller: "FooterController",
+		controller: "QuestionController",
 		link: function(scope, element, attributes) {
   			 attributes.$observe('sid', function(value) {
    			  if (value) {
-//   			   scope.sid = value; &&& not sure why this is needed
+   			   scope.sid = value;
+			   scope.submission = "asdfasdf"
     			}
   			});
 		}
  	
 	};
 });
+=======
+			// if questionType(qid) == 'single' : 
+
+			templateUrl: "partials/question.html",
+			scope: {
+				qid: '='
+			},
+			transclude: false,
+			controller: "QuestionController",
+			link: function (scope, element, attributes) {
+				attributes.$observe('qid', function (value) {
+					if (value) {
+						scope.qid = value;
+					}
+				});
+			}
+		};
+	}
+
+		);
+>>>>>>> master
 

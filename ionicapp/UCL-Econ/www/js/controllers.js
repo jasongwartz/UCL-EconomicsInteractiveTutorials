@@ -6,27 +6,27 @@ angular.module('app.controllers', [])
       $scope.data = {}
       var alertPopup = $ionicPopup.alert({
         title: '<b>About:</b>',
-        template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc CS</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
+        template: '<b>UCL Interactive Economics Tutorials</b> is brought to you by: <br><br><b>UCL Institute of Global Health</b><br><br><b>UCL MSc Computer Science</b><br>Dan Sturgess<br>Jason Gwartz<br>Sophie Mugridge White<br><br>Special thanks to <b>Sam Baker</b> for use of his economics content.'
       });
       alertPopup.then(function (res) {
-        console.log('Thank you for not eating my delicious ice cream cone');
-      });
+       });
     };
   })
 
-.controller('economicsInteractiveTutorialsCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
+.controller('sambakerChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
 
+            $scope.chapterTitles = Chapters.getTitles();
+            $scope.chapterSections = Chapters.getSections();
             $scope.modalResults = {}
-
             $scope.modal = {}
 
             $scope.currentChapterID = {}
-
+            
             // Chapter Clicker Listener
             $scope.chapterClicker = function(chapterID){
-              console.log("clicked");
               $scope.currentChapterID = chapterID;
-              $scope.modalResults = SectionNavigation.navigation(chapterID);
+              $scope.baseDirectory = "sambakerChapters";
+              $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
               $scope.modal.show();
 
@@ -59,16 +59,79 @@ angular.module('app.controllers', [])
             });
 
            
-           $scope.chapterTitles = Chapters.getTitles();
+           
      
   })
   
   
-  .controller("QuestionController", function ($scope, $timeout, QuestionFactory, $ionicPopup) {
+  
+.controller('extraChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
+
+            $scope.chapterTitles = Chapters.getTitles();
+            $scope.chapterSections = Chapters.getSections();
+            $scope.modalResults = {}
+            $scope.modal = {}
+
+            $scope.currentChapterID = {}
+            
+            // Chapter Clicker Listener
+            $scope.chapterClicker = function(chapterID){
+              $scope.currentChapterID = chapterID;
+              $scope.baseDirectory = "sambakerChapters";
+              $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
+
+              $scope.modal.show();
+
+            }
+
+            // Modal Pop Up
+            $ionicModal.fromTemplateUrl('templates/modal.html', {
+              scope: $scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              $scope.modal = modal;
+            });
+            $scope.openModal = function() {
+              $scope.modal.show();
+            };
+            $scope.closeModal = function() {
+              $scope.modal.hide();
+            };
+            //Cleanup the modal when we're done with it!
+            $scope.$on('$destroy', function() {
+              $scope.modal.remove();
+            });
+            // Execute action on hide modal
+            $scope.$on('modal.hidden', function() {
+              // Execute action
+            });
+            // Execute action on remove modal
+            $scope.$on('modal.removed', function() {
+              // Execute action
+            });
+ 
+  })
+  
+  
+  
+  .controller("sambakerChaptersPageCtrl", function ($scope) {
+    //$scope.baseDirectory = "sambakerChapters";
+  })
+  
+  .controller("QuestionController", function ($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
+
       $timeout(function(){
-        $scope.name = $scope.qid;
+       $scope.name = $scope.qid;
        $scope.text = QuestionFactory.questionText($scope.qid);
-       //$scope.submission = $scope.qid + '.submission';
+       $scope.type = QuestionFactory.questionType($scope.qid);
+       if ($scope.type === "MultipleChoice") {
+         $scope.choices = QuestionFactory.questionChoices($scope.qid);
+       }
+       if ($scope.type === "Range") {
+         $scope.qmax = QuestionFactory.rangeMax($scope.qid);
+         $scope.start = ($scope.qmax / 2);
+       }
+       
       });
       
       $scope.answer = {
@@ -77,9 +140,8 @@ angular.module('app.controllers', [])
       
       $scope.thisAlert = function(questionName, submission) {
 
-       
-      $scope.returned = QuestionFactory.answerMachine(questionName, submission);
-      
+          $scope.returned = QuestionFactory.answerMachine(questionName, submission);
+   
       if($scope.returned[0] == true){
         var alertPopup = $ionicPopup.alert({
           title: "<div class='bar bar-calm'><h1 class='title'>Correct!</h1></div>",
@@ -103,12 +165,67 @@ angular.module('app.controllers', [])
         });
       }
        alertPopup.then(function(res) {
-         console.log('Thank you for not eating my delicious ice cream cone');
        });
        };
       
 
 })
+      
+
+    .controller("FooterController", function($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
+      
+       // Start the footer stuff -->
+
+      // Footer nav ng hide variables for section navigtion
+      $scope.baseDirectory = "sambakerChapters"; // GET THIS WORKING DYNAMICALLY &&&
+      $scope.prevEnd = false;
+      $scope.nextEnd = true;
+
+      // Get the last character of the URL - basically the current section number
+      $scope.absUrl = $location.absUrl().slice(-1);
+
+      // Get current section number and use it to calculate the next and previous sections
+      // These variables are placed in the footer.html file
+      $scope.nextSection = parseInt($scope.absUrl) + 1;
+      $scope.prevSection = parseInt($scope.absUrl) - 1;
+      $scope.progressBar;
+
+      // Get the entered Chapter ID (<footer sid="..."></footer>) from the footer directive
+      // Use the entered Chapter ID to get the number of sections in that chapter from Chapters .factory
+      $timeout(function(){
+        $scope.chaptID = $scope.sid;
+         $scope.totalSections = parseInt(Chapters.getSectionNumber($scope.sid));
+
+         // progressBar variable is used in footer/html to set the progress bar length. Round to nearest integer.
+         $scope.progressBar = Math.round((100 / $scope.totalSections) * parseInt($scope.absUrl));
+      });
+
+      // Hide previous section arrow in footer when in section 1
+      if($scope.prevSection < 1){
+        $scope.prevEnd = true;
+      } else {
+        $scope.prevEnd = false;
+      }
+
+      // When the user hits the tick icon in the footer to navigate beyond the final section, show this :)
+      $scope.completeSection = function () {
+        var alertPopup = $ionicPopup.alert({
+          title: "<div class='bar bar-calm'><h1 class='title'>Congratulations!</h1></div>",
+          template: "<br>" +
+          "<div class='card has-header'><div class='item item-text-wrap' style='text-align:center;'><div class='row centerIcons expandUp'><i class='ion-ios-checkmark-outline balanced'></i></div><div class='row'>You've completed Chapter " + $scope.chaptID + "</div></div>",
+          okText: 'Chapter Overview',
+          okType: 'button-balanced'
+        });
+        alertPopup.then(function() {
+          $location.url("/sambaker");
+        })
+      };
+      
+      // End the footer stuff    
+      
+    }
+    
+    )
 
 
    .controller('lesson1Ctrl', function ($scope, QuestionFactory, $ionicPopup) {
