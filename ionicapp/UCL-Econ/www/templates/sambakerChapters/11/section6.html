@@ -1,69 +1,40 @@
-<ion-view>
-	<ion-content>
+<ion-view title="The NPV Curve">
+    <ion-content padding="true" class="has-header has-footer">
 		
-		<h4> The NPV Curve</h4>
- One way to understand how the net present value and the internal rate of 
-return can give seemingly different advice is to use what I will call the net 
-present value curve, or NPV curve.  The NPV curve shows the relationship 
-between the discount rate and the net present value for a range of discount 
-rates.  The present value at a given discount rate, such as 5%, and the
-internal rate of return are each points on the NPV curve. 
-<p>The NPV curve, the relationship between the discount rate and the net present
-value has a formula that can be written like this: <br>
-<img src="npvequation.gif" height="62" width="370">
- <br>
-This, of course, is the formula we saw already for the net present value,
-for annualized costs and revenues and a constant discount rate.  Each
-<b><i>I</i></b> is an income amount for a specific year.  The subscripts
-(which are also the exponents in the denominators) are the year numbers,
-starting with 0, which is this year.  The constant discount rate is
-<i>r</i>. The number of years the investment lasts is <i>n</i>. In Weeks's
-study of professionals' incomes, <i>n</i> was about 44, because costs and
-incomes were calculated from age 21 to age 65. </p>
-<p>We'll use an example with an <i>n</i> of 6, so the formula fits on your 
-screen: <br>
-<img src="npveq2.gif" height="61" width="527">
- <br>
-This is our machine investment example that we have been using all along. 
-The <i>NPV</i> is a function of <i>r</i>.  Graphed, it looks like this: 
-<br>
-<img src="npv2graph.gif" height="295" width="398">
- <br>
-The blue curve shows the net present value for discount rates (<i>r</i>) from
-0 to 0.1 (0% to 10%).  The red dots are the two points we get from our
-measures.  The left red dot shows the net present value at the discount
-rate of 0.05 (5%).  The right red dot shows the internal rate of return,
-because it is where the curve crosses the horizontal line indicating an NPV of 0. 
-That right red dot is between the 0.05 and 0.06 marks on the <i>r </i>axis, so the internal rate of return is between 0.05 and 0.06.  (The
-actual internal rate of return is about 0.0547, as we saw earlier.) </p>
-<p>Imagine we have another possible investment, which has this NPV equation: 
-<br>
-<img src="npveq3.gif" height="61" width="527">
- <br>
-This investment is like the first, except that the net profit in years 1
-through 6 is $220 per year, rather than $200.  I would say that this
-investment has a similar "shape" to the first, because the costs and profits
-come at the same times.  Also, the size of the initial outlay is the
-same for both.  The only difference is the amount of profit.  Here's
-a graph with both investments on it: <br>
-<img src="npv3graph.gif" height="299" width="400">
- <br>
-The green curve is the second investment.  It is above and parallel to
-the first investment's blue curve.  The left orange dot shows the net
-present value of the second investment at the discount rate of 0.05.  
-The net present value there is a little over $100.  This is higher than
-the left red dot, so the net present value at <i>r</i>=5% of the green-line 
-investment is higher than the net present value at <i>r</i>=5% for the blue-line
-investment. </p>
-<p>The right orange dot shows where the second investment's curve crosses 
-the NPV=0 line.  This is well to the right of the first investment's 
-internal rate of return dot.  The internal rate of return for the second
-investment is much higher (further to the right). </p>
-<p>In this example, our two measures, the net present value at <i>r</i>=0.05 
-and the internal rate of return, tell us the same thing.  They both say
-the second investment is better.  A look at the graph above confirms 
-that the second investment is better at all discount rates, so it is fair 
-to say that the second investment is unequivocably better than the first. 
-</p>
+		<h4>The NPV Curve</h4>
 
-	</ion-content></ion-view>
+		<p>One way to understand how the net present value and the internal rate of return can give seemingly different advice is to use what I will call the net present value curve, or NPV curve.  The NPV curve shows the relationship between the discount rate and the net present value for a range of discount rates. The present value at a given discount rate, such as 5%, and the internal rate of return are each points on the NPV curve.</p>
+
+		<p>The NPV curve, the relationship between the discount rate and the net present value has a formula that can be written like this:</p>
+
+		<img src="img/c11-s6-1.gif" width="370" height="62" border="0" alt="NPV equation">
+
+		<p>This, of course, is the formula we saw already for the net present value, for annualized costs and revenues and a constant discount rate. Each <b>I</b> is an income amount for a specific year.  The subscripts (which are also the exponents in the denominators) are the year numbers, starting with 0, which is this year. The constant discount rate is <b>r</b>. The number of years the investment lasts is <b>n</b>. In Weeks's study of professionals' incomes, <b>n</b> was about 44, because costs and incomes were calculated from age 21 to age 65.</p>
+
+		<p>We'll use an example with an <b>n</b> of 6, so the formula fits on your screen:</p>
+
+		<img src="img/c11-s6-2.gif" width="527" height="61" border="0" alt="NPV equation2">
+
+		<p>This is our machine investment example that we have been using all along. The <b>NPV</b> is a function of <b>r</b>. Graphed, it looks like this:</p>
+
+		<img src="img/c11-s6-3.gif" width="398" height="295" border="0" alt="NPV2 graph">
+
+		<p>The blue curve shows the net present value for discount rates (<b>r</b>) from 0 to 0.1 (0% to 10%). The red dots are the two points we get from our measures. The left red dot shows the net present value at the discount rate of 0.05 (5%). The right red dot shows the internal rate of return, because it is where the curve crosses the horizontal line indicating an NPV of 0. That right red dot is between the 0.05 and 0.06 marks on the <b>r</b>axis, so the internal rate of return is between 0.05 and 0.06. (The actual internal rate of return is about 0.0547, as we saw earlier.)</p>
+
+		<p>Imagine we have another possible investment, which has this NPV equation:</p>
+
+		<img src="img/c11-s6-4.gif" width="527" height="61" border="0" alt="NPV equation3">
+
+		<p>This investment is like the first, except that the net profit in years 1 through 6 is £220 per year, rather than £200. I would say that this investment has a similar "shape" to the first, because the costs and profits come at the same times. Also, the size of the initial outlay is the same for both. The only difference is the amount of profit. Here's a graph with both investments on it:</p>
+
+		<img src="img/c11-s6-5.gif" width="400" height="299" border="0" alt="NPV3 graph">
+
+		<p>The green curve is the second investment. It is above and parallel to the first investment's blue curve.  The left orange dot shows the net present value of the second investment at the discount rate of 0.05. The net present value there is a little over £100. This is higher than the left red dot, so the net present value at <b>r</b>=5% of the green-line investment is higher than the net present value at <b>r</b>=5% for the blue-line investment.</p>
+
+		<p>The right orange dot shows where the second investment's curve crosses the NPV=0 line. This is well to the right of the first investment's internal rate of return dot. The internal rate of return for the second investment is much higher (further to the right).</p>
+
+		<p>In this example, our two measures, the net present value at <b>r</b>=0.05 and the internal rate of return, tell us the same thing. They both say the second investment is better. A look at the graph above confirms that the second investment is better at all discount rates, so it is fair to say that the second investment is unequivocably better than the first.</p>
+
+</ion-content>
+<footer sid="11"></footer>
+</ion-view>

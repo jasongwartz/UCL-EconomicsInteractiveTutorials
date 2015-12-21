@@ -1,149 +1,117 @@
-<ion-view>
-	<ion-content>
+<ion-view title="If Costs Come Later Than Profits">
+    <ion-content padding="true" class="has-header has-footer">
 		
-		<h4> If Costs Come Later Than Profits</h4>
- If costs come later than profits, the NPV curve can tilt the other way, making
-it even more problematic to use the internal rate of return to compare investments. 
-<p>Costs can come later than profits if an investment creates environmental 
-problems that will have to watched or cleaned up later. Nuclear power plants 
-are a good example.  After about 40 years of service (sometimes less 
-than that), they become too contaminated with radiation to continue in service. 
-They must then be closed and either guarded where they are for thousands
-of years or dismantled and moved to a disposal site. </p>
-<p>Consider this income stream: 
-<table border="1" cellspacing="2" cellpadding="5">
- <tbody>
-    <tr>
- <td valign="top">Year</td>
-  <td align="right" valign="top">0</td>
-  <td align="right" valign="top">1</td>
-  <td align="right" valign="top">2</td>
-  <td align="right" valign="top">3</td>
-  <td align="right" valign="top">4</td>
-  <td align="right" valign="top">5</td>
-  <td align="right" valign="top">6</td>
- </tr>
-  <tr>
- <td valign="top">Income amounts</td>
-  <td align="right" valign="top"><b>-$200</b></td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top"><b>-$900</b></td>
- </tr>
- 
-  </tbody>
-</table>
-  </p>
-<p>I've reduced the initial cost, but added a big cost at the end.  Let's
-see what a difference this makes in how the NPV changes when the discount
-rate changes.  In the applet below, the starting discount rate 5%. 
-The net present value (NPV) is -$6.  That's negative six dollars, so
-if your discount rate really were 5%, you would not want to do this investment. 
-</p>
-<p>Try changing the discount rate, by clicking in the discount rate box and
-changing the 0.05 to something else. Try 0.04 or 0.03.  In the examples above, 
-the NPV goes up when the discount rate is lowered.  Is that true for this project?
-Then try 0.06 or 0.07.  What happens to the NPV?  
-<br><applet code="Invest06.class" width="610" height="120" align="top"></applet> 
-<br>(Keep the discount rates reasonably small,
-like between 0.00, which is 0%, and 0.3, which is 30%.) 
-<p>
-The relationship between the discount rate and the NPV is the reverse of
-what we see with "normal" investments!  
-With this kind of income stream, higher discount 
-rates make the net present value bigger, and lower discount rates make the
-net present value smaller. 
-<p>Before leaving the applet above, see if you can find the internal rate of
-return, the discount rate that makes the net present value equal to $0. 
-</p>
-<p>Here is the NPV graph: <br>
-<img src="npvup1.gif" nosave="" height="239" width="542">
- <br>
-The left blue dot shows the net present value at a 5% (0.05) discount rate. 
-It is at -$6 on the net present value scale. <br>
-The right blue dot is where the curve crosses the discount rate axis, which
-is where the net present value is $0.  The discount rate here, 0.054
-(5.4%), is the internal rate of return. </p>
-<p>Or, at least, it fits the standard definition of internal rate of return. 
-However, unlike the usual situation, this project is <i>profitable </i>at 
-interest rates <i>above</i> this IRR and unprofitable at interest rates below
-this IRR. </p>
-<p>Suppose we have an alternative project which also has this shape, with 
-a big cost at the end, but slightly lower profits in the intermediate years. 
-I'll call the new alternative the "green line investment." <br>
-  
-<table border="1" cellspacing="2" cellpadding="5">
- <tbody>
-    <tr>
- <td valign="top">Year</td>
-  <td align="right" valign="top">0</td>
-  <td align="right" valign="top">1</td>
-  <td align="right" valign="top">2</td>
-  <td align="right" valign="top">3</td>
-  <td align="right" valign="top">4</td>
-  <td align="right" valign="top">5</td>
-  <td align="right" valign="top">6</td>
-  <td align="right" valign="top">NPV at 0.05 discount rate</td>
-  <td align="right" valign="top">Internal rate of return</td>
- </tr>
-  <tr>
- <td valign="top">Red line investment </td>
-  <td align="right" valign="top">-$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">$200</td>
-  <td align="right" valign="top">-$900</td>
-  <td align="right" valign="top"><b>-$6</b></td>
-  <td align="right" valign="top">0.054</td>
- </tr>
-  <tr>
- <td valign="top">Green line investment</td>
-  <td align="right" valign="top">-$200</td>
-  <td align="right" valign="top">$195</td>
-  <td align="right" valign="top">$195</td>
-  <td align="right" valign="top">$195</td>
-  <td align="right" valign="top">$195</td>
-  <td align="right" valign="top">$195</td>
-  <td align="right" valign="top">-$900</td>
-  <td align="right" valign="top">-$27</td>
-  <td align="right" valign="top"><b>0.070</b></td>
- </tr>
- 
-  </tbody>
-</table>
-  </p>
-<p>The green line investment has a lower NPV than the red line investment 
-at all discount rates, because it has lower profits in years 1 through 5,
-and the same costs in years 0 and 6.  In particular, as the table above
-indicates, it has a lower NPV at the 0.05 discount rate. The graph below
-shows the NPV curves for both investments, with the green line lying below
-the red line at all discount rates. <br>
-<img src="npvup2.gif" nosave="" height="255" width="553">
- <br>
-The green line investment is clearly inferior, but it has the higher internal
-rate of return.  The green line investment's IRR is 0.07.  The
-red line investment's is 0.054. </p>
-<p>Thus, for projects with big late costs, the <i>better </i>projects will 
-have <i>lower internal rates of return</i>, the opposite of the rule for normal
-projects that have their costs early and their positive returns later. </p>
-<p>Now let's discover something even more strange. Here's another applet that
-lets you change the discount rate and see the effect on the red line investment's
-value.  This one, though, allows you to take the discount rate over
-0.3 (30%) and all the way up to 1.0 (100%).  Those rates are much higher
-than, hopefully, we will ever see in the U.S., but they are theoretically
-possible, and they show a strange phenomenon. </p>
-<p>Try raising the discount rate to 0.3, and notice what happens to the net
-present value.  Then, raise the discount rate some more above that. 
-In which direction does the NPV move now? <br>
-<applet code="Invest07.class" width="610" height="120" align="top"></applet> 
-<br>
-See if you can find the <i>second IRR</i>, where the NPV is zero again! </p>
-<table bgcolor="#ffcccc" border="1" bordercolor="#ff0000"><tr><td>Please do not scroll down past this area until you have answered the question.
-	
-	</ion-content>
-	</ion-view>
+		<h4>If Costs Come Later Than Profits</h4>
+
+    <p>If costs come later than profits, the NPV curve can tilt the other way, making it even more problematic to use the internal rate of return to compare investments.</p>
+
+    <p>Costs can come later than profits if an investment creates environmental problems that will have to watched or cleaned up later. Nuclear power plants are a good example. After about 40 years of service (sometimes less than that), they become too contaminated with radiation to continue in service. They must then be closed and either guarded where they are for thousands of years or dismantled and moved to a disposal site.</p>
+
+    <p>Consider this income stream:</p> 
+
+    <table>
+      <tr>
+        <td>Year</td>
+        <td>0</td>    
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Income amounts</td>
+        <td><b>-£200</b></td>    
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td><b>-£900</b></td>
+      </tr>
+    </table>
+
+    <p>I've reduced the initial cost, but added a big cost at the end. Let's see what a difference this makes in how the NPV changes when the discount rate changes. In the applet below, the starting discount rate 5%. The net present value (NPV) is -$6. That's negative six dollars, so if your discount rate really were 5%, you would not want to do this investment.</p>
+
+    <p>Try changing the discount rate, by clicking in the discount rate box and changing the 0.05 to something else. Try 0.04 or 0.03. In the examples above, the NPV goes up when the discount rate is lowered. Is that true for this project? Then try 0.06 or 0.07. What happens to the NPV?</p>
+
+    <applet code="Invest06.class" width="610" height="120" align="top"></applet>
+    <p>TODO Java applet Invest06</p>
+
+    <p>(Keep the discount rates reasonably small, like between 0.00, which is 0%, and 0.3, which is 30%.)</p>
+
+    <p>The relationship between the discount rate and the NPV is the reverse of what we see with "normal" investments! With this kind of income stream, higher discount rates make the net present value bigger, and lower discount rates make the net present value smaller.</p>
+
+    <p>Before leaving the applet above, see if you can find the internal rate of return, the discount rate that makes the net present value equal to $0.</p>
+
+    <p>Here is the NPV graph:</p>
+
+    <img src="img/c11-s8-1.gif" width="542" height="239" border="0" alt="NPV equation">
+
+    <p>The left blue dot shows the net present value at a 5% (0.05) discount rate. It is at -£6 on the net present value scale.<br>
+    The right blue dot is where the curve crosses the discount rate axis, which is where the net present value is £0. The discount rate here, 0.054 (5.4%), is the internal rate of return.</p>
+
+    <p>Or, at least, it fits the standard definition of internal rate of return. However, unlike the usual situation, this project is <b>profitable</b> at interest rates <b>above</b> this IRR and unprofitable at interest rates below this IRR.</p>
+
+    <p>Suppose we have an alternative project which also has this shape, with a big cost at the end, but slightly lower profits in the intermediate years. I'll call the new alternative the "green line investment".</p>
+
+    <table>
+      <tr>
+        <td>Year</td>
+        <td>0</td>    
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>NPV at 0.05 discount rate</td>
+        <td>Internal rate of return</td>
+      </tr>
+      <tr>
+        <td>Red line investment</td>
+        <td>-£200</td>    
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td>£200</td>
+        <td>-£900</td>
+        <td><b>-£6</b></td>
+        <td>0.054</td>
+      </tr>
+      <tr>
+        <td>Green line investment</td>
+        <td>-£200</td>    
+        <td>£195</td>
+        <td>£195</td>
+        <td>£195</td>
+        <td>£195</td>
+        <td>£195</td>
+        <td>-£900</td>
+        <td>-£27</td>
+        <td>0.070</td>
+      </tr>
+    </table>
+
+    <p>The green line investment has a lower NPV than the red line investment at all discount rates, because it has lower profits in years 1 through 5, and the same costs in years 0 and 6. In particular, as the table above indicates, it has a lower NPV at the 0.05 discount rate. The graph below shows the NPV curves for both investments, with the green line lying below the red line at all discount rates.</p>
+
+    <img src="img/c11-s8-2.gif" width="553" height="255" border="0" alt="NPV equation">
+
+    <p>The green line investment is clearly inferior, but it has the higher internal rate of return. The green line investment's IRR is 0.07. The red line investment's is 0.054.</p>
+
+    <p>Thus, for projects with big late costs, the <b>better</b> projects will have <b>lower internal rates of return</b>, the opposite of the rule for normal projects that have their costs early and their positive returns later.</p>
+
+    <p>Now let's discover something even more strange. Here's another applet that lets you change the discount rate and see the effect on the red line investment's value. This one, though, allows you to take the discount rate over 0.3 (30%) and all the way up to 1.0 (100%). Those rates are much higher than, hopefully, we will ever see in the U.S., but they are theoretically possible, and they show a strange phenomenon.</p>
+
+    <p>Try raising the discount rate to 0.3, and notice what happens to the net present value. Then, raise the discount rate some more above that. In which direction does the NPV move now?</p>
+
+    <applet code="Invest07.class" width="610" height="120" align="top"></applet>
+    <p>TODO Java applet Invest07</p>
+
+    <p>See if you can find the <b>second IRR</b>, where the NPV is zero again!</p>
+
+</ion-content>
+<footer sid="11"></footer>
+</ion-view>
