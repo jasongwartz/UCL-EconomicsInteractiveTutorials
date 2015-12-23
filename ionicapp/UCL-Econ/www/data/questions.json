@@ -683,44 +683,83 @@
         "id": "mc8"
     }, 
     "risk6": {
-        "incorrect": "AIG (American International Group) took that attitude in the mid-2000s.  They agreed to pay Goldman Sachs if the mortgage-backed securities it held became worthless.  AIG charged premiums based on past default rates and some seemingly harmless assumptions about independence.  Then housing collapsed, many homeowners defaulted on their mortgages, and AIG owed more money than it had.  Bankruptcy loomed for AIG and for Goldman Sachs, which needed the money from AIG.  The U.S. government bailed out AIG. That indirectly bailed out Goldman Sachs.  AIG officials paid themselves bonuses.  Maybe they judged it right after all!", 
-        "text": "", 
-        "correct": "Correct! We seem to learn this lesson over and over again, the hard way.  (Try the other answer for a story.)", 
-        "answer": "Do", 
-        "type": "SingleAnswer", 
-        "id": "risk6"
+        "text": "Why do we need to distinguish risk from undercertainty?", 
+        "type": "MultipleChoice", 
+        "id": "risk6", 
+        "choices": {
+            "We don't. A statistical analysis of the past will tell you what you need to know about the future.": {
+                "message": "AIG (American International Group) took that attitude in the mid-2000s. They agreed to pay Goldman Sachs if the mortgage-backed securities it held became worthless. AIG charged premiums based on past default rates and some seemingly harmless assumptions about independence. Then housing collapsed, many homeowners defaulted on their mortgages, and AIG owed more money than it had. Bankruptcy loomed for AIG and for Goldman Sachs, which needed the money from AIG. The U.S. government bailed out AIG. That indirectly bailed out Goldman Sachs. AIG officials paid themselves bonuses. Maybe they judged it right after all!", 
+                "solution": false
+            }, 
+            "We do. Risk is about probabilities. Probabilities can change.": {
+                "message": "Correct! We seem to learn this lesson over and over again, the hard way. (Try the other answer for a story.)", 
+                "solution": true
+            }
+        }
     }, 
     "risk4": {
-        "incorrect": "Correct! Insurance cannot be fair, the way we are using that word, because no insurance company could stay in business if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
-        "text": "", 
-        "correct": "Insurance cannot be fair, the way we are using that word, because the insurance company would not make any money if insurance were a fair bet.  Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
-        "answer": "Yes", 
-        "type": "SingleAnswer", 
-        "id": "risk4"
+        "text": "Obamacare is requiring health insurance companies to pay out -- for health care -- at least 85% of their premiums.  Does this make health insurance a fair bet?", 
+        "type": "MultipleChoice", 
+        "id": "risk4", 
+        "choices": {
+            "Yes, fair.": {
+                "message": "Insurance cannot be fair, the way we are using that word, because the insurance company would not make any money if insurance were a fair bet. Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
+                "solution": false
+            }, 
+            "No, not fair.": {
+                "message": "Correct! Insurance cannot be fair, the way we are using that word, because no insurance company could stay in business if insurance were a fair bet. Obamacare is making insurance a better deal for the consumer than it was before, but people who buy insurance will be losing, on average, $0.15 for each $1.00 they spend on premiums.", 
+                "solution": true
+            }
+        }
     }, 
     "risk5": {
-        "incorrect": "If the probability of default goes up, and therefore the probability of getting paid goes down, then the expected present value of the security will be less.  No one will buy the security for less than what he or she thinks the expected present value is.", 
-        "text": "", 
-        "correct": "Correct! No one will buy the security for less than what he or she thinks the expected present value is.", 
-        "answer": "Down", 
-        "type": "SingleAnswer", 
-        "id": "risk5"
+        "text": "If investors think that the probability has gone up that a certain security will not pay off, what happens to the price of the security? ", 
+        "type": "MultipleChoice", 
+        "id": "risk5", 
+        "choices": {
+            "The price should go down.": {
+                "message": "Correct! No one will buy the security for less than what he or she thinks the expected present value is.", 
+                "solution": true
+            }, 
+            "The price should go up.": {
+                "message": "If the probability of default goes up, and therefore the probability of getting paid goes down, then the expected present value of the security will be less. No one will buy the security for less than what he or she thinks the expected present value is.", 
+                "solution": false
+            },
+            "The price should not change.": {
+                "message": "If the probability of default goes up, and therefore the probability of getting paid goes down, then the expected present value of the security will be less. No one will buy the security for less than what he or she thinks the expected present value is.", 
+                "solution": false
+            }
+        }
     }, 
     "risk2": {
-        "incorrect": "You would be right if you bet each of your dollars just once and then quit.", 
-        "text": "", 
-        "correct": "Correct!  As you bet your dollars over and over again, you will probably find yourself betting way more than ten times.  When you have bet 190 times, your expected loss is 190 times 2/38, which is $10.  Keep betting long enough, and you will lose everything.", 
-        "answer": "Repeat", 
-        "type": "SingleAnswer", 
-        "id": "risk2"
+        "text": "If you go into a casino with £10 and start betting £1 at a time at roulette, sooner or later you'll lose all your £10. Why is this? If your expected loss per £1 bet is £-0.0528, shouldn't you expect to lose just £0.528 when you bet £10? Choose the better explanation for why you lose all of your money:", 
+        "type": "MultipleChoice", 
+        "id": "risk2", 
+        "choices": {
+            "I am unlucky. If I go in with £10, on average, I should come out with £10 minus £0.528. ": {
+                "message": "You would be right if you bet each of your dollars just once and then quit.", 
+                "solution": false
+            }, 
+            "If I keep betting, the total I have bet is more than £10. I bet the same pounds over and over.": {
+                "message": "Correct! As you bet your dollars over and over again, you will probably find yourself betting way more than ten times. When you have bet 190 times, your expected loss is 190 times 2/38, which is £10. Keep betting long enough, and you will lose everything.", 
+                "solution": true
+            }
+        }
     }, 
     "risk3": {
-        "incorrect": "A game can be unfair even if it is not rigged.  Of course, if a game is rigged, so that the probabilities are not what you think they are, then the game is almost surely unfair.", 
-        "text": "", 
-        "correct": "Correct!", 
-        "answer": "Repeat", 
-        "type": "SingleAnswer", 
-        "id": "risk3"
+        "text": "A fair game is a game that ...", 
+        "type": "MultipleChoice", 
+        "id": "risk3", 
+        "choices": {
+            "... is not rigged. The every number on the roulette wheel, or every card in the deck, has an equal chance of being selected or dealt.": {
+                "message": "A game can be unfair even if it is not rigged. Of course, if a game is rigged, so that the probabilities are not what you think they are, then the game is almost surely unfair.", 
+                "solution": false
+            }, 
+            "... has an expected payoff value of $0.": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
     }, 
     "C3": {
         "incorrect": "The calculation is the cost of four patients minus the cost of zero patients.  Variable = Total - Fixed.", 
