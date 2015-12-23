@@ -395,44 +395,83 @@
         "id": "sd20"
     }, 
     "riska1": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
-        "type": "SingleAnswer", 
-        "id": "riska1"
+        "text": "Which do you chose?", 
+        "type": "MultipleChoice", 
+        "id": "riska1", 
+        "choices": {
+            "Keep the £10,000. Don't take the 50-50 chance to get £20,000.": {
+                "message": "This is the prudent choice. It is also the risk averse choice. The expected value of playing again is £10,000, but you only get to play once, so the law of large numbers does not help you. You prefer a sure £10,000.", 
+                "solution": false
+            }, 
+            "Play again, with an 0.5 chance of getting £20,000, and an 0.5 chance of going back to £0.": {
+                "message": "You are not risk averse. You prefer risk. You are happy to risk your £10,000 to make £20,000, even though your expected value for going on is the same as what you have for sure.", 
+                "solution": false
+            }, 
+            "I could go either way. They are worth the same to me.": {
+                "message": "You are risk-neutral. Taking a chance or not does not matter to you, if the expected value of taking a chance is the same as the value of the £10,000 you have.", 
+                "solution": false
+            }
+        }
     }, 
     "riska2": {
-        "incorrect": "You are not very risk averse.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to risk your $10,000 to get $1000 in expected additional value.", 
-        "text": "", 
-        "correct": "This is risk aversion, definitely.  The expected value of playing again is one-half times $22,000, which is $11,000.  Stopping now has a value of $10,000.  You are willing to forgo $1000 in expected value to avoid risking your $10,000.", 
-        "answer": "Keep", 
-        "type": "SingleAnswer", 
-        "id": "riska2"
+        "text": "Which do you chose?", 
+        "type": "MultipleChoice", 
+        "id": "riska2", 
+        "choices": {
+            "Stop with £10,000.": {
+                "message": "This is risk aversion, definitely. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to forgo £1000 in expected value to avoid risking your £10,000.", 
+                "solution": false
+            }, 
+            "Play again, with an 0.5 chance of getting £22,000, and an 0.5 chance of going back to £0.": {
+                "message": "You are not very risk averse. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to risk your £10,000 to get £1000 in expected additional value.", 
+                "solution": false
+            }
+        }
     }, 
     "riska5": {
-        "incorrect": "B is your choice.  A 9% chance at $5 million.", 
-        "text": "", 
-        "correct": "A is your choice.  A 10% chance at $1 million.", 
-        "answer": "A", 
-        "type": "SingleAnswer", 
-        "id": "riska5"
+        "text": "Which would you choose?", 
+        "type": "MultipleChoice", 
+        "id": "riska5", 
+        "choices": {
+            "A: 10% chance at £1 million.": {
+                "message": "A is your choice. A 10% chance at £1 million.", 
+                "solution": true
+            }, 
+            "B: 9% chance at £5 million.": {
+                "message": "B is your choice. A 9% chance at £5 million.", 
+                "solution": true
+            }
+        }
     }, 
     "riska6": {
-        "incorrect": "D is your choice.   A 1% chance of nothing.  A 9% chance at $5 million. A 90% chance at $1 million.", 
-        "text": "", 
-        "correct": "C is your choice.  A sure $1 million.", 
-        "answer": "C", 
-        "type": "SingleAnswer", 
-        "id": "riska6"
+        "text": "Which would you choose now?", 
+        "type": "MultipleChoice", 
+        "id": "riska6", 
+        "choices": {
+            "C: 100% chance at £1 million.": {
+                "message": "C is your choice. A sure £1 million.", 
+                "solution": true
+            }, 
+            "D: 90% chance at £1 million. 9% chance at $5 million. 1% chance of no prize.": {
+                "message": "D is your choice. A 1% chance of nothing. A 9% chance at £5 million. A 90% chance at £1 million.", 
+                "solution": true
+            }
+        }
     }, 
     "riska7": {
-        "incorrect": "It can be smart to buy health insurance, even though the insurance company takes a bigger percentage than the casino does.  <br>It's about risk and risk aversion.  Insurance reduces your risk.  It may be worth your while to pay them for that.  <br>When you play roulette, you are increasing your risk, and you are paying the casino to increase your risk!", 
-        "text": "", 
-        "correct": "Right.  Insurance is a worse gamble than roulette, in terms of expected value and actuarial fairness.  However, it can still make sense to buy insurance.  See the other answer for why.", 
-        "answer": "Right", 
-        "type": "SingleAnswer", 
-        "id": "riska7"
+        "text": "We conclude that roulette is much better deal than health insurance. Right?", 
+        "type": "MultipleChoice", 
+        "id": "riska7", 
+        "choices": {
+            "Right.": {
+                "message": "Right. Insurance is a worse gamble than roulette, in terms of expected value and actuarial fairness. However, it can still make sense to buy insurance. See the other answer for why.", 
+                "solution": true
+            }, 
+            "Wrong! It's smart to buy insurance": {
+                "message": "It can be smart to buy health insurance, even though the insurance company takes a bigger percentage than the casino does. It's about risk and risk aversion. Insurance reduces your risk. It may be worth your while to pay them for that. When you play roulette, you are increasing your risk, and you are paying the casino to increase your risk!", 
+                "solution": true
+            }
+        }
     }, 
     "sd16": {
         "incorrect": "No, not unless the doctors want their patients to eat more fries. They have to want that enough to lower their fees.", 
@@ -516,12 +555,13 @@
         "id": "irr10"
     }, 
     "riska3-button": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
-        "type": "SingleAnswer", 
-        "id": "riska3-button"
+        "text":"This is a Range test.",
+        "correct":"Right",
+        "highmessage":"Too High",
+        "lowmessage":"Too Low",
+        "type":"Range",
+        "max":20000,
+        "answer":5
     }, 
     "MC5-button": {
         "incorrect": "", 

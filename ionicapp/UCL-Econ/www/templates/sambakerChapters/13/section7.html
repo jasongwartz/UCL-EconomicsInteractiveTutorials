@@ -1,251 +1,142 @@
-<ion-view>
-	<ion-content>
+<ion-view title="Insurance Spreads Risk">
+    <ion-content padding="true" class="has-header has-footer">
 		
-		<h4>
-Insurance Spreads Risk</h4>
-Suppose you and four friends each face a 0.01 chance of losing $10,000.
-If you can trust each other, you can form a risk pool. You agree that if
-any of the five of you suffer the $10,000 loss, every one of you will give
-the loser $2,000, one-fifth of $10,000.
-<blockquote>You may also pay fee to join this.  That would cover paperwork cost.  We will not include that in the risk pool money.</blockquote>
-<p>This arrangement helps you reduce your risk. You can only lose $10,000
-if all five members of the group get unlucky and lose the $10,000. The
-probability of that is .01 times .01 times .01 times .01 times .01, which
-equals .0000000001, or one chance in ten billion.
-<p>The tradeoff is that you now have a bigger chance that you will lose a smaller amount of money.
-The table below shows the probabilities that you face, as a member of the
-risk pool. (The probabilities in the 4th column are calculated using the binomial distribution.  
-The assumption is that bad events are independent of each other.)
-<table BORDER width="100%"><caption>Probabilities of losing different amounts in a 5-person risk pool</caption>
-<tr>
-<td VALIGN=top NOWRAP>Claims
-<div class="small">How many people in the pool
-<br>get unlucky and lose $10,000</div></td>
-
-<td VALIGN=top NOWRAP>Total claim cost to the pool
-<div class="small">$10,000 times the number of claims</div></td>
-
-<td VALIGN=top NOWRAP>Cost per pool member
-<div class="small">Total cost divided by 5,<br>the number of pool members</div></td>
-
-<td VALIGN=top NOWRAP>Probability
-<div class="small">of this much cost</div></td>
-
-<td VALIGN=top NOWRAP>Running total probabilty
-<div class="small">The probability of this much cost or less</div></td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9509900499</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9509900499</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$2,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0480298005</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9990198504</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>2</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$20,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$4,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0009702990</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999901494</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>3</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$30,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$6,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000098010</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999999504
-</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>4</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$40,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$8,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000000495</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.9999999999</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>5</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$50,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.0000000001</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1.0000000000</td>
-</tr>
-</table>
-<p>The row for 1 claim tells us that there is about a 5% chance
-that you will lose $2,000.  
-The cell on the right end of that row says that the chance of losing $2000 or less is 0.9990198504.  
-Subtract that from 1, and we get that the probability of losing $4,000 or more is 0.0009801496.  This is about one chance in a thousand. 
-From the row for 3 claims, we can similarly calculate that the chance of losing $6,000 or more is about 1 in 100,000. </p>
-
-<p>This risk pool of five is better than being on your own, but you can
-do even better if you can get more people to join.
-<p>Expand the pool to 100 members, and the probability that you will lose
-as much as $2,000 drops to 0.000000000000000000024.&nbsp; That's small!&nbsp;
-There is less than 1 chance in 10,000 that you will lose $700 or more.
-<table BORDER >
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>Claims</td>
-
-<td VALIGN=BOTTOM NOWRAP>Total Cost&nbsp;
-<br>to Group</td>
-
-<td VALIGN=BOTTOM NOWRAP>Cost per member&nbsp;
-<br><font size=-1>(100 members)</font></td>
-
-<td VALIGN=BOTTOM NOWRAP>Probability</td>
-
-<td VALIGN=BOTTOM NOWRAP>Running total&nbsp;
-<br>of probabilities</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$0</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.366032</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.366032</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>1</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$10,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$100</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.369730</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.735762</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>2</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$20,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$200</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.184865</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.920627</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>3</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$30,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$300</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.060999</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.981626</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>4</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$40,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$400</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.014942</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.996568</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>5</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$50,000</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>$500</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.002898</td>
-
-<td ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>0.999465</td>
-</tr>
-
-<tr>
-<td ALIGN=RIGHT>6</td>
-
-<td ALIGN=RIGHT>$60,000</td>
-
-<td ALIGN=RIGHT>$600</td>
-
-<td ALIGN=RIGHT>0.000463</td>
-
-<td ALIGN=RIGHT>0.999929</td>
-</tr>
-</table>
-
-<p>The bigger the pool, the smaller your risk of losing a large amount
-of money.&nbsp; At the same time, the bigger the pool, the more likely
-it is that you'll have to come up with a small amount of money, because
-somebody in the pool will be unlucky and you'll have to pay your share.
-<p>On top of your share of other pool members' losses, you'll also have
-to pay your share of the cost of operating the pool.&nbsp; If the pool
-is a profit-making business, you'll also have to pay your share of profit
-sufficient to attract entrepreneurs to the insurance business.&nbsp; Those
-administrative costs and profits are not included in the tables above.
-<p>Most insurance companies do not require
-you to pay more money if they have unusual losses (other than by raising
-the premium for the following year, which you can decline to pay if another
-insurance company can offer you a better deal).&nbsp; Instead, the company
-takes the risk.&nbsp; The advantage of size, though, is similar.&nbsp;
-The bigger a company is, the less "reserves" of money it needs, relative
-to the value of its business, to have any specified probability of being
-able to pay all its claims from those reserves.
-<p><b>Mutual funds</b> are risk pools, too.&nbsp; For an individual, buying
-"junk bonds" -- bonds with a high yield but a significant risk of not paying
-off -- is risky.&nbsp; Mutual funds spread the risk, by holding junk bonds,
-or risky stocks, of a wide variety of companies.&nbsp; By buying shares
-in a mutual fund, you get, in effect, small holdings in many companies.&nbsp;
-Unless there is some general market collapse, you are safe from financial
-disaster.&nbsp; Risky companies benefit, too.&nbsp;&nbsp; They can sell
-their stocks and bonds to mutual funds without having to pay as much extra
-to compensate for the risk as they would if selling to risk averse individuals.
+	<h3>Insurance Spreads Risk</h3>
+
+	<p>Suppose you and four friends each face a 0.01 chance of losing £10,000. If you can trust each other, you can form a risk pool. You agree that if any of the five of you suffer the £10,000 loss, every one of you will give the loser £2,000, one-fifth of £10,000.</p>
+
+	<blockquote>You may also pay fee to join this. That would cover paperwork cost. We will not include that in the risk pool money.</blockquote>
+
+	<p>This arrangement helps you reduce your risk. You can only lose £10,000 if all five members of the group get unlucky and lose the £10,000. The probability of that is .01 times .01 times .01 times .01 times .01, which equals .0000000001, or one chance in ten billion.</p>
+
+	<p>The tradeoff is that you now have a bigger chance that you will lose a smaller amount of money. The table below shows the probabilities that you face, as a member of the risk pool. (The probabilities in the 4th column are calculated using the binomial distribution. The assumption is that bad events are independent of each other).</p>
+
+
+	<table><caption>Probabilities of losing different amounts in a 5-person risk pool</caption>
+		<tr>
+		  <td>Claims<br>How many people in the pool get unlucky and lose £10,000</td>
+		  <td>Total claim cost to the pool<br>£10,000 times the number of claims</td>
+		  <td>Cost per pool member<br>Total cost divided by 5, the number of pool members</td>
+		  <td>Probability<br>of this much cost</td>
+		  <td>Running total probabilty<br>The probability of this much cost or less</td>
+		</tr>
+		<tr>
+		  <td>0</td>
+		  <td>£0</td>
+		  <td>£0</td>
+		  <td>0.9509900499</td>
+		  <td>0.9509900499</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>£10,000</td>
+		  <td>£2,000</td>
+		  <td>0.0480298005</td>
+		  <td>0.9990198504</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>£20,000</td>
+		  <td>£4,000</td>
+		  <td>0.0009702990</td>
+		  <td>0.9999901494</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>£30,000</td>
+		  <td>£6,000</td>
+		  <td>0.0000098010</td>
+		  <td>0.9999999504</td>
+		</tr>
+		<tr>
+		  <td>4</td>
+		  <td>£40,000</td>
+		  <td>£8,000</td>
+		  <td>0.0000000495</td>
+		  <td>0.9999999999</td>
+		</tr>
+		<tr>
+		  <td>5</td>
+		  <td>£50,000</td>
+		  <td>£10,000</td>
+		  <td>0.0000000001</td>
+		  <td>1.0000000000</td>
+		</tr>
+	</table>
+
+	<br><p>The row for 1 claim tells us that there is about a 5% chance that you will lose £2,000. The cell on the right end of that row says that the chance of losing £2000 or less is 0.9990198504. Subtract that from 1, and we get that the probability of losing £4,000 or more is 0.0009801496. This is about one chance in a thousand. From the row for 3 claims, we can similarly calculate that the chance of losing £6,000 or more is about 1 in 100,000.</p>
+
+	<p>This risk pool of five is better than being on your own, but you can do even better if you can get more people to join.</p>
+
+	<p>Expand the pool to 100 members, and the probability that you will lose as much as £2,000 drops to 0.000000000000000000024. That's small! There is less than 1 chance in 10,000 that you will lose £700 or more.</p>
+
+	<table>
+		<tr>
+		  <td>Claims</td>
+		  <td>Total Cost<br>to Group</td>
+		  <td>Cost per member<br>(100 members)</td>
+		  <td>Probability</td>
+		  <td>Running total<br>of probabilities</td>
+		</tr>
+		<tr>
+		  <td>0</td>
+		  <td>£0</td>
+		  <td>£0</td>
+		  <td>0.366032</td>
+		  <td>0.366032</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>£10,000</td>
+		  <td>£100</td>
+		  <td>0.369730</td>
+		  <td>0.735762</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>£20,000</td>
+		  <td>£200</td>
+		  <td>0.184865</td>
+		  <td>0.920627</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>£30,000</td>
+		  <td>£300</td>
+		  <td>0.060999</td>
+		  <td>0.981626</td>
+		</tr>
+		<tr>
+		  <td>4</td>
+		  <td>£40,000</td>
+		  <td>£400</td>
+		  <td>0.014942</td>
+		  <td>0.996568</td>
+		</tr>
+		<tr>
+		  <td>5</td>
+		  <td>£50,000</td>
+		  <td>£500</td>
+		  <td>0.002898</td>
+		  <td>0.999465</td>
+		</tr>
+		<tr>
+		  <td>6</td>
+		  <td>£60,000</td>
+		  <td>£600</td>
+		  <td>0.000463</td>
+		  <td>0.999929</td>
+		</tr>
+	</table>
+
+	<br><p>The bigger the pool, the smaller your risk of losing a large amount of money. At the same time, the bigger the pool, the more likely it is that you'll have to come up with a small amount of money, because somebody in the pool will be unlucky and you'll have to pay your share.</p>
+
+	<p>On top of your share of other pool members' losses, you'll also have to pay your share of the cost of operating the pool.&nbsp; If the pool is a profit-making business, you'll also have to pay your share of profit sufficient to attract entrepreneurs to the insurance business. Those administrative costs and profits are not included in the tables above.</p>
+
+	<p>Most insurance companies do not require you to pay more money if they have unusual losses (other than by raising the premium for the following year, which you can decline to pay if another insurance company can offer you a better deal). Instead, the company takes the risk. The advantage of size, though, is similar. The bigger a company is, the less "reserves" of money it needs, relative to the value of its business, to have any specified probability of being able to pay all its claims from those reserves.</p>
+
+	<p><b>Mutual funds</b> are risk pools, too. For an individual, buying "junk bonds" -- bonds with a high yield but a significant risk of not paying off -- is risky. Mutual funds spread the risk, by holding junk bonds, or risky stocks, of a wide variety of companies. By buying shares in a mutual fund, you get, in effect, small holdings in many companies. Unless there is some general market collapse, you are safe from financial disaster. Risky companies benefit, too. They can sell their stocks and bonds to mutual funds without having to pay as much extra to compensate for the risk as they would if selling to risk averse individuals.</p>
 
 </ion-content>
+<footer sid="13"></footer>
 </ion-view>
