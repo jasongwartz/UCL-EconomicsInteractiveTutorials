@@ -421,7 +421,7 @@
         "text": "Which patient is the last one that you add? What is the highest number patient that has a marginal cost less than the price? ",
         "answer": "7",   
         "correct": "Correct! 7 is your profit-maximizing choice.",
-        "incorrect": "No. Please see the answer to the question above.",
+        "incorrect": "No. Please see the answer to the question above."
     },
     "Elasq9": {
         "incorrect": "If our number were something like -2, we would call the demand elastic.", 
@@ -702,7 +702,7 @@
         "text": "What is the average of the Q's? ",
         "answer": "80",   
         "correct": "Correct! 80 is (60 + 100) / 2. Our Change in Q is -40 and our average of Q's is 80 ...",
-        "incorrect": "You want to the number halfway between 60 and 100.",
+        "incorrect": "You want to the number halfway between 60 and 100."
     }, 
     "q6": {
         "incorrect": "No, this does not show elastic.  Elastic demand would mean that buyers would buy less at higher prices.  Here, they buy the same at all prices.", 
@@ -752,7 +752,7 @@
         "text": "If the going price for an urgent visit is £10, how many visits per day will be demanded? ",
         "answer": "1000",   
         "correct": "Correct! This is from the bottom line of the table.",
-        "incorrect": "Find the line in the table for a price of £10 per visit.",
+        "incorrect": "Find the line in the table for a price of £10 per visit."
     }, 
     "sd7": {
         "text": "Would this market be in equilibrium if the price were £10?", 
@@ -1508,7 +1508,7 @@
         "text": "How much profit is Joan's making now? ",
         "answer": "0",   
         "correct": "Correct! Her revenue and her total cost are equal. No profit.",
-        "incorrect": "Profit is Revenue minus Total Cost at 5 patients.",
+        "incorrect": "Profit is Revenue minus Total Cost at 5 patients."
     }, 
     "D4": {
         "text": "", 

@@ -1,7 +1,5 @@
 <ion-view title="Roulette Simulation">
     <ion-content padding="true" class="has-header has-footer">
-
-
 		
 	<h4>Roulette Simulation</h4>
 
@@ -16,11 +14,19 @@
 	<table>
       <tr>
         <td>The number that last came up</td>
-        <td>TODO</td>
+        <td>TODO
+          <span>
+            count: {{count}}
+          </span>
+        </td>
       </tr>
       <tr>
       	<td>How many times we won</td>
-      	<td>TODO</td>
+      	<td>TODO
+          <span>
+            count: {{count2}}
+          </span>
+        </td>
   	  </tr>
   	  <tr>
       	<td>How many times we lost</td>
@@ -40,8 +46,22 @@
   	  </tr>
   </table>
 
+            <div ng-controller="app.controllers" style="text-align:center">
+    
+                <button ng-click="calculateQuantity()">Calculate</button>
+             <h2>Total Cost: Rs.{{quantityResult}}</h2>
+            </div>
+
+  <button ng-click="count = Math.random()" ng-init="count=0">
+    Increment1
+  </button>
+
+  <button ng-click="count2 = count2 + 1; count = count + 1" ng-init="count2=0">
+    Increment2
+  </button>
 
 
+  <br>
   <button id="spin1">Click to spin once.</button><br>
   <button id="spin10">Click to spin 10 times.</button><br>
   <button id="spin1000">Click to spin 1000 times.</button><br>
