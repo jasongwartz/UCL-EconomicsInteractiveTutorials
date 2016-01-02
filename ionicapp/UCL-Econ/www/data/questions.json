@@ -219,50 +219,69 @@
         "id": "D13"
     }, 
     "dis10": {
-        "incorrect": "MEMEMEMEME", 
-        "text": "", 
-        "correct": "FIXFIXFIX", 
-        "answer": "FIXME", 
-        "type": "SingleAnswer", 
+        "text": "Try some different discount rates.", 
+        "choices": {
+            "0%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>0%</b> the present value of that bond will be: <br/><br />$1000 = $1000 / ( 1.00 )<sup>10</sup></p><br /><p>The bond will sell for <b>$1000</b> on the day it is newly issued.<br />If the discount rate is zero, the bond sells for its value at maturity.",
+                "solution": true
+            },
+            "2.75%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>2.75%</b> the present value of that bond will be: <br/><br />$762.40 = $1000 / ( 1.0275 )<sup>10</sup></p><br /><p>The bond will sell for <b>$762.40</b> on the day it is newly issued.<br />This is close to the interest rate on Treasury bonds at this writing (August 2013).",
+                "solution": true
+            },
+            "5%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>5%</b> the present value of that bond will be: <br/><br />$613.91 = $1000 / ( 1.05 )<sup>10</sup></p><br /><p>The bond will sell for <b>$613.91</b> on the day it is newly issued.<br />The bond's price goes down when the discount rate goes up, and vise-versa..",
+                "solution": true
+            },
+            "15.8%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>15.8%</b> the present value of that bond will be: <br/><br />$230.63 = $1000 / ( 1.158 )<sup>10</sup></p><br /><p>The bond will sell for <b>$230.63</b> on the day it is newly issued.<br />The is the highest rate that the U.S. Treasury ever had to pay. It was in September 1981. The Federal Reserve sold so many government bonds that it forced the price down to this level. (The Federal Reserve holds a lot of Treasury bonds. It sells them when it wants to raise interest rates. It buys them when it wants to lower interest rates.) Bond prices crashed.",
+                "solution": true
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "dis10"
     }, 
     "dis11": {
-        "text": "", 
+        "text": "Do you agree?", 
         "type": "MultipleChoice", 
         "id": "dis11", 
         "choices": {
-            "yes": {
-                "message": "Correct, probably, but what if you'll starve before you get the hen and it starts laying?\"", 
-                "solution": "Y"
-            }, 
-            "numbers": {
-                "message": "Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!", 
+            "I agree.  I'll wait for the hen.": {
+                "message": "Correct, probably, but what if you'll starve before you get the hen and it starts laying?", 
                 "solution": false
             }, 
-            "depends": {
+            "I disagree.  Give me the egg!": {
+                "message": "Correct, if you would starve before you got the hen.",
+                "solution": false
+            },
+            "Maybe.  It depends on my discount rate and my rate of time preference.": {
                 "message": "Correct!  It depends on your rate of time preference, which is about how soon you really need to eat!", 
                 "solution": true
-            }, 
-            "no": {
-                "message": "Correct, if you would starve before you got the hen.", 
+            },
+            "It depends on the lucky numbers on the back of the fortune.": {
+                "message": "Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!", 
                 "solution": false
-            }
+            }            
         }
     }, 
     "dis1": {
-        "text": "", 
+        "text": "Which is worth more to you, according to economic theory: $200 given to you today, or $200 given to you one year from now? \n\nSuppose that there is no risk. You absolutely, positively, will get the money at the time you choose. Also suppose that there is no inflation. $200 in one year will have the same buying power as $200 does today.", 
         "type": "MultipleChoice", 
         "id": "dis1", 
         "choices": {
-            "today": {
-                "message": "Correct!  $200 today is worth more than $200 a year from now.  If you get $200 now, you can put it in a bank account.  In a year, you'll have your $200, plus the interest it will earn. <p>In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.", 
+            "200 dollars today is worth more.": {
+                "message": "Correct!  $200 today is worth more than $200 a year from now.  If you get $200 now, you can put it in a bank account.  In a year, you'll have your $200, plus the interest it will earn. In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.", 
                 "solution": true
-            }, 
-            "same": {
+            },
+            "No difference.  The two are worth the same, as long as I am protected against price inflation.": {
                 "message": "Even with no inflation and no risk of non-payment, getting the money sooner is better, because you can put money you get now in a bank and earn interest.", 
                 "solution": false
             }, 
-            "year": {
+            "200 dollars in one year is worth more.": {
                 "message": "Not correct.  If you wait until next year to get your $200, you'll lose one year's worth of interest that you could have earned in a bank.", 
                 "solution": false
             }
@@ -270,22 +289,22 @@
     }, 
     "dis2": {
         "incorrect": "\"No.  We will have $200 plus one year's simple interest.  5% of 200 is 10.", 
-        "text": "", 
+        "text": "After one year, after the 5% interest is paid, how much will be in the account? (Type the number only)", 
         "correct": "Correct!  We'll have $210.<p>That's the $200 we started with, plus 5% of $200, which is $10.", 
-        "answer": "210.0", 
+        "answer": 210.0, 
         "type": "SingleAnswer", 
         "id": "dis2"
     }, 
     "dis3": {
-        "text": "", 
+        "text": "Let's go to two years.  If we leave in the bank all the money, that is, the original $200 plus the interest we earn, how much will we have at the end of two years?", 
         "type": "MultipleChoice", 
         "id": "dis3", 
         "choices": {
-            "22050": {
+            "220.50": {
                 "message": "Correct!  After one year you have $210.  After the second year, you get 5% of $210, which is $10.50, in interest.  Your final total is $210 + $10.50 = $220.50.", 
                 "solution": true
             }, 
-            "220": {
+            "220.00": {
                 "message": "Not quite.  Your original $200 will earn another $10 interest, but you'll also get interest on the first year's $10 interest. Getting interest on interest is called 'compounding.'", 
                 "solution": false
             }
@@ -293,14 +312,14 @@
     }, 
     "dis4": {
         "incorrect": "No.  For the total after one year, we multiplied $200 by 1.05 once.  For two years, we multiplied by 1.05 twice.  For three years, ...", 
-        "text": "", 
+        "text": "Now, let's do three years. If we leave all the money in the bank for three years, we multiply by (1 + Interest Rate) how many times?", 
         "correct": "<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH='73%' ><tr><td ALIGN=CENTER VALIGN=TOP WIDTH='53%'>$200 &times;(1.05)&sup3;&nbsp;</font></td><td VALIGN=TOP WIDTH='46%'>= $231.52</td></tr><tr><td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&sup3;&nbsp;</td><td VALIGN=TOP>= Future Value in Three Years</td></tr></table>To calculate how much we will have in three years, we multiply by 1.05 three times, once for the first year, once for the second year, and once for the third year.", 
-        "answer": "3", 
+        "answer": 3, 
         "type": "SingleAnswer", 
         "id": "dis4"
     }, 
     "dis5": {
-        "text": "", 
+        "text": "How much would you need today to have $200 in your bank account in one year?", 
         "type": "MultipleChoice", 
         "id": "dis5", 
         "choices": {
@@ -308,45 +327,64 @@
                 "message": "You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for a year.", 
                 "solution": false
             }, 
-            "190": {
+            "200 less 5% = 200 minus 10 = 190.": {
                 "message": "$190 is not quite enough.  Subtracting 5% of $200 does not give the right answer.  If you did start with $190, your interest would be 5% of $190, which is $9.50.  You'd have $199.50 next year, not $200.", 
                 "solution": false
             }, 
-            "19048": {
-                "message": "Correct! You want the amount that will grow to $200 in one year.  <br>You want X such that <br>X \\u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: <br>X = $200/1.05 <br>which calculates to<br>X = $190.48.", 
+            "200 divided by 1.05 = 190.48": {
+                "message": "Correct! You want the amount that will grow to $200 in one year.  <br>You want X such that <br>X \u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: <br>X = $200/1.05 <br>which calculates to<br>X = $190.48.", 
                 "solution": true
             }
         }
     }, 
     "dis6": {
-        "incorrect": "No.  There is only one method that discounts future amounts correctly. You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for two years.", 
-        "text": "", 
-        "correct": "<p>We want to know the amount of money that will grow to $200 in two years at 5% interest. <br>This is the amount X such that<br>X&times;1.05&sup2; = $200.<p>Divide both sides of that by (1.05)&sup2; to solve for X:<br>X = $200/1.05&sup2; = $181.41", 
-        "answer": "<p>18141", 
-        "type": "SingleAnswer", 
+        "text": "What is the present value of $200 two years from now?",
+        "choices": {
+            "200": {
+                "message": "You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for two years.",
+                "solution":false
+            },
+            "200 less 10% = $200 - $20 = 180." : {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            },
+            "200 / 1.10 = 181.82": {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            },
+            "200 / 1.05^2; = 181.41": {
+                "message": "<p>We want to know the amount of money that will grow to $200 in two years at 5% interest. <br>This is the amount X such that<br>X \u00d7 1.05&sup2; = $200.<p>Divide both sides of that by (1.05)&sup2; to solve for X:<br>X = $200/1.05&sup2; = $181.41",
+                "solution": true                
+            },
+            "200 / 0.95^2;= 180.50": {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "dis6"
     }, 
     "dis7": {
         "incorrect": "No.  For the present value of an amount one year in the future, we divided $200 by 1.05 once.  For $200 two years in the future, we divided by 1.05 twice.  For three years in the future, ...", 
-        "text": "", 
+        "text": "To calculate the present value of $200 three years in the future, how many times do you divide by 1.05?", 
         "correct": "Correct!", 
-        "answer": "3", 
+        "answer": 3, 
         "type": "SingleAnswer", 
         "id": "dis7"
     }, 
     "dis8": {
         "incorrect": "No.  The bond matures in 5 years. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
-        "text": "", 
+        "text": "From the table above, type the value for the most that you would be willing to pay for a $200 zero-coupon bond that matures in five years when your discount rate is 5%.</p>", 
         "correct": "<p>Correct!  The most you should be willing to pay is the amount that, if you put it in the bank for 5 years at 5% interest, would grow to $200. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
-        "answer": "5", 
+        "answer": 156.71, 
         "type": "SingleAnswer", 
         "id": "dis8"
     }, 
     "dis9": {
         "incorrect": "No.  The bond matures in 3 years.", 
-        "text": "", 
+        "text": "If everybody's discount rate is 5%, how much should you expect to get for selling your bond?  (Ignore sales expenses, such as the broker's commission.)", 
         "correct": "<p>Correct!  With three years to go, the bond should be worth $172.77.  The closer it gets to maturity, the more it is worth.  When it finally gets to maturity, it will be worth the full $200.", 
-        "answer": "3", 
+        "answer": 172.77, 
         "type": "SingleAnswer", 
         "id": "dis9"
     }, 
