@@ -1,5 +1,5 @@
 <ion-view title="Roulette Simulation">
-    <ion-content padding="true" class="has-header has-footer">
+    <ion-content padding="true" ng-controller="ch13Controller" class="has-header has-footer">
 		
 	<h4>Roulette Simulation</h4>
 
@@ -14,81 +14,43 @@
 	<table>
       <tr>
         <td>The number that last came up</td>
-        <td>TODO
-          <span>
-            count: {{count}}
-          </span>
-        </td>
+        <td>{{num}}</td>
       </tr>
       <tr>
       	<td>How many times we won</td>
-      	<td>TODO
-          <span>
-            count: {{count2}}
-          </span>
-        </td>
+      	<td>{{win}}</td>
   	  </tr>
   	  <tr>
       	<td>How many times we lost</td>
-      	<td>TODO</td>
+      	<td>{{loss}}</td>
   	  </tr>
   	  <tr>
       	<td>Our net gain (minus means loss)</td>
-      	<td>TODO</td>
+      	<td>{{net}}</td>
   	  </tr>
   	  <tr>
       	<td>Total bets</td>
-      	<td>TODO</td>
+      	<td>{{bets}}</td>
   	  </tr>
   	  <tr>
-      	<td>Gain per dollar bet</td>
-      	<td>TODO</td>
+      	<td>Gain per pound bet</td>
+      	<td>{{ratio}}</td>
   	  </tr>
   </table>
 
-            <div ng-controller="app.controllers" style="text-align:center">
-    
-                <button ng-click="calculateQuantity()">Calculate</button>
-             <h2>Total Cost: Rs.{{quantityResult}}</h2>
-            </div>
-
-  <button ng-click="count = Math.random()" ng-init="count=0">
-    Increment1
-  </button>
-
-  <button ng-click="count2 = count2 + 1; count = count + 1" ng-init="count2=0">
-    Increment2
-  </button>
-
-
   <br>
-  <button id="spin1">Click to spin once.</button><br>
-  <button id="spin10">Click to spin 10 times.</button><br>
-  <button id="spin1000">Click to spin 1000 times.</button><br>
-  <button id="spin1000000">Click to spin 1 million times.</button>
+  <button ng-click="spin1()">Click to spin once</button><br>
+  <button ng-click="spin10()">Click to spin 10 times</button><br>
+  <button ng-click="spin1000()">Click to spin 1000 times</button><br>
+  <button ng-click="spin1000000()">Click to spin 1 million times</button>
 
-  <table border>
-<tr>
-<td>The number that last came up</td><td><span id="num"></span></td></tr>
-<tr><td>How many times we won</td><td><span id="win">0</span></td></tr>
-<tr>
-<td>How many times we lost</td><td><span id="loss">0</span></td></tr>
-<tr>
-<td>Our net gain (minus means loss)</td><td><span id="net">0</span></td></tr>
-<tr>
-<td>Total bets</td><td><span id="bets">0</span></td></tr>
-<tr><td>Gain per dollar bet</td><td><span id="ratio"></span></td></tr></table>
+	<p>If you spin once, you will either win or lose. Your net gain per pound bet will be either 1 or -1.</p>
 
+	<p>If you press the spin 10 button several times, your net gain per pound bet will vary, but it won't go nearly all the way to 1 or -1.</p>
 
+	<p>If you press the spin 1000 button several times, your net gain per pound bet will vary, but not by nearly as much as for spinning 10 times.</p>
 
-
-	<p>If you spin once, you will either win or lose. Your net gain per dollar bet will be either 1 or -1.</p>
-
-	<p>If you press the spin 10 button several times, your net gain per dollar bet will vary, but it won't go nearly all the way to 1 or -1.</p>
-
-	<p>If you press the spin 1000 button several times, your net gain per dollar bet will vary, but not by nearly as much as for spinning 10 times.</p>
-
-	<p>If you press the spin 1 million button several times, the net gain per dollar spent will come out between -0.510 and -0.0540 almost every time. Suppose a roulette wheel in a casino gets two bets every thirty seconds, 12 hours a day. The casino is very likely to make between £51,000 and £54,000 on that roulette wheel.</p>
+	<p>If you press the spin 1 million button several times, the net gain per pound spent will come out between -0.510 and -0.0540 almost every time. Suppose a roulette wheel in a casino gets two bets every thirty seconds, 12 hours a day. The casino is very likely to make between £51,000 and £54,000 on that roulette wheel.</p>
 
 	<p>The more spins, the smaller is the bracket around -2/38.</p>
 
@@ -128,34 +90,37 @@
 
   <blockquote>90% + 10% = 100%, so there are no other possible outcomes.</blockquote>
 
-  
-<span class="question">Place the decimal forms of 90% and 10% in the table below. In other words, type 0.9 and 0.1 in the boxes below.  The only thing to figure out is which number goes in which box.</span>
-<br><button id="risk2-button">Type a number in each box.<br>Then click this.</button>
-<table border>
-<tr>
-<td>Outcome</td>
-<td>Present value<br>of payoff</td>
-<td>Probability<br>of outcome</td>
-    <td><span id="product-answer"></td>
-</tr>
-<tr>
-<td>The bond will pay <br>$10,000 next year.</td>
-<td align=right>$9803.92</td>
-<td><input id="risk2Y-response" name="risk2Y" type="text" size="5"></input></td>
-<td align=right><span id="productY"></span></td>
-</tr>
-<tr>
-<td>The bond will pay <br>$0 next year.</td>
-<td align=right>$0.00</td>
-<td><input id="risk2N-response" name="risk2N" type="text" size="5"></input></td>
-<td align=right><span id="productN"></span></td>
-</tr>
-</table> 
+  TODO
 
-    <div id="risk2Y-answer"></div><div id="risk2N-answer"><br></div><div id="risk2A-answer">
+  <p>Place the decimal forms of 90% and 10% in the table below. In other words, type 0.9 and 0.1 in the boxes below.  The only thing to figure out is which number goes in which box.</p>
 
-    <p>test</p>
+  <button ng-click="risk2()">Type a number in each box. Then click this</button><br>
 
+  <table>
+    <tr>
+      <td>Outcome</td>
+      <td>Present value of payoff</td>
+      <td>Probability of outcome</td>
+      <td>{{both0}}</td>s
+    </tr>
+    <tr>
+      <td>The bond will pay £10,000 next year.</td>
+      <td>£9803.92</td>
+      <td><input type="text" ng-model="box1"/></td>
+      <td>{{both1}}</td>
+    </tr>
+    <tr>
+    <td>The bond will pay £0 next year.</td>
+    <td>£0.00</td>
+    <td><input type="text" ng-model="box2"/></td>
+    <td>{{both2}}</td>
+    </tr>
+  </table> 
+
+  <br>
+  {{box1answeru}}<br>
+  {{box2answeru}}<br>
+  {{both}}<br>
 	
 </ion-content>
 <footer sid="12"></footer>

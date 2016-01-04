@@ -332,6 +332,153 @@ angular.module('app.controllers', [])
   }
 })
 
+.controller('ch13Controller', function($scope) {
+
+  $scope.spin1 = function() {
+    var outcome = Math.floor(Math.random()*38);   
+    var win = 0;
+    var loss = 0;
+    
+    if (outcome === 37) {
+      outcome = 0;
+      $scope.num = "00";
+    } else {
+      $scope.num = outcome;
+    }
+    
+    if (outcome % 2 === 1) {
+      win++;
+    } else {
+      loss++;
+    }
+    
+    $scope.win = win;
+    $scope.loss = loss;
+    $scope.net = win - loss;
+    $scope.bets = win + loss;
+    $scope.ratio = (win - loss)/(win + loss);
+  };
+  
+  $scope.spin10 = function() {
+    var win = 0;
+    var loss = 0;
+    var outcome = 0;
+    
+    for (var i = 0; i < 10; i++) {
+      outcome = Math.floor(Math.random()*38);
+      if (outcome === 37) {
+        outcome = 0;
+        $scope.num = "00";
+      } else {
+        $scope.num = outcome;
+      }
+      
+      if (outcome % 2 === 1) {
+        win++;
+      } else {
+        loss++;
+      }
+      
+    }
+    
+    $scope.win = win;
+    $scope.loss = loss;
+    $scope.net = win - loss;
+    $scope.bets = win + loss;
+    $scope.ratio = (win - loss)/(win + loss);
+  };
+  
+  $scope.spin1000 = function() {
+    var win = 0;
+    var loss = 0;
+    var outcome = 0;
+    
+    for (var i = 0; i < 1000; i++) {
+      outcome = Math.floor(Math.random()*38);
+      if (outcome === 37) {
+        outcome = 38;
+      }
+      
+      if (outcome % 2 === 1) {
+    win++;
+    } else {
+    loss++;
+    }
+    }
+    
+    if (outcome === 38) {
+      $scope.num = "00";
+    } else {
+      $scope.num = outcome;
+    }
+   
+    $scope.win = win;
+    $scope.loss = loss;
+    $scope.net = win - loss;
+    $scope.bets = win + loss;
+    $scope.ratio = (win - loss)/(win + loss);
+    
+  };
+  
+  $scope.spin1000000 = function() {
+    var win = 0;
+    var loss = 0;
+    var outcome = 0;
+    
+    for (var i = 0; i < 1000000; i++) {
+      outcome = Math.floor(Math.random()*38);
+    if (outcome === 37) { 
+    outcome = 38;
+    }
+    if (outcome % 2 === 1) {
+    win++;
+    } else {
+    loss++;
+    }
+    }
+    
+    if (outcome === 38) {
+      $scope.num = "00";
+    } else {
+      $scope.num = outcome;
+    }
+
+    $scope.win = win;
+    $scope.loss = loss;
+    $scope.net = win - loss;
+    $scope.bets = win + loss;
+    $scope.ratio = (win - loss)/(win + loss);
+  };
+
+  $scope.box1 = "Type here";
+  $scope.box2 = "Type here";
+  $scope.risk2 = function() {
+  
+    if ($scope.box1 == 0.9) {
+      $scope.box1answeru = "Correct! Upper box should be 0.9.";
+    } else {
+      $scope.box1answeru = "The probability that the bond will pay goes in the upper box. Use a decimal, not a percentage.";
+    }
+
+    if ($scope.box2 == 0.1) {
+      $scope.box2answeru = "Correct! 0.1 goes in the lower box.";
+    } else {
+      $scope.box2answeru = "The probability that the bond will default goes in the lower box. Use a decimal, not a percentage.";
+    }
+
+    if (($scope.box1 == "0.9") && ($scope.box2 == "0.1")) {
+      $scope.both0 = "Payoff x Probability";
+      $scope.both1 = "£8823.53";
+      $scope.both2 = "£0.00";
+      $scope.both = "The expected present value of this bill is £8823.53. (£8823.53+£0.00=£8823.53) That is also the price for which the bill should sell.";
+    }
+
+
+
+  };
+
+})
+
 ;
 
 function getAnswer(s) {

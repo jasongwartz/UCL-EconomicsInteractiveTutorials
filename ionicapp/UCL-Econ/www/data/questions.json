@@ -663,14 +663,15 @@
         "type": "SingleAnswer", 
         "id": "irr10"
     }, 
-    "riska3-button": {
-        "text":"This is a Range test.",
-        "correct":"Right",
-        "highmessage":"Too High",
-        "lowmessage":"Too Low",
+    "riska3": {
+        "text":"Let's take the next step: How high would the payoff on the second game have to be to entice you to take the risk, rather than keep the sure £10,000?",
+        "correct":"You are risk preferring. For you, £10000 is worth twice as much as £10000",
+        "highmessage":"You are very risk averse. For you, $num is worth only twice as much as £10000",
+        "lowmessage":"You are risk preferring. For you, your answer is worth twice as much as £10000",
         "type":"Range",
         "max":20000,
-        "answer":5
+        "answer":10000
+
     }, 
     "MC5-button": {
         "incorrect": "", 
@@ -1556,5 +1557,13 @@
         "answer": "Down", 
         "type": "SingleAnswer", 
         "id": "D2"
+    },
+    "risk1": {
+        "incorrect": "The number of Queen of Spades cards is the numerator. There is only one of those in the deck. The number of cards in the deck is the denominator.", 
+        "text": "What is the probability that the card will be the Queen of Diamonds? The answer is a fraction. Type (numerator)/(denominator). Then click the button.", 
+        "correct": "Correct numerator! Correct denominator! The probability of guessing the card is 1/52, which is a little less than 0.02.", 
+        "answer": "1/52", 
+        "type": "SingleAnswer", 
+        "id": "risk1"
     }
 }
