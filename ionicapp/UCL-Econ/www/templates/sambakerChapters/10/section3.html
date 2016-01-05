@@ -1,197 +1,218 @@
-<ion-view>
-	<ion-content>
+<ion-view title="Internal Rate of Return">
+	<ion-content padding="true" class="has-header has-footer">
 		
-		<center><h3>The Present Value of an Income Stream</h3></center>
+		<center><h2>The Present Value of an Income Stream</h2></center>
 
 <center>The <b>present value of a future amount of income</b> is:
-<p>Present Value = (Future Value)/(1 + Discount Rate)&ordf;,
+<p>Present Value = (Future Value)/(1 + Discount Rate)&ordf;,</p>
 <p>where the exponent &ordf; is the number of years in the future that
 the future value will be received. The discount rate is the same as the
-interest rate.</center>
+interest rate.</center></p>
 
 <p>An income stream is a series of future values. The <b>present value
 of an income stream</b> is calculated by adding up the present values of
-all the items in the income stream.
+all the items in the income stream.</p>
 <p>To calculate a present value, we need to pick a discount rate. Since
 one of our alternative investments is a 5% per year bank account, let's
-pick 5% per year as the discount rate.
+pick 5% per year as the discount rate.</p>
+
+
+<br />
+<hr>
+<small>
 <table BORDER CELLSPACING=2 CELLPADDING=5 >
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP >Year (<em>a</em> in the formula)</td>
+<td ALIGN=RIGHT VALIGN=TOP ><b>Year</b> (<em>a</em> in the formula)&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >0</td>
+<td ALIGN=CENTER VALIGN=TOP >0</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >1</td>
+<td ALIGN=CENTER VALIGN=TOP >1</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >2</td>
+<td ALIGN=CENTER VALIGN=TOP >2</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >3</td>
+<td ALIGN=CENTER VALIGN=TOP >3</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >4</td>
+<td ALIGN=CENTER VALIGN=TOP >4</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >5</td>
+<td ALIGN=CENTER VALIGN=TOP >5</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >6</td>
+<td ALIGN=CENTER VALIGN=TOP >6</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+<td ALIGN=CENTER VALIGN=TOP >Total</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Machine income stream</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Machine income stream&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 </tr>
 
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP>1.05&ordf;</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>1.05&ordf;&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.0000</td>
+<td ALIGN=CENTER VALIGN=TOP>1.0000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.0500</td>
+<td ALIGN=CENTER VALIGN=TOP>1.0500</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.1025</td>
+<td ALIGN=CENTER VALIGN=TOP>1.1025</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.1576</td>
+<td ALIGN=CENTER VALIGN=TOP>1.1576</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.2155</td>
+<td ALIGN=CENTER VALIGN=TOP>1.2155</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.2763</td>
+<td ALIGN=CENTER VALIGN=TOP>1.2763</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.3401</td>
+<td ALIGN=CENTER VALIGN=TOP>1.3401</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Present values, at a 5% discount rate.<br>2nd row divided by 3rd row</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Present values, at a 5% discount rate.</b>&nbsp;&nbsp;<br />
+    (2nd row divided by 3rd row) &nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+<td ALIGN=CENTER VALIGN=TOP>$190.48&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$181.41</td>
+<td ALIGN=CENTER VALIGN=TOP>$181.41&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$172.77</td>
+<td ALIGN=CENTER VALIGN=TOP>$172.77&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$164.54</td>
+<td ALIGN=CENTER VALIGN=TOP>$164.54&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$156.71</td>
+<td ALIGN=CENTER VALIGN=TOP>$156.71&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$149.24</td>
+<td ALIGN=CENTER VALIGN=TOP>$149.24&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$15.14</td>
+<td ALIGN=CENTER VALIGN=TOP><b>&nbsp;$15.14&nbsp;</b></td>
 </tr>
 </table>
+</small>
+<hr>
 
 <p>The total of the present values is $15.14. This is the present value
-of the machine income stream at a 5% discount rate. 
+of the machine income stream at a 5% discount rate. </p>
 <blockquote>(If you check the addition,
-using the numbers shown in the table, you'll get $15.15.  The .01 difference is due to round-off error.)</blockquote>  The tutorial on discounting future 
-income has a nifty <a href="../dis/dis.html#spreadsheet">spreadsheet setup for calculating present values</a> that 
+using the numbers shown in the table, you'll get $15.15.  The .01 difference is due to round-off error.)</blockquote>  The tutorial on discounting future income has a nifty spreadsheet setup for calculating present values that 
 you can copy and use in your own spreadsheet.  
-<p>Let's use the same method on the 5%-interest bank account.
+<br />
+<p>Let's use the same method on the 5%-interest bank account.</p>
+
+<small>
+<hr>
 <table BORDER CELLSPACING=2 CELLPADDING=5 >
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+<td ALIGN=RIGHT VALIGN=TOP ><b>Year&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP >0</td>
+<td ALIGN=CENTER VALIGN=TOP >0</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >1</td>
+<td ALIGN=CENTER VALIGN=TOP >1</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >2</td>
+<td ALIGN=CENTER VALIGN=TOP >2</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >3</td>
+<td ALIGN=CENTER VALIGN=TOP >3</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >4</td>
+<td ALIGN=CENTER VALIGN=TOP >4</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >5</td>
+<td ALIGN=CENTER VALIGN=TOP >5</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >6</td>
+<td ALIGN=CENTER VALIGN=TOP >6</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+<td ALIGN=CENTER VALIGN=TOP >Total</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>5% bank account income stream</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>5% bank account income stream&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+<td ALIGN=CENTER VALIGN=TOP>$50</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+<td ALIGN=CENTER VALIGN=TOP>$50</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+<td ALIGN=CENTER VALIGN=TOP>$50</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+<td ALIGN=CENTER VALIGN=TOP>$50</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$50</td>
+<td ALIGN=CENTER VALIGN=TOP>$50</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$1050</td>
+<td ALIGN=CENTER VALIGN=TOP>$1050</td>
 </tr>
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP>1.05&ordf;</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>1.05&ordf;&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.0000</td>
+<td ALIGN=CENTER VALIGN=TOP>1.0000&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.0500</td>
+<td ALIGN=CENTER VALIGN=TOP>1.0500&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.1025</td>
+<td ALIGN=CENTER VALIGN=TOP>1.1025&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.1576</td>
+<td ALIGN=CENTER VALIGN=TOP>1.1576&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.2155</td>
+<td ALIGN=CENTER VALIGN=TOP>1.2155&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.2763</td>
+<td ALIGN=CENTER VALIGN=TOP>1.2763&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>1.3401</td>
+<td ALIGN=CENTER VALIGN=TOP>1.3401&nbsp;&nbsp;</td>
 </tr>
 
 
 <tr>
-<td VALIGN=TOP>Present values, 5% discount rate<br>2nd row divided by 3rd row</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Present values, at a 5% discount rate.</b>&nbsp;&nbsp;<br />
+    (2nd row divided by 3rd row) &nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$47.62</td>
+<td ALIGN=CENTER VALIGN=TOP>$47.62&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$45.35</td>
+<td ALIGN=CENTER VALIGN=TOP>$45.35&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$43.19</td>
+<td ALIGN=CENTER VALIGN=TOP>$43.19&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$41.14</td>
+<td ALIGN=CENTER VALIGN=TOP>$41.14&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$39.18</td>
+<td ALIGN=CENTER VALIGN=TOP>$39.18&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$783.53</td>
+<td ALIGN=CENTER VALIGN=TOP>$783.53&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$0.00</td>
+<td ALIGN=CENTER VALIGN=TOP><b>$0.00&nbsp;&nbsp;</b></td>
 </tr>
 </table>
-<p>These present values add up to $0. <blockquote>(Actually, they add to $0.01, but that's
-due to round-off error.)</blockquote> </p>
+</small>
+<hr>
+
+<p>These present values add up to $0. <small>(Actually, they add to $0.01, but that's
+due to round-off error.)</small> </p>
 <p>The present value of an 5% bank account, evaluated
     at an 5% discount rate, will always turn out to be $0.  Whenever the discount rate equals the interest rate, you will get $0 for the present value.</p>
 <p>When we compare, we find that, at a 5% discount rate, the machine has a higher present value ($15.14)
-than the 5% bank account ($0).  The machine wins!
-<p>The primitive method of adding up the income streams ...
+than the 5% bank account ($0).  The machine wins!</p>
+<p>The primitive method of adding up the income streams ...</p>
 
-<p>Bank Account: -1000 + 50 + 50 + 50 + 50 + 50 +1050 = 300
-<p>Machine: -1000 +200 +200 +200 +200 +200 + 200 = 200
-<p>... would be valid if the interest rate were 0%. That would be if you could borrow money and pay it back without any extra for interest. 
+<small>
+    <hr>
+<p>Bank Account:<br /> -1000 + 50 + 50 + 50 + 50 + 50 +1050 = 300</p>
+<p>Machine:<br /> -1000 +200 +200 +200 +200 +200 + 200 = 200</p>
+<hr>
+</small>
+
+<p>... would be valid if the interest rate were 0%. That would be if you could borrow money and pay it back without any extra for interest. </p>
 <p>So, now we have a way to compare investments and choose the better ones.  A drawback of the method is that we have to specify a discount rate first and do the calculation second.  Another method, the internal rate of return, lets us calculate a number for the investment first and compare that with our discount rate second.   
 </p>
 
 
 
 </ion-content>
+<footer sid="10"></footer>
 </ion-view>

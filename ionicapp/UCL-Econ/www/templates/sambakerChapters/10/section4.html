@@ -1,165 +1,177 @@
-<ion-view>
-	<ion-content>
+<ion-view title="Internal Rate of Return">
+	<ion-content padding="true" class="has-header has-footer">
 		
 		
 <center>
-<h3>
-Calculating the Internal Rate of Return</h3></center>
+<h2>
+Calculating the Internal Rate of Return</h2></center>
+<br />
 One way to evaluate an investment is to calculate an internal rate of return. The calculation we just made for the bank account gives us an idea of what we want to do. Recall that the bank account's interest rate (5%) was the discount rate that made the 
 present value of its income stream total zero.
-<p>That is how we define the <strong>internal rate of return</strong>.  It is <strong>the discount rate that makes the net present value of the investment equal zero</strong>. 
-<p>Consider this table.  It shows the present value of the machine at two interest rates, 5% and 6%:
+<p>That is how we define the <strong>internal rate of return</strong>.  It is <strong>the discount rate that makes the net present value of the investment equal zero</strong>. </p>
+<p>Consider this table.  It shows the present value of the machine at two interest rates, 5% and 6%:</p>
+
+<hr>
+<small>
 <table BORDER CELLSPACING=2 CELLPADDING=5  >
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+<td ALIGN=RIGHT VALIGN=TOP ><b>Year</b>&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >0</td>
+<td ALIGN=CENTER VALIGN=TOP >0</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >1</td>
+<td ALIGN=CENTER VALIGN=TOP >1</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >2</td>
+<td ALIGN=CENTER VALIGN=TOP >2</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >3</td>
+<td ALIGN=CENTER VALIGN=TOP >3</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >4</td>
+<td ALIGN=CENTER VALIGN=TOP >4</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >5</td>
+<td ALIGN=CENTER VALIGN=TOP >5</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >6</td>
+<td ALIGN=CENTER VALIGN=TOP >6</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+<td ALIGN=CENTER VALIGN=TOP >Total</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Income stream</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Income stream</b>&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Present value, at a 5% discount rate</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Present value, at a 5% discount rate</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$190.48</td>
+<td ALIGN=CENTER VALIGN=TOP>$190.48</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$181.41</td>
+<td ALIGN=CENTER VALIGN=TOP>$181.41</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$172.77</td>
+<td ALIGN=CENTER VALIGN=TOP>$172.77</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$164.54</td>
+<td ALIGN=CENTER VALIGN=TOP>$164.54</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$156.71</td>
+<td ALIGN=CENTER VALIGN=TOP>$156.71</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$149.24</td>
+<td ALIGN=CENTER VALIGN=TOP>$149.24</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$15.14</td>
+<td ALIGN=CENTER VALIGN=TOP><b>$15.14</b></td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Present value, at a 6% discount rate</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Present value, at a 6% discount rate</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$188.68</td>
+<td ALIGN=CENTER VALIGN=TOP>$188.68&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$178.00</td>
+<td ALIGN=CENTER VALIGN=TOP>$178.00&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$167.92</td>
+<td ALIGN=CENTER VALIGN=TOP>$167.92&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$158.42</td>
+<td ALIGN=CENTER VALIGN=TOP>$158.42&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$149.45</td>
+<td ALIGN=CENTER VALIGN=TOP>$149.45&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$140.99</td>
+<td ALIGN=CENTER VALIGN=TOP>$140.99&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$16.54</td>
+<td ALIGN=CENTER VALIGN=TOP><b>-$16.54</b>&nbsp;&nbsp;</td>
 </tr>
 </table>
+</small>
+<hr>
+
 <p>At a 6% per year discount rate, the machine investment's present value
-is less than $0. At a 5% discount rate, the present value is greater than $0. 
-<p>Mathematically, the present value is a continuous function of the discount rate.  The Intermediate Value Theorem implies that there must be a discount rate between 5% and 6% at which the present value is $0. 
-<p>Let's find that discount
-rate.  <p class="question">Type a number between .0500 and .0600 in the box.  Click the button to see what comes out for the present value.
-<br><input id="irr2-response" name="dis2" type="text"></input>
-<button id="irr2-button">Type a number in the box.  Then click this.</button>
-<span id="irr2-answer">If you type a number starting with 5, I'll move the decimal point to where it is supposed to be.  Don't type a % sign.</span><br>
+is less than $0. At a 5% discount rate, the present value is greater than $0. </p>
+<p>Mathematically, the present value is a continuous function of the discount rate.  The Intermediate Value Theorem implies that there must be a discount rate between 5% and 6% at which the present value is $0. </p>
+<p><h3>Let's find that discount rate. Example: </h3> </p>
+
+<br />
+
+<hr>
+<small>
 <table BORDER CELLSPACING=2 CELLPADDING=5  >
 <tr>
-<td ALIGN=RIGHT VALIGN=TOP >Year</td>
+<td ALIGN=RIGHT VALIGN=TOP >Year&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >0</td>
+<td ALIGN=CENTER VALIGN=TOP >0</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >1</td>
+<td ALIGN=CENTER VALIGN=TOP >1</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >2</td>
+<td ALIGN=CENTER VALIGN=TOP >2</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >3</td>
+<td ALIGN=CENTER VALIGN=TOP >3</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >4</td>
+<td ALIGN=CENTER VALIGN=TOP >4</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >5</td>
+<td ALIGN=CENTER VALIGN=TOP >5</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >6</td>
+<td ALIGN=CENTER VALIGN=TOP >6</td>
 
-<td ALIGN=RIGHT VALIGN=TOP >Total</td>
+<td ALIGN=CENTER VALIGN=TOP >Total</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Income stream</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Income stream&nbsp;&nbsp;</b></td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$200</td>
+<td ALIGN=CENTER VALIGN=TOP>$200</td>
 </tr>
 
 <tr>
-<td VALIGN=TOP>Present value, at a <span id="irr2-drate">5.000</span>% discount rate</td>
+<td ALIGN=RIGHT VALIGN=TOP><b>Present value, at a 5.000% discount rate</b>&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>-$1000</td>
+<td ALIGN=CENTER VALIGN=TOP>-$1000</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv1">190.48</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$190.48&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv2">181.41</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$181.41&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv3">172.77</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$172.77&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv4">164.54</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$164.54&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv5">156.71</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$156.71&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-pv6">149.24</span></td>
+<td ALIGN=CENTER VALIGN=TOP>$149.24&nbsp;&nbsp;</td>
 
-<td ALIGN=RIGHT VALIGN=TOP>$<span id="irr2-total">15.14</span></td>
+<td ALIGN=CENTER VALIGN=TOP><b>$15.14&nbsp;&nbsp;</b></td>
 </tr>
 
-<tr>
 </table>
+</small>
+<hr>
+<br />
 
-<div id="irr2A-answer">
-<p class="question">Please get to within $0.10 of a $0 total before moving on.<br><br>If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.  
-
+<question qid="irr2"></question>
+<br />
+Continued on the following page.
+<br />
 </ion-content>
+<footer sid="10"></footer>
 </ion-view>

@@ -30,7 +30,8 @@
         <div class="list">
           <div class="item range range-positive">
             <i class="icon ion-ios-minus-outline"></i>
-            <input type="range" ng-model="$parent.q.submission" name="answer" min="0" max="{{qmax}}">
+            <input type="range" ng-model="$parent.q.submission" 
+                name="answer" min="{{qmin}}" max="{{qmax}}" value="{{start}}" step="{{step}}">
             <!--When working, can use {{start}} to set starting slider position-->
             <i class="icon ion-ios-plus-outline"></i> ​
           </div>

@@ -129,7 +129,9 @@ angular.module('app.controllers', [])
        }
        if ($scope.type === "Range") {
          $scope.qmax = QuestionFactory.rangeMax($scope.qid);
-         $scope.start = ($scope.qmax / 2);
+         $scope.qmin = QuestionFactory.rangeMin($scope.qid);
+         $scope.step = QuestionFactory.rangeStep($scope.qid);
+         $scope.start = ($scope.qmax - ($scope.qmax - $scope.qmin) / 2);
        }
        
       });

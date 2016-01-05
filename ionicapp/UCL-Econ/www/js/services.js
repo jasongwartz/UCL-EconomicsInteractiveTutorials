@@ -77,6 +77,20 @@ angular.module('app.services', [])
             rangeMax: function(question) {
                 return questions[question].max;
             },
+            rangeMin: function(question) {
+                if (typeof questions[question].min != 'undefined') {
+                    return questions[question].min;
+                } else {
+                    return 0;
+                }
+            },
+            rangeStep: function(question) {
+                if (typeof questions[question].step != 'undefined') {
+                    return questions[question].step;
+                } else {
+                    return 1;
+                }
+            },
 
             answerMachine: function (question, submission) {
                 

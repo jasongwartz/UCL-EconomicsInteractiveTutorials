@@ -6,7 +6,9 @@
         "lowmessage":"Too Low",
         "type":"Range",
         "max":20000,
-        "answer":5
+        "min":0,
+        "answer":5,
+        "step":100
     },
     "MultipleChoice": {
         "text":"This is a MCQ test.",
@@ -86,12 +88,36 @@
         "type": "SingleAnswer", 
         "id": "irr3"
     }, 
+    
+    "irr2A": {
+        
+    },
+    "irr2": {
+        "text": "Choose a number between 5% and 6%. Please get to within $0.10 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":6,
+        "min":5,
+        "id": "irr2",
+        "answer": 5.47,
+        "step":0.01,
+        "correct":"You can get a present value $0.06 with a discount rate of .0547 or 5.47%. That is as close to a $0 total as you can get unless you go to the next digit after the decimal point. <br><br> The internal rate of return for the machine is therefore 5.47%.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    },
     "irr1": {
-        "incorrect": "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.", 
-        "text": "", 
-        "correct": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future.", 
+        "text": "The income stream from the bank account adds up to $300. The income stream from the machine adds up to $200. Does this make the bank account better?", 
         "answer": "Maybe", 
-        "type": "SingleAnswer", 
+        "choices": {
+            "Yes.  Why make a simple problem complicated?": {
+                "message":  "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.", 
+                "solution": false
+            },
+            "No, not necessarily.  We need a more complicated calculation.": {
+                "message": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future.",
+                "solution": true
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "irr1"
     }, 
     "D51": {
