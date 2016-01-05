@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-10 col-center">
 		<div ng-hide="{{prevEnd}}">
-		    <a href="#chapter{{chaptID}}section{{prevSection}}"><i class="ion-ios-arrow-thin-left"></i></a>
+		    <a href="#{{baseDirectory}}chapter{{chaptID}}section{{prevSection}}"><i class="ion-ios-arrow-thin-left"></i></a>
 		</div>
 	</div>
   <div class="col-80 col-center">
@@ -10,7 +10,7 @@
   	 <div class="progress">
 	  <div class="progress-bar stretchRight" role="progressbar" aria-valuenow="{{progressBar}}"
 	  aria-valuemin="0" aria-valuemax="100" style="width:{{progressBar}}%">
-	    <span class="sr-only">&nbsp;{{progressBar}}%</span>
+	    <span class="sr-only"><b>&nbsp;&nbsp;{{progressBar}}%</b></span>
 	  </div>
 	</div>
 
@@ -19,7 +19,7 @@
   		<!-- If progress bar == 100%, end of section, 
   		remove next link and provide tick icon to chapters home page -->
 		<div ng-if="progressBar != 100">
-			<a href="#chapter{{chaptID}}section{{nextSection}}"><i class="ion-ios-arrow-thin-right"></i></a>
+			<a href="#{{baseDirectory}}chapter{{chaptID}}section{{nextSection}}"><i class="ion-ios-arrow-thin-right"></i></a>
 		</div>
 		<div ng-if="progressBar == 100">
 			<a ng-click="completeSection()"><i class="ion-ios-checkmark-outline pulse"></i></a>

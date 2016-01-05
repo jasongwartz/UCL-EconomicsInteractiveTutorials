@@ -1,54 +1,82 @@
 {
-      "1": {
-            "name": "Total Cost, Variable Cost, and Marginal Cost",
-            "sections": 2
-      },
-      "2": {
-            "name": "Marginal Cost and the Price-Taking Firm's Optimal Output Rate",
-            "sections": 6
-      },
-      "3": {
-            "name": "Average Cost and the Break-Even Output Rate **",
-            "sections": 5
-      },
-      "4": {
-            "name": "Demand",
-            "sections": 5
-      },
-      "5": {
-            "name": "Elasticity I",
-            "sections": 5
-      },
-      "6": {
-            "name": "Elasticity II",
-            "sections": 5
-      },
-      "7": {
-            "name": "Supply, Demand, and Equilibrium",
-            "sections": 7
-      },
-      "8": {
-            "name": "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate **",
-            "sections": 12
-      },
-      "9": {
-            "name": "Discounting Future Income",
-            "sections": 10
-      },
-      "10": {
-            "name": "The Internal Rate of Return",
-            "sections": 14
-      },
-      "11": {
-            "name": "Perils of the Internal Rate of Return **",
-            "sections": 9
-      },
-      "12": {
-            "name": "Risk",
-            "sections": 8
-      },
-      "13": {
-            "name": "Risk Aversion and Insurance",
-            "sections": 8
-      }
+    "11": {
+        "base": "sambakerChapters", 
+        "sections": 9, 
+        "name": "Perils of the Internal Rate of Return **"
+    }, 
+    "10": {
+        "base": "sambakerChapters", 
+        "sections": 14, 
+        "name": "The Internal Rate of Return"
+    }, 
+    "13": {
+        "base": "sambakerChapters", 
+        "sections": 8, 
+        "name": "Risk Aversion and Insurance"
+    }, 
+    "12": {
+        "base": "sambakerChapters", 
+        "sections": 8, 
+        "name": "Risk"
+    }, 
+    "1": {
+        "base": "sambakerChapters", 
+        "sections": 2, 
+        "name": "Total Cost, Variable Cost, and Marginal Cost"
+    }, 
+    "3": {
+        "base": "sambakerChapters", 
+        "sections": 5, 
+        "name": "Average Cost and the Break-Even Output Rate **"
+    }, 
+    "2": {
+        "base": "sambakerChapters", 
+        "sections": 6, 
+        "name": "Marginal Cost and the Price-Taking Firm's Optimal Output Rate"
+    }, 
+    "5": {
+        "base": "sambakerChapters", 
+        "sections": 5, 
+        "name": "Elasticity I"
+    }, 
+    "4": {
+        "base": "sambakerChapters", 
+        "sections": 5, 
+        "name": "Demand"
+    }, 
+    "7": {
+        "base": "sambakerChapters", 
+        "sections": 7, 
+        "name": "Supply, Demand, and Equilibrium"
+    }, 
+    "6": {
+        "base": "sambakerChapters", 
+        "sections": 5, 
+        "name": "Elasticity II"
+    }, 
+    "9": {
+        "base": "sambakerChapters", 
+        "sections": 10, 
+        "name": "Discounting Future Income"
+    }, 
+    "8": {
+        "base": "sambakerChapters", 
+        "sections": 12, 
+        "name": "Monopoly: Marginal Revenue and the Profit-Maximizing Price and Output Rate **"
+    },
+    "14": {
+        "base": "extraChapters", 
+        "sections": 4, 
+        "name": "Demand"
+    },
+    "15": {
+        "base": "extraChapters", 
+        "sections": 7, 
+        "name": "Elasticity"
+    },
+    "16": {
+        "base": "extraChapters", 
+        "sections": 8, 
+        "name": "Supply"
+    }
 }
