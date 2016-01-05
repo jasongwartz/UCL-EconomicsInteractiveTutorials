@@ -236,6 +236,12 @@ i {
 }
 
 @media (max-width: 567px) {
+
+  img.fullWidth {
+    width:100%;
+    height:auto;
+  }
+
 	#progressFooter {
 
 }

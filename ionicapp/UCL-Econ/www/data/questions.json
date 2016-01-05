@@ -1,11 +1,11 @@
 {
-    "MC1-button": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
+    "MC1": {
+        "incorrect": "How much does the cost increase when Joan's goes from 7 patients to 8?", 
+        "text": "What is the marginal cost of the 8th patient in the table above?", 
+        "correct": "Correct! The marginal cost of the 8th patient is $4000.", 
+        "answer": "4000", 
         "type": "SingleAnswer", 
-        "id": "MC1-button"
+        "id": "MC1"
     }, 
     "D15": {
         "incorrect": "No.  Demand is the price-quantity relationship of the buyers.", 
@@ -947,12 +947,19 @@
         "id": "MC3"
     }, 
     "MC2": {
-        "incorrect": "Compare what the first patient pays you with the cost of adding that first patient.  The cost of adding the first patient is the marginal cost of the 1st patient.", 
-        "text": "", 
-        "correct": "Correct!  The $3700 price is more than the $3500 marginal cost.  You gain $200 by accepting the first patient.", 
-        "answer": "Yes", 
-        "type": "SingleAnswer", 
-        "id": "MC2"
+        "text": "Would adding 1 patient make you better off? If that patient would pay you $3700?", 
+        "type": "MultipleChoice", 
+        "id": "MC2", 
+        "choices": {
+            "yes": {
+                "message": "Correct!  The $3700 price is more than the $3500 marginal cost.  You gain $200 by accepting the first patient.", 
+                "solution": true
+            }, 
+            "no": {
+                "message": "Compare what the first patient pays you with the cost of adding that first patient.  The cost of adding the first patient is the marginal cost of the 1st patient.", 
+                "solution": false
+            }
+        }
     }, 
     "sd15a": {
         "incorrect": "No, insurance works on the demand side.", 
