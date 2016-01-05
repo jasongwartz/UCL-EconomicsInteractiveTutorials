@@ -1,10 +1,13 @@
 angular.module('app.services', [])
 
     .factory('Chapters', [function ($scope) {
+        
+
         /// source http://stackoverflow.com/questions/10775787/function-wait-with-return-until-getjson-is-finished   
         // http://stackoverflow.com/questions/684672/loop-through-javascript-object
         // http://api.jquery.com/each/          
         var chapters;
+        var hellothere;
 
         $.getJSON('data/chapters.json', function (data) {
             chapters = data;
@@ -39,7 +42,10 @@ angular.module('app.services', [])
 
             getSections: function () {
                 var sections = {};
-                getChapterData().then(function (c) { // c is returned chapter data  
+                getChapterData().then(function (c) { // c is returned chapter data
+                            
+                            
+                            
                     for (var key in c) {
                         if (c.hasOwnProperty(key)) {
                             sections[key] = c[key]["sections"]
@@ -48,12 +54,20 @@ angular.module('app.services', [])
                 }
                 )
                 return sections;
+<<<<<<< HEAD
             },
 
             getSectionNumber: function(theSectionID) {
+
                 return chapters[theSectionID].sections;
+                
             }
         }
+
+=======
+            }
+        }
+>>>>>>> master
     }])
 
     .factory('QuestionFactory', [function ($scope) {

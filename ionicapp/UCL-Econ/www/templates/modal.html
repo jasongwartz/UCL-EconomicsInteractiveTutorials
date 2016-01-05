@@ -6,7 +6,7 @@
     <div class="list list-inset">
     	<div ng-repeat="n in modalResults track by $index">
 		      <div class="item">
-		      	<a href="#chapter{{currentChapterID}}section{{$index + 1}}" ng-click="closeModal()"><button class="button button-block button-positive">{{modalResults[$index].message}}</button></a>
+		      	<a href="#{{baseDirectory}}chapter{{currentChapterID}}section{{$index + 1}}" ng-click="closeModal()"><button class="button button-block button-positive">{{modalResults[$index].message}}</button></a>
 		      </div>
 		</div>
 	</div>

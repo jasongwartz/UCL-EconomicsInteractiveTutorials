@@ -31,6 +31,32 @@ h3 {
   font-size: 64px;
 }
 
+ul {
+    list-style-position: inside;
+}
+
+ol {
+    list-style-position: inside;
+    padding: 50px;
+}
+
+table {
+    width: 100%;
+}
+
+table#t01 {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
 .progress {
   height: 20px;
   overflow: hidden;
