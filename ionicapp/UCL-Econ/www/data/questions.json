@@ -6,7 +6,9 @@
         "lowmessage":"Too Low",
         "type":"Range",
         "max":20000,
-        "answer":5
+        "min":0,
+        "answer":5,
+        "step":100
     },
     "MultipleChoice": {
         "text":"This is a MCQ test.",
@@ -51,47 +53,162 @@
         "type": "SingleAnswer", 
         "id": "D15"
     }, 
+    "irr9": {
+        "text": "Let's find the internal rate of return for this machine now. Choose a number between .0100 and .0547. Please get to within $0.50 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":5.47,
+        "min":1,
+        "id": "irr9",
+        "answer": 4.19,
+        "step":0.01,
+        "correct":"Total would be: <b>$0.07</b> Within 10 cents is good enough.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    }, 
     "irr7": {
-        "incorrect": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
-        "text": "", 
-        "correct": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing.", 
-        "answer": "5irr", 
-        "type": "SingleAnswer", 
+        "text": "The internal rate of return falls to 5.31%, from the 5.47% it was before, if the expected annual payout falls by $1. How far would you expect the income amounts to fall?", 
+        "type": "MultipleChoice",
+        "choices": {
+            "Until the income amounts are all $0.": {
+                "message": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
+                "solution": false
+            },
+            "Until the internal rate of return is 0%.": {
+                "message": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
+                "solution": false
+            },
+            "Until the internal rate of return matches the bank's 5%.": {
+                "message": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing.",
+                "solution": true                
+            }
+        },
         "id": "irr7"
     }, 
     "irr6": {
-        "text": "", 
+        "text": "As more and more firms buy machines, put them to work, and try to sell the machine's products, what would you expect to happen to the typical machine's income stream?", 
         "type": "MultipleChoice", 
         "id": "irr6", 
         "choices": {
-            "1": {
-                "message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<ol><li>Each seller will sell fewer products.<li>The price of the product will fall.</ol>This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were.  (I have tutorials about elasticity at sambaker.com/econ )<p>I also assume that the demand curve does not move outward.", 
-                "solution": true
-            }, 
-            "3": {
+            "The income amounts should not change.": {
+                "message": "If more sellers flood the market, can the revenue that each seller makes stay the same?", 
+                "solution": false
+            },
+            "The income amounts should go up.": {
                 "message": "If more sellers flood the market, can the revenue that each seller makes go up?", 
                 "solution": false
             }, 
-            "2": {
-                "message": "If more sellers flood the market, can the revenue that each seller makes stay the same?", 
-                "solution": false
-            }
+            "The income amounts should go down.": {
+                "message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<br /><ol><li> - Each seller will sell fewer products.<li> - The price of the product will fall.</ol><br />This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were. I also assume that the demand curve does not move outward.", 
+                "solution": true
+            }            
         }
     }, 
+    "irr5": {
+        "text": "Choose a number between 1.0% and 9.0% (which is way too big) in the box.  Click the button to see what comes out for the present value. Please get to within $0.50 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":9,
+        "min":1,
+        "id": "irr5",
+        "answer": 5.7,
+        "step":0.1,
+        "correct":"Total would be: <b>$0.39.</b> Within 50 cents is close enough this time. To get closer, you'd have to go to the next decimal place.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    },    
+    "irr4a": {
+        "text": "Type the income stream for year 0.",
+        "type": "SingleAnswer",
+        "answer": -800,
+        "correct": "Correct!",
+        "incorrect": "You want what you'll pay for the bond, as a negative number.",
+        "id": "irr4a"
+    },
+    "irr4b": {
+        "text": "Type the income stream for year 1.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 1.",
+        "id": "irr4b"
+    },
+    "irr4c": {
+        "text": "Type the income stream for year 2.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 2.",
+        "id": "irr4c"
+    },
+    "irr4d": {
+        "text": "Type the income stream for year 3.",
+         "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 3.",
+        "id": "irr4d"       
+    },
+    "irr4e": {
+        "text": "Type the income stream for year 4.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 4.",
+        "id": "irr4e"        
+    },
+    "irr4f": {
+        "text": "Type the income stream for year 5.",
+        "type": "SingleAnswer",
+        "answer": 1010,
+        "correct": "Correct!",
+        "incorrect": "You get the interest and the principal in year 5.",
+        "id": "irr4f"        
+    },
     "irr3": {
-        "incorrect": "No, it's not that easy, because the bond is not selling at its face value.", 
-        "text": "", 
-        "correct": "You're right!  Let's do it!", 
-        "answer": "irr", 
-        "type": "SingleAnswer", 
+        "text": "How do you evaluate the bonds as an investment?", 
+        "answer": "irr",
+        "choices": {
+            "Help!  Please explain what a bond is.": {
+                "message": "A bond is an I.O.U. with a fixed repayment schedule.  Buying a bond is like lending someone money.  Selling a bond is like borrowing money from the person you sell it to.  The seller promises to pay off the bond -- which means paying off the loan -- on a certain day.  Sometimes, the seller also promises to pay interest along the way.  For instance, a $1000 5-year bond that pays 10% interest annually will pay the holder $1000 in 5 years. It will also pay the holder $100 (10% of $1000) each year for those 5 years.<br>The face value of the bond is its final value, how much the seller will pay when the bond matures, or comes due.  Bonds usually do not sell for their face values.  They may sell at a premium -- more than the face value -- or at a discount -- less than the face value.",
+                "solution": false
+            },
+            "Calculate the internal rate of return.  That tells you the yield to maturity.": {
+                "message": "You're right!  Let's do it!",
+                "solution": true
+            },
+            "Why bother with math?  The rate of return is 1%, the interest rate.": {
+                "message": "No, it's not that easy, because the bond is not selling at its face value.",
+                "solution": false
+            }
+        }, 
+        "type": "MultipleChoice", 
         "id": "irr3"
     }, 
+    "irr2": {
+        "text": "Choose a number between 5% and 6%. Please get to within $0.10 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":6,
+        "min":5,
+        "id": "irr2",
+        "answer": 5.47,
+        "step":0.01,
+        "correct":"You can get a present value $0.06 with a discount rate of .0547 or 5.47%. That is as close to a $0 total as you can get unless you go to the next digit after the decimal point. <br><br> The internal rate of return for the machine is therefore 5.47%.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    },
     "irr1": {
-        "incorrect": "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.", 
-        "text": "", 
-        "correct": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future.", 
+        "text": "The income stream from the bank account adds up to $300. The income stream from the machine adds up to $200. Does this make the bank account better?", 
         "answer": "Maybe", 
-        "type": "SingleAnswer", 
+        "choices": {
+            "Yes.  Why make a simple problem complicated?": {
+                "message":  "Not correct.  You can't just add up the amounts, because a certain amount in the future is worth less than that same amount today.", 
+                "solution": false
+            },
+            "No, not necessarily.  We need a more complicated calculation.": {
+                "message": "Correct!  You need to take into account that income in the distant future is worth less than the same income in the near future.",
+                "solution": true
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "irr1"
     }, 
     "D51": {
@@ -103,19 +220,19 @@
         "id": "D51"
     }, 
     "sd19": {
-        "text": "What does this change in the market for cigarettes?", 
-        "type": "MultipleChoice", 
-        "id": "Elasq16", 
+        "text": "You put a scary message of every pack of cigarettes. What does this change in the market for cigarettes?", 
         "choices": {
             "Lowers demand": {
-                "message": "Correct! A scary message may make smokers want to smoke less, even if the price of cigarettes does not change.", 
+                "message": "Correct! A scary message may make smokers want to smoke less, even if the price of cigarettes does not change.",
                 "solution": true
-            }, 
+            },
             "Lowers supply": {
-                "message": "No. The message is there to influence buyers, not sellers. The tobacco companies kept on making cigarettes even after they had to put the messages on the boxes.", 
+                "message": "No.  The message is there to influence buyers, not sellers.  The tobacco companies kept on making cigarettes even after they had to put the messages on the boxes.",
                 "solution": false
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd19"
     }, 
     "q1": {
         "incorrect": "This patient will be presumed to want care regardless of what he will be charged.  Demand is inelastic, therefore.<br>As for what the hospital does, that is a supply side question.", 
@@ -265,88 +382,107 @@
         "id": "D13"
     }, 
     "dis10": {
-        "incorrect": "MEMEMEMEME", 
-        "text": "", 
-        "correct": "FIXFIXFIX", 
-        "answer": "FIXME", 
-        "type": "SingleAnswer", 
+        "text": "Try some different discount rates.", 
+        "choices": {
+            "0%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>0%</b> the present value of that bond will be: <br/><br />$1000 = $1000 / ( 1.00 )<sup>10</sup></p><br /><p>The bond will sell for <b>$1000</b> on the day it is newly issued.<br />If the discount rate is zero, the bond sells for its value at maturity.",
+                "solution": true
+            },
+            "2.75%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>2.75%</b> the present value of that bond will be: <br/><br />$762.40 = $1000 / ( 1.0275 )<sup>10</sup></p><br /><p>The bond will sell for <b>$762.40</b> on the day it is newly issued.<br />This is close to the interest rate on Treasury bonds at this writing (August 2013).",
+                "solution": true
+            },
+            "5%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>5%</b> the present value of that bond will be: <br/><br />$613.91 = $1000 / ( 1.05 )<sup>10</sup></p><br /><p>The bond will sell for <b>$613.91</b> on the day it is newly issued.<br />The bond's price goes down when the discount rate goes up, and vise-versa..",
+                "solution": true
+            },
+            "15.8%": {
+                "message":
+                    "<p>If the discount rate for bond-buying people and institutions is <b>15.8%</b> the present value of that bond will be: <br/><br />$230.63 = $1000 / ( 1.158 )<sup>10</sup></p><br /><p>The bond will sell for <b>$230.63</b> on the day it is newly issued.<br />The is the highest rate that the U.S. Treasury ever had to pay. It was in September 1981. The Federal Reserve sold so many government bonds that it forced the price down to this level. (The Federal Reserve holds a lot of Treasury bonds. It sells them when it wants to raise interest rates. It buys them when it wants to lower interest rates.) Bond prices crashed.",
+                "solution": true
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "dis10"
     }, 
     "dis11": {
-        "text": "", 
+        "text": "Do you agree?", 
         "type": "MultipleChoice", 
         "id": "dis11", 
         "choices": {
-            "yes": {
-                "message": "Correct, probably, but what if you'll starve before you get the hen and it starts laying?\"", 
-                "solution": "Y"
-            }, 
-            "numbers": {
-                "message": "Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!", 
+            "I agree.  I'll wait for the hen.": {
+                "message": "Correct, probably, but what if you'll starve before you get the hen and it starts laying?", 
                 "solution": false
             }, 
-            "depends": {
+            "I disagree.  Give me the egg!": {
+                "message": "Correct, if you would starve before you got the hen.",
+                "solution": false
+            },
+            "Maybe.  It depends on my discount rate and my rate of time preference.": {
                 "message": "Correct!  It depends on your rate of time preference, which is about how soon you really need to eat!", 
                 "solution": true
-            }, 
-            "no": {
-                "message": "Correct, if you would starve before you got the hen.", 
+            },
+            "It depends on the lucky numbers on the back of the fortune.": {
+                "message": "Your lucky numbers are 2 44 26 3 8 37.<br> If these win the state lottery, you can buy the hen and the egg!", 
                 "solution": false
-            }
+            }            
         }
     }, 
     "dis1": {
-        "text": "", 
+        "text": "Which is worth more to you, according to economic theory: $200 given to you today, or $200 given to you one year from now? \n\nSuppose that there is no risk. You absolutely, positively, will get the money at the time you choose. Also suppose that there is no inflation. $200 in one year will have the same buying power as $200 does today.", 
         "type": "MultipleChoice", 
         "id": "dis1", 
         "choices": {
-            "today": {
-                "message": "Correct!  £200 today is worth more than £200 a year from now.  If you get £200 now, you can put it in a bank account.  In a year, you'll have your £200, plus the interest it will earn. <p>In 2013, interest rates are low.  The bank may only add £1, but that's better than £0.", 
+            "200 dollars today is worth more.": {
+                "message": "Correct!  $200 today is worth more than $200 a year from now.  If you get $200 now, you can put it in a bank account.  In a year, you'll have your $200, plus the interest it will earn. In 2013, interest rates are low.  The bank may only add $1, but that's better than $0.", 
                 "solution": true
-            }, 
-            "same": {
+            },
+            "No difference.  The two are worth the same, as long as I am protected against price inflation.": {
                 "message": "Even with no inflation and no risk of non-payment, getting the money sooner is better, because you can put money you get now in a bank and earn interest.", 
                 "solution": false
             }, 
-            "year": {
-                "message": "Not correct.  If you wait until next year to get your £200, you'll lose one year's worth of interest that you could have earned in a bank.", 
+            "200 dollars in one year is worth more.": {
+                "message": "Not correct.  If you wait until next year to get your $200, you'll lose one year's worth of interest that you could have earned in a bank.", 
                 "solution": false
             }
         }
     }, 
     "dis2": {
-        "incorrect": "\"No.  We will have £200 plus one year's simple interest.  5% of 200 is 10.", 
-        "text": "", 
-        "correct": "Correct!  We'll have £210.<p>That's the £200 we started with, plus 5% of £200, which is £10.", 
-        "answer": "210.0", 
+        "incorrect": "\"No.  We will have $200 plus one year's simple interest.  5% of 200 is 10.", 
+        "text": "After one year, after the 5% interest is paid, how much will be in the account? (Type the number only)", 
+        "correct": "Correct!  We'll have $210.<p>That's the $200 we started with, plus 5% of $200, which is $10.", 
+        "answer": 210.0, 
         "type": "SingleAnswer", 
         "id": "dis2"
     }, 
     "dis3": {
-        "text": "", 
+        "text": "Let's go to two years.  If we leave in the bank all the money, that is, the original $200 plus the interest we earn, how much will we have at the end of two years?", 
         "type": "MultipleChoice", 
         "id": "dis3", 
         "choices": {
-            "22050": {
-                "message": "Correct!  After one year you have £210.  After the second year, you get 5% of £210, which is £10.50, in interest.  Your final total is £210 + £10.50 = £220.50.", 
+            "220.50": {
+                "message": "Correct!  After one year you have $210.  After the second year, you get 5% of $210, which is $10.50, in interest.  Your final total is $210 + $10.50 = $220.50.", 
                 "solution": true
             }, 
-            "220": {
-                "message": "Not quite.  Your original £200 will earn another £10 interest, but you'll also get interest on the first year's £10 interest. Getting interest on interest is called 'compounding.'", 
+            "220.00": {
+                "message": "Not quite.  Your original $200 will earn another $10 interest, but you'll also get interest on the first year's $10 interest. Getting interest on interest is called 'compounding.'", 
                 "solution": false
             }
         }
     }, 
     "dis4": {
-        "incorrect": "No.  For the total after one year, we multiplied £200 by 1.05 once.  For two years, we multiplied by 1.05 twice.  For three years, ...", 
-        "text": "", 
-        "correct": "<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH='73%' ><tr><td ALIGN=CENTER VALIGN=TOP WIDTH='53%'>£200 &times;(1.05)&sup3;&nbsp;</font></td><td VALIGN=TOP WIDTH='46%'>= £231.52</td></tr><tr><td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&sup3;&nbsp;</td><td VALIGN=TOP>= Future Value in Three Years</td></tr></table>To calculate how much we will have in three years, we multiply by 1.05 three times, once for the first year, once for the second year, and once for the third year.", 
-        "answer": "3", 
+        "incorrect": "No.  For the total after one year, we multiplied $200 by 1.05 once.  For two years, we multiplied by 1.05 twice.  For three years, ...", 
+        "text": "Now, let's do three years. If we leave all the money in the bank for three years, we multiply by (1 + Interest Rate) how many times?", 
+        "correct": "<table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH='73%' ><tr><td ALIGN=CENTER VALIGN=TOP WIDTH='53%'>$200 &times;(1.05)&sup3;&nbsp;</font></td><td VALIGN=TOP WIDTH='46%'>= $231.52</td></tr><tr><td ALIGN=CENTER VALIGN=TOP>Present Value &times;( 1+Interest Rate )&sup3;&nbsp;</td><td VALIGN=TOP>= Future Value in Three Years</td></tr></table>To calculate how much we will have in three years, we multiply by 1.05 three times, once for the first year, once for the second year, and once for the third year.", 
+        "answer": 3, 
         "type": "SingleAnswer", 
         "id": "dis4"
     }, 
     "dis5": {
-        "text": "", 
+        "text": "How much would you need today to have $200 in your bank account in one year?", 
         "type": "MultipleChoice", 
         "id": "dis5", 
         "choices": {
@@ -354,64 +490,83 @@
                 "message": "You don't need £200 now. You only need the amount that will grow to £200 if you leave it in the bank and earn interest for a year.", 
                 "solution": false
             }, 
-            "190": {
-                "message": "£190 is not quite enough.  Subtracting 5% of £200 does not give the right answer.  If you did start with £190, your interest would be 5% of £190, which is £9.50.  You'd have £199.50 next year, not £200.", 
+            "200 less 5% = 200 minus 10 = 190.": {
+                "message": "$190 is not quite enough.  Subtracting 5% of $200 does not give the right answer.  If you did start with $190, your interest would be 5% of $190, which is $9.50.  You'd have $199.50 next year, not $200.", 
                 "solution": false
             }, 
-            "19048": {
-                "message": "Correct! You want the amount that will grow to £200 in one year.  <br>You want X such that <br>X \\u00d7 (1.05) = £200.  <br>Divide both sides of this by 1.05 to get: <br>X = £200/1.05 <br>which calculates to<br>X = £190.48.", 
+            "200 divided by 1.05 = 190.48": {
+                "message": "Correct! You want the amount that will grow to $200 in one year.  <br>You want X such that <br>X \u00d7 (1.05) = $200.  <br>Divide both sides of this by 1.05 to get: <br>X = $200/1.05 <br>which calculates to<br>X = $190.48.", 
                 "solution": true
             }
         }
     }, 
     "dis6": {
-        "incorrect": "No.  There is only one method that discounts future amounts correctly. You don't need £200 now. You only need the amount that will grow to £200 if you leave it in the bank and earn interest for two years.", 
-        "text": "", 
-        "correct": "<p>We want to know the amount of money that will grow to £200 in two years at 5% interest. <br>This is the amount X such that<br>X&times;1.05&sup2; = £200.<p>Divide both sides of that by (1.05)&sup2; to solve for X:<br>X = £200/1.05&sup2; = £181.41", 
-        "answer": "<p>18141", 
-        "type": "SingleAnswer", 
+        "text": "What is the present value of $200 two years from now?",
+        "choices": {
+            "200": {
+                "message": "You don't need $200 now. You only need the amount that will grow to $200 if you leave it in the bank and earn interest for two years.",
+                "solution":false
+            },
+            "200 less 10% = $200 - $20 = 180." : {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            },
+            "200 / 1.10 = 181.82": {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            },
+            "200 / 1.05^2; = 181.41": {
+                "message": "<p>We want to know the amount of money that will grow to $200 in two years at 5% interest. <br>This is the amount X such that<br>X \u00d7 1.05&sup2; = $200.<p>Divide both sides of that by (1.05)&sup2; to solve for X:<br>X = $200/1.05&sup2; = $181.41",
+                "solution": true                
+            },
+            "200 / 0.95^2;= 180.50": {
+                "message": "No.  There is only one method that discounts future amounts correctly.",
+                "solution":false                
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "dis6"
     }, 
     "dis7": {
-        "incorrect": "No.  For the present value of an amount one year in the future, we divided £200 by 1.05 once.  For £200 two years in the future, we divided by 1.05 twice.  For three years in the future, ...", 
-        "text": "", 
+        "incorrect": "No.  For the present value of an amount one year in the future, we divided $200 by 1.05 once.  For $200 two years in the future, we divided by 1.05 twice.  For three years in the future, ...", 
+        "text": "To calculate the present value of $200 three years in the future, how many times do you divide by 1.05?", 
         "correct": "Correct!", 
-        "answer": "3", 
+        "answer": 3, 
         "type": "SingleAnswer", 
         "id": "dis7"
     }, 
     "dis8": {
-        "incorrect": "No.  The bond matures in 5 years. <p>If the bond's price is lower than £156.71, you will buy the bond. If the bond's price is higher than £156.71, you will put your money in the bank instead.", 
-        "text": "", 
-        "correct": "<p>Correct!  The most you should be willing to pay is the amount that, if you put it in the bank for 5 years at 5% interest, would grow to £200. <p>If the bond's price is lower than £156.71, you will buy the bond. If the bond's price is higher than £156.71, you will put your money in the bank instead.", 
-        "answer": "5", 
+        "incorrect": "No.  The bond matures in 5 years. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
+        "text": "From the table above, type the value for the most that you would be willing to pay for a $200 zero-coupon bond that matures in five years when your discount rate is 5%.</p>", 
+        "correct": "<p>Correct!  The most you should be willing to pay is the amount that, if you put it in the bank for 5 years at 5% interest, would grow to $200. <p>If the bond's price is lower than $156.71, you will buy the bond. If the bond's price is higher than $156.71, you will put your money in the bank instead.", 
+        "answer": 156.71, 
         "type": "SingleAnswer", 
         "id": "dis8"
     }, 
     "dis9": {
         "incorrect": "No.  The bond matures in 3 years.", 
-        "text": "", 
-        "correct": "<p>Correct!  With three years to go, the bond should be worth £172.77.  The closer it gets to maturity, the more it is worth.  When it finally gets to maturity, it will be worth the full £200.", 
-        "answer": "3", 
+        "text": "If everybody's discount rate is 5%, how much should you expect to get for selling your bond?  (Ignore sales expenses, such as the broker's commission.)", 
+        "correct": "<p>Correct!  With three years to go, the bond should be worth $172.77.  The closer it gets to maturity, the more it is worth.  When it finally gets to maturity, it will be worth the full $200.", 
+        "answer": 172.77, 
         "type": "SingleAnswer", 
         "id": "dis9"
     }, 
     "Elasq2": {
-        "text": "", 
+        "text": "What number do you think you should use for the level of Q in the numerator of the fraction? ", 
         "type": "MultipleChoice", 
         "id": "Elasq2", 
         "choices": {
-            "1": {
-                "message": "You're right to be unsure!  You could use 100, 60, or something between.", 
-                "solution": true
-            }, 
-            "3": {
+            "60": {
                 "message": "Correct, maybe.  Are you sure you shouldn't use 100?", 
                 "solution": false
             }, 
-            "2": {
+            "100": {
                 "message": "Correct, maybe. Are you sure you shouldn't use 60?", 
                 "solution": false
+            },
+             "Not Sure": {
+                "message": "You're right to be unsure!  You could use 100, 60, or something between.", 
+                "solution": true
             }
         }
     }, 
@@ -424,42 +579,49 @@
         "incorrect": "No. Please see the answer to the question above."
     },
     "Elasq9": {
-        "incorrect": "If our number were something like -2, we would call the demand elastic.", 
-        "text": "", 
-        "correct": "Correct!  -0.5 is between 0 and -1, so we can call this demand inelastic.", 
-        "answer": "Inelastic", 
-        "type": "SingleAnswer", 
+        "text": "Is this elastic or inelastic demand?", 
+        "choices":{
+            "Inelastic demand":{
+                "message":"Correct!  -0.5 is between 0 and -1, so we can call this demand inelastic.",
+                "solution":true
+            },
+            "Elastic demand":{
+                "message":"If our number were something like -2, we would call the demand elastic.",
+                "solution":false
+            }
+        },        
+        "type": "MultipleChoice", 
         "id": "Elasq9"
     }, 
     "sd21": {
         "text": "You forbid smoking in many places that are open to the public. ", 
-        "type": "MultipleChoice", 
-        "id": "Elasq16", 
         "choices": {
             "Changes demand": {
-                "message": "Correct! These restrictions reduce demand. They move the demand curve to the left. When smoking is less convenient, and when smokers see fewer other smokers, they will buy fewer packs of cigarettes.", 
+                "message": "Correct!  These restrictions reduce demand.  They move the demand curve to the left.  When smoking is less convenient, and when smokers see fewer other smokers, they will buy fewer packs of cigarettes.",
                 "solution": true
-            }, 
+            },
             "Changes supply": {
-                "message": "These restrictions do not directly affect the makers of cigarettes. They do not move the supply curve.", 
+                "message": "These restrictions do not <em>directly</em> affect the makers of cigarettes.  They do not move the supply curve.", 
                 "solution": false
             }
-        }
+        },
+        "type": "SingleAnswer", 
+        "id": "sd21"
     }, 
     "sd20": {
-        "text": "What does this change in the market for cigarettes?", 
-        "type": "MultipleChoice", 
-        "id": "sd20", 
+        "text": "You put a tax on every pack of cigarettes. What does this change in the market for cigarettes?", 
         "choices": {
             "Lowers demand": {
-                "message": "People will demand fewer cigarettes, but that will be because the price is higher. That is a movement along the demand curve. It is not a movement of the demand curve. The 'demand curve' and the 'quantity demanded' are two different concepts.", 
+                "message": "People will demand fewer cigarettes, but that will be because the price is higher.  That is a movement along the demand curve.  It is not a movement of the demand curve.  The 'demand curve' and the 'quantity demanded' are two different concepts.", 
                 "solution": false
-            }, 
+            },
             "Lowers supply": {
-                "message": "Correct! The tax adds to the cost of offering the cigarettes for sale. The store includes the tax in the price that it quotes to the buyers. That's why I say that the tax is on the supply side.", 
+                "message": "Correct!  The tax adds to the cost of offering the cigarettes for sale.  The store includes the tax in the price that it quotes to the buyers.  That's why I say that the tax is on the supply side.", 
                 "solution": true
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd20"
     }, 
     "riska1": {
         "text": "Which do you chose?", 
@@ -540,95 +702,95 @@
             }
         }
     }, 
-    "sd16": {
-        "text": "What does this change in the market for prenatal care visits?", 
-        "type": "MultipleChoice", 
-        "id": "sd16", 
+    "sd16": {        
+        "text": "You give pregnant women coupons for free fast food after they complete a certain number of prenatal visits. (Laugh if you like, but this was actually done in South Carolina in the 1990s.) What does this change in the market for prenatal care visits?",  
         "choices": {
             "Raises demand": {
-                "message": "Correct! This works on the buyer, the woman.", 
+                "message": "Correct! This works on the buyer, the woman.",
                 "solution": true
-            }, 
+            },
             "Raises supply": {
                 "message": "No, not unless the doctors want their patients to eat more fries. They have to want that enough to lower their fees.", 
                 "solution": false
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd16"
     }, 
     "sd17": {
-        "text": "What does this change in the market for inoculations?", 
-        "type": "MultipleChoice", 
-        "id": "sd17", 
+        "text": "You give doctors free vaccine. What does this change in the market for inoculations?", 
         "choices": {
             "Raises demand": {
                 "message": "No. The free vaccine goes to the doctor, who is selling inoculations to patients.", 
-                "solution": false
-            }, 
+                "solution": false                
+            },
             "Raises supply": {
-                "message": "Correct! Free vaccine lowers the cost of operating for the sellers of inoculations. The supply curve should move up, which is to the right in the standard diagram.", 
+                "message": "Correct!  Free vaccine lowers the cost of operating for the sellers of inoculations.  The supply curve should move up, which is to the right in the standard diagram.", 
                 "solution": true
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd17"
     }, 
     "sd14": {
-        "text": "Some sellers notice that they have a lot of their stuff piling up. They decide that, if they offer to sell for a little less than the going price, maybe they can get some sales away from their competitors.", 
-        "type": "MultipleChoice", 
-        "id": "sd14", 
+        "text": "The government sees that there is a surplus and orders that the price be lowered.", 
+        "id": "sd14",
         "choices": {
             "This might be a reason why the price would fall in a free market with excess supply.": {
-                "message": "I would say No here. Check the other answer for why.", 
+                "message": "I would say No here.  Check the other answer for why.",
                 "solution": false
-            }, 
+            },
             "This does not sound like a reason for the price to fall in a free market with excess supply.": {
-                "message": "Correct! I suppose that the government could do that, but now we're not talking about a free market.", 
+                "message": "Correct!  I suppose that the government could do that, but now we're not talking about a free market.",
                 "solution": true
-            }
-        }
+            }  
+        },        
+        "type": "MultipleChoice"
     }, 
     "sd15": {
-        "text": "What does this change in the market for prostate examinations?", 
-        "type": "MultipleChoice", 
-        "id": "sd15", 
+        "text": "You run advertisements telling men that they need get their prostates tested. What does this change in the market for prostate examinations?", 
         "choices": {
             "Raises demand": {
-                "message": "Correct! Changing the buyers' thinking changes the demand.", 
+                "message": "Correct!  Changing the buyers' thinking changes the demand.",
                 "solution": true
-            }, 
+            },
             "Raises supply": {
-                "message": "No, not unless the advertisements affect the providers' attitudes.", 
+                "message": "No, not unless the advertisements affect the providers' attitudes.",
                 "solution": false
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd15"
     }, 
     "sd12": {
-        "text": "Some sellers notice that they have a lot of their stuff piling up. They decide that, if they offer to sell for a little less than the going price, maybe they can get some sales away from their competitors.", 
-        "type": "MultipleChoice", 
-        "id": "sd12", 
+        "text": "Some sellers notice that they have a lot of their stuff piling up.  They decide that, if they offer to sell for a little less than the going price, maybe they can get some sales away from their competitors.",
         "choices": {
             "This might be a reason why the price would fall in a free market with excess supply.": {
-                "message": "Correct! If there is excess supply, and if there is competition among the sellers for scarce customers, the price should tend to go down.", 
-                "solution": true
-            }, 
-            "This does not sound like a reason for the price to fall in a free market with excess supply. ": {
-                "message": "I like this reason. Check the other answer for why.", 
-                "solution": false
+                "message":"Correct!  If there is excess supply, and if there is competition among the sellers for scarce customers, the price should tend to go down.",
+                "solution":true
+            },
+            "This does not sound like a reason for the price to fall in a free market with excess supply.": {
+                "message":"I like this reason.  Check the other answer for why.",
+                "solution":false
             }
-        }
-    }, 
-    "sd13": {
-        "text": "Some sellers notice that they have a lot of their stuff piling up. They decide that, if they offer to sell for a little less than the going price, maybe they can get some sales away from their competitors.", 
+        },
         "type": "MultipleChoice", 
+        "id": "sd12"
+    }, 
+    "sd13": { 
+        "text": "Buyers notice that the sellers' stuff is piling up.  These buyers start looking for sellers willing to sell at a little less than the going price.", 
         "id": "sd13", 
         "choices": {
             "This might be a reason why the price would fall in a free market with excess supply.": {
-                "message": "Correct! Again, it is the combination of excess supply and competition among the sellers.", 
-                "solution": true
-            }, 
+                "message":"Correct!  Again, it is the combination of excess supply and competition among the sellers.",
+                "solution":true
+            },
             "This does not sound like a reason for the price to fall in a free market with excess supply.": {
-                "message": "I would say Yes here. Check the other answer for why.", 
-                "solution": false
+                "message":"I would say Yes here.  Check the other answer for why",
+                "solution":false
             }
-        }
+        }, 
+        "type": "MultipleChoice"
     }, 
     "AC11": {
         "highmessage": "Your average cost is less than the price, but there is a lower output rate for which that is also true.", 
@@ -696,14 +858,66 @@
         "type": "SingleAnswer", 
         "id": "q2"
     }, 
-    "Elas203": { 
-        "id": "Elas203",
+    "Elas203": {
+        "text": "What is the average of the Q's?", 
         "type": "SingleAnswer", 
-        "text": "What is the average of the Q's? ",
-        "answer": "80",   
-        "correct": "Correct! 80 is (60 + 100) / 2. Our Change in Q is -40 and our average of Q's is 80 ...",
-        "incorrect": "You want to the number halfway between 60 and 100."
+        "correct":"Correct! 80 is (60 + 100) / 2.<br><br>Our Change in Q is -40 and our average of Q's is 80 ...",
+        "incorrect":"You want to the number halfway between 60 and 100.",
+        "id": "Elas203", 
+        "answer":80
     }, 
+    "Elas204": {
+        "text": "... so the (Change in Q) / (average of Q's) is what? (Don't lose the minus sign!)",
+        "type": "SingleAnswer",
+        "correct": "Correct! (Change in Q) / (average of Q's) = -40 / 80 = -0.5.",
+        "incorrect": "It should equal -40/80.",
+        "answer": -0.5
+    },
+    "Elas205": {
+        "text": "Tackling the denominator, what is the change in P, \"after\" minus \"before\"?",
+        "type": "SingleAnswer",
+        "correct": "Correct! The change in P is 30 - 10 = 20.",
+        "incorrect": "It should equal 30 - 10.",
+        "answer": 20
+    },
+    "Elas206": {
+        "text": "And the average of the P's?",
+        "type": "SingleAnswer",
+        "correct": "The average of the P's is (10 + 30) / 2 = 20.  Correct!",
+        "incorrect": "The calculation is (10 + 30) / 2.",
+        "answer": 20
+    },
+    "Elas207": {
+        "text": "So, (Change in P) / (average of P's) is:",
+        "type": "SingleAnswer",
+        "correct": "(Change in P) / (average of P's) = 20/20 = 1.  Correct!<p><p>This means that our arc elasticity fraction is <br><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-0.5<br>Arc Elasticity = ------------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</pre>",
+        "incorrect": "The calculation is (Change in P) / (average of P's) = 20/20 = ?",
+        "answer": 1
+    },
+    "Elas208": {
+        "text": "Last step:  Based on the above fraction, what is the arc elasticity?",
+        "type": "SingleAnswer",
+        "correct": "Correct!  The arc elasticity is -0.5.",
+        "incorrect": "The calculation is -0.5 / 1.",
+        "answer": -0.5
+    },
+    
+    "Elas210": {
+        "text": "At a price of $10, you sell 100 tests per month. What is the total revenue (price times quantity)?",
+        "type": "SingleAnswer",
+        "correct": "Correct!  $10 per test times 100 tests is $1000.",
+        "incorrect": "It should be $10 times 100.",
+        "answer": 1000
+    },
+    "Elas211": {
+        "text": "When the price is $30, you do 60 tests per month. What is that total revenue?",
+        "type": "SingleAnswer",
+        "correct": "Correct!  $30 per test times 60 tests is $1800.",
+        "incorrect": "It should be $30 times 60.",
+        "answer": 1800
+    },
+    
+     
     "q6": {
         "incorrect": "No, this does not show elastic.  Elastic demand would mean that buyers would buy less at higher prices.  Here, they buy the same at all prices.", 
         "text": "", 
@@ -712,23 +926,38 @@
         "type": "SingleAnswer", 
         "id": "q6"
     }, 
-    "sd4": {
+    "sd4": { 
         "text": "Palmetto Richland's emergency department?", 
-        "type": "MultipleChoice", 
         "id": "sd4", 
         "choices": {
             "Demand": {
-                "message": "No, emergency departments are on the Supply side. Patients are on the Demand side.", 
-                "solution": false
-            }, 
+                "message":"No, emergency departments are on the Supply side.  Patients are on the Demand side.",
+                "solution":false
+            },
             "Supply": {
-                "message": "Correct! Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere.", 
-                "solution": true
+                "message":"Correct!  Its emergency department sells primary care services, even though they prefer that people get their primary care elsewhere.",
+                "solution":true
+                
             }
-        }
+        }, 
+        "type": "MultipleChoice"
     }, 
     "sd5": {
         "text": "Providence Hospital's outpatient surgery center?", 
+        "choices": {
+            "Supply": {
+                "message":"No.  It is not in the primary care market.",
+                "solution":false
+            },
+            "Demand": {
+                "message":"No.  It is not in the primary care market.",
+                "solution":false
+            },
+            "Neither side": {
+                "message":"Correct!  It does not sell primary care services.  It is a supplier in a different market.",
+                "solution":true
+            }
+        }, 
         "type": "MultipleChoice", 
         "id": "sd5", 
         "choices": {
@@ -746,28 +975,30 @@
             }
         }
     }, 
-    "sd6": { 
-        "id": "sd6",
-        "type": "SingleAnswer", 
-        "text": "If the going price for an urgent visit is £10, how many visits per day will be demanded? ",
-        "answer": "1000",   
-        "correct": "Correct! This is from the bottom line of the table.",
-        "incorrect": "Find the line in the table for a price of £10 per visit."
+    "sd6": {
+        "highmessage": "Find the line in the table for a price of $10 per visit.", 
+        "lowmessage": "Find the line in the table for a price of $10 per visit.", 
+        "text": "If the going price for an urgent visit is $10, how many visits per day will be demanded?", 
+        "correct": "Correct!  This is from the bottom line of the table.", 
+        "answer":1000,
+        "type": "Range",
+        "max":1500,
+        "id": "sd6"
     }, 
     "sd7": {
-        "text": "Would this market be in equilibrium if the price were £10?", 
-        "type": "MultipleChoice", 
-        "id": "Elasq16", 
+        "text": "If that is so, would this market be in equilibrium if the price were $10?", 
+        "id": "sd7", 
         "choices": {
             "Yes, in equilibrium": {
-                "message": "No. Equilibrium requires that supply and demand be in balance.", 
-                "solution": false
-            }, 
+                "message":"No. Equilibrium requires that supply and demand be in balance.",
+                "solution":false
+            },
             "No, not in equilibrium": {
-                "message": "Correct! Demand quantity exceeds supply quantity at this price.", 
-                "solution": true
+                "message":"Correct! Demand quantity exceeds supply quantity at this price.",
+                "solution":true                
             }
-        }
+        },
+        "type": "MultipleChoice"
     }, 
     "D10": {
         "incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.", 
@@ -779,191 +1010,113 @@
     }, 
     "sd1": {
         "text": "On which side of this market are primary care physicians in office-based practices? Are they on the Demand side or the Supply side?", 
-        "type": "MultipleChoice", 
         "id": "sd1", 
+        "type": "MultipleChoice", 
         "choices": {
             "Demand": {
-                "message": "No, doctors are on the Supply side. Patients are on the Demand side. True, doctors do influence their demand, because patients rely on them for guidance about what medical services to buy. At the first level of analysis, though, doctors are on the supply sides of medical services markets.", 
-                "solution": false
-            }, 
-            "Supply": {
-                "message": "Correct! The 'providers' are sellers in this market.", 
-                "solution": true
-            }
+                "message":"No, doctors are on the Supply side.  Patients are on the Demand side.  True, doctors do influence their demand, because patients rely on them for guidance about what medical services to buy.  At the first level of analysis, though, doctors are on the supply sides of medical services markets.",
+                "solution":false
+            },
+             "Supply": {
+                 "message":  "Correct! The 'providers' are sellers in this market.",
+                 "solution": true
+             }
         }
     }, 
     "sd2": {
-        "text": "On which side of this market would be a person with a bad sore throat?", 
-        "type": "MultipleChoice", 
-        "id": "sd2", 
+        "text": "On which side of this market would be a person with a bad sore throat?",
         "choices": {
             "Demand": {
-                "message": "Correct! Patients, or potential patients, are buyers in this market.", 
-                "solution": true
-            }, 
+                "message": "Correct! Patients, or potential patients, are buyers in this market.",
+                "solution":true
+            },
             "Supply": {
-                "message": "No. Patients, or potential patients, are buyers. Buyers are on the demand side of a market.", 
+                "message": "No. Patients, or potential patients, are buyers. Buyers are on the demand side of a market.",
                 "solution": false
             }
-        }
+        },
+        "id": "sd2", 
+        "type": "MultipleChoice"
     }, 
     "sd3": {
         "text": "BlueCross BlueShield of SC (an insurer)?", 
-        "type": "MultipleChoice", 
-        "id": "sd3", 
         "choices": {
             "Demand": {
-                "message": "Correct! Health insurance companies help or hinder patients who want to buy health care.", 
-                "solution": true
-            }, 
+                "message": "Correct!  Health insurance companies help or hinder patients who want to buy health care.",
+                "solution":true
+            },
             "Supply": {
-                "message": "No. It does not sell these medical services.", 
+                "message": "No. It does not sell these medical services.",
                 "solution": false
             }
-        }
+        },
+        "id": "sd3", 
+        "type": "MultipleChoice"       
     }, 
     "sd8": {
-        "text": "Click the button next to the price at which this market is in equilibrium.<br>Price        Amount Demanded         Amount Supplied", 
-        "type": "MultipleChoice", 
+        "highmessage": "No.  Equilibrium requires the supplied and the demanded quantities be equal.", 
+        "lowmessage": "No.  Equilibrium requires the supplied and the demanded quantities be equal.", 
+        "text": "Set the range slider to the price at which this market is in equilibrium.", 
         "id": "sd8", 
-        "choices": {
-            "£55       100 visits/day demanded    900 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal.", 
-                "solution": false
-            }, 
-            "£50       200 visits/day demanded    800 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal.", 
-                "solution": false
-            }, 
-            "£45       300 visits/day demanded    700 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal.", 
-                "solution": false
-            },
-            "£40       400 visits/day demanded    600 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal.", 
-                "solution": false
-            },
-            "£35       500 visits/day demanded    500 visits/day supplied": {
-                "message": "Correct! At £35, the demand quantity and the supply quantity are both 500.", 
-                "solution": true
-            },
-            "£30       600 visits/day demanded    400 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal", 
-                "solution": false
-            },
-            "£25       700 visits/day demanded    300 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal", 
-                "solution": false
-            },
-            "£20       800 visits/day demanded    200 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal", 
-                "solution": false
-            },
-            "£15       900 visits/day demanded    100 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal", 
-                "solution": false
-            },
-            "£10      1000 visits/day demanded      0 visits/day supplied": {
-                "message": "Not this row. Equilibrium requires the supplied and the demanded quantities be equal", 
-                "solution": false
-            }
-        }
+        "answer": 35, 
+        "max": 70,
+        "type": "Range", 
+        "correct": "Correct!  At $35, the demand quantity and the supply quantity are both 500."
     }, 
     "sd9": {
-        "text": "In the table below, click the button next to the price at which there is an excess demand of 400 visits/day.<br>Price        Amount Demanded         Amount Supplied", 
-        "type": "MultipleChoice", 
+        "highmessage":"Find the row that has a quantity demanded 400 greater than the quantity supplied.",
+        "lowmessage":"Find the row that has a quantity demanded 400 greater than the quantity supplied.",
+        "text": "Set the range slider to the price at which there is an excess demand of 400 visits/day.", 
         "id": "sd9", 
-        "choices": {
-            "£55       100 visits/day demanded    900 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }, 
-            "£50       200 visits/day demanded    800 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }, 
-            "£45       300 visits/day demanded    700 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£40       400 visits/day demanded    600 visits/day supplied": {
-                "message": "Correct! At £40, supply quantity exceeds demand quantity by 200.", 
-                "solution": true
-            },
-            "£35       500 visits/day demanded    500 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£30       600 visits/day demanded    400 visits/day supplied": {
-                "message": "At £30, there is an excess demand of 200.", 
-                "solution": false
-            },
-            "£25       700 visits/day demanded    300 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£20       800 visits/day demanded    200 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£15       900 visits/day demanded    100 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£10      1000 visits/day demanded      0 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }
-        }
+        "answer": 25, 
+        "max": 70,
+        "type": "Range", 
+        "correct": "Correct!  At $25, demand quantity exceeds supply quantity by 400."
     }, 
-    "sd14c": {
-        "text": "What happens to the price? ", 
-        "type": "MultipleChoice", 
-        "id": "sd14c", 
+    "sd14c": {  
+        "text": "What happens to the price?", 
         "choices": {
             "The price goes up.": {
-                "message": "Correct! For price, up is up and down is down. As the supply curve moves to the right, the point where it crosses the demand curve moves down. That indicates a lower price. As the supply curve moves to the left, the point where it crosses the demand curve moves up, towards the top of the page. That indicates a higher price.", 
+                "message": "Correct!  For price, up is up and down is down.  As the supply curve moves to the right, the point where it crosses the demand curve moves down.  That indicates a lower price.  As the supply curve moves to the left, the point where it crosses the demand curve moves up, towards the top of the page.  That indicates a higher price.",
                 "solution": true
-            }, 
+            },
             "The price goes down.": {
-                "message": "No. As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.", 
+                "message": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.",
                 "solution": false
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd14c"
     }, 
     "sd14b": {
         "text": "What happens to the quantity sold?", 
-        "type": "MultipleChoice", 
-        "id": "sd14b", 
         "choices": {
             "Quantity sold goes up.": {
-                "message": "Correct! As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right. That indicates a higher quantity. As the supply curve moves to the left, the point where it crosses the demand curve also moves to the left. That indicates a lower quantity.", 
+                "message": "Correct!  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.  That indicates a higher quantity.  As the supply curve moves to the left, the point where it crosses the demand curve also moves to the left.  That indicates a lower quantity.",
                 "solution": true
-            }, 
+            },
             "Quantity sold goes down.": {
-                "message": "No. As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.", 
+                "message": "No.  As the supply curve moves to the right, the point where it crosses the demand curve also moves to the right.",
                 "solution": false
             }
-        }
-    }, 
-    "sd14a": {
-        "text": "Why do the words 'Supply Rising' sometimes move from higher to lower in the picture?", 
+        },
         "type": "MultipleChoice", 
-        "id": "sd14a", 
+        "id": "sd14b"
+    }, 
+    "sd14a": { 
+        "text": "Why do the words \"Supply Rising\" sometimes move from higher to lower in the picture?",
         "choices": {
             "I messed up.": {
-                "message": "The diagram could have been better designed, but it is properly labelled. See the other answer for why.", 
+                "message":  "The diagram could have been better designed, but it is properly labelled.  See the other answer for why.",
                 "solution": false
-            }, 
+            },
             "Up is to the right, when you're talking about movement of the curves.": {
-                "message": "Correct! Even when the supply curve appears to be moving down in the picture, the equilibrium quantity is moving to the right, indicating a higher quantity. Imagine a horizontal line running through the middle of the graph. You can hold a piece of paper up to the screen, so that the top edge of the paper goes horizontally through the middle of the graph. You will see that the place where the supply curve touches the paper moves to the right when the words Supply Rising are moving down. That means that you are getting more quantity supplied at a given price.", 
+                "message": "Correct!  Even when the supply curve appears to be moving down in the picture, the equilibrium quantity is moving to the right, indicating a higher quantity.<br><br>  Imagine a horizontal line running through the middle of the graph.  You can hold a piece of paper up to the screen, so that the top edge of the paper goes horizontally through the middle of the graph.  You will see that the place where the supply curve touches the paper moves to the right when the words Supply Rising are moving down.  That means that you are getting more quantity supplied at a given price.",
                 "solution": true
-            }, 
-            "2": {
-                "message": "", 
-                "solution": false
-            }
-        }
+            }            
+        },
+        "type": "MultipleChoice", 
+        "id": "sd14a"
     }, 
     "mc8": {
         "text": "Should Joan's continue to serve 7 patients, if the price is £3300?", 
@@ -1116,93 +1269,121 @@
         "id": "C4"
     }, 
     "sd17a": {
-        "text": "Would that move the demand curve or the supply curve?", 
-        "type": "MultipleChoice", 
-        "id": "sd17a", 
+        "text": "The President could order the Veterans Health Administration (a U.S. government agency) to expand and revamp the its medical services for veterans. Would that move the demand curve or the supply curve?",
         "choices": {
-            "Demand. This would make demand move to the right as in the movie above.": {
-                "message": "No. Expanding service capacity works on the supply side.", 
+            "Demand.  This would make demand move to the right as in the movie above.": {
+                "message": "No. Expanding service capacity works on the supply side.",
                 "solution": false
-            }, 
-            "Supply. This would move the supply curve to the right. ": {
-                "message": "Correct! This is what President Clinton chose to do, twenty years ago. The result is that war veterans get the best health care in the U.S., according to standard quality measures. Meanwhile, expanding supply this way kept the price pressure off of the general public's system. At this writing, there is a big backlog of veterans' applications to get into the system, but that is not the fault of the hospitals and the medical personnel. ", 
+            },
+            "Supply.  This would move the supply curve to the right.": {
+                "message": "Correct!  <p>This is what President Clinton chose to do, twenty years ago.  The result is that war veterans get the best health care in the U.S., according to standard quality measures.  Meanwhile, expanding supply this way kept the price pressure off of the general public's system.  </p><p>At this writing, there is a big backlog of veterans' applications to get into the system, but that is not the fault of the hospitals and the medical personnel. </p>",
                 "solution": true
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd17a"
     }, 
     "Elasq14": {
-        "incorrect": "You are throwing money away!  You must be one of those &#9786;Liberals.", 
-        "text": "", 
-        "correct": "Correct!  Charge 'what the market will bear' to bring in more money.", 
-        "answer": "Raise", 
-        "type": "SingleAnswer", 
+        "text": "This is how elasticity of demand relates to pricing strategy. If your demand is inelastic, how would you change your price to bring in more money?", 
+        "choices": {
+            "Raise price if demand is inelastic": {
+                "message": "Correct!  Charge 'what the market will bear' to bring in more money.",
+                "solution": true
+            },
+            "Lower price if demand is inelastic": {
+                "message": "You are throwing money away!  You must be one of those &#9786;Liberals.",
+                "solution": false
+            }
+        }, 
+        "type": "MultipleChoice", 
         "id": "Elasq14"
     }, 
-    "Elas201-button": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
+    "Elas201": {
+        "incorrect": "Incorrect.  You want to subtract the before quantity from the after quantity.", 
+        "text": "What is the change in Q, \"after\" minus \"before\"?    (The \"after\" quantity is 60.  The \"before\" quantity is 100.)", 
+        "correct": "Correct! The new quantity is 40 less than the old quantity.", 
+        "answer": "-40", 
         "type": "SingleAnswer", 
-        "id": "Elas201-button"
+        "id": "Elas201"
     }, 
     "Elasq16": {
-        "text": "", 
+        "text": "We have said that demand is called \"inelastic\" if the price-elasticity is between 0 and -1.  Suppose the demand is perfectly inelastic.  No response of quantity to price differences. What is the elasticity number if demand is perfectly inelastic?", 
         "type": "MultipleChoice", 
         "id": "Elasq16", 
         "choices": {
-            "1": {
+            "0": {
                 "message": "Correct!  No response to price changes makes the numerator of the elasticity fraction zero, which makes the whole fraction equal zero.", 
                 "solution": true
             }, 
-            "3": {
+            "-\u221E (negative infinity)": {
                 "message": "An elasticity of minus infinity would be for a huge fall in quantity demanded when the price goes up by almost nothing.  That is highly responsive demand.", 
                 "solution": false
             }, 
-            "2": {
+            "-1": {
                 "message": "No response to price changes makes the numerator of the elasticity fraction zero.  A fraction can't be -1 if its numerator is 0.", 
                 "solution": false
             }
         }
     }, 
     "Elasq17": {
-        "incorrect": "With elastic demand, raising the price drives customers away.  What you gain from a higher price per item does not compensate for your selling fewer items.", 
-        "text": "", 
-        "correct": "\tCorrect!  With elastic demand, your gain from selling more items is more than your loss from making less money on each item.", 
-        "answer": "Lower", 
-        "type": "SingleAnswer", 
+        "text": "What if demand were elastic? How would you change your price to bring in more money?", 
+        "type": "MultipleChoice", 
+        "choices": {
+            "Lower price if demand is elastic": {
+                "message": "Correct!  With elastic demand, your gain from selling more items is more than your loss from making less money on each item.",
+                "solution": true
+            },
+            "Raise price if demand is elastic": {
+                "message": "With elastic demand, raising the price drives customers away.  What you gain from a higher price per item does not compensate for your selling fewer items.",
+                "solution": false
+            }
+        },
         "id": "Elasq17"
     }, 
     "Elasq12": {
-        "incorrect": "£1800 is bigger than £1000.", 
-        "text": "", 
-        "correct": "Correct!  Revenue goes up, from £1000 to £1800.", 
-        "answer": "Up", 
-        "type": "SingleAnswer", 
+        "text": "So, raising the price from $10 to $30 does what to total revenue? ", 
+        "choices" : {
+            "Revenue goes up": {
+                "message":"Correct!  Revenue goes up, from $1000 to $1800.",
+                "solution":true
+            },
+            "Revenue goes down":{
+                "message": "$1800 is bigger than $1000.", 
+                "solution": false   
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "Elasq12"
     }, 
-    "Elasq13": {
-        "incorrect": "It is consistent.  Our demand is inelastic and our higher price brings more revenue.", 
-        "text": "", 
-        "correct": "Correct!  Our demand is inelastic and our higher price brings more revenue.", 
-        "answer": "Yes", 
-        "type": "SingleAnswer", 
+    "Elasq13": { 
+        "text": "Our calculated elasticity was -0.5, which we called \"inelastic\" because its absolute value was less than 1. Is this consistent with the idea that revenue going up when the price goes up?", 
+        "choices": {
+            "Yes": {
+                "message": "Correct!  Our demand is inelastic and our higher price brings more revenue.",
+                "solution": true
+            },
+            "No": {
+                "message":  "It is consistent.  Our demand is inelastic and our higher price brings more revenue.",
+                "solution": false
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "Elasq13"
     }, 
     "Elasq18": {
-        "text": "", 
+        "text": "What is the elasticity number if demand is perfectly elastic?", 
         "type": "MultipleChoice", 
         "id": "Elasq18", 
         "choices": {
-            "1": {
+            "-\u221E (negative infinity)": {
                 "message": "Correct!  The tiniest price increase wipes out all your sales.  At the limit, that makes the elasticity number minus infinity.", 
                 "solution": true
             }, 
-            "3": {
+            "0": {
                 "message": "An elasticity of 0 is for perfectly <strong>in</strong>elastic demand.", 
                 "solution": false
             }, 
-            "2": {
+            "-1": {
                 "message": "A tiny price reduction will give you a huge increase in sales quantity.  The elasticity fraction for such a price reduction is a big number divided by a small negative number.  The quotient is going to be way more negative than -1.", 
                 "solution": false
             }
@@ -1374,19 +1555,19 @@
         }
     }, 
     "sd15a": {
-        "text": "Would that move the demand curve or the supply curve?", 
-        "type": "MultipleChoice", 
-        "id": "sd15a", 
+        "text": "The President and Congress could give veterans health insurance that would pay for health care services from the doctors and hospitals that the general public uses.  Would that move the demand curve or the supply curve?", 
         "choices": {
-            "Demand. This would make demand move to the right as in the movie above.": {
-                "message": "Correct! Insurance works on the demand side. More insurance would mean that veterans could buy more care at the same prices, because the insurance would help pay the prices. Supply-demand theory says that this would tend to further drive up the prices of health care services to the general public.", 
+            "Demand.  This would make demand move to the right as in the movie above.": {
+                "message": "Correct!  Insurance works on the demand side.  More insurance would mean that veterans could buy more care at the same prices, because the insurance would help pay the prices.  Supply-demand theory says that this would tend to further drive up the prices of health care services to the general public.",
                 "solution": true
-            }, 
-            "Supply. This would move the supply curve to the right. ": {
-                "message": "No, insurance works on the demand side.", 
+            },
+            "Supply.  This would move the supply curve to the right.": {
+                "message":  "No, insurance works on the demand side.",
                 "solution": false
             }
-        }
+        },
+        "type": "MultipleChoice", 
+        "id": "sd15a"
     }, 
     "D41": {
         "text": "", 
@@ -1417,74 +1598,44 @@
         "correct": "Correct! At 8, the marginal cost is less than £2900.  Above that, the marginal cost is more than £2900."
     }, 
     "sd10": {
-        "text": "Click the button next to the price at which this market is in equilibrium.<br>Price        Amount Demanded         Amount Supplied", 
-        "type": "MultipleChoice", 
-        "id": "sd10", 
-        "choices": {
-            "£55       100 visits/day demanded    900 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }, 
-            "£50       200 visits/day demanded    800 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }, 
-            "£45       300 visits/day demanded    700 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£40       400 visits/day demanded    600 visits/day supplied": {
-                "message": "Correct! At £40, supply quantity exceeds demand quantity by 200.", 
-                "solution": true
-            },
-            "£35       500 visits/day demanded    500 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£30       600 visits/day demanded    400 visits/day supplied": {
-                "message": "At £30, there is an excess demand of 200.", 
-                "solution": false
-            },
-            "£25       700 visits/day demanded    300 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£20       800 visits/day demanded    200 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£15       900 visits/day demanded    100 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            },
-            "£10      1000 visits/day demanded      0 visits/day supplied": {
-                "message": "Not this row. Find the row that has a quantity demanded 200 less than the quantity supplied.", 
-                "solution": false
-            }
-        }
+        "highmessage":"Find the row that has a quantity demanded 200 greater than the quantity supplied.",
+        "lowmessage":"Find the row that has a quantity demanded 200 greater than the quantity supplied.",
+        "text": "Set the range slider to the price at which there is an excess demand of 200 visits/day.", 
+        "id": "sd9", 
+        "answer": 40, 
+        "max": 70,
+        "type": "Range", 
+        "correct": "Correct!  At $40, supply quantity exceeds demand quantity by 200."
     }, 
     "Elasq15": {
-        "incorrect": "The demand for education services is probably very elastic.  If you make classes or consultations expensive, no one will come.  This is not where you can make a lot of revenue by raising the price.", 
-        "text": "", 
-        "correct": "Correct!  The demand for emergency services is price-inelastic.  Those are prices you can raise and bring in more revenue.<p>You will implement the price increase by assigning a lot of overhead cost to the emergency department.  That way, you don't show a big profit, which might raise eyebrows with the public.  If somebody gets emergency services who has no means to pay, you will show a big financial loss.  That loss will be exaggerated, to the extent that it includes the overhead costs that you tacked on.</p>", 
-        "answer": "Emergency", 
-        "type": "SingleAnswer", 
+        "text": "Which department's prices will you mark up by a lot?",
+        "type": "MultipleChoice", 
+        "choices": {
+            "Emergency department": {
+                "message": "Correct!  The demand for emergency services is price-inelastic.  Those are prices you can raise and bring in more revenue.<br />You will implement the price increase by assigning a lot of overhead cost to the emergency department.  That way, you don't show a big profit, which might raise eyebrows with the public.  If somebody gets emergency services who has no means to pay, you will show a big financial loss.  That loss will be exaggerated, to the extent that it includes the overhead costs that you tacked on.",
+                "solution": true
+                },
+            "Education department": {
+                "message": "The demand for education services is probably very elastic.  If you make classes or consultations expensive, no one will come.  This is not where you can make a lot of revenue by raising the price.",
+                "solution": false
+            }
+        },
         "id": "Elasq15"
     }, 
     "sd11": {
-        "text": "The price will tend to go which way?", 
-        "type": "MultipleChoice", 
+        "text": "Suppose we have excess supply, as in this last example. The price will tend to go which way?", 
         "id": "sd11", 
         "choices": {
             "Up": {
-                "message": "If there is excess supply, there is a surplus on the market. Unless something peculiar is going on, that should not make the price up. ('Something peculiar' would be if people think a product is more valuable if it is expensive. Perfumes may work that way).", 
-                "solution": false
-            }, 
+                "message": "If there is excess supply, there is a surplus on the market.  Unless something peculiar is going on, that should not make the price up.  ('Something peculiar' would be if people think a product is more valuable if it is expensive.  Perfumes may work that way.)",
+                "solution":false
+            },
             "Down": {
-                "message": "Correct! If there is excess supply, the price should tend to go down. Let's look in to why.", 
-                "solution": true
+                "message": "Correct!  If there is excess supply, the price should tend to go down.<br><br>Let's look in to why.",
+                "solution":true
             }
-        }
+        },
+        "type": "MultipleChoice"        
     }, 
     "D8": {
         "incorrect": "No.  More gloves were bought, even at the same prices.", 
