@@ -53,45 +53,136 @@
         "type": "SingleAnswer", 
         "id": "D15"
     }, 
+    "irr9": {
+        "text": "Let's find the internal rate of return for this machine now. Choose a number between .0100 and .0547. Please get to within $0.50 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":5.47,
+        "min":1,
+        "id": "irr9",
+        "answer": 4.19,
+        "step":0.01,
+        "correct":"Total would be: <b>$0.07</b> Within 10 cents is good enough.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    }, 
     "irr7": {
-        "incorrect": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
-        "text": "", 
-        "correct": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing.", 
-        "answer": "5irr", 
-        "type": "SingleAnswer", 
+        "text": "The internal rate of return falls to 5.31%, from the 5.47% it was before, if the expected annual payout falls by $1. How far would you expect the income amounts to fall?", 
+        "type": "MultipleChoice",
+        "choices": {
+            "Until the income amounts are all $0.": {
+                "message": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
+                "solution": false
+            },
+            "Until the internal rate of return is 0%.": {
+                "message": "Too drastic.  New firms will stop entering the market well before it gets that bad.", 
+                "solution": false
+            },
+            "Until the internal rate of return matches the bank's 5%.": {
+                "message": "Correct!  Once the IRR for the machine matches the IRR for the bank, there is no incentive to take money out of the bank to buy a machine.  The supply of machine products will stop growing.",
+                "solution": true                
+            }
+        },
         "id": "irr7"
     }, 
     "irr6": {
-        "text": "", 
+        "text": "As more and more firms buy machines, put them to work, and try to sell the machine's products, what would you expect to happen to the typical machine's income stream?", 
         "type": "MultipleChoice", 
         "id": "irr6", 
         "choices": {
-            "1": {
-                "message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<ol><li>Each seller will sell fewer products.<li>The price of the product will fall.</ol>This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were.  (I have tutorials about elasticity at sambaker.com/econ )<p>I also assume that the demand curve does not move outward.", 
-                "solution": true
-            }, 
-            "3": {
+            "The income amounts should not change.": {
+                "message": "If more sellers flood the market, can the revenue that each seller makes stay the same?", 
+                "solution": false
+            },
+            "The income amounts should go up.": {
                 "message": "If more sellers flood the market, can the revenue that each seller makes go up?", 
                 "solution": false
             }, 
-            "2": {
-                "message": "If more sellers flood the market, can the revenue that each seller makes stay the same?", 
-                "solution": false
-            }
+            "The income amounts should go down.": {
+                "message": "Correct!  As more sellers try to sell more product, some combination of two things will happen:<br /><ol><li> - Each seller will sell fewer products.<li> - The price of the product will fall.</ol><br />This should mean less revenue, on average, for each machine.<br>I assume that the demand for the machine's product is inelastic.  That way, a price drop reduces revenue for all the sellers together.  If demand were elastic, then the early adopters should have charged more than they actually were. I also assume that the demand curve does not move outward.", 
+                "solution": true
+            }            
         }
     }, 
+    "irr5": {
+        "text": "Choose a number between 1.0% and 9.0% (which is way too big) in the box.  Click the button to see what comes out for the present value. Please get to within $0.50 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
+        "type": "Range",
+        "max":9,
+        "min":1,
+        "id": "irr5",
+        "answer": 5.7,
+        "step":0.1,
+        "correct":"Total would be: <b>$0.39.</b> Within 50 cents is close enough this time. To get closer, you'd have to go to the next decimal place.",
+        "highmessage": "Your total is below $0. Try a slightly lower discount rate.",
+        "lowmessage":"Your total would be above $0. Try a slightly higher discount rate."
+    },    
+    "irr4a": {
+        "text": "Type the income stream for year 0.",
+        "type": "SingleAnswer",
+        "answer": -800,
+        "correct": "Correct!",
+        "incorrect": "You want what you'll pay for the bond, as a negative number.",
+        "id": "irr4a"
+    },
+    "irr4b": {
+        "text": "Type the income stream for year 1.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 1.",
+        "id": "irr4b"
+    },
+    "irr4c": {
+        "text": "Type the income stream for year 2.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 2.",
+        "id": "irr4c"
+    },
+    "irr4d": {
+        "text": "Type the income stream for year 3.",
+         "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 3.",
+        "id": "irr4d"       
+    },
+    "irr4e": {
+        "text": "Type the income stream for year 4.",
+        "type": "SingleAnswer",
+        "answer": 10,
+        "correct": "Correct!",
+        "incorrect": "You want the interest that the bond pays in year 4.",
+        "id": "irr4e"        
+    },
+    "irr4f": {
+        "text": "Type the income stream for year 5.",
+        "type": "SingleAnswer",
+        "answer": 1010,
+        "correct": "Correct!",
+        "incorrect": "You get the interest and the principal in year 5.",
+        "id": "irr4f"        
+    },
     "irr3": {
-        "incorrect": "No, it's not that easy, because the bond is not selling at its face value.", 
-        "text": "", 
-        "correct": "You're right!  Let's do it!", 
-        "answer": "irr", 
-        "type": "SingleAnswer", 
+        "text": "How do you evaluate the bonds as an investment?", 
+        "answer": "irr",
+        "choices": {
+            "Help!  Please explain what a bond is.": {
+                "message": "A bond is an I.O.U. with a fixed repayment schedule.  Buying a bond is like lending someone money.  Selling a bond is like borrowing money from the person you sell it to.  The seller promises to pay off the bond -- which means paying off the loan -- on a certain day.  Sometimes, the seller also promises to pay interest along the way.  For instance, a $1000 5-year bond that pays 10% interest annually will pay the holder $1000 in 5 years. It will also pay the holder $100 (10% of $1000) each year for those 5 years.<br>The face value of the bond is its final value, how much the seller will pay when the bond matures, or comes due.  Bonds usually do not sell for their face values.  They may sell at a premium -- more than the face value -- or at a discount -- less than the face value.",
+                "solution": false
+            },
+            "Calculate the internal rate of return.  That tells you the yield to maturity.": {
+                "message": "You're right!  Let's do it!",
+                "solution": true
+            },
+            "Why bother with math?  The rate of return is 1%, the interest rate.": {
+                "message": "No, it's not that easy, because the bond is not selling at its face value.",
+                "solution": false
+            }
+        }, 
+        "type": "MultipleChoice", 
         "id": "irr3"
     }, 
-    
-    "irr2A": {
-        
-    },
     "irr2": {
         "text": "Choose a number between 5% and 6%. Please get to within $0.10 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
         "type": "Range",
