@@ -1,7 +1,11 @@
-<ion-view title="Output Rate Under Competition">
-<ion-content padding="true" class="has-header">
-​
-The idea here is simple, once you get used to the jargon. Increasing
+<ion-view title="Marginal Decision Rule">
+<ion-content padding="true" class="has-header has-footer">
+​<h1>The Marginal Decision Rule</h1>
+<div class="card"><blockquote>
+<b>Expand production if and only if the price is greater than the marginal
+cost.</b></blockquote></div>
+
+<p>The idea here is simple, once you get used to the jargon. Increasing
 production makes both total cost and total revenue go up. If the revenue
 goes up more than the cost, profit goes up. (Profit = total revenue - total
 cost.) Marginal cost is how much cost goes up from making one more. The
@@ -9,13 +13,13 @@ price is how much revenue goes up from selling one more. (This is where
 the price-taker assumption comes in -- you don't have to cut your price
 to sell more.) If the price is bigger than the marginal cost, then what
 you gain in revenue is greater than what you lose in added cost. That makes
-your profit higher, so you should go ahead and expand production.
-On the other hand, if price is less than marginal cost, increasing production
+your profit higher, so you should go ahead and expand production.</p>
+<p>On the other hand, if price is less than marginal cost, increasing production
 costs you more than the revenue you gain. You should not expand production.
 Let's see how this works. Here is Joan's cost table, showing the total
 cost and the marginal cost for each number of patients. Assume as before
 that patients sign one year contracts, so we don't have to bother with
-fractions of patients.
+fractions of patients.</p>
 <div id="MC1A-answer">
 <table CELLSPACING=5 >
 <tr>
@@ -109,20 +113,18 @@ fractions of patients.
 <td>$5000</td>
 </tr>
 </table></div>
+<br />
 In each row of this table, the marginal cost number is how much total
 cost increases when going up to that rate of production from the next lower rate. You can think
-of the Marginal Cost here as meaning "the marginal cost of adding <i>this</i>
+of the Marginal Cost here as meaning "the marginal cost of adding <em>this</em>
 patient." For example, the $3500 for marginal cost in the row for
 1 patient means that serving 1 patient costs $3500 more than serving 0
 patients.
-Just to be sure you are with me, please answer this: 
-<br><span class="question">What is the marginal
-cost of the 8th patient in the table above?
-<br>
-<input id="MC1-response" name="MC1" type="text"></input>
-<button id="MC1-button">Type a number in the box.  Then click this.</button>
-<div id="MC1-answer">Do not type a $ sign or a comma with your number.</div>
-Here's the top of that cost table again:
+Just to be sure you are with me, please answer this: <br />
+(Do not type a $ sign or a comma with your submission)
+<question qid="MC1"></question>
+<br /><br />
+Here's the top of that cost table again:<br /><br />
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number of Patients
@@ -151,6 +153,7 @@ Here's the top of that cost table again:
 <td>$3500</td>
 </tr>
 </table>
+<br />
 Suppose the going price is $3700. At that price, you can get
 patients to sign contracts for your service.
 We're going to work our way up to finding the number of patients that gives
@@ -158,15 +161,13 @@ you the most profit, starting from 0 patients.
 ​
 To start, assume you are currently treating 0 patients -- no patients
 at all. <span class="question">Would adding 1 patient make you better off?  If that patient would pay you $3700?</span>
-<br><input type="radio" name="MC2" value="yes">Yes.</input>
-<input type="radio" name="MC2" value="no">No.</input>
-<div id="MC2-answers"></div>
+<question qid="MC2"></question>
+<br />
 "Wait a second," you might say, "the table says my total cost of seeing one patient is $4500.  The patient is paying me only $3700, so I'm losing $800!  <span class="question">Shouldn't I see 0 patients?"</span>
-<br><input type="radio" name="MC3" value="0">0 is better than 1.</input>
-<input type="radio" name="MC3" value="1">1 is better than 0.</input>
-<div id="MC3-answers"></div>
-​
+<question qid="MC3"></question>
+<br />
 Let's look at the second and third rows of the cost table:
+<br />
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number of Patients
@@ -195,11 +196,13 @@ Let's look at the second and third rows of the cost table:
 <td>$3000</td>
 </tr>
 </table>
+<br />
 The price is still $3700. You are currently treating one patient. <span class="question">Should
-you add a 2nd?</span>
-<br><input type="radio" name="MC4" value="yes">Yes.</input>
-<input type="radio" name="MC4" value="no">No.</input>
-<div id="MC4-answers">For best continuity of text, click the correct answer to the above question before going on.</div>
+you add a 2nd?</span><br />
+<question qid="MC4"></question>
+<br />
+
+For best continuity of text, click the correct answer to the above question before going on.
 ​
 ​
 </ion-content>

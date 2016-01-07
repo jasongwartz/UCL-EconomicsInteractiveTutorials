@@ -1,117 +1,235 @@
-<ion-view>
-	<ion-content padding="true" class="has-header">
+<ion-view title="Break Even Point">
+	<ion-content padding="true" class="has-header has-footer">
 		
-		<h3>
-The Break Even Point</h3>
-The break even point is the lowest output level at
-which total revenue exceeds total cost.
+<h1>The Break Even Point</h1>
+<p>The break even point is the lowest output level atwhich total revenue exceeds total cost.</p>
 <blockquote>You could argue that there are two break-even points for Joan's.  Joan's loses money if she signs up too few or too many patients.  In practice, selling too few is a way more common problem than selling too many.  We therefore define the "break even
 point" as the minimum you have to do to make your enterprise viable.</blockquote>
 
-By this definition, the break even point for Joan's is 4.
-This table shows in boldface the profitable output rates for Joan's if the price is $3200:
-<tt>Number of Patients per Year:</tt>
-<br /><tt>&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>4</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<strong>5</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>6</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>7</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<strong>8</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9</tt>
-<tt>Total Revenue: = number of patients times price patients pay ($3200)</tt>
-<br /><tt>$&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 3200&nbsp;&nbsp; 6400&nbsp;&nbsp;
-9600&nbsp; <b>12800&nbsp; 16000&nbsp; 19200&nbsp; 22400&nbsp; 25600</b>&nbsp;
-28800</tt>
-<tt>Total Cost:</tt>
-<br /><tt>$ 1000&nbsp;&nbsp; 4500&nbsp;&nbsp; 7500&nbsp; 10000&nbsp; <b>12000&nbsp;
-14500&nbsp; 17500&nbsp; 21000&nbsp; 25000</b>&nbsp; 30000</tt>
-<tt>Profit&nbsp; (= Revenue minus Cost)</tt>
-<br /><tt>$-1000&nbsp; -1300&nbsp; -1100&nbsp;&nbsp; -400&nbsp;&nbsp;&nbsp; 
-<b>800&nbsp;&nbsp;
-1500&nbsp;&nbsp; 1700&nbsp;&nbsp; 1400&nbsp;&nbsp;&nbsp; 600</b>&nbsp;
--1200</tt>
-<tt>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
-Patients</tt>
-<br /><tt>$ ----&nbsp;&nbsp; 4500&nbsp;&nbsp; 3750&nbsp;&nbsp; 3333&nbsp;&nbsp;
-<b>3000&nbsp;&nbsp; 2900&nbsp;&nbsp; 2917&nbsp;&nbsp; 3000&nbsp;&nbsp;
-3125</b>&nbsp;&nbsp; 3333</tt>
-<br /><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p>By this definition, the break even point for Joan's is 4.
+This table shows in boldface the profitable output rates for Joan's if the price is $3200:</p>
+<table cellspacing="2" cellpadding="2" border="2" align="left">
+<tr>
+    <td colspan="10"><strong>Number of Patients:</strong></td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td><strong>4</strong></td>
+    <td><strong>5</strong></td>
+    <td><strong>6</strong></td>
+    <td><strong>7</strong></td>
+    <td><strong>8</strong></td>
+    <td>9</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Revenue: = number of patients times price patients pay ($3200)</strong></td>
+</tr>
+<tr>
+    <td>$0</td>
+    <td>3200</td>
+    <td>6400</td>
+    <td>9600</td>
+    <td><strong>12800</strong></td>
+    <td><strong>16000</strong></td>
+    <td><strong>19200</strong></td>
+    <td><strong>22400</strong></td>
+    <td><strong>25600</strong></td>
+    <td>28800</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Cost:</strong></td>
+</tr>
+<tr>
+    <td>$1000</td>
+    <td>4500</td>
+    <td>7500</td>
+    <td>10000</td>
+    <td><strong>12000</strong></td>
+    <td><strong>14500</strong></td>
+    <td><strong>17500</strong></td>
+    <td><strong>21000</strong></td>
+    <td><strong>25000</strong></td>
+    <td>30000</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
+Patients</strong></td>
+</tr>
+<tr>
+    <td>$---</td>
+    <td>4500</td>
+    <td>3750</td>
+    <td>3333</td>
+    <td><strong>3000</strong></td>
+    <td><strong>2900</strong></td>
+    <td><strong>2917</strong></td>
+    <td><strong>3000</strong></td>
+    <td><strong>3125</strong></td>
+    <td>3333</td>
+</tr>
+</table>
 
-<b>Average cost less than $3200.</b></tt>
-There are two ways to do a break even analysis.
-<ol>
-<li>
-You can compare total revenue with total cost at a range of output rates, or</li>
+<b>Average cost less than $3200.</b><br />
 
-<li>
-You can compare the price with the average cost at a range of output rates</li>
-</ol>
+<br />
+<p>There are two ways to do a break even analysis.</p>
+<p>You can compare total revenue with total cost at a range of output rates, or you can compare the price with the average cost at a range of output rates</p>
 <blockquote>Method 2 requires that all your customers pay the same price.  Method 1 is more flexible -- there can be a non-linear relationship between output rate and revenue.  In this tutorial, we assume that all customers do pay the same price, so we can talk about "the price" and use either method to determine the break even point.</blockquote>
 <h3>The break even point when competition increases</h3>
 Let us see what happens if more and more firms enter the market and drive
 the price down.
-Here is the cost table, again:
-<tt>Number of Patients per Year</tt>
-<br /><tt>&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9</tt>
-<tt>Total Cost:</tt>
-<br /><tt>$ 1000&nbsp;&nbsp; 4500&nbsp;&nbsp; 7500&nbsp; 10000&nbsp; 12000&nbsp;
-14500&nbsp; 17500&nbsp; 21000&nbsp; 25000&nbsp; 30000</tt>
-<tt>Marginal Cost:&nbsp; = difference in Total Cost</tt>
-<br /><tt>$&nbsp;&nbsp;&nbsp;&nbsp; 3500&nbsp;&nbsp; 3000&nbsp;&nbsp; 2500&nbsp;&nbsp;
-2000&nbsp;&nbsp; 2500&nbsp;&nbsp; 3000&nbsp;&nbsp; 3500&nbsp;&nbsp; 4000&nbsp;&nbsp;
-5000</tt>
-<tt>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
-Patients</tt>
-<br /><tt>$ ----&nbsp;&nbsp; 4500&nbsp;&nbsp; 3750&nbsp;&nbsp; 3333&nbsp;&nbsp;
-3000&nbsp;&nbsp; 2900&nbsp;&nbsp; 2917&nbsp;&nbsp; 3000&nbsp;&nbsp; 3125&nbsp;&nbsp;
-3333</tt>
-Let's start with a high price of $4200.
-What is Joan's break even point, based on that price and the costs above?
-<br /><input id="AC7-response" name="AC7" type="text"></input>
-<button id="AC7-button">Type a number in the box.  Then click this.</button>
-<div id="AC7-answer">Type a number from the Number of Patients row of the table.</div>
-Where does Joan's average cost bottom out? At what output rate is Joan's average cost minimized?
-<br /><input id="AC8-response" name="AC7" type="text"></input>
-<button id="AC8-button">Type a number in the box.  Then click this.</button>
-<div id="AC8-answer">Type a number from the Number of Patients row of the table.</div>
-True or false: A firm should always choose the output level at which
-its average cost is the least.
-<br /><input type="radio" name="AC9" value="true">True.</input>
-<input type="radio" name="AC9" value="false">False.</input>
-<div id="AC9-answers"></div>
-The cost table yet again:
-<tt>Number of Patients per Year</tt>
-<br /><tt>&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9</tt>
-<tt>Total Cost:</tt>
-<br /><tt>$ 1000&nbsp;&nbsp; 4500&nbsp;&nbsp; 7500&nbsp; 10000&nbsp; 12000&nbsp;
-14500&nbsp; 17500&nbsp; 21000&nbsp; 25000&nbsp; 30000</tt>
-<tt>Marginal Cost:&nbsp; = difference in Total Cost</tt>
-<br /><tt>$&nbsp;&nbsp;&nbsp;&nbsp; 3500&nbsp;&nbsp; 3000&nbsp;&nbsp; 2500&nbsp;&nbsp;
-2000&nbsp;&nbsp; 2500&nbsp;&nbsp; 3000&nbsp;&nbsp; 3500&nbsp;&nbsp; 4000&nbsp;&nbsp;
-5000</tt>
-<tt>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
-Patients</tt>
-<br /><tt>$ ----&nbsp;&nbsp; 4500&nbsp;&nbsp; 3750&nbsp;&nbsp; 3333&nbsp;&nbsp;
-3000&nbsp;&nbsp; 2900&nbsp;&nbsp; 2917&nbsp;&nbsp; 3000&nbsp;&nbsp; 3125&nbsp;&nbsp;
-3333</tt>
-What is the number of patients that gives Joan's the <b>most</b> profit,
-if the price patients pay is $4200?
-<br /><input id="AC10-response" name="AC10" type="text"></input>
-<button id="AC10-button">Type a number in the box.  Then click this.</button>
-<div id="AC10-answer">Type a number from the Number of Patients row of the table.</div>
-I am deliberately switching back and forth between marginal cost and
-average cost, to better bring out what each is good for.
-<ul>
-<li>
-Average cost tells you if you are making or losing money overall.</li>
+Here is the cost table, again:<br /><br />
+<table cellspacing="2" cellpadding="2" border="2" align="left">
+<tr>
+    <td colspan="10"><strong>Number of Patients per Year</strong></td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Cost:</strong></td>
+</tr>
+<tr>
+    <td>$1000</td>
+    <td>4500</td>
+    <td>7500</td>
+    <td>10000</td>
+    <td>12000</td>
+    <td>14500</td>
+    <td>17500</td>
+    <td>21000</td>
+    <td>25000</td>
+    <td>30000</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Marginal Cost:&nbsp; = difference in Total Cost</strong></td>
+</tr>
+<tr>
+    <td>$</td>
+    <td>3500</td>
+    <td>3000</td>
+    <td>2500</td>
+    <td>2000</td>
+    <td>2500</td>
+    <td>3000</td>
+    <td>3500</td>
+    <td>4000</td>
+    <td>5000</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
+Patients</strong></td>
+</tr>
+<tr>
+    <td>$---</td>
+    <td>4500</td>
+    <td>3750</td>
+    <td>3333</td>
+    <td><strong>3000</strong></td>
+    <td><strong>2900</strong></td>
+    <td><strong>2917</strong></td>
+    <td><strong>3000</strong></td>
+    <td><strong>3125</strong></td>
+    <td>3333</td>
+</tr>
+</table>
+<br /><br />
+<strong>Let's start with a high price of $4200.</strong>
+<question qid="AC7"></question>
 
-<li>
+<question qid="AC8"></question>
+
+<question qid="AC9"></question><br />
+<p>The cost table yet again:</p><br />
+<table cellspacing="2" cellpadding="2" border="2" align="left">
+<tr>
+    <td colspan="10"><strong>Number of Patients per Year</strong></td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Cost:</strong></td>
+</tr>
+<tr>
+    <td>$1000</td>
+    <td>4500</td>
+    <td>7500</td>
+    <td>10000</td>
+    <td>12000</td>
+    <td>14500</td>
+    <td>17500</td>
+    <td>21000</td>
+    <td>25000</td>
+    <td>30000</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Marginal Cost:&nbsp; = difference in Total Cost</strong></td>
+</tr>
+<tr>
+    <td>$</td>
+    <td>3500</td>
+    <td>3000</td>
+    <td>2500</td>
+    <td>2000</td>
+    <td>2500</td>
+    <td>3000</td>
+    <td>3500</td>
+    <td>4000</td>
+    <td>5000</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
+Patients</strong></td>
+</tr>
+<tr>
+    <td>$---</td>
+    <td>4500</td>
+    <td>3750</td>
+    <td>3333</td>
+    <td><strong>3000</strong></td>
+    <td><strong>2900</strong></td>
+    <td><strong>2917</strong></td>
+    <td><strong>3000</strong></td>
+    <td><strong>3125</strong></td>
+    <td>3333</td>
+</tr>
+</table>
+<br /><br />
+<p>&nbsp;</p>
+
+<question qid="AC10"></question>
+<br />
+<p>
+I am deliberately switching back and forth between marginal cost and
+average cost, to better bring out what each is good for.</p>
+<p>
+Average cost tells you if you are making or losing money overall.</p>
+
+<p>
 Marginal cost tells you how to increase
-or decrease your profit.</li>
-</ul>
+or decrease your profit.</p>
 
 
 </ion-content>

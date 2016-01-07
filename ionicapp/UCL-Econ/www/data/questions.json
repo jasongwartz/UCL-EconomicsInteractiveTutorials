@@ -46,13 +46,20 @@
         "id": "MC1"
     }, 
     "D15": {
-        "incorrect": "No.  Demand is the price-quantity relationship of the buyers.", 
-        "text": "", 
-        "correct": "Correct!  Demand is the buyers' price-quantity relationship.", 
-        "answer": "Curve", 
-        "type": "SingleAnswer", 
-        "id": "D15"
-    }, 
+        "text": "Demand is... ", 
+        "type": "MultipleChoice", 
+        "id": "D15", 
+        "choices": {
+            "... how much gets bought and sold.": {
+                "message": "No. Demand is the price-quantity relationship of the buyers.", 
+                "solution": false
+            }, 
+            ".. a curve, or a table, showing prices and the corresponding quantities demanded.": {
+                "message": "Correct! Demand is the buyers' price-quantity relationship.", 
+                "solution": true
+            }
+        }
+    },
     "irr9": {
         "text": "Let's find the internal rate of return for this machine now. Choose a number between .0100 and .0547. Please get to within $0.50 of a $0 total before moving on. If your total is above $0, try a slightly higher discount rate.  If your total is below $0, try a slightly lower discount rate.",
         "type": "Range",
@@ -235,21 +242,30 @@
         "id": "sd19"
     }, 
     "q1": {
-        "incorrect": "This patient will be presumed to want care regardless of what he will be charged.  Demand is inelastic, therefore.<br>As for what the hospital does, that is a supply side question.", 
-        "text": "", 
-        "correct": "Correct!  The demand will be inelastic with respect to price.  This patient will be presumed to want care regardless of what he will be charged.<br>As for what the hospital does, that is a supply side question.", 
-        "answer": "Inelastic", 
-        "type": "SingleAnswer", 
-        "id": "q1"
-    }, 
+        "text": "An unconscious bleeding man is brought to a hospital emergency room.", 
+        "type": "MultipleChoice", 
+        "id": "q1", 
+        "choices": {
+            "Elastic demand": {
+                "message": "This patient will be presumed to want care regardless of what he will be charged. Demand is inelastic, therefore. As for what the hospital does, that is a supply side question.", 
+                "solution": false
+            }, 
+            "Inelastic demand": {
+                "message": "Correct! The demand will be inelastic with respect to price. This patient will be presumed to want care regardless of what he will be charged. As for what the hospital does, that is a supply side question.", 
+                "solution": true
+            }
+        }
+    },
     "MC11": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
-        "type": "SingleAnswer", 
-        "id": "MC11"
-    }, 
+        "highmessage": "What is the marginal cost at this number of patients? Bigger than $2900? If yes, don't add this patient number.", 
+        "lowmessage": "Too low. The 3rd, 4th, and 5th patients all have marginal costs below $2900. Joan's does better by serving those.", 
+        "id": "MC11", 
+        "max": "9",
+        "text": "If the price is $2900, how many patients should Joan's serve?", 
+        "answer": "5", 
+        "type": "Range", 
+        "correct": "Correct! At 5, the marginal cost is less than $2900. Above that, the marginal cost is more than $2900."
+    },
     "MC10": {
         "text": "Suppose the price falls to £2900. Will Joan's still want to serve 6 patients?", 
         "type": "MultipleChoice", 
@@ -264,23 +280,37 @@
                 "solution": true
             }
         }
-    }, 
-    "q5": {
-        "incorrect": "No, it is not elastic.  Elastic demand means that buyers change what they buy, or how much they buy, when prices are different or change.", 
-        "text": "", 
-        "correct": "Correct!  Inelastic demand means that price differences do not affect what buyers buy.", 
-        "answer": "inelastic", 
-        "type": "SingleAnswer", 
-        "id": "q5"
-    }, 
+    },
     "q4": {
-        "incorrect": "No, it is not inelastic.  Inelastic demand means that price differences do not affect buyer behavior.", 
-        "text": "", 
-        "correct": "Correct!  If how much buyers buy responds to price differences, demand is elastic.", 
-        "answer": "Elastic", 
-        "type": "SingleAnswer", 
-        "id": "q4"
-    }, 
+        "text": "In general, if the decision-maker has an incentive to spend less on some product and if there is a lower-price alternative or substitute for that product, then demand is more ... ", 
+        "type": "MultipleChoice", 
+        "id": "q4", 
+        "choices": {
+            "Elastic": {
+                "message": "Correct! If how much buyers buy responds to price differences, demand is elastic.", 
+                "solution": true
+            }, 
+            "Inelastic": {
+                "message": "No, it is not inelastic. Inelastic demand means that price differences do not affect buyer behavior.", 
+                "solution": false
+            }
+        }
+    },
+    "q5": {
+        "text": "If the decision-maker is spending somebody else's money, or if there is no lower-price alternative or substitute for the product, then demand is more ...", 
+        "type": "MultipleChoice", 
+        "id": "q5", 
+        "choices": {
+            "Elastic": {
+                "message": "No, it is not elastic. Elastic demand means that buyers change what they buy, or how much they buy, when prices are different or change.", 
+                "solution": false
+            }, 
+            "Inelastic": {
+                "message": "Correct! Inelastic demand means that price differences do not affect what buyers buy.", 
+                "solution": true
+            }
+        }
+    },
     "q7": {
         "text": "For example, suppose the demand curve in the graph above applies to you, and right now you're charging £2. If your sole goal is profit, should you raise your price, keep it the same, or lower it?", 
         "type": "MultipleChoice", 
@@ -331,6 +361,36 @@
             }
         }
     },
+    "q10": {
+        "text": "What really empowers health care consumers?", 
+        "type": "MultipleChoice", 
+        "id": "q10", 
+        "choices": {
+            "Negotiating with providers on your own when you need care": {
+                "message": "I'm not convinced. When you have a pressing health care need, your limited time and your relative lack of knowledge are both working against you.", 
+                "solution": false
+            }, 
+            "Being part of a big group, such as all veterans served by the V.A., and having the V.A. negotiate for you.": {
+                "message": "I agree. Group power puts the consumer in the driver's seat. Of course, it depends on how much power the members have with the group.", 
+                "solution": true
+            }
+        }
+    },
+    "q11": {
+        "text": "Imagine a pharmaceutical company that is deciding what price to set for a new drug. Which of these two would make the demand for that drug more price-elastic? ", 
+        "type": "MultipleChoice", 
+        "id": "q11", 
+        "choices": {
+            "Each of us buys with money from our own Health Savings Account.": {
+                "message": "I'm not convinced. Individual buying makes demand only somewhat elastic. That's why providers lobbied Congress to keep private insurance in Obamacare and not have a public insurance option.", 
+                "solution": false
+            }, 
+            "Medicare evaluates drugs and bargains for prices.": {
+                "message": "I agree. This makes the demand for the drug much more elastic with respect to price. That's why providers lobby Congress to make such negotiation unlawful.", 
+                "solution": true
+            }
+        }
+    },
     "MC14": {
         "text": "Using that logic, how often should a woman have a Pap test?", 
         "type": "MultipleChoice", 
@@ -374,13 +434,20 @@
         }
     }, 
     "D13": {
-        "incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.", 
-        "text": "", 
-        "correct": "Correct!  Changing your prices moves you along your demand curve.  Your demand is inelastic, so your demand curve is close to a vertical line.  You move up that line when you raise your price.", 
-        "answer": "Along", 
-        "type": "SingleAnswer", 
-        "id": "D13"
-    }, 
+        "text": "You double what you charge for an organ transplant. It makes little difference in patients per year.", 
+        "type": "MultipleChoice", 
+        "id": "D13", 
+        "choices": {
+            "That is movement ALONG the demand curve for transplants.": {
+                "message": "Correct! Changing your prices moves you along your demand curve. Your demand is inelastic, so your demand curve is close to a vertical line. You move up that line when you raise your price.", 
+                "solution": true
+            }, 
+            "That is movement OF the demand curve for transplants.": {
+                "message": "No. Price changes do not move the demand curve. They move from one place to another on your existing demand curve.", 
+                "solution": false
+            }
+        }
+    },
     "dis10": {
         "text": "Try some different discount rates.", 
         "choices": {
@@ -573,7 +640,7 @@
     "MC6": { 
         "id": "MC6",
         "type": "SingleAnswer", 
-        "text": "Which patient is the last one that you add? What is the highest number patient that has a marginal cost less than the price? ",
+        "text": "Therefore, what is the profit-maximizing number of patients if the price is $3700?",
         "answer": "7",   
         "correct": "Correct! 7 is your profit-maximizing choice.",
         "incorrect": "No. Please see the answer to the question above."
@@ -796,15 +863,16 @@
         "highmessage": "Your average cost is less than the price, but there is a lower output rate for which that is also true.", 
         "lowmessage": "Your costs exceed your revenues at this output rate.  You can tell because your average cost is more than £3200.", 
         "correct": "Correct!  This is the lowest output rate for which the average cost is less than £3200.  You have to have at least 4 patients to break even.", 
-        "text": "", 
+        "text": "Now what is Joan's break even number of patients, after the price has fallen to $3200?",
+        "max": "9", 
         "answer": "4", 
         "type": "Range", 
         "id": "AC11"
     }, 
     "AC10": {
-        "incorrect": "Use the marginal decision rule.  You want the highest output rate that has a marginal cost less than £4200.", 
-        "text": "", 
-        "correct": "Correct!  This is the highest output rate for which the marginal cost is less than £4200", 
+        "incorrect": "Use the marginal decision rule. You want the highest output rate that has a marginal cost less than £4200.", 
+        "text": "What is the number of patients that gives Joan's the most profit, if the price patients pay is $4200?", 
+        "correct": "Correct! This is the highest output rate for which the marginal cost is less than £4200", 
         "answer": "8", 
         "type": "SingleAnswer", 
         "id": "AC10"
@@ -834,30 +902,44 @@
         "max":20000,
         "answer":5
     }, 
-    "MC5-button": {
-        "incorrect": "", 
-        "text": "", 
-        "correct": "", 
-        "answer": "TODO", 
+    "MC5": {
+        "incorrect": "What is the marginal cost at this number? Bigger than $3700? If not, add that patient.", 
+        "text": "What is the highest number patient that has a marginal cost less than the price?", 
+        "correct": "Correct! At 7 or below, the marginal cost is less than $3700. The marginal cost of the 8th patient is more than $3700.", 
+        "answer": "7", 
         "type": "SingleAnswer", 
-        "id": "MC5-button"
+        "id": "MC5"
     }, 
     "q3": {
-        "incorrect": "Not inelastic, because the family may or may not go see the doctor, depending on the price charged.", 
-        "text": "", 
-        "correct": "Correct!  The demand will be elastic.  If the price for an office visit is high, the parents may hesitate to go to the doctor, and hope that the earache goes away by itself.", 
-        "answer": "Elastic", 
-        "type": "SingleAnswer", 
-        "id": "q3"
+        "text": "A family has a high-deductible health insurance policy. This means that the family must pay all its medical bills until it has spent, maybe, $6000. Suppose that the family has not spent that much on medical care yet, and now one of the children has an earache. What would their demand be like for an office visit to get this checked out?", 
+        "type": "MultipleChoice", 
+        "id": "q3", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Correct! The demand will be elastic. If the price for an office visit is high, the parents may hesitate to go to the doctor, and hope that the earache goes away by itself.", 
+                "solution": true
+            }, 
+            "Inelastic demand": {
+                "message": "Not inelastic, because the family may or may not go see the doctor, depending on the price charged.", 
+                "solution": false
+            }
+        }
     }, 
     "q2": {
-        "incorrect": "Not inelastic, because the patient may or may not buy the prescribed drug, depending on the price.", 
-        "text": "", 
-        "correct": "Correct!  The demand will be elastic.  If the price is high, the patient may forgo buying the drug.", 
-        "answer": "Elastic", 
-        "type": "SingleAnswer", 
-        "id": "q2"
-    }, 
+        "text": "A patient is given a presciption for a drug to control high blood pressure. The patient's insurance doesn't cover drugs, or has a high deductible, so the patient must pay out of pocket for the drug.", 
+        "type": "MultipleChoice", 
+        "id": "q2", 
+        "choices": {
+            "Inelastic demand": {
+                "message": "Not inelastic, because the patient may or may not buy the prescribed drug, depending on the price.", 
+                "solution": false
+            }, 
+            "Elastic demand": {
+                "message": "Correct!  The demand will be elastic.  If the price is high, the patient may forgo buying the drug.", 
+                "solution": true
+            }
+        }
+    },
     "Elas203": {
         "text": "What is the average of the Q's?", 
         "type": "SingleAnswer", 
@@ -917,16 +999,23 @@
         "answer": 1800
     },
     
-     
     "q6": {
-        "incorrect": "No, this does not show elastic.  Elastic demand would mean that buyers would buy less at higher prices.  Here, they buy the same at all prices.", 
-        "text": "", 
-        "correct": "Correct!  The graph and table say that the same amount is sold at high prices and at low prices.  There is no response of quantity to price.", 
-        "answer": "Yes", 
-        "type": "SingleAnswer", 
-        "id": "q6"
-    }, 
-    "sd4": { 
+        "text": "Is the title 'INELASTIC DEMAND' correct?", 
+        "type": "MultipleChoice", 
+        "id": "q6", 
+        "choices": {
+            "Yes": {
+                "message": "Correct! The graph and table say that the same amount is sold at high prices and at low prices. There is no response of quantity to price.", 
+                "solution": true
+            }, 
+            "No": {
+                "message": "No, this does not show elastic. Elastic demand would mean that buyers would buy less at higher prices. Here, they buy the same at all prices.", 
+                "solution": false
+            }
+        }
+    },
+    "sd4": {
+
         "text": "Palmetto Richland's emergency department?", 
         "id": "sd4", 
         "choices": {
@@ -1001,13 +1090,20 @@
         "type": "MultipleChoice"
     }, 
     "D10": {
-        "incorrect": "No.  Price changes do not move the demand curve.  They move from one place to another on your existing demand curve.", 
-        "text": "", 
-        "correct": "Correct!  Changing your prices moves you along your demand curve.", 
-        "answer": "Along", 
-        "type": "SingleAnswer", 
-        "id": "D10"
-    }, 
+        "text": "You cut your price on routine physical examinations. More patients come.", 
+        "type": "MultipleChoice", 
+        "id": "D10", 
+        "choices": {
+            "That is movement ALONG the demand curve for exams.": {
+                "message": "Correct! Changing your prices moves you along your demand curve.", 
+                "solution": true
+            }, 
+            "That was movement OF the demand curve for gloves.": {
+                "message": "No. Price changes do not move the demand curve. They move from one place to another on your existing demand curve.", 
+                "solution": false
+            }
+        }
+    },
     "sd1": {
         "text": "On which side of this market are primary care physicians in office-based practices? Are they on the Demand side or the Supply side?", 
         "id": "sd1", 
@@ -1118,10 +1214,10 @@
         "type": "MultipleChoice", 
         "id": "sd14a"
     }, 
-    "mc8": {
+    "MC8": {
         "text": "Should Joan's continue to serve 7 patients, if the price is £3300?", 
         "type": "MultipleChoice", 
-        "id": "mc8", 
+        "id": "MC8", 
         "choices": {
             "Yes.": {
                 "message": "Compare the marginal cost of the 7th patient with the price, which is now £3300.", 
@@ -1391,7 +1487,7 @@
     }, 
     "AC3": {
         "incorrect": "Use the column in the table for an output of 3.  Use the average cost row of numbers.  If you do the calculation yourself, round off to the nearest whole number.", 
-        "text": "", 
+        "text": "The average cost of serving 3 patients, for example, is...", 
         "correct": "Correct!", 
         "answer": "3333", 
         "type": "SingleAnswer", 
@@ -1399,7 +1495,7 @@
     }, 
     "AC1": {
         "incorrect": "The average cost of one toy is the total cost divided by 1.  Add the fixed cost (10000) to the marginal cost of the first toy (1) to get the total cost.  Then divide by 1.", 
-        "text": "", 
+        "text": "What is the average cost per toy if you make just 1 toy a year?", 
         "correct": "Correct!  The average cost of 1 is the total cost, 10001, divided by 1.", 
         "answer": "10001", 
         "type": "SingleAnswer", 
@@ -1409,7 +1505,7 @@
         "highmessage": "At this output rate, you are more than breaking even.  However, there is a lower output rate that also more than breaks even.", 
         "lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.", 
         "correct": "Correct!", 
-        "text": "", 
+        "text": "What is Joan's break even point, based on that price and the costs above?", 
         "answer": "2", 
         "type": "Range", 
         "id": "AC7"
@@ -1418,7 +1514,8 @@
         "highmessage": "At this output rate, your total cost is less than your total revenue.  You are not breaking even.", 
         "lowmessage": "At this output rate, your total cost is more than your total revenue.  You are not breaking even.", 
         "id": "AC6", 
-        "text": "", 
+        "max": "9",
+        "text": "What is the highest output rate that is profitable for Joan's?", 
         "answer": "8", 
         "type": "Range", 
         "correct": "Correct!"
@@ -1427,21 +1524,22 @@
         "highmessage": "At this output rate, your total cost is less than your total revenue.  However, there is a lower output rate for which that is also true.", 
         "lowmessage": "At this output rate, the total cost is greater than the total revenue.  You are not breaking even.", 
         "correct": "Correct!", 
-        "text": "", 
+        "max": "9",
+        "text": "What is the lowest output rate at which Joan's at least breaks even?", 
         "answer": "4", 
         "type": "Range", 
         "id": "AC5"
     }, 
     "AC4": {
-        "text": "", 
+        "text": "Joan's is making a profit if, and only if, the average cost is less than the price.", 
         "type": "MultipleChoice", 
         "id": "AC4", 
         "choices": {
-            "yes": {
+            "That is true": {
                 "message": "Correct!  The £3700 price is more than the £3000 marginal cost.  You gain £700 by accepting the 2nd patient.  <p><p>So far, we have figured out that we want to contract with at least 2 patients.", 
                 "solution": true
             }, 
-            "no": {
+            "That is false": {
                 "message": "Compare what the 2nd patient pays you with the cost of adding that 2nd patient, which is the the marginal cost of the 2nd patient.", 
                 "solution": false
             }
@@ -1449,15 +1547,15 @@
     }, 
     "AC9": {
         "incorrect": "Not correct.  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the £4200 price.", 
-        "text": "", 
+        "text": "True or false: A firm should always choose the output level at which its average cost is the least.", 
         "correct": "Correct!  Joan's average cost is lowest at 5 patients, but serving the 6th, 7th, etc. patients add even more to profit.  The marginal costs of those patients are less than the £4200 price.<p>The break-even point, the minimum average cost point, and the profit maximizing point are three different points!", 
         "answer": "false", 
-        "type": "SingleAnswer", 
+        "type": "TrueFalse", 
         "id": "AC9"
     }, 
     "AC8": {
         "incorrect": "There is another output rate with a lower average cost.", 
-        "text": "", 
+        "text": "Where does Joan's average cost bottom out? At what output rate is Joan's average cost minimized?", 
         "correct": "Correct!  Joan's average cost bottoms out at 5 patients per year.", 
         "answer": "5", 
         "type": "SingleAnswer", 
@@ -1471,13 +1569,13 @@
         "type": "SingleAnswer", 
         "id": "risk1-button"
     }, 
-    "Ac2": {
+    "AC2": {
         "incorrect": "The average cost of two toys is the total cost divided by 2.  Add the fixed cost (10000) to the marginal cost of the two toys (1 each) to get the total cost.  Then divide by 2.", 
-        "text": "", 
+        "text": "Assume that you can make any number of toys at the same $1 marginal cost per toy. What is the average cost per year of producing 2 toys per year?", 
         "correct": "Correct!  The average cost of 2 is the total cost, 10002, divided by 2.", 
         "answer": "5001", 
         "type": "SingleAnswer", 
-        "id": "Ac2"
+        "id": "AC2"
     }, 
     "MC9": {
         "text": "How about 6? Should Joan's serve 6 patients if the price is £3300? ", 
@@ -1570,7 +1668,7 @@
         "id": "sd15a"
     }, 
     "D41": {
-        "text": "", 
+        "text": "Suppose your price was $2 and you change it to $4. You move along the demand graph to what point?", 
         "type": "MultipleChoice", 
         "id": "D41", 
         "choices": {
@@ -1588,11 +1686,12 @@
             }
         }
     }, 
-    "MC13-button": {
-        "highmessage": "", 
-        "lowmessage": "TODO", 
-        "id": "MC13-button", 
-        "text": "", 
+    "MC13": {
+        "highmessage": "What is the marginal cost at this number? Bigger than $2900? If yes, don't add this patient number.", 
+        "lowmessage": "Too low. The 3rd, 4th, and 5th patients, etc., all have marginal costs below $2900. Joan's does better by serving those. How far does the 'etc.' go?", 
+        "id": "MC13", 
+        "max": "9",
+        "text": "Now how many patients does Joan's serve if the price is $2900? ", 
         "answer": "8", 
         "type": "Range", 
         "correct": "Correct! At 8, the marginal cost is less than £2900.  Above that, the marginal cost is more than £2900."
@@ -1638,21 +1737,35 @@
         "type": "MultipleChoice"        
     }, 
     "D8": {
-        "incorrect": "No.  More gloves were bought, even at the same prices.", 
-        "text": "", 
-        "correct": "Correct!  More gloves were bought, even at the same prices.", 
-        "answer": "Shift", 
-        "type": "SingleAnswer", 
-        "id": "D8"
-    }, 
+        "text": "As HIV-AIDS spread, sales of rubber gloves skyrocketed. ", 
+        "type": "MultipleChoice", 
+        "id": "D8", 
+        "choices": {
+            "That was movement ALONG the demand curve for gloves.": {
+                "message": "No. More gloves were bought, even at the same prices.", 
+                "solution": false
+            }, 
+            "That was movement OF the demand curve for gloves.": {
+                "message": "Correct! More gloves were bought, even at the same prices.", 
+                "solution": true
+            }
+        }
+    },
     "D9": {
-        "incorrect": "No.  More patients come in, even at the same prices, means that the demand curve shifted out.", 
-        "text": "", 
-        "correct": "Correct!  More patients come in, even at the same prices.", 
-        "answer": "Shift", 
-        "type": "SingleAnswer", 
-        "id": "D9"
-    }, 
+        "text": "A wellness clinic hires a handsome receptionist. More patients come.", 
+        "type": "MultipleChoice", 
+        "id": "D9", 
+        "choices": {
+            "That is movement ALONG the demand curve for clinic visits.": {
+                "message": "No. More patients come in, even at the same prices, means that the demand curve shifted out.", 
+                "solution": false
+            }, 
+            "That is movement OF the demand curve for clinic visits. ": {
+                "message": "Correct! More patients come in, even at the same prices.", 
+                "solution": true
+            }
+        }
+    },
     "MC12": { 
         "id": "MC12",
         "type": "SingleAnswer", 
@@ -1660,9 +1773,9 @@
         "answer": "0",   
         "correct": "Correct! Her revenue and her total cost are equal. No profit.",
         "incorrect": "Profit is Revenue minus Total Cost at 5 patients."
-    }, 
+    },
     "D4": {
-        "text": "", 
+        "text": "Which point on this graph tells you the quantity demanded when the price you charge is $2?", 
         "type": "MultipleChoice", 
         "id": "D4", 
         "choices": {
@@ -1691,21 +1804,73 @@
                 "solution": false
             }
         }
-    }, 
+    },
+    "D7": { 
+        "id": "D7",
+        "type": "SingleAnswer", 
+        "text": "For example, you can keep on selling 30 gowns per day if you cut your price to what?",
+        "answer": "1",   
+        "correct": "Correct! To sell 30, you have to reduce your price to $1.",
+        "incorrect": "You don't sell 30 at that price."
+    },
+    "D6": {
+        "text":"At the new lower demand (click the 'Graph of demand with the rumor' button above to see this) how many can you sell at a price of $2?",
+        "correct":"Correct! Now you can only sell 15 at a price of $2.",
+        "highmessage":"Too high. To sell that many gowns, the price would have to be less than $2.",
+        "lowmessage":"Too low. That sales number is for a higher price than $2.",
+        "type":"Range",
+        "id": "D6",
+        "max":"30",
+        "answer":"15"
+    },
     "D5": {
-        "incorrect": "No, a nasty rumor is not going to increase your sales at a given price", 
-        "text": "", 
-        "correct": "Correct!  A nasty rumor makes demand shift down.  At any given price, you will sell fewer gowns.", 
-        "answer": "Down", 
-        "type": "SingleAnswer", 
-        "id": "D5"
-    }, 
+        "text":"Which way will your demand probably shift?",
+        "type":"MultipleChoice",
+        "id": "D5",
+        "choices":{
+            "Up":{
+                "message":"No, a nasty rumor is not going to increase your sales at a given price",
+                "solution":false
+            },
+            "Down":{
+                "message":"Correct!  A nasty rumor makes demand shift down. At any given price, you will sell fewer gowns.",
+                "solution":true
+            }
+        }
+    },
+    "D3": {
+        "text":"If you want to sell 30 gowns per day, what price should you charge?",
+        "correct":"Correct! To sell $30 per day, set the price at $2.",
+        "highmessage":"Too high. At that price, you will sell fewer than 30 gowns per day.",
+        "lowmessage":"Too low. At that price, you will sell more than 30 gowns per day.",
+        "type":"Range",
+        "id": "D3",
+        "max":"30",
+        "answer":"2"
+    },
     "D2": {
-        "incorrect": "No, higher prices make the quantity demanded go down.", 
-        "text": "", 
-        "correct": "Correct!  Higher prices make the quantity demanded lower.", 
-        "answer": "Down", 
-        "type": "SingleAnswer", 
-        "id": "D2"
+        "text":"That question asked for the quantity demanded at that particular price of $4. Suppose that you raise your price to $5 or $6. Does the quantity demanded go up or down?",
+        "type":"MultipleChoice",
+        "id": "D2",
+        "choices":{
+            "Up":{
+                "message":"No, higher prices make the quantity demanded go down.",
+                "solution":false
+            },
+            "Down":{
+                "message":"Correct!  Higher prices make the quantity demanded lower.",
+                "solution":true
+            }
+        }
+    },
+    "D1": {
+        "text":"Based on this table, how many gowns will be bought per day if you charge $4 each? ",
+        "correct":"Correct! If the price is $4, buyers will buy 15 gowns.",
+        "highmessage":"Too high. To sell that many, the price would have to be less than $4.",
+        "lowmessage":"Too low. To sell that many, the price would have to be more than $4.",
+        "type":"Range",
+        "id": "D1",
+        "max":"60",
+        "answer":"15"
     }
 }

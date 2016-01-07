@@ -1,14 +1,13 @@
-<ion-view>
-<ion-content padding="true" class="has-header">
-
-
+<ion-view title="Marginal Decision Rule">
+<ion-content padding="true" class="has-header has-footer">
+​<h1>The Marginal Decision Rule</h1>
 
 <p>We got this far solely by comparing the marginal cost
 with the price. We haven't had to do any other calculating to decide whether
-or not to expand output. We haven't needed the total cost numbers.
+or not to expand output. We haven't needed the total cost numbers.</p>
 <p>Nevertheless, I'm going to leave the total cost column in the table,
-just to see if I can confuse you.
-<p>Here is the cost table again.  
+just to see if I can confuse you.</p>
+<p>Here is the cost table again. </p> 
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number of Patients
@@ -100,39 +99,23 @@ just to see if I can confuse you.
 <td>$5000</td>
 </tr>
 </table>
-
-<p>We are developing a <strong>marginal decision rule</strong>:  Starting from 0, add patients whose marginal cost is less than the $3700 price.  When you come to a marginal cost that is higher than the $3700 price, stop before adding that patient.
+<br />
+<p>We are developing a <strong>marginal decision rule</strong>:  Starting from 0, add patients whose marginal cost is less than the $3700 price.  When you come to a marginal cost that is higher than the $3700 price, stop before adding that patient.</p>
 <p class="question">Which patient is the last one that you add?  What is the highest number patient that has a marginal cost less than the price?
-<br><input id="MC5-response" name="MC6" type="text"></input>
-<button id="MC5-button">Type a number in the box.  Then click this.</button>
-<div id="MC5-answer">Do not type a "th" or anything like that.  Just a plain number.</div>
-<p class="question">Therefore, what is the profit-maximizing number of patients 
-if the price is $3700?
-<br><input id="MC6-response" name="MC6" type="text"></input>
-<button id="MC6-button">Type a number in the box.  Then click this.</button>
-<div id="MC6-answer">Do not type a "th" or anything like that.  Just a plain number.</div>
-<div id="MC6A-answer">
-<p>Leaving space until the above question is answered correctly.
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-<p>&uArr;
-</div>
+<question qid="MC5"></question>
+Do not type a "th" or anything like that.  Just a plain number.<br />
+<p>Therefore, what is the profit-maximizing number of patients 
+if the price is $3700?</p>
+<question qid="MC6"></question>
+<p>Do not type a "th" or anything like that.  Just a plain number.</p>
+<br />
 <p>We have found the number of patients that gives us the greatest profit,
 just by comparing the price with the numbers in the marginal cost column.
-No arithmetic is needed.
+No arithmetic is needed.</p>
 <p>Now I'll do the arithmetic for you, to verify that this answer is correct.
 <p>Total Revenue = $3700 times the Number of Patients.&nbsp; Profit =
-Total Revenue minus Total Cost.
-<br>&nbsp;
+Total Revenue minus Total Cost.</p>
+
 <table CELLSPACING=5 >
 <tr>
 <td ALIGN=CENTER>Number
@@ -276,20 +259,16 @@ Total Revenue minus Total Cost.
 <td>$3300</td>
 </tr>
 </table>
-
+<br />
 <p>Sure enough, profit is greatest when you serve 7 patients. The marginal
-decision rule told you that without having to calculate out the whole table.
+decision rule told you that without having to calculate out the whole table.</p>
 <p>On the other hand, the marginal decision rule didn't tell you how much
 profit (or loss) you have if you server 7 patients. For that you do need
-the calculations, and we see that profit at 7 patients is $4900.
+the calculations, and we see that profit at 7 patients is $4900.</p>
 <p>A trick question:
-<p class="question">
 The marginal decision rule says you should set your price to be equal
-to your marginal cost.
-<br>
-<input type="radio" name="MC7" value="true">True.</input>
-<input type="radio" name="MC7" value="false">False.</input>
-<div id="MC7-answers"></div>
+to your marginal cost.</p>
+<question qid="MC7"></question>
 
 
 </ion-content>
