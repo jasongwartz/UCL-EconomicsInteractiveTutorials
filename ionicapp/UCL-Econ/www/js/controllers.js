@@ -15,6 +15,8 @@ angular.module('app.controllers', [])
 
 .controller('sambakerChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
 
+            Chapters.setFilename('data/sambakerChapters.json');
+
             $scope.chapterTitles = Chapters.getTitles();
             $scope.chapterSections = Chapters.getSections();
             $scope.modalResults = {}
@@ -29,7 +31,6 @@ angular.module('app.controllers', [])
               $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
               $scope.modal.show();
-
             }
 
             // Modal Pop Up
@@ -57,15 +58,13 @@ angular.module('app.controllers', [])
             $scope.$on('modal.removed', function() {
               // Execute action
             });
-
-           
-           
-     
   })
   
   
   
 .controller('extraChaptersCtrl', function ($scope, SectionNavigation, Chapters, $ionicModal) {
+
+            Chapters.setFilename('data/extraChapters.json');
 
             $scope.chapterTitles = Chapters.getTitles();
             $scope.chapterSections = Chapters.getSections();
@@ -77,7 +76,7 @@ angular.module('app.controllers', [])
             // Chapter Clicker Listener
             $scope.chapterClicker = function(chapterID){
               $scope.currentChapterID = chapterID;
-              $scope.baseDirectory = "sambakerChapters";
+              $scope.baseDirectory = "extraChapters";
               $scope.modalResults = SectionNavigation.navigation(chapterID, $scope.chapterSections);
 
               $scope.modal.show();
@@ -661,17 +660,4 @@ angular.module('app.controllers', [])
     }
   };
 
-})
-
-;
-
-function getAnswer(s) {
-  // modify this to run answer lookup code
-  if (s.length > 5) {
-    var a = [true, "Sam Baker approves!"];
-  } else {
-    var a = [false, "Sam Baker is dissapointed..."]
-  }
-  
-  return a;
-}
+});

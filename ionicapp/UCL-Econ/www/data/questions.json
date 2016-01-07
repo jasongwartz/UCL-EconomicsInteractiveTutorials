@@ -1049,21 +1049,7 @@
             }
         }, 
         "type": "MultipleChoice", 
-        "id": "sd5", 
-        "choices": {
-            "Demand": {
-                "message": "No. It is not in the primary care market. ", 
-                "solution": false
-            }, 
-            "Supply": {
-                "message": "No. It is not in the primary care market. ", 
-                "solution": false
-            }, 
-            "Neither side": {
-                "message": "Correct! It does not sell primary care services. It is a supplier in a different market. ", 
-                "solution": true
-            }
-        }
+        "id": "sd5"
     }, 
     "sd6": {
         "highmessage": "Find the line in the table for a price of $10 per visit.", 

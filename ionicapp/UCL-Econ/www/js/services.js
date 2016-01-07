@@ -5,20 +5,24 @@ angular.module('app.services', [])
         // http://stackoverflow.com/questions/684672/loop-through-javascript-object
         // http://api.jquery.com/each/          
         var chapters;
-
-        $.getJSON('data/chapters.json', function (data) {
+        var filename;
+        $.getJSON(filename, function (data) {
             chapters = data;
         });
 
         function getChapterData() {
-            return $.getJSON("data/chapters.json").then(function (data) {
+            return $.getJSON(filename).then(function (data) {
                 chapters = data;
                 return data;
             });
         }
         return {
+            
+            setFilename: function(name) {
+                filename = name;
+            },
+                
             getChapters: function () {
-
                 getChapterData().then(function (returndata) {
                     chapters = returndata;
                 })
