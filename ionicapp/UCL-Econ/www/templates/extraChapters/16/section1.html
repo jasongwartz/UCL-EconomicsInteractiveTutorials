@@ -1,23 +1,45 @@
 <ion-view title="Supply - Section 1">
-    <ion-content padding="true" class="has-header">
+    <ion-content padding="true" ng-controller="ch16Controller" class="has-header has-footer">
 
-<p>Table 2 shows a hypothetical supply schedule for GP services in a town where there is no free health service.</p>
+  <p>Table 2 shows a hypothetical supply schedule for GP services in a town where there is no free health service.</p>
 
-<p>Table 2</p>
+  <p>Table 2</p>
 
-<p>
-Price of GP consultations			Quantity of consultations GPs are prepared to supply per month
-0									0
-£5									40
-£10									80
-£15									100
-£20									150
-</p>
+  <table>
+    <tr>
+      <td>Price of GP consultations</td>
+      <td>Quantity of consultations GPs are prepared to supply per month</td>    
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>    
+    </tr>
+    <tr>
+      <td>£5</td>
+      <td>40</td>    
+    </tr>
+    <tr>
+      <td>£10</td>
+      <td>80</td>    
+    </tr>
+    <tr>
+      <td>£15</td>
+      <td>100</td>    
+    </tr>
+    <tr>
+      <td>£20</td>
+      <td>150</td>    
+    </tr>
+  </table>
 
-<p>Using the same graph on which you have drawn your demand curve, draw a supply curve for GP services using this information.</p>
+  <p>Using the same graph on which you have drawn your demand curve, draw a supply curve for GP services using this information.</p>
 
-TODO: drawing graph functionality, call answer machine
+  <p>Work out the answer for yourself on paper, then click submit to check if you are correct!</p>
 
+  <button ng-click="question1()">Submit</button><br><br>
 
-	</ion-content>
+  <img src="img/{{demandGraph}}.jpg" width="558" height="307" border="0" alt="Graph">
+
+</ion-content>
+<footer sid="16"></footer>
 </ion-view>

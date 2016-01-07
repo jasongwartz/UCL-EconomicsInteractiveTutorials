@@ -1,9 +1,14 @@
 <ion-view title="Supply - Section 5">
-    <ion-content padding="true" class="has-header">
+    <ion-content padding="true" ng-controller="ch16Controller" class="has-header has-footer">
 
-<p>Draw a new supply curve to show the effect of the increase in costs (on the same diagram as the original supply curve). </p>
+	<p>Draw a new supply curve to show the effect of the increase in costs (on the same diagram as the original supply curve).</p>
 
-TODO: use brain
+	<p>Work out the answer for yourself on paper, then click submit to check if you are correct!</p>
 
-	</ion-content>
+	<button ng-click="question5()">Submit</button><br><br>
+
+	<img src="img/{{demandGraph}}.jpg" width="560" height="389" border="0" alt="Graph">
+
+</ion-content>
+<footer sid="16"></footer>
 </ion-view>
