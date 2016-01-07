@@ -332,7 +332,7 @@ angular.module('app.controllers', [])
   }
 })
 
-.controller('ch13Controller', function($scope) {
+.controller('ch12Controller', function($scope) {
 
   $scope.spin1 = function() {
     var outcome = Math.floor(Math.random()*38);   
@@ -378,7 +378,6 @@ angular.module('app.controllers', [])
       } else {
         loss++;
       }
-      
     }
     
     $scope.win = win;
@@ -400,10 +399,10 @@ angular.module('app.controllers', [])
       }
       
       if (outcome % 2 === 1) {
-    win++;
-    } else {
-    loss++;
-    }
+        win++;
+      } else {
+        loss++;
+      }
     }
     
     if (outcome === 38) {
@@ -427,14 +426,16 @@ angular.module('app.controllers', [])
     
     for (var i = 0; i < 1000000; i++) {
       outcome = Math.floor(Math.random()*38);
-    if (outcome === 37) { 
-    outcome = 38;
-    }
-    if (outcome % 2 === 1) {
-    win++;
-    } else {
-    loss++;
-    }
+
+      if (outcome === 37) { 
+        outcome = 38;
+      }
+
+      if (outcome % 2 === 1) {
+        win++;
+      } else {
+        loss++;
+      }
     }
     
     if (outcome === 38) {
@@ -472,9 +473,190 @@ angular.module('app.controllers', [])
       $scope.both2 = "£0.00";
       $scope.both = "The expected present value of this bill is £8823.53. (£8823.53+£0.00=£8823.53) That is also the price for which the bill should sell.";
     }
+  };
+})
+
+.controller('ch14Controller', function($scope) {
+  $scope.demandGraph = "demandGraphDefault";
+
+  $scope.question1 = function() {
+    $scope.demandGraph = "demandGraphDrawn";
+  };
+
+})
+
+.controller('ch16Controller', function($scope) {
+  $scope.demandGraph = "demandGraphDefault";
+
+  $scope.question1 = function() {
+    $scope.demandGraph = "demandsupplyGraphDrawn";
+  };
+
+  $scope.question3 = function() {
+    $scope.quantity0 = 0;
+    $scope.quantity1 = 36;
+    $scope.quantity2 = 72;
+    $scope.quantity3 = 90;
+    $scope.quantity4 = 135;
+  };
+
+  $scope.question5 = function() {
+    $scope.demandGraph = "demandsupplyextraGraphDrawn";
+  };
+
+})
+
+.controller('ch8Controller', function($scope) {
+  $scope.demandGraph = "demandGraphDefault";
+
+  $scope.question1 = function() {
+    $scope.demandGraph = "demandGraphDrawn";
+  };
+
+  
+  $scope.inputT0 = "Type here";
+  $scope.inputT1 = "Type here";
+  $scope.inputT2 = "Type here";
+  $scope.inputT3 = "Type here";
+  $scope.inputT4 = "Type here";
+  $scope.inputT5 = "Type here";
+  $scope.inputT6 = "Type here";
+  $scope.inputT7 = "Type here";
+  $scope.inputT8 = "Type here";
+  $scope.inputT9 = "Type here";
+  $scope.Mon02Ans = "My comments will be here";
+
+  $scope.btnMon020 = function() {
+    if ($scope.inputT0 == 0) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 0";
+    }
+  };
+  $scope.btnMon021 = function() {
+    if ($scope.inputT1 == 20) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 1";
+    }
+  };
+  $scope.btnMon022 = function() {
+    if ($scope.inputT2 == 40) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 2";
+    }
+  };
+  $scope.btnMon023 = function() {
+    if ($scope.inputT3 == 60) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 3";
+    }
+  };
+  $scope.btnMon024 = function() {
+    if ($scope.inputT4 == 80) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 4";
+    }
+  };
+  $scope.btnMon025 = function() {
+    if ($scope.inputT5 == 100) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 5";
+    }
+  };
+  $scope.btnMon026 = function() {
+    if ($scope.inputT6 == 120) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 6";
+    }
+  };
+  $scope.btnMon027 = function() {
+    if ($scope.inputT7 == 140) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 7";
+    }
+  };
+  $scope.btnMon028 = function() {
+    if ($scope.inputT8 == 160) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 8";
+    }
+  };
+  $scope.btnMon029 = function() {
+    if ($scope.inputT9 == 180) {
+      $scope.Mon02Ans = "Correct! Please do another.";
+    } else {
+      $scope.Mon02Ans = "Not correct, you want 20 x 9";
+    }
+  };
 
 
 
+
+
+
+  $scope.inputMon04 = "Type here";
+
+  $scope.btnMon04 = function() {
+
+    var MCost = [ 15, 15, 15, 15, 15, 15, 15, 25, 30 ];
+
+    if ($scope.inputMon04 == 7) {
+      $scope.ansMon04 = "Correct! 7 is the highest output rate before the marginal cost rises above the marginal revenue.";
+    } else if ($scope.inputMon04 < 7) {
+      $scope.ansMon04 = $scope.inputMon04 + " doesn't maximise profit. If you increase output to " + (+$scope.inputMon04 + 1) + ", the marginal revenue (£20) is more than the marginal cost (£"+ MCost[$scope.inputMon04] + "). You'll add £" + (20 - MCost[$scope.inputMon04]) + " to your profit if you increase output to " + (+$scope.inputMon04 + 1) + "test is" + test;
+    } else if ($scope.inputMon04 > 7) {
+
+      var str = "";
+      if ($scope.inputMon04 == 8) {
+        str = 25;
+      } else {
+        str = 30;
+      }
+
+      $scope.ansMon04 = "Too high. If you cut your output back to " + (+$scope.inputMon04 - 1) + ", your revenue goes down by £20, but your cost goes down by " + str + ", so your profit is greater at " + (+$scope.inputMon04 - 1);
+      
+    } else {
+      $scope.ansMon04 = "Please input a whole number.";
+    }
+
+  };
+
+  $scope.inputMon05 = "Type here";
+
+  $scope.btnMon05 = function() {
+
+    if ($scope.inputMon05 == 60) {
+      $scope.ansMon05 = "Correct! If you want to provide 4 visits per hour, and if you want to maximize profit, then you should charge £60. Charge less and you are throwing money away. Charge more and you won't get 4 patients to come in per hour.";
+    } else if ($scope.inputMon05 < 60) {
+      $scope.ansMon05 = "Too low, if you want to maximise profit. You can charge more than £" + $scope.inputMon05 + " and still get at least 4 patients to come in per hour.";
+    } else if ($scope.inputMon05 > 60) {
+      $scope.ansMon05 = "Too high. At this price, you won't get 4 patients per hour to come in";
+    } else {
+      $scope.ansMon05 = "Please input a whole number.";
+    }
+  };
+
+  $scope.inputMon06 = "Type here";
+
+  $scope.btnMon06 = function() {
+
+    if ($scope.inputMon06 == 50) {
+      $scope.ansMon06 = "Correct!  If you want to provide 5 visits per hour, and if you want to maximize profit, then you should charge £50. Charge less and you are throwing money away. Charge more and you won't get 5 patients per hour.";
+    } else if ($scope.inputMon06 < 50) {
+      $scope.ansMon06 = "Too low, if you want to maximize profit. You can charge more than $" + $scope.inputMon06 + " and still get at least 5 patients to come in per hour.";
+    } else if ($scope.inputMon06 > 50) {
+      $scope.ansMon06 = "Too high. At this price, you won't get 5 patients per hour to come in";
+    } else {
+      $scope.ansMon06 = "Please input a whole number.";
+    }
   };
 
 })

@@ -1565,5 +1565,519 @@
         "answer": "1/52", 
         "type": "SingleAnswer", 
         "id": "risk1"
+    }, 
+    "extraDemand2": {
+        "id": "extraDemand2",
+        "type": "SingleAnswer",
+        "text": "If the price of a consultation is £5, what is the total amount that people will spend on consultations?",
+        "answer": "2000",
+        "correct": "Well done - you are on your way to being a true health economist - Jolene would be proud!",
+        "incorrect": "Sorry, this is not the correct answer."       
+    },
+    "extraDemand3": {
+        "text": "Choose the right answer from the following", 
+        "type": "MultipleChoice", 
+        "id": "extraDemand3", 
+        "choices": {
+            "Decrease": {
+                "message": "Well done! Continue to the supply questions.", 
+                "solution": true
+            }, 
+            "Increase": {
+                "message": "Sorry, this is not the correct answer. Check you have drawn your curve correctly.", 
+                "solution": false
+            }, 
+            "Stay the same": {
+                "message": "Sorry, this is not the correct answer. Check you have drawn your curve correctly.", 
+                "solution": false
+            }
+        }
+    },
+    "extraSupply2": {
+        "text": "If the price of consultations rose from £5 to £15, what would happen to the quantity of consultations GPs are prepared to supply?", 
+        "type": "MultipleChoice", 
+        "id": "extraSupply2", 
+        "choices": {
+            "Decrease": {
+                "message": "Sorry, look again at your notes and the curve that you have just drawn.", 
+                "solution": false
+            }, 
+            "Increase": {
+                "message": "Well done! You really understood the concept.", 
+                "solution": true
+            }, 
+            "Stay the same": {
+                "message": "Sorry, look again at your notes and the curve that you have just drawn.", 
+                "solution": false
+            }
+        }
+    },
+    "extraSupply4": {
+        "text": "Using the new table, identify the quantity that GP's would be prepared to provide if the price of a consultation were £10.", 
+        "type": "MultipleChoice", 
+        "id": "extraSupply4", 
+        "choices": {
+            "36": {
+                "message": "Sorry, this is the not the correct answer. Make sure that you have calculated the percentage correctly.", 
+                "solution": false
+            }, 
+            "72": {
+                "message": "Excellent! Keep going!", 
+                "solution": true
+            }, 
+            "90": {
+                "message": "Sorry, this is the not the correct answer. Make sure that you have calculated the percentage correctly.", 
+                "solution": false
+            }, 
+            "135": {
+                "message": "Sorry, this is the not the correct answer. Make sure that you have calculated the percentage correctly.", 
+                "solution": false
+            }
+        }
+    },
+    "extraSupply6": {
+        "text": "What happened to the supply curve?", 
+        "type": "MultipleChoice", 
+        "id": "extraSupply6", 
+        "choices": {
+            "The supply curve stayed the same": {
+                "message": "Sorry, make sure that you plotted the new quantities correctly.", 
+                "solution": false
+            }, 
+            "Moved UPWARDS (left)": {
+                "message": "Well done! You really understood it!", 
+                "solution": true
+            }, 
+            "Moved DOWNWARDS (right)": {
+                "message": "Sorry, make sure that you plotted the new quantities correctly.", 
+                "solution": false
+            }
+        }
+    },
+    "extraSupply7": {
+        "text": "What is the equilibrium price?", 
+        "type": "MultipleChoice", 
+        "id": "extraSupply7", 
+        "choices": {
+            "£5": {
+                "message": "Sorry, this is not the correct answer. Look again where the supply and demand curves intersect.", 
+                "solution": false
+            }, 
+            "£10": {
+                "message": "Sorry, this is not the correct answer. Look again where the supply and demand curves intersect.", 
+                "solution": false
+            }, 
+            "£15": {
+                "message": "Well done! Only one more question to go!", 
+                "solution": true
+            }, 
+            "£20": {
+                "message": "Sorry, this is not the correct answer. Look again where the supply and demand curves intersect.", 
+                "solution": false
+            }
+        }
+    },
+    "extraSupply8": {
+        "text": "How much revenue are doctors receiving at the equilibrium price?", 
+        "type": "MultipleChoice", 
+        "id": "extraSupply8", 
+        "choices": {
+            "£200": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "£800": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "£1500": {
+                "message": "Congratulations! You have completed this task! I hope it wasn't too hard. Press continue to end the lesson and see your grade. Remember, you can repeat this lesson as many times as you wish.", 
+                "solution": true
+            }, 
+            "Nohing, they make a loss": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    }, 
+    "extraEla11": {
+        "id": "extraEla11",
+        "type": "SingleAnswer",
+        "text": "What is Julie's elasticity of demand?",
+        "answer": "0.8",
+        "correct": "To find Julie's elasticity of demand, we need to divide the percent change in quantity by the percent change in price.\n\n% Change in Quantity = (8 - 10)/(10) = -0.20 = -20%\n% Change in Price = (3.75 - 3.00)/(3.00) = 0.25 = 25%\nElasticity = |(-20%)/(25%)| = |-0.8| = 0.8\n\nHer elasticity of demand is the absolute value of -0.8, or 0.8.",
+        "incorrect": "Sorry, this is not the correct answer."       
+    },
+    "extraEla12": {
+        "text": "Is Julie's demand for envelopes elastic or inelastic?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla12", 
+        "choices": {
+            "Elastic": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Inelastic": {
+                "message": "Julie's elasticity of demand is inelastic, since it is less than 1.", 
+                "solution": true
+            }
+        }
+    }, 
+    "extraEla2": {
+        "id": "extraEla2",
+        "type": "SingleAnswer",
+        "text": "If Neil's elasticity of demand for hot dogs is constantly 0.9, and he buys 4 hot dogs when the price is £1.50 per hot dog, how many will he buy when the price is £1.00 per hot dog?",
+        "answer": "5",
+        "correct": "This time, we are using elasticity to find quantity, instead of the other way around. We will use the same formula, plug in what we know, and solve from there.\n\nElasticity =\nAnd, in the case of John, %Change in Quantity = (X – 4)/4\nTherefore:\nElasticity = 0.9 = |((X – 4)/4)/(% Change in Price)|\n% Change in Price = (1.00 - 1.50)/(1.50) = -33%\n0.9 = |(X – 4)/4)/(-33%)|\n|((X - 4)/4)| = 0.3\n0.3 = (X - 4)/4\nX = 5.2\n\nSince Neil probably can't buy fractions of hot dogs, it looks like he will buy 5 hot dogs when the price drops to £1.00 per hot dog.",
+        "incorrect": "Sorry, this is not the correct answer."       
+    },
+    "extraEla41": {
+        "text": "A shift in which curve would affect quantity more?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla41", 
+        "choices": {
+            "Demand curve": {
+                "message": "Shifting the demand curve would affect quantity more.", 
+                "solution": true
+            }, 
+            "Supply curve": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    },
+    "extraEla42": {
+        "text": "A shift in which curve would affect price more?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla42", 
+        "choices": {
+            "Demand curve": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Supply curve": {
+                "message": "Shifting the supply curve would affect price more.", 
+                "solution": true
+            }
+        }
+    }, 
+    "extraEla51": {
+        "id": "extraEla51",
+        "type": "SingleAnswer",
+        "text": "What is the elasticity of demand?",
+        "answer": "0.4",
+        "correct": "To find the elasticity of demand, we need to divide the percent change in quantity by the percent change in price./n/n% Change in Quantity = (40 - 50)/(50) = -0.20 = -20%/n% Change in Price = (6.00 - 4.00)/(4.00) = 0.50 = 50%/nElasticity = |(-20%)/(50%)| = |-0.4| = 0.4/n/nThe elasticity of demand is 0.4 (inelastic).",
+        "incorrect": "Sorry, this is not the correct answer."       
+    }, 
+    "extraEla52": {
+        "id": "extraEla52",
+        "type": "SingleAnswer",
+        "text": "Assuming that the elasticity of demand is constant, how many would she sell if the price were £10 a box?",
+        "answer": "20",
+        "correct": "To find the quantity when the price is £10 a box, we use the same formula:/n/nElasticity = 0.4 = |(% Change in Quantity)/(% Change in Price)|/n% Change in Price = (10.00 - 4.00)/(4.00) = 1.5 = 150%/n/nRemember that before taking the absolute value, elasticity was -0.4, so use -0.4 to calculate the changes in quantity, or you will end up with a big increase in consumption, instead of a decrease!/n/n-0.4 = |(% Change in Quantity)/(150%)|/n|(%Change in Quantity)| = -60% = -0.6/n-0.6 = (X - 50)/50/nX = 20/n/nThe new demand at £10 a dozen will be 20 dozen cookies.",
+        "incorrect": "Sorry, this is not the correct answer."       
+    },
+    "extraEla81": {
+        "text": "Coffee or water", 
+        "type": "MultipleChoice", 
+        "id": "extraEla81", 
+        "choices": {
+            "Coffee": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "Water": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    },
+    "extraEla82": {
+        "text": "Rice or ham?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla81", 
+        "choices": {
+            "Rice": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Ham": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla83": {
+        "text": "Underwear or tuxedos?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla83", 
+        "choices": {
+            "Underwear": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Tuxedos": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla84": {
+        "text": "Velvet or cotton?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla84", 
+        "choices": {
+            "Velvet": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "Cotton": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    },
+    "extraEla85": {
+        "text": "Coffee makers or espresso machines?", 
+        "type": "MultipleChoice", 
+        "id": "extraEla85", 
+        "choices": {
+            "Coffee makers": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Espresso machines": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla31": {
+        "text": "Home heating oil", 
+        "type": "MultipleChoice", 
+        "id": "extraEla31", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Inelastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla32": {
+        "text": "Pepsi", 
+        "type": "MultipleChoice", 
+        "id": "extraEla32", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "Inelastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    },
+    "extraEla33": {
+        "text": "Chocolate", 
+        "type": "MultipleChoice", 
+        "id": "extraEla33", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "Inelastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    },
+    "extraEla34": {
+        "text": "Water", 
+        "type": "MultipleChoice", 
+        "id": "extraEla34", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Inelastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla35": {
+        "text": "Heart medication", 
+        "type": "MultipleChoice", 
+        "id": "extraEla35", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }, 
+            "Inelastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }
+        }
+    },
+    "extraEla36": {
+        "text": "Oriental rugs", 
+        "type": "MultipleChoice", 
+        "id": "extraEla36", 
+        "choices": {
+            "Elastic demand": {
+                "message": "Correct!", 
+                "solution": true
+            }, 
+            "Inelastic demand": {
+                "message": "Sorry, this is not the correct answer.", 
+                "solution": false
+            }
+        }
+    }, 
+    "extraEla6": {
+        "id": "extraEla6",
+        "type": "SingleAnswer",
+        "text": "",
+        "answer": "",
+        "correct": "When OPEC decreases supply, moving the supply curve inwards, it results in an increase in price and a decrease in consumption. What makes this situation even worse is that in the short run, UK demand for petrol is relatively inelastic, so that when the supply curve shifts inwards, consumption doesn't decrease much, but the price increases by a lot, since the demand curve is so steep.",
+        "incorrect": "When OPEC decreases supply, moving the supply curve inwards, it results in an increase in price and a decrease in consumption. What makes this situation even worse is that in the short run, UK demand for petrol is relatively inelastic, so that when the supply curve shifts inwards, consumption doesn't decrease much, but the price increases by a lot, since the demand curve is so steep."       
+    }, 
+    "extraEla7": {
+        "id": "extraEla7",
+        "type": "SingleAnswer",
+        "text": "",
+        "answer": "",
+        "correct": "Goods for which demand is inelastic tend to be essential goods or goods without good substitutes. While some might argue that there is no good substitute for caviar, and it is necessary for a good lifestyle, it is still not as essential as oxygen. If there were a market for oxygen and a market for caviar, and buyers have a limited amount of money, they would always choose to buy oxygen, no matter what the price, or else they would die, rendering all markets useless anyway. Caviar, being a non-essential good, would be a lower priority that oxygen, and so demand for it would be more affected by changes in price. This means that demand for oxygen will be inelastic relative to demand for caviar.",
+        "incorrect": "Goods for which demand is inelastic tend to be essential goods or goods without good substitutes. While some might argue that there is no good substitute for caviar, and it is necessary for a good lifestyle, it is still not as essential as oxygen. If there were a market for oxygen and a market for caviar, and buyers have a limited amount of money, they would always choose to buy oxygen, no matter what the price, or else they would die, rendering all markets useless anyway. Caviar, being a non-essential good, would be a lower priority that oxygen, and so demand for it would be more affected by changes in price. This means that demand for oxygen will be inelastic relative to demand for caviar."       
+    }, 
+    "extraEla9": {
+        "id": "extraEla9",
+        "type": "SingleAnswer",
+        "text": "",
+        "answer": "",
+        "correct": "When OPEC decreases supply, moving the supply curve inwards, it results in an increase in price and a decrease in consumption. What makes this situation even worse is that in the short run, UK demand for petrol is relatively inelastic, so that when the supply curve shifts inwards, consumption doesn't decrease much, but the price increases by a lot, since the demand curve is so steep.",
+        "incorrect": "When OPEC decreases supply, moving the supply curve inwards, it results in an increase in price and a decrease in consumption. What makes this situation even worse is that in the short run, UK demand for petrol is relatively inelastic, so that when the supply curve shifts inwards, consumption doesn't decrease much, but the price increases by a lot, since the demand curve is so steep."
+    }, 
+    "extraEla10": {
+        "id": "extraEla10",
+        "type": "SingleAnswer",
+        "text": "",
+        "answer": "",
+        "correct": "Putting a tax on cigarettes would have the effect of increasing the price of cigarettes. If demand is inelastic, however, smokers will still buy the same amount of cigarettes, or show a very small decrease in consumption, regardless of the increase in price. The net result of the tax would be a large jump in price with a smaller-than-desired decrease in consumption.",
+        "incorrect": "Putting a tax on cigarettes would have the effect of increasing the price of cigarettes. If demand is inelastic, however, smokers will still buy the same amount of cigarettes, or show a very small decrease in consumption, regardless of the increase in price. The net result of the tax would be a large jump in price with a smaller-than-desired decrease in consumption."
+    }, 
+    "Invest04": {
+        "text": "Which of these measures (net present value and internal rate of return) requires you to know the future income and outgo amounts? Click on the best answer.", 
+        "type": "MultipleChoice", 
+        "id": "Invest04", 
+        "choices": {
+            "Net Present Value": {
+                "message": "The net present value does require predicting the income stream, but what about the internal rate of return?", 
+                "solution": false
+            }, 
+            "Internal Rate of Return": {
+                "message": "The internal rate of return does require predicting the income stream, but what about the net present value?", 
+                "solution": false
+            }, 
+            "Both": {
+                "message": "Correct! Both require predicting the income stream. This brings in some uncertainty, of course, but that can't be avoided.", 
+                "solution": true
+            }, 
+            "Neither": {
+                "message": "No. You have to predict the income stream to get started with either measure.", 
+                "solution": false
+            }
+        }
+    }, 
+    "Invest05": {
+        "text": "Which of the measures requires you to know what the discount rate will be in the future? Click on the best answer.", 
+        "type": "MultipleChoice", 
+        "id": "Invest05", 
+        "choices": {
+            "Net Present Value": {
+                "message": "Correct! The net present value does require the discount rate to do its calculation. This brings in more uncertainty, because we don't know for sure what the discount rate will be in the future.", 
+                "solution": true
+            }, 
+            "Internal Rate of Return": {
+                "message": "The internal rate of return does not require predicting the discount rate. Instead, it gives you a discount rate, the one that makes the net present value 0.", 
+                "solution": false
+            }, 
+            "Both": {
+                "message": "No. Do you need to predict the discount rate to calculate the internal rate of return?", 
+                "solution": false
+            }, 
+            "Neither": {
+                "message": "No. Can you calculate the net present value without choosing a discount rate?", 
+                "solution": false
+            }
+        }
+    }, 
+    "Mon01": {
+        "text": "That makes them a monopoly, yes?", 
+        "type": "MultipleChoice", 
+        "id": "Mon01", 
+        "choices": {
+            "Yes. Only Wendy's has the Biggie!": {
+                "message": "Correct!  In a market where there is product differentiation, each firm is a monopolist for its particular product variant. (But see what my reply is if you answer No.)", 
+                "solution": true
+            }, 
+            "No. I can get burgers lots of places.": {
+                "message": "Correct! Wendy's certainly is not the sole seller of burgers and fries. Can you imagine the Justice Department prosecuting Wendy's as a monopolist? I can't! (But see what my reply is if you answer Yes.)", 
+                "solution": true
+            }
+        }
+    }, 
+    "Mon015": {
+        "text": "Is the distinction between monopolistic competition and monopoly clear to you?", 
+        "type": "MultipleChoice", 
+        "id": "Mon015", 
+        "choices": {
+            "Yes!": {
+                "message": "Really! Maybe you should be a Federal judge. (On the other hand, maybe you shouldn't be a Federal judge.) A couple of paragraphs down, I'll suggest a distinction, but there is no hard and fast rule.", 
+                "solution": false
+            }, 
+            "Ummm... No.": {
+                "message": "It's not clear to me, either. A couple of paragraphs down, I'll suggest a distinction, but there is no hard and fast rule.", 
+                "solution": true
+            }
+        }
+    }, 
+    "Mon08": {
+        "text": "Over which range of output rates is the demand elastic?", 
+        "type": "MultipleChoice", 
+        "id": "Mon08", 
+        "choices": {
+            "0 to 5, because revenue goes up as the price goes down": {
+                "message": "Correct! Elastic demand means quantity demanded responds a lot to price changes. Quantity goes up by more, proportionally, than the price goes down, so total revenue goes up when you reduce your price.", 
+                "solution": true
+            }, 
+            "5 to 9, because revenue goes down as the price goes down": {
+                "message": "No. If total revenue goes down when you reduce your price, it means that the quantity demanded is not responding much to your price change. Demand is inelastic.", 
+                "solution": false
+            }
+        }
+    }, 
+    "Mon11": {
+        "text": "For the most profit, always raise your price if your demand is inelastic.", 
+        "type": "MultipleChoice", 
+        "id": "Mon011", 
+        "choices": {
+            "True": {
+                "message": "Correct!  When demand is inelastic, you gain revenue by raising your price. If your sole motivation is profit, keep raising your price at least until your demand starts getting elastic.", 
+                "solution": true
+            }, 
+            "False": {
+                "message": "No.  The statement is true, if your sole motivation is profit. Inelastic demand means more revenue if you raise your price. More revenue means more profit.", 
+                "solution": false
+            }
+        }
     }
 }
