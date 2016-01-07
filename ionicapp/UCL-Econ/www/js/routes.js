@@ -55,7 +55,12 @@ var populateStates = function (chaptersDict) {
   });
 };
 
-$.getJSON("data/chapters.json").then(function (c) {
+$.getJSON("data/sambakerChapters.json").then(function (c) {
+  populateStates(c);
+});
+$.getJSON("data/extraChapters.json").then(function (c) {
+    console.log(c);
   populateStates(c);
 })
+
   });

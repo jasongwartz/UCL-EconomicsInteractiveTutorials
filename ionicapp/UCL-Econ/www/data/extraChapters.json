@@ -1,14 +1,17 @@
 {
       "1": {
             "name": "Demand",
-            "sections": 4
+            "sections": 4,
+            "base": "extraChapters" 
       },
       "2": {
             "name": "Elasticity",
-            "sections": 12
+            "sections": 12,
+            "base": "extraChapters"
       },
       "3": {
             "name": "Supply",
-            "sections": 8
+            "sections": 8,
+            "base": "extraChapters"
       }
 }

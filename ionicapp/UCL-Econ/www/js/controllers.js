@@ -117,6 +117,10 @@ angular.module('app.controllers', [])
     //$scope.baseDirectory = "sambakerChapters";
   })
   
+    .controller("extraChaptersPageCtrl", function ($scope) {
+    //$scope.baseDirectory = "sambakerChapters";
+  })
+  
   .controller("QuestionController", function ($scope, $timeout, QuestionFactory, Chapters, $ionicPopup, $location) {
 
       $timeout(function(){
@@ -178,7 +182,20 @@ angular.module('app.controllers', [])
        // Start the footer stuff -->
 
       // Footer nav ng hide variables for section navigtion
-      $scope.baseDirectory = "sambakerChapters"; // GET THIS WORKING DYNAMICALLY &&&
+      console.log();
+      
+      // check if 'extra' in footer URL
+      // source: http://stackoverflow.com/questions/1789945/how-can-i-check-if-one-string-contains-another-substring
+      
+      var stringUrl = $location.absUrl()
+      // source: http://www.sitepoint.com/javascript-truthy-falsy/
+      
+      if (~(stringUrl.indexOf('x'))) { // checks if the result of indexOf is 'truthy'
+        $scope.baseDirectory = "extraChapters";
+      } else {
+          $scope.baseDirectory = "sambakerChapters";
+      };
+      
       $scope.prevEnd = false;
       $scope.nextEnd = true;
 
@@ -195,7 +212,8 @@ angular.module('app.controllers', [])
       // Use the entered Chapter ID to get the number of sections in that chapter from Chapters .factory
       $timeout(function(){
         $scope.chaptID = $scope.sid;
-         $scope.totalSections = parseInt(Chapters.getSectionNumber($scope.sid));
+        Chapters.setFilename("data/" + $scope.baseDirectory + ".json")
+        $scope.totalSections = parseInt(Chapters.getSectionNumber($scope.sid));
 
          // progressBar variable is used in footer/html to set the progress bar length. Round to nearest integer.
          $scope.progressBar = Math.round((100 / $scope.totalSections) * parseInt($scope.absUrl));
