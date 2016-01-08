@@ -183,13 +183,26 @@ angular.module('app.controllers', [])
       $scope.prevEnd = false;
       $scope.nextEnd = true;
 
-      // Get the last character of the URL - basically the current section number
+      // Figure out the current section number
+
+      $scope.theURLNumber;
+
       $scope.absUrl = $location.absUrl().slice(-1);
+
+      $scope.absUrlSecond = $location.absUrl().slice(-2);
+      $scope.absUrlParsedSecond = parseInt($scope.absUrlSecond);
+
+      if(isNaN($scope.absUrlParsedSecond) == true){
+        $scope.theURLNumber = $scope.absUrl;
+      } else { 
+        $scope.theURLNumber = $scope.absUrlParsedSecond;
+      }
 
       // Get current section number and use it to calculate the next and previous sections
       // These variables are placed in the footer.html file
-      $scope.nextSection = parseInt($scope.absUrl) + 1;
-      $scope.prevSection = parseInt($scope.absUrl) - 1;
+      $scope.nextSection = parseInt($scope.theURLNumber) + 1;
+      $scope.prevSection = parseInt($scope.theURLNumber) - 1;
+
       $scope.progressBar;
 
       // Get the entered Chapter ID (<footer sid="..."></footer>) from the footer directive
@@ -199,7 +212,7 @@ angular.module('app.controllers', [])
          $scope.totalSections = parseInt(Chapters.getSectionNumber($scope.sid));
 
          // progressBar variable is used in footer/html to set the progress bar length. Round to nearest integer.
-         $scope.progressBar = Math.round((100 / $scope.totalSections) * parseInt($scope.absUrl));
+         $scope.progressBar = Math.round((100 / $scope.totalSections) * parseInt($scope.theURLNumber));
       });
 
       // Hide previous section arrow in footer when in section 1
