@@ -15,7 +15,7 @@ angular.module('app.routes', [])
     })
         
     .state('sambakerChapters', {
-      url: '/sambaker',
+      url: '/sambakerChapters',
       templateUrl: 'templates/sambakerChapters.html',
       controller: 'sambakerChaptersCtrl'
     })
@@ -59,7 +59,6 @@ $.getJSON("data/sambakerChapters.json").then(function (c) {
   populateStates(c);
 });
 $.getJSON("data/extraChapters.json").then(function (c) {
-    console.log(c);
   populateStates(c);
 })
 

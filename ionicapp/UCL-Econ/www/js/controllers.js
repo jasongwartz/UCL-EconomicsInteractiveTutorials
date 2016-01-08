@@ -236,7 +236,7 @@ angular.module('app.controllers', [])
           okType: 'button-balanced'
         });
         alertPopup.then(function() {
-          $location.url("/sambaker");
+          $location.url("/" + $scope.baseDirectory);
         })
       };
       
