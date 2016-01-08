@@ -351,6 +351,103 @@ angular.module('app.controllers', [])
   }
 })
 
+.controller('ch3Controller', function($scope) {
+  $scope.inputACost12 = "Type here";
+  $scope.ansACost12 = "My comments will be here.";
+  $scope.btnACost12 = function() {
+    if ($scope.inputACost12 == 8) {
+      $scope.ansACost12 = "Correct! 8 is the largest number of patients for which average cost is less than £3200. Notice that this top end is now lower it was before.It's 8, rather than 9.";
+    } else {
+      if (($scope.inputACost12 > 4) && ($scope.inputACost12 <= 8)) {
+        $scope.ansACost12 = "True, Joan's does make a profit serving " + $scope.inputACost12 + " patients. But Joan's can also make a profit at a higher rate of output. Here you're being asked for the highest output rate at which Joan's does not lose money, when the price is £3200";
+      } else {
+        $scope.ansACost12 = "Joan's average cost exceeds £3200 when she serves " + $scope.inputACost12 + " per year.";
+      }
+    }
+  };
+
+  $scope.inputACost13 = "Type here";
+  $scope.ansACost13 = "My comments will be here.";
+  $scope.btnACost13 = function() {
+    if (($scope.inputACost13 >= 2917) && ($scope.inputACost13 < 3000)) {
+      $scope.ansACost13 = "Correct! For any price from £2917 up to £3000, output rates of 5 and 6, and only those, are profitable or break even. Joan's output decision is narrowly constrained if the price is in this £2917-£3000 range.";
+    } else {
+      if ($scope.inputACost13 < 2900) {
+        $scope.ansACost13 = "Too low. No output rates break even at this price.";
+      } else if ($scope.inputACost13 < 2917) {
+        $scope.ansACost13 = "Too low. The output rate of 6 is not profitable at this price.";
+      }
+      if ($scope.inputACost13 == 3000) {
+        $scope.ansACost13 = "Too high. The output rate of 7 breaks even at this price.";
+      }
+      if ($scope.inputACost13 > 3000) {
+        $scope.ansACost13 = "Too high. The output rate of 7 is also profitable at this price.";
+      }
+    }
+  }
+
+  $scope.inputACost14 = "Type here";
+  $scope.ansACost14 = "My comments will be here.";
+  $scope.btnACost14 = function() {
+    if ($scope.inputACost14 == 2900) {
+      $scope.ansACost14 = "Correct! At this price, Joan's has no choice but to see 5 patients per year, and the firm just breaks even.";
+    } else {
+
+      if ($scope.inputACost14 < 2900) {
+        $scope.ansACost14 = "Too low. No output rates break even at this price.";
+      } else {
+        $scope.ansACost14 = "Too high to be the lowest price. Joan's does make some profit greater than £0 at this price, if the firm treats 5 patients per year.";
+      }
+    }
+  }
+
+  $scope.inputACost16 = "Type here";
+  $scope.ansACost16 = "My comments will be here.";
+  $scope.btnACost16 = function() {
+    if (($scope.inputACost16 < 0) || ($scope.inputACost16 > 9)) {
+      $scope.ansACost16 = "Your answer has to be a plain number between 0 and 9. Please edit and try again";
+    }
+    if ($scope.inputACost16 == 0) {
+      $scope.ansACost16 = "Not 0. Please use the marginal decision rule and the figures in the marginal cost row. Please try again.";
+    } else if ($scope.inputACost16 == 8) {
+      $scope.ansACost16 = "Correct! With these lower costs, Joan's makes the most profit at an output rate of 8. It's the highest output rate before the marginal cost gets higher than £2900";
+    } else {
+      if (($scope.inputACost16 > 0) && ($scope.inputACost16 < 8)){
+        $scope.ansACost16 = "Not the best profit. Joan's does better at " + (+$scope.inputACost16 + 1) + " than at " + $scope.inputACost16 + ". Please try again.";
+      } else {
+        $scope.ansACost16 = "Joan's loses money at 9.";
+      }
+    }
+  }
+
+  $scope.inputACost18 = "Type here";
+  $scope.ansACost18 = "My comments will be here.";
+  $scope.btnACost18 = function() {
+    if (($scope.inputACost18 < 0) || ($scope.inputACost18 > 9)) {
+      $scope.ansACost18 = "Your answer has to be a plain number between 0 and 9. Please edit and try again";
+    }
+    if ($scope.inputACost18 == 5) {
+      $scope.ansACost18 = "Correct! 5 is the smallest number of patients for which average cost is less than £2900. Joan's break even point is higher than it was at the old price and the old technology, which had less fixed cost.";
+    } else {
+
+      if ($scope.inputACost18 > 5) {
+        $scope.ansACost18 = "True, Joan's does make a profit serving " + $scope.inputACost18 + " patients. But Joan's can also make a profit at a lower rate of output. Compare the average cost to the price.";
+      } else {
+        $scope.ansACost18 = "Joan's average cost exceeds £2900 when she serves " + $scope.inputACost18 + " per year.";
+      }
+
+    }
+
+
+
+  }
+
+
+
+
+})
+
+
 .controller('ch12Controller', function($scope) {
 
   $scope.spin1 = function() {

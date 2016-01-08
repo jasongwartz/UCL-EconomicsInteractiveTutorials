@@ -2373,12 +2373,42 @@
         "id": "Mon011", 
         "choices": {
             "True": {
-                "message": "Correct!  When demand is inelastic, you gain revenue by raising your price. If your sole motivation is profit, keep raising your price at least until your demand starts getting elastic.", 
+                "message": "Correct! When demand is inelastic, you gain revenue by raising your price. If your sole motivation is profit, keep raising your price at least until your demand starts getting elastic.", 
                 "solution": true
             }, 
             "False": {
-                "message": "No.  The statement is true, if your sole motivation is profit. Inelastic demand means more revenue if you raise your price. More revenue means more profit.", 
+                "message": "No. The statement is true, if your sole motivation is profit. Inelastic demand means more revenue if you raise your price. More revenue means more profit.", 
                 "solution": false
+            }
+        }
+    }, 
+    "ACost15": {
+        "text": "Can Joan's now make profit if the price is £2900?", 
+        "type": "MultipleChoice", 
+        "id": "ACost15", 
+        "choices": {
+            "Yes. Joan's can now mane a profit": {
+                "message": "Correct! Some average costs are lower than before. There are several output rates at which the average cost is less than £2900.", 
+                "solution": true
+            }, 
+            "No. Joan's has no profitable output rates with these costs": {
+                "message": "What if Joan's sees 5 patients? Isn't the average cost there less than the price of £2900?", 
+                "solution": false
+            }
+        }
+    }, 
+    "ACost17": {
+        "text": "Which way will the price go?", 
+        "type": "MultipleChoice", 
+        "id": "ACost17", 
+        "choices": {
+            "Up. The price should rise": {
+                "message": "What should happen to the price when all these agencies try to attract additional patients?", 
+                "solution": false
+            }, 
+            "Down. The price should fall": {
+                "message": "Correct!  The supply expansion, and consequent competition among the sellers, should force the price down.", 
+                "solution": true
             }
         }
     }

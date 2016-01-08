@@ -1,5 +1,5 @@
 <ion-view title="New Entry Into Market">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch3Controller" class="has-header has-footer">
 		
 <h1>Effect of new entry into the market</h1>
 <p>Suppose that new firms, attracted by the easy profit, enter the home care
@@ -10,7 +10,7 @@ prices, can dominate on the demand side. Let's suppose, for the sake of
 this illustration, that there is price competition anyway.)</p>
 <p>The cost table again:</p>
 <br />
-<table cellspacing="2" cellpadding="2" border="2" align="left">
+<table cellspacing="2" cellpadding="2" border="2">
 <tr>
     <td colspan="10"><strong>Number of Patients</strong></td>
 </tr>
@@ -78,7 +78,7 @@ Patients</strong></td>
 
 <question qid="AC11"></question>
 <br />
-<table cellspacing="2" cellpadding="2" border="2" align="left">
+<table cellspacing="2" cellpadding="2" border="2">
 <tr>
     <td colspan="10"><strong>Number of Patients</strong></td>
 </tr>
@@ -152,13 +152,18 @@ Patients</strong></td>
 <p>&nbsp;</p>
 <p>What is the top end of the profitable range, the most patients Joan's
 can serve and still make a profit, if the price patients pay is $3200?</p>
-<br /><applet code="ACost12" archive="ACost12.jar" WIDTH="500" HEIGHT="132" ALIGN="TOP">Enable
-Java on your computer to use this applet.</applet>
+
+<input type="text" ng-model="inputACost12"/>
+
+<button ng-click="btnACost12()">Submit</button>
+
+<p style="color:blue">{{ansACost12}}</p>
+
 <br /><br />The profitable output range shrinks as the price falls. When the price
 was $4200, profitable output rates were 2 through 9. As the price falls,
 Joan's leeway is reduced.
 <br /><br />
-<table cellspacing="2" cellpadding="2" border="2" align="left">
+<table cellspacing="2" cellpadding="2" border="2">
 <tr>
     <td colspan="10"><strong>Number of Patients</strong></td>
 </tr>
@@ -227,12 +232,17 @@ rate range would be just 5 to 6 patients per year?</p>
 
 <p>There is a range of correct answers. I'll accept as correct any number
 in that range.</p>
-<br /><applet code="ACost13" archive="ACost13.jar" WIDTH="500" HEIGHT="190" ALIGN="TOP">Enable
-Java on your computer to use this applet.</applet>
+
+<input type="text" ng-model="inputACost13"/>
+
+<button ng-click="btnACost13()">Submit</button>
+
+<p style="color:blue">{{ansACost13}}</p>
+
 <br /><br /><p>As new firms flood into the home care market, the price patients have
 to pay will be bid down further and further.</p>
 <p>What price is so low that the best Joan's can do is just break even?</p><br />
-<table cellspacing="2" cellpadding="2" border="2" align="left">
+<table cellspacing="2" cellpadding="2" border="2">
 <tr>
     <td colspan="10"><strong>Number of Patients</strong></td>
 </tr>
@@ -296,6 +306,15 @@ Patients</strong></td>
 </tr>
 </table>
 <p>&nbsp;</p>
+
+
+<input type="text" ng-model="inputACost14"/>
+
+<button ng-click="btnACost14()">Submit</button>
+
+<p style="color:blue">{{ansACost14}}</p>
+
+
 <br /><applet code="ACost14" archive="ACost14.jar" WIDTH="500" HEIGHT="190" ALIGN="TOP">Enable
 Java on your computer to use this applet.</applet>
 <br /><br /><p>If competition in the industry drives the price down this low, this
