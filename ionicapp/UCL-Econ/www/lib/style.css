@@ -40,20 +40,29 @@ ol {
     padding: 50px;
 }
 
-table-sophie {
+.sophie table {
+  width:100%;
+}
+
+.sophie table tr td {
+  border: 1px solid black;
+  text-align: left;
+}
+
+table.sophie {
     width: 100%;
 }
 
-table-sophie#t01 {
+table.sophie#t01 {
     text-align: center;
 }
 
-table-sophie, th-sophie, td-sophie {
+table.sophie, th.sophie, td.sophie {
     border: 1px solid black;
     text-align: left;
 }
 
-th-sophie {
+th.sophie {
     font-weight: bold;
 }
 
