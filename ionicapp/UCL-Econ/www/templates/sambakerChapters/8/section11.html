@@ -1,5 +1,5 @@
 <ion-view title="Monopoly">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
 
 		
 		<h3>
@@ -22,9 +22,14 @@ that to calculate the profit-maximizing output rate.&nbsp; All we need
 is the marginal revenue, marginal cost, and the <b>restated marginal decision
 rule:&nbsp; Expand output so long as the marginal revenue is greater than
 the marginal cost.</b>
-<br>What is our profit-maximizing output rate?
-<br><applet CODE="Mon12.class" CODEBASE="./" WIDTH="550" HEIGHT="160"
-ALIGN="TOP"></applet>
+<p>What is our profit-maximizing output rate?</p>
+
+<input type="text" ng-model="inputMon12"/>
+
+<button ng-click="btnMon12()">Submit</button>
+
+<p style="color:blue">{{ansMon12}}</p>
+
 <p>&nbsp;</p>
 <blockquote>Spoiler alert!  Don't scroll down past the shaded area until you have answered the question above.
 </blockquote>

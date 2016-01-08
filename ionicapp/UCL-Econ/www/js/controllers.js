@@ -448,17 +448,11 @@ angular.module('app.controllers', [])
       } else {
         $scope.ansACost18 = "Joan's average cost exceeds £2900 when she serves " + $scope.inputACost18 + " per year.";
       }
-
     }
-
-
-
   }
-
-
-
-
 })
+
+
 
 
 .controller('ch12Controller', function($scope) {
@@ -653,79 +647,33 @@ angular.module('app.controllers', [])
   $scope.inputT7 = "Type here";
   $scope.inputT8 = "Type here";
   $scope.inputT9 = "Type here";
-  $scope.Mon02Ans = "My comments will be here";
 
-  $scope.btnMon020 = function() {
-    if ($scope.inputT0 == 0) {
-      $scope.Mon02Ans = "Correct! Please do another.";
+  $scope.ansMon02 = "My comments will be here";
+  $scope.btnMon02xx = function(input, boxNum) {
+    if (input == (boxNum * 20)) {
+      $scope.ansMon02 = "Correct! Please do another.";
     } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 0";
-    }
-  };
-  $scope.btnMon021 = function() {
-    if ($scope.inputT1 == 20) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 1";
-    }
-  };
-  $scope.btnMon022 = function() {
-    if ($scope.inputT2 == 40) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 2";
-    }
-  };
-  $scope.btnMon023 = function() {
-    if ($scope.inputT3 == 60) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 3";
-    }
-  };
-  $scope.btnMon024 = function() {
-    if ($scope.inputT4 == 80) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 4";
-    }
-  };
-  $scope.btnMon025 = function() {
-    if ($scope.inputT5 == 100) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 5";
-    }
-  };
-  $scope.btnMon026 = function() {
-    if ($scope.inputT6 == 120) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 6";
-    }
-  };
-  $scope.btnMon027 = function() {
-    if ($scope.inputT7 == 140) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 7";
-    }
-  };
-  $scope.btnMon028 = function() {
-    if ($scope.inputT8 == 160) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 8";
-    }
-  };
-  $scope.btnMon029 = function() {
-    if ($scope.inputT9 == 180) {
-      $scope.Mon02Ans = "Correct! Please do another.";
-    } else {
-      $scope.Mon02Ans = "Not correct, you want 20 x 9";
+      $scope.ansMon02 = "Not correct, you want 20 x " + boxNum;
     }
   };
 
+  $scope.ansMon03 = "My comments will be here";
+  $scope.btnMon03xx = function(input, boxNum) {
+    if (input == (20)) {
+      $scope.ansMon03 = "Correct! Please do another.";
+    } else {
+      $scope.ansMon03 = "Not correct, you want  " + (20 * boxNum) + " - " + (20 * boxNum - 20);
+    }
+  };
+
+  $scope.ansMon07 = "My comments will be here";
+  $scope.btnMon07xx = function(input, boxNum) {
+    if (input == (boxNum * (100 - boxNum * 10))) {
+      $scope.ansMon07 = "Correct! Please do another.";
+    } else {
+      $scope.ansMon07 = "Not correct, you want  " + (100 - boxNum * 10) + " times " + boxNum;
+    }
+  };
 
 
 
@@ -740,7 +688,7 @@ angular.module('app.controllers', [])
     if ($scope.inputMon04 == 7) {
       $scope.ansMon04 = "Correct! 7 is the highest output rate before the marginal cost rises above the marginal revenue.";
     } else if ($scope.inputMon04 < 7) {
-      $scope.ansMon04 = $scope.inputMon04 + " doesn't maximise profit. If you increase output to " + (+$scope.inputMon04 + 1) + ", the marginal revenue (£20) is more than the marginal cost (£"+ MCost[$scope.inputMon04] + "). You'll add £" + (20 - MCost[$scope.inputMon04]) + " to your profit if you increase output to " + (+$scope.inputMon04 + 1) + "test is" + test;
+      $scope.ansMon04 = $scope.inputMon04 + " doesn't maximise profit. If you increase output to " + (+$scope.inputMon04 + 1) + ", the marginal revenue (£20) is more than the marginal cost (£"+ MCost[$scope.inputMon04] + "). You'll add £" + (20 - MCost[$scope.inputMon04]) + " to your profit if you increase output to " + (+$scope.inputMon04 + 1);
     } else if ($scope.inputMon04 > 7) {
 
       var str = "";
@@ -787,5 +735,32 @@ angular.module('app.controllers', [])
       $scope.ansMon06 = "Please input a whole number.";
     }
   };
+
+  var MRev = [ 1000, 90, 70, 50, 30, 10, -10, -30, -50, -70 ];
+  var MCost = [ 1000, 15, 15, 15, 15, 15, 15, 15, 25, 30 ];
+  $scope.inputMon12 = "Type here";
+  $scope.ansMon12 = "My comments will be here.";
+  $scope.btnMon12 = function() {
+    if (($scope.inputMon12 < 0) || ($scope.inputMon12 > 9)) {
+      $scope.ansMon12 = "Please input a number between 0 and 9."
+    }
+    if ($scope.inputMon12 == 4) {
+      $scope.ansMon12 = "Correct! 4 is the highest output rate before the marginal cost rises above the marginal revenue.";
+    } else {
+
+      if ($scope.inputMon12 < 4) {
+        $scope.ansMon12 = "Too low. If you want to maximize profit. If you increase output to " + (+$scope.inputMon12 + 1) + ", the marginal cost (£" + MCost[+$scope.inputMon12 + 1] + ") is less than the marginal revenue (£" + MRev[+$scope.inputMon12 + 1] + "). You'll add £" + (MRev[+$scope.inputMon12 + 1] - MCost[+$scope.inputMon12 + 1]) + " to your profit.";
+      }
+      if ($scope.inputMon12 > 4) {
+        $scope.ansMon12 = "Too high. If you cut your output back to " + (+$scope.inputMon12 - 1) + ", your revenue goes down by £" +  MRev[+$scope.inputMon12] + ", but your cost goes down by £" + MCost[+$scope.inputMon12] + ", so your profit is greater.";
+      }
+      if ($scope.inputMon12 > 5) {
+        $scope.ansMon12 = "Way too high. Marginal revenue is negative. If you cut your output back to " + (+$scope.inputMon12 - 1) + ", your revenue goes up by £" +  -MRev[+$scope.inputMon12] + ", and your cost goes down by £" + MCost[+$scope.inputMon12] + ", so your profit is greater.";
+      }
+
+
+    }
+
+  }
 
 });

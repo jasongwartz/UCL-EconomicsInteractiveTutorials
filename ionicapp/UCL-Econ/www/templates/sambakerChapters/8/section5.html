@@ -1,5 +1,5 @@
 <ion-view title="Monopoly">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
 
 		
 		<h3>
@@ -15,8 +15,70 @@ form of money.)</p>
 <p>Let's calculate some Total Revenue numbers for this price-taking firm.&nbsp;
 Click on a text field below (the little boxes are called "text fields")
 and type in the Total Revenue for that output rate. Type a plain number
-with no $ sign. Press Enter and I'll tell you if you were right.</p>
-<p><applet CODE="Mon02.class" WIDTH="500" HEIGHT="168" ALIGN="TOP"></applet></p>
+with no £ sign. Press Enter and I'll tell you if you were right.</p>
+
+	<table>
+    <tr>
+        <td colspan="10">Price per visit:</td>
+    </tr>
+    <tr>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+        <td>£20</td>
+    </tr>
+    <tr>
+        <td colspan="10">Quantity of visits demand per hour:</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td colspan="10">Total Revenue: (Type a number in a box below. Press the button below to see if you're right)</td>
+    </tr>
+    <tr>
+        <td><input type="text" ng-model="inputT0"/></td>
+        <td><input type="text" ng-model="inputT1"/></td>
+        <td><input type="text" ng-model="inputT2"/></td>
+        <td><input type="text" ng-model="inputT3"/></td>
+        <td><input type="text" ng-model="inputT4"/></td>
+        <td><input type="text" ng-model="inputT5"/></td>
+        <td><input type="text" ng-model="inputT6"/></td>
+        <td><input type="text" ng-model="inputT7"/></td>
+        <td><input type="text" ng-model="inputT8"/></td>
+        <td><input type="text" ng-model="inputT9"/></td>
+    </tr>
+    <tr>
+		<td><button ng-click="btnMon02xx(inputT0, 0)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT1, 1)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT2, 2)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT3, 3)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT4, 4)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT5, 5)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT6, 6)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT7, 7)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT8, 8)">Click here</button></td>
+		<td><button ng-click="btnMon02xx(inputT9, 9)">Click here</button></td>
+	</tr>
+	</table>
+
+	<p style="color:blue">{{ansMon02}}</p>
+
 <p>&nbsp;</p>
 <blockquote>Spoiler alert!  Don't scroll down past the shaded area until you have answered the question above.
 </blockquote>

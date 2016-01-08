@@ -1,5 +1,5 @@
 <ion-view title="Monopoly">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
 
 		
 		<h4>
@@ -52,7 +52,7 @@ production so long as marginal revenue exceeds marginal cost.</p>
 if you sell one more visit. The marginal cost is what it costs if you sell
 one more visit. If selling one more visit per hour gains you more than
 it costs, a "rational" decision maker sells one more visit.</p>
-<p>Let's add a (made-up) marginal cost line to the table.<a NAME="table for applet 04"></a></p>
+<p>Let's add a (made-up) marginal cost line to the table.<a NAME="table for question 04"></a></p>
 <pre>Price per visit:
 $&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20
 Quantity of visits demanded per hour:
@@ -64,14 +64,14 @@ $&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&
 Marginal Cost
 $&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp; 30
 </pre>
-See if you can apply the marginal decision rule to answer this:
-<br>Based on these marginal cost and marginal revenue figures, what is
-the profit-maximizing quantity?
-<br><applet CODE="Mon04.class" CODEBASE="./" WIDTH="550" HEIGHT="160" ALIGN=
+<p>See if you can apply the marginal decision rule to answer this:<br>
+Based on these marginal cost and marginal revenue figures, what is the profit-maximizing quantity?</p>
 
-"TOP"></applet>
-<br>(<a href="#table for applet 04">Click here</a> to scroll up to see
-the whole table that you need to answer this question.)
+<input type="text" ng-model="inputMon04"/>
+
+<button ng-click="btnMon04()">Submit</button>
+
+<p style="color:blue">{{ansMon04}}</p>
 
 </ion-content>
 <footer sid="8"></footer>

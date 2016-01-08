@@ -1,5 +1,5 @@
 <ion-view title="Monopoly">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
 		
 		<h3>
 A Price Maker's Demand Curve</h3>
@@ -65,19 +65,91 @@ $&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nb
 Quantity of visits demanded per hour:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
 </pre>
-<applet CODE="Mon05.class" CODEBASE="./" WIDTH="550" HEIGHT="150"
-ALIGN="TOP"></applet>
-<br>And the only way to expand service to 5 visits per hour would be to
-drop the price to what?
-<br><applet CODE="Mon06.class" CODEBASE="./" WIDTH="550" HEIGHT="150" ALIGN=
-"TOP"></applet>
+
+<input type="text" ng-model="inputMon05"/>
+
+<button ng-click="btnMon05()">Submit</button>
+
+<p style="color:blue">{{ansMon05}}</p>
+
+<p>And the only way to expand service to 5 visits per hour would be to
+drop the price to what?</p>
+
+<input type="text" ng-model="inputMon06"/>
+
+<button ng-click="btnMon06()">Submit</button>
+
+<p style="color:blue">{{ansMon06}}</p>
+
 <br>&nbsp;
 <h4>
 Price-Maker's (Monopolist's) Total Revenue</h4>
 The first step to getting marginal revenue is getting total revenue, as
 before.&nbsp; The total revenues form a pattern I'd like you to notice,
 so please fill in the blanks in this table:
-<br><applet CODE="Mon07.class" WIDTH="500" HEIGHT="168" ALIGN="TOP"></applet>
+
+	<table>
+    <tr>
+        <td colspan="10">Price per visit:</td>
+    </tr>
+    <tr>
+        <td>£100</td>
+        <td>£90</td>
+        <td>£80</td>
+        <td>£70</td>
+        <td>£60</td>
+        <td>£50</td>
+        <td>£40</td>
+        <td>£30</td>
+        <td>£20</td>
+        <td>£10</td>
+    </tr>
+    <tr>
+        <td colspan="10">Quantity of visits demanded per hour:</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td colspan="10">Total Revenue: (Type a number in a box below. Press the button below to see if you're right)</td>
+    </tr>
+    <tr>
+        <td><input type="text" ng-model="inputT0"/></td>
+        <td><input type="text" ng-model="inputT1"/></td>
+        <td><input type="text" ng-model="inputT2"/></td>
+        <td><input type="text" ng-model="inputT3"/></td>
+        <td><input type="text" ng-model="inputT4"/></td>
+        <td><input type="text" ng-model="inputT5"/></td>
+        <td><input type="text" ng-model="inputT6"/></td>
+        <td><input type="text" ng-model="inputT7"/></td>
+        <td><input type="text" ng-model="inputT8"/></td>
+        <td><input type="text" ng-model="inputT9"/></td>
+    </tr>
+    <tr>
+		<td><button ng-click="btnMon07xx(inputT0, 0)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT1, 1)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT2, 2)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT3, 3)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT4, 4)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT5, 5)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT6, 6)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT7, 7)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT8, 8)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT9, 9)">Click here</button></td>
+	</tr>
+	</table>
+
+	<p style="color:blue">{{ansMon07}}</p>
+
 <p>&nbsp;</p>
 
 </ion-content>
