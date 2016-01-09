@@ -675,12 +675,17 @@ angular.module('app.controllers', [])
     }
   };
 
-
-
-
+  $scope.ansMon10 = "My comments will be here";
+  $scope.btnMon10xx = function(input, boxNum) {
+    boxNum++;
+    if (input == (100 - boxNum * 10) * boxNum - (100 - (boxNum - 1) * 10) * (boxNum - 1)) {
+      $scope.ansMon10 = "Correct! Please do another.";
+    } else {
+      $scope.ansMon10 = "Not correct, you want  " + (100 - boxNum * 10) * boxNum + " - " + (100 - (boxNum - 1) * 10) * (boxNum - 1) + ".";
+    }
+  };
 
   $scope.inputMon04 = "Type here";
-
   $scope.btnMon04 = function() {
 
     var MCost = [ 15, 15, 15, 15, 15, 15, 15, 25, 30 ];

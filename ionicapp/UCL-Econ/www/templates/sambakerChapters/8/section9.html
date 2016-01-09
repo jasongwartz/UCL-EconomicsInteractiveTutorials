@@ -1,5 +1,5 @@
 <ion-view title="Monopoly">
-	<ion-content padding="true" class="has-header has-footer">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
 
 		
 		<br><p>In the monopoly case, total revenue goes up and then goes down, as the
@@ -67,24 +67,88 @@ a "high price" depend on consumers' budgets and on the prices of other
 things consumers can buy to help meet their need for this firm's product.
 <p>Here is an animated display of the relationship between price and total
 revenue.</p>
-<br>This diagram has a continuous-looking demand curve, unlike the discreet
+<p>This diagram has a continuous-looking demand curve, unlike the discreet
 demand relation shown in the table above. Imagine for now that we are a
 large organization, so that each unit of quantity in the table above actually
 represents a large number of visits, so that fractional numbers of visits
-make sense.
-<br><applet CODE="AnimatedTR.class" WIDTH="800" HEIGHT="300" ALIGN="TOP"></applet>
+make sense.</p>
+
+<video controls loop>
+  <source src="vid/AnimatedTR.mp4" type="video/mp4">
+</video>
+
 <br>If we had no costs, and all we cared about was maximizing revenue,
 then we would set the price at $50. We would see 5 patients per hour, and
 make $250 per hour.
 <h3>
 A Monopolist's Marginal Revenue</h3>
-The marginal revenue is the change in total revenue resulting from a change
+<p>The marginal revenue is the change in total revenue resulting from a change
 of one unit in the output rate.&nbsp; In the bottom row of the applet below,
 click on a text field and type in the appropriate marginal revenue. (As
 always, type a plain number with no $ sign.) Press Enter and I'll tell
 you if that marginal revenue is right. To be sure you see the pattern,
-I'll be asking you do fill in most of the text fields on the bottom row.
-<br><applet CODE="Mon10.class" WIDTH="500" HEIGHT="216" ALIGN="TOP"></applet>
+I'll be asking you do fill in most of the text fields on the bottom row.</p>
+<table>
+    <tr>
+        <td colspan="10">Price per visit:</td>
+    </tr>
+    <tr>
+        <td>£100</td>
+        <td>£90</td>
+        <td>£80</td>
+        <td>£70</td>
+        <td>£60</td>
+        <td>£50</td>
+        <td>£40</td>
+        <td>£30</td>
+        <td>£20</td>
+        <td>£10</td>
+    </tr>
+    <tr>
+        <td colspan="10">Quantity of visits demanded per hour:</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td colspan="10">Total Revenue: (Type a number in a box below. Press the button below to see if you're right)</td>
+    </tr>
+    <tr>
+        <td><input type="text" ng-model="inputT0"/></td>
+        <td><input type="text" ng-model="inputT1"/></td>
+        <td><input type="text" ng-model="inputT2"/></td>
+        <td><input type="text" ng-model="inputT3"/></td>
+        <td><input type="text" ng-model="inputT4"/></td>
+        <td><input type="text" ng-model="inputT5"/></td>
+        <td><input type="text" ng-model="inputT6"/></td>
+        <td><input type="text" ng-model="inputT7"/></td>
+        <td><input type="text" ng-model="inputT8"/></td>
+        <td><input type="text" ng-model="inputT9"/></td>
+    </tr>
+    <tr>
+		<td><button ng-click="btnMon10xx(inputT0, 0)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT1, 1)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT2, 2)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT3, 3)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT4, 4)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT5, 5)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT6, 6)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT7, 7)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT8, 8)">Click here</button></td>
+		<td><button ng-click="btnMon10xx(inputT9, 9)">Click here</button></td>
+	</tr>
+	</table>
+
+	<p style="color:blue">{{ansMon10}}</p>
 
 
 </ion-content>
