@@ -452,7 +452,35 @@ angular.module('app.controllers', [])
   }
 })
 
+.controller('ch11Controller', function($scope) {
+  $scope.inputI0 = "-1000";
+  $scope.inputI1 = "200";
+  $scope.inputI2 = "200";
+  $scope.inputI3 = "200";
+  $scope.inputI4 = "200";
+  $scope.inputI5 = "200";
+  $scope.inputI6 = "200";
+  $scope.disc0 = "-1000";
+  $scope.disc1 = "191";
+  $scope.disc2 = "181";
+  $scope.disc3 = "173";
+  $scope.disc4 = "165";
+  $scope.disc5 = "157";
+  $scope.disc6 = "149";
+  $scope.NPV = "15";
+  var arrIncome = [ inputI0, inputI1, inputI2, inputI3, inputI4, inputI5, inputI6 ];
+  $scope.ansInvest01 = "My comments on your changes will appear here.";
 
+  $scope.btnInvest01 = function() {
+    for (var i = 0; i < arrIncome.length; i++) {
+
+      $scope.ansInvest01 = "HELLO.";
+
+
+    }
+  }
+
+})
 
 
 .controller('ch12Controller', function($scope) {

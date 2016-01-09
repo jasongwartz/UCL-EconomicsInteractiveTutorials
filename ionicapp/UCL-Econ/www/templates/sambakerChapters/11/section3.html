@@ -1,5 +1,5 @@
 <ion-view title="Varying future interest rates">
-    <ion-content padding="true" class="has-header has-footer">
+    <ion-content padding="true" ng-controller="ch11Controller" class="has-header has-footer">
 		
 		<h4>Varying future interest rates</h4>
 
@@ -20,11 +20,7 @@
 		<p>TODO Java applet Invest01</p>
 
 		<p>Discount rate: 0.05</p>
-
-
-		ng-init="count=0"
-		
-<br>
+	
 
 		<table>
 	        <tr>
@@ -40,17 +36,30 @@
 	        </tr>
 	        <tr>
 	          <td>Income</td>
-	          <td><input type="text" name="userName" ng-model="box11" required></td>    
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
-	          <td></td>
+	          <td><input type="text" ng-model="inputI0"/></td>    
+	          <td><input type="text" ng-model="inputI1"/></td>
+	          <td><input type="text" ng-model="inputI2"/></td>
+	          <td><input type="text" ng-model="inputI3"/></td>
+	          <td><input type="text" ng-model="inputI4"/></td>
+	          <td><input type="text" ng-model="inputI5"/></td>
+	          <td><input type="text" ng-model="inputI6"/></td>
+	          <td>NPV</td>
+	        </tr>
+	        <tr>
+	          <td>Discounted</td>
+	          <td>{{disc0}}</td>    
+	          <td>{{disc1}}</td>
+	          <td>{{disc2}}</td>
+	          <td>{{disc3}}</td>
+	          <td>{{disc4}}</td>
+	          <td>{{disc5}}</td>
+	          <td>{{disc6}}</td>
+	          <td>{{NPV}}</td>
 	        </tr>
         </table>
 
+        <button ng-click="btnInvest01()">Click here</button>
+        <p style="color:blue">{{ansInvest01}}</p>
 
 
 
