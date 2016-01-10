@@ -1,7 +1,7 @@
 <ion-view title="If Costs Come Later Than Profits">
-    <ion-content padding="true" class="has-header has-footer">
+    <ion-content padding="true" ng-controller="ch11Controller" class="has-header has-footer">
 		
-		<h4>If Costs Come Later Than Profits</h4>
+	<h4>If Costs Come Later Than Profits</h4>
 
     <p>If costs come later than profits, the NPV curve can tilt the other way, making it even more problematic to use the internal rate of return to compare investments.</p>
 
@@ -36,10 +36,48 @@
 
     <p>Try changing the discount rate, by clicking in the discount rate box and changing the 0.05 to something else. Try 0.04 or 0.03. In the examples above, the NPV goes up when the discount rate is lowered. Is that true for this project? Then try 0.06 or 0.07. What happens to the NPV?</p>
 
-    <applet code="Invest06.class" width="610" height="120" align="top"></applet>
-    <p>TODO Java applet Invest06</p>
-
     <p>(Keep the discount rates reasonably small, like between 0.00, which is 0%, and 0.3, which is 30%.)</p>
+
+    <p>Discount rate: <input type="text" ng-model="discountrate6"/></p>
+
+    <table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td>-200</td>    
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>-900</td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc60}}</td>    
+          <td>{{disc61}}</td>
+          <td>{{disc62}}</td>
+          <td>{{disc63}}</td>
+          <td>{{disc64}}</td>
+          <td>{{disc65}}</td>
+          <td>{{disc66}}</td>
+          <td style="background-color:{{bkgColour6}}">{{NPV6}}</td>
+        </tr>
+    </table>
+
+    <button ng-click="btnInvest06()">Click here</button>
+    <p style="color:blue">{{ansInvest06}}</p>
 
     <p>The relationship between the discount rate and the NPV is the reverse of what we see with "normal" investments! With this kind of income stream, higher discount rates make the net present value bigger, and lower discount rates make the net present value smaller.</p>
 
@@ -109,6 +147,52 @@
 
     <applet code="Invest07.class" width="610" height="120" align="top"></applet>
     <p>TODO Java applet Invest07</p>
+
+    sics rates is {{discountrate7}}
+
+    <p>Discount rate: <input type="text" ng-model="discountrate7"/></p>
+
+    <table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td>-200</td>    
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>200</td>
+          <td>-900</td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc70}}</td>    
+          <td>{{disc71}}</td>
+          <td>{{disc72}}</td>
+          <td>{{disc73}}</td>
+          <td>{{disc74}}</td>
+          <td>{{disc75}}</td>
+          <td>{{disc76}}</td>
+          <td style="background-color:{{bkgColour7}}">{{NPV7}}</td>
+        </tr>
+    </table>
+
+    <button ng-click="btnInvest07()">Click here</button>
+    <p style="color:blue">{{ansInvest07}}</p>
+
+
+
 
     <p>See if you can find the <b>second IRR</b>, where the NPV is zero again!</p>
 
