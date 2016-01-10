@@ -1,12 +1,50 @@
 <ion-view title="Internal Rate of Return">
-    <ion-content padding="true" class="has-header has-footer">
+    <ion-content padding="true" ng-controller="ch11Controller" class="has-header has-footer">
 		
 	<h4>Internal Rate of Return</h4>
 
 	<p>In the example we've been using, if you keep the income amounts at their original -1000, 200, 200, 200, 200, 200, and 200, and set the discount rate to 0.0547, the net present value becomes 0. This discount rate, 0.0547 or 5.47%, is the <b>internal rate of return</b> for this investment -- it is the discount rate that makes the net present value equal 0. You can try this below, by setting the discount rate to 0.0547.</p>
 
-	<applet code="Invest03.class" width="610" height="120" align="top"></applet> 
-	<p>TODO Java applet Invest03</p>
+	<p>Discount rate: <input type="text" ng-model="discountrate"/></p>
+
+	<table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td><input type="text" ng-model="input3I0"/></td>    
+          <td><input type="text" ng-model="input3I1"/></td>
+          <td><input type="text" ng-model="input3I2"/></td>
+          <td><input type="text" ng-model="input3I3"/></td>
+          <td><input type="text" ng-model="input3I4"/></td>
+          <td><input type="text" ng-model="input3I5"/></td>
+          <td><input type="text" ng-model="input3I6"/></td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc30}}</td>    
+          <td>{{disc31}}</td>
+          <td>{{disc32}}</td>
+          <td>{{disc33}}</td>
+          <td>{{disc34}}</td>
+          <td>{{disc35}}</td>
+          <td>{{disc36}}</td>
+          <td style="background-color:{{bkgColour3}}">{{NPV3}}</td>
+        </tr>
+    </table>
+
+	<button ng-click="btnInvest03()">Click here</button>
+	<p style="color:blue">{{ansInvest03}}</p>
 
 	<p>If you now raise any of the income amounts in years 1 through 6 (feel free to edit an income amount and see for yourself), you will need a higher discount rate to bring the net present value back to 0. That would seem to imply that projects with higher incomes have higher internal rates of return.</p>
 

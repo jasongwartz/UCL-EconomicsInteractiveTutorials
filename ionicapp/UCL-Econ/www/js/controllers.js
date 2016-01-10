@@ -452,7 +452,603 @@ angular.module('app.controllers', [])
   }
 })
 
+.controller('ch11Controller', function($scope) {
+  $scope.inputI0 = "-1000";
+  $scope.inputI1 = "200";
+  $scope.inputI2 = "200";
+  $scope.inputI3 = "200";
+  $scope.inputI4 = "200";
+  $scope.inputI5 = "200";
+  $scope.inputI6 = "200";
+  $scope.disc0 = "-1000";
+  $scope.disc1 = "191";
+  $scope.disc2 = "181";
+  $scope.disc3 = "173";
+  $scope.disc4 = "165";
+  $scope.disc5 = "157";
+  $scope.disc6 = "149";
+  $scope.NPV = "15";
+  $scope.bkgColour = "green";
+  $scope.ansInvest01 = "My comments on your changes will appear here.";
 
+  $scope.btnInvest01 = function() {
+    var d1 = 0;
+    var d2 = 0.0;
+
+    for (var j = 0; j < 7; j++) {
+      switch (j) {
+        case 0:
+          d2 = $scope.inputI0;
+          break;
+        case 1:
+          d2 = $scope.inputI1;
+          break;
+        case 2:
+          d2 = $scope.inputI2;
+          break;
+        case 3:
+          d2 = $scope.inputI3;
+          break;
+        case 4:
+          d2 = $scope.inputI4;
+          break;
+        case 5:
+          d2 = $scope.inputI5;
+          break;
+        case 6:
+          d2 = $scope.inputI6;
+          break;
+        case 7:
+          d2 = $scope.inputI7;
+          break;
+        }
+
+      d2 /= Math.pow(1.05, j);
+      d1 += d2;
+      d2 = Math.round(d2);
+        
+      switch (j) {
+        case 0:
+          $scope.disc0 = d2;
+          break;
+        case 1:
+          $scope.disc1 = d2;
+          break;
+        case 2:
+          $scope.disc2 = d2;
+          break;
+        case 3:
+          $scope.disc3 = d2;
+          break;
+        case 4:
+          $scope.disc4 = d2;
+          break;
+        case 5:
+          $scope.disc5 = d2;
+          break;
+        case 6:
+          $scope.disc6 = d2;
+          break;
+        case 7:
+          $scope.disc7 = d2;
+          break;
+      }
+    }
+
+    d2 = $scope.NPV;
+    if (d1 > 0) {
+      $scope.bkgColour = "green";
+    } else {
+      $scope.bkgColour = "red";
+    }
+    $scope.NPV = Math.round(d1);
+    if (d1 == 0) {
+      $scope.bkgColour = "white";
+    }
+    if (d1 > d2) {
+      $scope.ansInvest01 = "You increased the net present value of this income stream, by increasing an income amount.";
+    } else if (d1 < d2) {
+      $scope.ansInvest01 = "You decreased the net present value of this income stream, by decreasing an income amount.";
+    }
+    if (Math.abs(d1 - d2) < 1) {
+      $scope.ansInvest01 = "The net present value of the income stream didn't change much.";
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  $scope.income0 = "-1000";
+  $scope.income1 = "400";
+  $scope.income2 = "400";
+  $scope.income3 = "400";
+  $scope.income4 = "0";
+  $scope.income5 = "0";
+  $scope.income6 = "0";
+  $scope.disc20 = "-1000";
+  $scope.disc21 = "381";
+  $scope.disc22 = "363";
+  $scope.disc23 = "346";
+  $scope.disc24 = "0";
+  $scope.disc25 = "0";
+  $scope.disc26 = "0";
+  $scope.NPV2 = "89";
+  $scope.instruct = "To start, click on a 400 in the row for Income."
+  $scope.bkgColour2 = "green";
+  $scope.ansInvest02 = "My comments on your changes will appear here.";
+  var holderformove = null;
+
+  $scope.assignIncome = function(i, value) {
+    switch (i) {
+        case 0:
+          $scope.income0 = value;
+          break;
+        case 1:
+          $scope.income1 = value;
+          break;
+        case 2:
+          $scope.income2 = value;
+          break;
+        case 3:
+          $scope.income3 = value;
+          break;
+        case 4:
+          $scope.income4 = value;
+          break;
+        case 5:
+          $scope.income5 = value;
+          break;
+        case 6:
+          $scope.income6 = value;
+          break;
+        }
+  }
+
+    $scope.getIncome = function(i) {
+    switch (i) {
+        case 0:
+        return $scope.income0;
+        case 1:
+        return $scope.income1;
+        case 2:
+        return $scope.income2;
+        case 3:
+        return $scope.income3;
+        case 4:
+        return $scope.income4;
+        case 5:
+        return $scope.income5;
+        case 6:
+        return $scope.income6;
+        }
+  }
+
+  $scope.btnIncome = function(i) {
+    
+
+
+    if ($scope.getIncome(i) == 400) {
+      holderformove = i;
+      $scope.instruct = "Good. Now click on a 0 in the income row.";
+    }
+    if (($scope.getIncome(i) == 0) && (holderformove != null)) {
+      $scope.assignIncome(holderformove, 0);
+      $scope.assignIncome(i, 400)
+      $scope.computeInvest02(i);
+      $scope.instruct = "For another move, click on a 400 or a 0 in the income row.";
+    }
+  }
+
+  $scope.computeInvest02 = function(i) {
+    var d1 = 0;
+    var d2 = 0.0;
+
+    for (var j = 0; j < 7; j++) {
+      d2 = $scope.getIncome(j);
+
+      d2 /= Math.pow(1.05, j);
+      d1 += d2;
+      d2 = Math.round(d2);
+
+        
+      switch (j) {
+        case 0:
+          $scope.disc20 = d2;
+          break;
+        case 1:
+          $scope.disc21 = d2;
+          break;
+        case 2:
+          $scope.disc22 = d2;
+          break;
+        case 3:
+          $scope.disc23 = d2;
+          break;
+        case 4:
+          $scope.disc24 = d2;
+          break;
+        case 5:
+          $scope.disc25 = d2;
+          break;
+        case 6:
+          $scope.disc26 = d2;
+          break;
+        case 7:
+          $scope.disc27 = d2;
+          break;
+      }
+    }
+
+    d2 = $scope.NPV2;
+    $scope.NPV2 = Math.round(d1);
+
+    if (d1 > d2) {
+      $scope.ansInvest02 = "You increased the net present value of this income stream, by moving some income to earlier.";
+    } else if (d1 < d2) {
+      $scope.ansInvest02 = "You decreased the net present value of this income stream, by moving some income to later.";
+    }
+    if (Math.abs(d1 - d2) < 1) {
+      $scope.ansInvest02 = "The net present value of the income stream didn't change much.";
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $scope.discountrate = 0.05;
+  $scope.input3I0 = "-1000";
+  $scope.input3I1 = "200";
+  $scope.input3I2 = "200";
+  $scope.input3I3 = "200";
+  $scope.input3I4 = "200";
+  $scope.input3I5 = "200";
+  $scope.input3I6 = "200";
+  $scope.disc30 = "-1000";
+  $scope.disc31 = "191";
+  $scope.disc32 = "181";
+  $scope.disc33 = "173";
+  $scope.disc34 = "165";
+  $scope.disc35 = "157";
+  $scope.disc36 = "149";
+  $scope.NPV3 = "15";
+  $scope.bkgColour3 = "green";
+  $scope.ansInvest03 = "My comments on your changes will appear here.";
+
+  $scope.btnInvest03 = function() {
+    var d1 = 0;
+    var d2 = 0.0;
+
+    for (var j = 0; j < 7; j++) {
+      switch (j) {
+        case 0:
+          d2 = $scope.input3I0;
+          break;
+        case 1:
+          d2 = $scope.input3I1;
+          break;
+        case 2:
+          d2 = $scope.input3I2;
+          break;
+        case 3:
+          d2 = $scope.input3I3;
+          break;
+        case 4:
+          d2 = $scope.input3I4;
+          break;
+        case 5:
+          d2 = $scope.input3I5;
+          break;
+        case 6:
+          d2 = $scope.input3I6;
+          break;
+        case 7:
+          d2 = $scope.input3I7;
+          break;
+        }
+
+      d2 /= Math.pow(1 + +$scope.discountrate, j);
+      d1 += d2;
+      d2 = Math.round(d2);
+        
+      switch (j) {
+        case 0:
+          $scope.disc30 = d2;
+          break;
+        case 1:
+          $scope.disc31 = d2;
+          break;
+        case 2:
+          $scope.disc32 = d2;
+          break;
+        case 3:
+          $scope.disc33 = d2;
+          break;
+        case 4:
+          $scope.disc34 = d2;
+          break;
+        case 5:
+          $scope.disc35 = d2;
+          break;
+        case 6:
+          $scope.disc36 = d2;
+          break;
+        case 7:
+          $scope.disc37 = d2;
+          break;
+      }
+    }
+
+    d2 = $scope.NPV3;
+    if (d1 > 0) {
+      $scope.bkgColour3 = "green";
+    } else {
+      $scope.bkgColour3 = "red";
+    }
+    $scope.NPV3 = Math.round(d1);
+    if (d1 == 0) {
+      $scope.bkgColour3 = "white";
+    }
+    if (d1 > d2) {
+      $scope.ansInvest03 = "You increased the net present value of this income stream.";
+    } else if (d1 < d2) {
+      $scope.ansInvest03 = "You decreased the net present value of this income stream.";
+    }
+    if (Math.abs(d1 - d2) < 1) {
+      $scope.ansInvest03 = "The net present value of the income stream didn't change much.";
+    }
+  }
+
+  $scope.discountrate6 = 0.05;
+  $scope.input6I0 = "-200";
+  $scope.input6I1 = "200";
+  $scope.input6I2 = "200";
+  $scope.input6I3 = "200";
+  $scope.input6I4 = "200";
+  $scope.input6I5 = "200";
+  $scope.input6I6 = "-900";
+  $scope.disc60 = "-200";
+  $scope.disc61 = "191";
+  $scope.disc62 = "181";
+  $scope.disc63 = "173";
+  $scope.disc64 = "165";
+  $scope.disc65 = "157";
+  $scope.disc66 = "-672";
+  $scope.NPV6 = "-6";
+  $scope.bkgColour6 = "green";
+  $scope.ansInvest06 = "My comments on your changes will appear here.";
+
+  $scope.btnInvest06 = function() {
+    var d1 = 0;
+    var d2 = 0.0;
+
+    for (var j = 0; j < 7; j++) {
+      switch (j) {
+        case 0:
+          d2 = $scope.input6I0;
+          break;
+        case 1:
+          d2 = $scope.input6I1;
+          break;
+        case 2:
+          d2 = $scope.input6I2;
+          break;
+        case 3:
+          d2 = $scope.input6I3;
+          break;
+        case 4:
+          d2 = $scope.input6I4;
+          break;
+        case 5:
+          d2 = $scope.input6I5;
+          break;
+        case 6:
+          d2 = $scope.input6I6;
+          break;
+        case 7:
+          d2 = $scope.input6I7;
+          break;
+        }
+
+      if ((d2 < 0) || (d2 > 0.3)) {
+        $scope.ansInvest06 = "Please choose a discount rate between 0.0 and 0.3, which is 30%!";
+      }
+
+      discountrate6 = d2;
+      d2 /= Math.pow(1 + +$scope.discountrate6, j);
+      d1 += d2;
+      d2 = Math.round(d2);
+        
+      switch (j) {
+        case 0:
+          $scope.disc60 = d2;
+          break;
+        case 1:
+          $scope.disc61 = d2;
+          break;
+        case 2:
+          $scope.disc62 = d2;
+          break;
+        case 3:
+          $scope.disc63 = d2;
+          break;
+        case 4:
+          $scope.disc64 = d2;
+          break;
+        case 5:
+          $scope.disc65 = d2;
+          break;
+        case 6:
+          $scope.disc66 = d2;
+          break;
+        case 7:
+          $scope.disc67 = d2;
+          break;
+      }
+    }
+
+    d2 = $scope.NPV6;
+    if (d1 > 0) {
+      $scope.bkgColour6 = "green";
+    } else {
+      $scope.bkgColour6 = "red";
+    }
+    $scope.NPV6 = Math.round(d1);
+    if (d1 == 0) {
+      $scope.bkgColour6 = "white";
+      $scope.ansInvest06 = "Good! You've found the IRR -- the discount rate that zeroes the NPV.";
+    }
+    if (d1 > d2) {
+      $scope.ansInvest06 = "A higher discount rate reduces the present value of the year 6 cost. NPV goes up.";
+    } else if (d1 < d2) {
+      $scope.ansInvest06 = "A lower discount rate raises the present value of the year 6 cost. NPV goes down.";
+    }
+    if (Math.abs(d1 - d2) < 1) {
+      $scope.ansInvest06 = "The net present value of the income stream didn't change much.";
+    }
+  }
+
+  $scope.discountrate7 = 0.05;
+  $scope.input7I0 = "-200";
+  $scope.input7I1 = "200";
+  $scope.input7I2 = "200";
+  $scope.input7I3 = "200";
+  $scope.input7I4 = "200";
+  $scope.input7I5 = "200";
+  $scope.input7I6 = "-900";
+  $scope.disc70 = "-200";
+  $scope.disc71 = "191";
+  $scope.disc72 = "181";
+  $scope.disc73 = "173";
+  $scope.disc74 = "165";
+  $scope.disc75 = "157";
+  $scope.disc76 = "-672";
+  $scope.NPV7 = "-6";
+  $scope.bkgColour7 = "green";
+  $scope.ansInvest07 = "My comments on your changes will appear here.";
+
+  $scope.btnInvest07 = function() {
+    var d1 = 0;
+    var d2 = 0.0;
+
+    for (var j = 0; j < 7; j++) {
+      switch (j) {
+        case 0:
+          d2 = $scope.input7I0;
+          break;
+        case 1:
+          d2 = $scope.input7I1;
+          break;
+        case 2:
+          d2 = $scope.input7I2;
+          break;
+        case 3:
+          d2 = $scope.input7I3;
+          break;
+        case 4:
+          d2 = $scope.input7I4;
+          break;
+        case 5:
+          d2 = $scope.input7I5;
+          break;
+        case 6:
+          d2 = $scope.input7I6;
+          break;
+        case 7:
+          d2 = $scope.input7I7;
+          break;
+        }
+
+      if ((d2 < 0) || (d2 > 1)) {
+        $scope.ansInvest06 = "Please choose a discount rate between 0.0 and 1.0, which is 100%.";
+      }
+
+      discountrate7 = d2;
+      d2 /= Math.pow(1 + +$scope.discountrate7, j);
+      d1 += d2;
+      d2 = Math.round(d2);
+        
+      switch (j) {
+        case 0:
+          $scope.disc70 = d2;
+          break;
+        case 1:
+          $scope.disc71 = d2;
+          break;
+        case 2:
+          $scope.disc72 = d2;
+          break;
+        case 3:
+          $scope.disc73 = d2;
+          break;
+        case 4:
+          $scope.disc74 = d2;
+          break;
+        case 5:
+          $scope.disc75 = d2;
+          break;
+        case 6:
+          $scope.disc76 = d2;
+          break;
+        case 7:
+          $scope.disc77 = d2;
+          break;
+      }
+    }
+
+    d2 = $scope.NPV7;
+    if (d1 > 0) {
+      $scope.bkgColour7 = "green";
+    } else {
+      $scope.bkgColour7 = "red";
+    }
+    $scope.NPV7 = Math.round(d1);
+
+    if (d1 > d2) {
+      $scope.ansInvest07 = "A higher discount rate reduces the present value of the year 6 cost. NPV goes up.";
+    } else if (d1 < d2) {
+      $scope.ansInvest07 = "A lower discount rate raises the present value of the year 6 cost. NPV goes down.";
+    }
+    if (Math.abs(d1 - d2) < 1) {
+      $scope.ansInvest07 = "The net present value of the income stream didn't change much.";
+    }
+    if (Math.round(d1) == 0) {
+      $scope.bkgColour7 = "white";
+        if (+discountrate7 < 0.1) {
+          $scope.ansInvest07 = "This is the IRR we saw already. This discount rate zeroes the NPV.";
+        }
+        if (+discountrate7 > 0.8) {
+          $scope.ansInvest07 = "Good! You've found the IRR -- the discount rate that zeroes the NPV.";
+        }
+
+      
+    }
+  }
+
+
+
+
+
+
+
+})
 
 
 .controller('ch12Controller', function($scope) {
