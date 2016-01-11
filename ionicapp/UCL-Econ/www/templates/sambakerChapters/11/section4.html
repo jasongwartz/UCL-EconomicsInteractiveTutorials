@@ -7,6 +7,7 @@
 
 	<p>Discount rate: <input type="text" ng-model="discountrate"/></p>
 
+  <div class="tborders">
 	<table>
         <tr>
           <td>Year</td>
@@ -42,8 +43,9 @@
           <td style="background-color:{{bkgColour3}}">{{NPV3}}</td>
         </tr>
     </table>
+  </div>
 
-	<button ng-click="btnInvest03()">Click here</button>
+	<button class="button button-balanced button-full" ng-click="btnInvest03()">Click here</button>
 	<p style="color:blue">{{ansInvest03}}</p>
 
 	<p>If you now raise any of the income amounts in years 1 through 6 (feel free to edit an income amount and see for yourself), you will need a higher discount rate to bring the net present value back to 0. That would seem to imply that projects with higher incomes have higher internal rates of return.</p>
