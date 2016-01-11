@@ -672,7 +672,7 @@
                 "solution": false
             }
         },
-        "type": "SingleAnswer", 
+        "type": "MultipleChoice", 
         "id": "sd21"
     }, 
     "sd20": {
@@ -1059,6 +1059,8 @@
         "answer":1000,
         "type": "Range",
         "max":1500,
+        "min":500,
+        "step":100,
         "id": "sd6"
     }, 
     "sd7": {
@@ -1684,9 +1686,9 @@
         "correct": "Correct! At 8, the marginal cost is less than £2900.  Above that, the marginal cost is more than £2900."
     }, 
     "sd10": {
-        "highmessage":"Find the row that has a quantity demanded 200 greater than the quantity supplied.",
-        "lowmessage":"Find the row that has a quantity demanded 200 greater than the quantity supplied.",
-        "text": "Set the range slider to the price at which there is an excess demand of 200 visits/day.", 
+        "highmessage":"Find the row that has a quantity demanded 200 less than the quantity supplied.",
+        "lowmessage":"Find the row that has a quantity demanded 200 less than the quantity supplied.",
+        "text": "Set the range slider to the price at which there is an excess supply of 200 visits/day.", 
         "id": "sd9", 
         "answer": 40, 
         "max": 70,
