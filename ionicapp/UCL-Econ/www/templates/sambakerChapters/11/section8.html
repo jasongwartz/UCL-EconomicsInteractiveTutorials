@@ -9,6 +9,7 @@
 
     <p>Consider this income stream:</p> 
 
+    <div class="tborders">
     <table>
       <tr>
         <td>Year</td>
@@ -31,6 +32,7 @@
         <td><b>-£900</b></td>
       </tr>
     </table>
+  </div>
 
     <p>I've reduced the initial cost, but added a big cost at the end. Let's see what a difference this makes in how the NPV changes when the discount rate changes. In the applet below, the starting discount rate 5%. The net present value (NPV) is -$6. That's negative six dollars, so if your discount rate really were 5%, you would not want to do this investment.</p>
 
@@ -40,6 +42,7 @@
 
     <p>Discount rate: <input type="text" ng-model="discountrate6"/></p>
 
+    <div class="tborders">
     <table>
         <tr>
           <td>Year</td>
@@ -75,8 +78,9 @@
           <td style="background-color:{{bkgColour6}}">{{NPV6}}</td>
         </tr>
     </table>
+  </div>
 
-    <button ng-click="btnInvest06()">Click here</button>
+    <button class="button button-balanced button-full" ng-click="btnInvest06()">Click here</button>
     <p style="color:blue">{{ansInvest06}}</p>
 
     <p>The relationship between the discount rate and the NPV is the reverse of what we see with "normal" investments! With this kind of income stream, higher discount rates make the net present value bigger, and lower discount rates make the net present value smaller.</p>
@@ -94,6 +98,7 @@
 
     <p>Suppose we have an alternative project which also has this shape, with a big cost at the end, but slightly lower profits in the intermediate years. I'll call the new alternative the "green line investment".</p>
 
+    <div class="tborders">
     <table>
       <tr>
         <td>Year</td>
@@ -132,6 +137,7 @@
         <td>0.070</td>
       </tr>
     </table>
+  </div>
 
     <p>The green line investment has a lower NPV than the red line investment at all discount rates, because it has lower profits in years 1 through 5, and the same costs in years 0 and 6. In particular, as the table above indicates, it has a lower NPV at the 0.05 discount rate. The graph below shows the NPV curves for both investments, with the green line lying below the red line at all discount rates.</p>
 
@@ -152,6 +158,7 @@
 
     <p>Discount rate: <input type="text" ng-model="discountrate7"/></p>
 
+    <div class="tborders">
     <table>
         <tr>
           <td>Year</td>
@@ -187,8 +194,9 @@
           <td style="background-color:{{bkgColour7}}">{{NPV7}}</td>
         </tr>
     </table>
+  </div>
 
-    <button ng-click="btnInvest07()">Click here</button>
+    <button class="button button-balanced button-full" ng-click="btnInvest07()">Click here</button>
     <p style="color:blue">{{ansInvest07}}</p>
 
 

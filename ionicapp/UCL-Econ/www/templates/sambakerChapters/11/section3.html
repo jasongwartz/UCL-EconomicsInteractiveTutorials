@@ -18,6 +18,7 @@
 
 	<p>Discount rate: 0.05</p>
 
+  <div class="tborders">
 	<table>
         <tr>
           <td>Year</td>
@@ -53,6 +54,7 @@
           <td style="background-color:{{bkgColour}}">{{NPV}}</td>
         </tr>
     </table>
+  </div>
 
 	<button ng-click="btnInvest01(0.05)">Click here</button>
 	<p style="color:blue">{{ansInvest01}}</p>
@@ -67,6 +69,7 @@
 
 	<p>Discount rate: 0.05</p>
 
+  <div class="tborders">
 	<table>
         <tr>
           <td>Year</td>
@@ -102,16 +105,18 @@
           <td style="background-color:{{bkgColour2}">{{NPV2}}</td>
         </tr>
     </table>
+  </div>
 
 
 	<p style="color:blue">{{ansInvest02}}</p>
 
 	<blockquote>3. Changing the discount rate changes the net present value. For an investment with the common pattern of having costs early and profits later, a higher discount rate makes the net present value smaller.</blockquote>
 
-	<p>Try it yourself. Click on the discount rate box and change the number there. Then press Enter. You can also change the income amounts, if you want.</p>
+	<p>Try it yourself. Click on the discount rate box and change the number there. Then click the button. You can also change the income amounts, if you want.</p>
 
 	<p>Discount rate: <input type="text" ng-model="discountrate"/></p>
 
+  <div class="tborders">
 	<table>
         <tr>
           <td>Year</td>
@@ -147,6 +152,7 @@
           <td style="background-color:{{bkgColour3}}">{{NPV3}}</td>
         </tr>
     </table>
+  </div>
 
 	<button ng-click="btnInvest03()">Click here</button>
 	<p style="color:blue">{{ansInvest03}}</p>

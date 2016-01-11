@@ -11,7 +11,7 @@
 
 	<p>The tradeoff is that you now have a bigger chance that you will lose a smaller amount of money. The table below shows the probabilities that you face, as a member of the risk pool. (The probabilities in the 4th column are calculated using the binomial distribution. The assumption is that bad events are independent of each other).</p>
 
-
+	<div class="tborders">
 	<table><caption>Probabilities of losing different amounts in a 5-person risk pool</caption>
 		<tr>
 		  <td>Claims<br>How many people in the pool get unlucky and lose £10,000</td>
@@ -63,6 +63,7 @@
 		  <td>1.0000000000</td>
 		</tr>
 	</table>
+	</div>
 
 	<br><p>The row for 1 claim tells us that there is about a 5% chance that you will lose £2,000. The cell on the right end of that row says that the chance of losing £2000 or less is 0.9990198504. Subtract that from 1, and we get that the probability of losing £4,000 or more is 0.0009801496. This is about one chance in a thousand. From the row for 3 claims, we can similarly calculate that the chance of losing £6,000 or more is about 1 in 100,000.</p>
 
@@ -70,6 +71,7 @@
 
 	<p>Expand the pool to 100 members, and the probability that you will lose as much as £2,000 drops to 0.000000000000000000024. That's small! There is less than 1 chance in 10,000 that you will lose £700 or more.</p>
 
+	<div class="tborders">
 	<table>
 		<tr>
 		  <td>Claims</td>
@@ -128,6 +130,7 @@
 		  <td>0.999929</td>
 		</tr>
 	</table>
+	</div>
 
 	<br><p>The bigger the pool, the smaller your risk of losing a large amount of money. At the same time, the bigger the pool, the more likely it is that you'll have to come up with a small amount of money, because somebody in the pool will be unlucky and you'll have to pay your share.</p>
 
