@@ -42,11 +42,12 @@ p input[type=text] {
 
 ul {
     list-style-position: inside;
+    list-style-type:disc
 }
 
 ol {
     list-style-position: inside;
-    padding: 50px;
+    padding: 10px;
 }
 
 .tborders table {
