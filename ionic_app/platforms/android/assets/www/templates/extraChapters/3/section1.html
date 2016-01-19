@@ -1,0 +1,47 @@
+<ion-view title="Supply - Section 1">
+    <ion-content padding="true" ng-controller="ch16Controller" class="has-header has-footer">
+
+  <p>Table 2 shows a hypothetical supply schedule for GP services in a town where there is no free health service.</p>
+
+  <p>Table 2</p>
+
+  <div class="tborders">
+  <table>
+    <tr>
+      <td>Price of GP consultations</td>
+      <td>Quantity of consultations GPs are prepared to supply per month</td>    
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>    
+    </tr>
+    <tr>
+      <td>£5</td>
+      <td>40</td>    
+    </tr>
+    <tr>
+      <td>£10</td>
+      <td>80</td>    
+    </tr>
+    <tr>
+      <td>£15</td>
+      <td>100</td>    
+    </tr>
+    <tr>
+      <td>£20</td>
+      <td>150</td>    
+    </tr>
+  </table>
+  </div>
+
+  <p>Using the same graph on which you have drawn your demand curve, draw a supply curve for GP services using this information.</p>
+
+  <p>Work out the answer for yourself on paper, then click submit to check if you are correct!</p>
+
+  <button class="button button-balanced button-full" ng-click="question1()">Submit</button><br><br>
+
+  <img src="img/{{demandGraph}}.jpg" width="562" height="365" border="0" alt="Graph">
+
+</ion-content>
+<footer sid="3"></footer>
+</ion-view>

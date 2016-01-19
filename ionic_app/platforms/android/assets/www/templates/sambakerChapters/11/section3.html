@@ -1,0 +1,164 @@
+<ion-view title="Varying future interest rates">
+    <ion-content padding="true" ng-controller="ch11Controller" class="has-header has-footer">
+		
+	<h4>Varying future interest rates</h4>
+
+	<p>The future interest rate does not have to be constant for this theory to apply.  The interest rate can vary, but that makes the formulas messier.</p>
+
+	<p>For example, if r<sub>1</sub> is the expected interest rate next year, and r<sub>2</sub> is the expected interest rate the year after that, then the present value today of I<sub>2</sub> income in year 2 is 
+		<br>I<sub>2</sub>/(1+r<sub>1</sub>)(1+r<sub>2</sub>).</p>
+
+	<p>The<b>I</b>'s are income amounts for each year. The subscripts (which are also the exponents in the denominators) are the year numbers, starting with 0, which is this year. The discount rate -- assumed to be constant in the future -- is <b>r</b>. The number of years the investment lasts is <b>n</b>.</p>
+
+	<p>Three properties of the net present value of an income stream are:</p>
+
+	<blockquote>1. Higher income amounts make the net present value higher. Lower income amounts make the net present value lower.</blockquote>
+
+	<p>Try it yourself. Click on a box in the Income row. Edit the number there, deleting or adding some digits. Then click the button.</p>
+
+	<p>Discount rate: 0.05</p>
+
+  <div class="tborders">
+	<table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td><input type="text" ng-model="inputI0"/></td>    
+          <td><input type="text" ng-model="inputI1"/></td>
+          <td><input type="text" ng-model="inputI2"/></td>
+          <td><input type="text" ng-model="inputI3"/></td>
+          <td><input type="text" ng-model="inputI4"/></td>
+          <td><input type="text" ng-model="inputI5"/></td>
+          <td><input type="text" ng-model="inputI6"/></td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc0}}</td>    
+          <td>{{disc1}}</td>
+          <td>{{disc2}}</td>
+          <td>{{disc3}}</td>
+          <td>{{disc4}}</td>
+          <td>{{disc5}}</td>
+          <td>{{disc6}}</td>
+          <td style="background-color:{{bkgColour}}">{{NPV}}</td>
+        </tr>
+    </table>
+  </div>
+
+	<button ng-click="btnInvest01(0.05)">Click here</button>
+	<p style="color:blue">{{ansInvest01}}</p>
+
+	<p>The NPV box on the right shows the net present value, which is the total of the amounts in the boxes in the Discounted row. (The total may be slightly off, due to rounding.)</p> 
+
+	<blockquote>2. If profits come sooner, the net present value is higher. If profits come later, the net present value is lower.</blockquote>
+
+	<p>Try it yourself. This applet lets you move the income amounts to later or earlier. You can see how that changes the net present value of the income stream.</p>
+
+	<p style="color:blue">{{instruct}}</p>
+
+	<p>Discount rate: 0.05</p>
+
+  <div class="tborders">
+	<table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td>{{income0}}</td>    
+          <td><button ng-click="btnIncome(1)">{{income1}}</button></td>
+          <td><button ng-click="btnIncome(2)">{{income2}}</button></td>
+          <td><button ng-click="btnIncome(3)">{{income3}}</button></td>
+          <td><button ng-click="btnIncome(4)">{{income4}}</button></td>
+          <td><button ng-click="btnIncome(5)">{{income5}}</button></td>
+          <td><button ng-click="btnIncome(6)">{{income6}}</button></td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc20}}</td>    
+          <td>{{disc21}}</td>
+          <td>{{disc22}}</td>
+          <td>{{disc23}}</td>
+          <td>{{disc24}}</td>
+          <td>{{disc25}}</td>
+          <td>{{disc26}}</td>
+          <td style="background-color:{{bkgColour2}">{{NPV2}}</td>
+        </tr>
+    </table>
+  </div>
+
+
+	<p style="color:blue">{{ansInvest02}}</p>
+
+	<blockquote>3. Changing the discount rate changes the net present value. For an investment with the common pattern of having costs early and profits later, a higher discount rate makes the net present value smaller.</blockquote>
+
+	<p>Try it yourself. Click on the discount rate box and change the number there. Then click the button. You can also change the income amounts, if you want.</p>
+
+	<p>Discount rate: <input type="text" ng-model="discountrate"/></p>
+
+  <div class="tborders">
+	<table>
+        <tr>
+          <td>Year</td>
+          <td>0</td>    
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td><input type="text" ng-model="input3I0"/></td>    
+          <td><input type="text" ng-model="input3I1"/></td>
+          <td><input type="text" ng-model="input3I2"/></td>
+          <td><input type="text" ng-model="input3I3"/></td>
+          <td><input type="text" ng-model="input3I4"/></td>
+          <td><input type="text" ng-model="input3I5"/></td>
+          <td><input type="text" ng-model="input3I6"/></td>
+          <td>NPV</td>
+        </tr>
+        <tr>
+          <td>Discounted</td>
+          <td>{{disc30}}</td>    
+          <td>{{disc31}}</td>
+          <td>{{disc32}}</td>
+          <td>{{disc33}}</td>
+          <td>{{disc34}}</td>
+          <td>{{disc35}}</td>
+          <td>{{disc36}}</td>
+          <td style="background-color:{{bkgColour3}}">{{NPV3}}</td>
+        </tr>
+    </table>
+  </div>
+
+	<button ng-click="btnInvest03()">Click here</button>
+	<p style="color:blue">{{ansInvest03}}</p>
+
+	<p>To summarize what was just illustrated, the net present value is higher if the income amounts are larger, or if they come sooner, or if the discount rate is lower.  The net present value is lower if the income amounts are smaller, or if they come later, or if the discount rate is higher.</p>
+
+</ion-content>
+<footer sid="11"></footer>
+</ion-view>

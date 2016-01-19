@@ -1,0 +1,110 @@
+<ion-view title="Monopoly">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
+
+		
+		<h3>
+Marginal Revenue, Marginal Cost, and the Profit-Maximizing Output Rate</h3>
+Now let's go back to our table and add marginal costs to it: (The table
+is getting big!)
+<pre>Price per visit:
+$&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 10
+Quantity of visits demanded per hour:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+Total Revenue:
+$&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp; 160&nbsp;&nbsp;&nbsp; 210&nbsp;&nbsp;&nbsp; 240&nbsp;&nbsp;&nbsp; 250&nbsp;&nbsp;&nbsp; 240&nbsp;&nbsp;&nbsp; 210&nbsp;&nbsp;&nbsp; 160&nbsp;&nbsp;&nbsp;&nbsp; 90
+Marginal Revenue
+$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; -10&nbsp;&nbsp;&nbsp; -30&nbsp;&nbsp;&nbsp; -50&nbsp;&nbsp;&nbsp; -70
+Marginal Cost
+$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp; 30
+</pre>
+To save space, I didn't include a row for Total Cost.&nbsp; We don't need
+that to calculate the profit-maximizing output rate.&nbsp; All we need
+is the marginal revenue, marginal cost, and the <b>restated marginal decision
+rule:&nbsp; Expand output so long as the marginal revenue is greater than
+the marginal cost.</b>
+<p>What is our profit-maximizing output rate?</p>
+
+<input type="text" ng-model="inputMon12"/>
+
+<button class="button button-balanced button-full" ng-click="btnMon12()">Submit</button>
+
+<p style="color:blue">{{ansMon12}}</p>
+
+<p>&nbsp;</p>
+<blockquote>Spoiler alert!  Don't scroll down past the shaded area until you have answered the question above.
+</blockquote>
+<pre class="red">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<hr color="#ff0000" size="2">
+<br><p>Notice that, at 4 visits, we are in the elastic portion of the demand
+curve.&nbsp; We don't just raise our price so long as the demand is inelastic.&nbsp;
+We cut back even more than that, so as to give us the biggest profit above
+our costs.</p>
+<p>The monopolist allows 4 visits and charges $60 for each. A competitive
+industry with the same costs and demand would, as we saw earlier, have
+7 visits and charge $30 each.</p>
+<h3>
+What's So Bad About Monopoly?</h3>
+With monopoly, there's an allocation and a distribution issue.&nbsp; The
+distribution issue is easier to see:&nbsp; The monopolist raises the price.&nbsp;
+This redistributes income from the costomers to the monopolist. That would
+be a sufficient complaint for most of us, but not for orthodox economists,
+who insist on not making value judgements about which people are more deserving
+of income.
+<p>Economists tend to emphasize the allocation issue, which we can illustrate
+with our example.</p>
+<pre>Price per visit:
+$&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 10
+Quantity of visits demanded per hour:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+Marginal Revenue
+$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; -10&nbsp;&nbsp;&nbsp; -30&nbsp;&nbsp;&nbsp; -50&nbsp;&nbsp;&nbsp; -70
+Marginal Cost
+$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp; 30
+</pre>
+The profit-maximizing monopolist sets the price at $60 and has four visits
+per hour.&nbsp; Somewhere out there, though, is a 5th person who would
+come in if the price were $50.&nbsp; (We know this because the first two
+rows tell us that if we charge $50 we can sell 5 visits per hour.)&nbsp;
+That visit must therefore be worth at least $50 to that person.&nbsp; The
+marginal cost of providing that visit is $15.&nbsp; (The fourth row of
+numbers tells us that.)&nbsp; By not providing 5 visits, we are giving
+up an opportunity to turn $15 worth of resources into $50 worth of service.&nbsp;
+That's a net loss to society of $35.&nbsp; We are not using our resources
+in the best possible way.
+<p>This is called a "consumer surplus" argument, and we can make it again
+with the 6th and 7th visits.&nbsp; By not providing that 6th visit, we
+are failing to turn $15 worth of resources into $40 worth of service.&nbsp;
+By not providing the 7th visit, we are failing to turn $15 worth of resources
+(the marginal cost of the 7th visit) into $30 worth of service.</p>
+<p>A competitive market would provide the 5th, 6th, and 7th visits.&nbsp;
+If somebody could enter our market, they could make money providing those
+visits, because the prices they could get would exceed the marginal costs.&nbsp;
+A competitive market would stop at 7, because the 8th visit has a marginal
+cost higher than the price you get get for it.&nbsp; Still, that's a lot
+more than the 4 visits that the monopoly finds profit-maximizing.</p>
+
+</ion-content>
+<footer sid="8"></footer>
+</ion-view>

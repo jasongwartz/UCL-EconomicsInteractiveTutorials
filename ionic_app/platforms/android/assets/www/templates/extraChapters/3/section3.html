@@ -1,0 +1,80 @@
+<ion-view title="Supply - Section 3">
+    <ion-content padding="true" ng-controller="ch16Controller" class="has-header has-footer">
+
+  <p>Suppose the cost of production facing GPs rose by 10%, and this led to a 10% reduction in the quantity of consultations the GPs were prepared to supply at every price (note: the price does not change, only the quantity supplied at each price).</p>
+
+  <p>Draw up a new table to show the effect of this.</p>
+
+  <p>Here is a reminder of Table 2 to help you complete this task.</p>
+
+  <p>Table 2</p>
+
+  <div class="tborders">
+  <table>
+    <tr>
+      <td>Price of GP consultations</td>
+      <td>Quantity of consultations GPs are prepared to supply per month</td>    
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>    
+    </tr>
+    <tr>
+      <td>£5</td>
+      <td>40</td>    
+    </tr>
+    <tr>
+      <td>£10</td>
+      <td>80</td>    
+    </tr>
+    <tr>
+      <td>£15</td>
+      <td>100</td>    
+    </tr>
+    <tr>
+      <td>£20</td>
+      <td>150</td>    
+    </tr>
+  </table>
+  </div>
+
+  <br><p>Work out the answer for yourself on paper, then click submit to check if you are correct!</p>
+
+  <button class="button button-balanced button-full" ng-click="question3()">Submit</button>
+
+  <p>The table becomes:</p>
+
+  <div class="tborders">
+  <table>
+    <tr>
+      <td>Price of GP consultations</td>
+      <td>Quantity of consultations GPs are prepared to supply per month</td>    
+    </tr>
+    <tr>
+      <td>0</td>
+      <td><p style="color:green">{{quantity0}}</p></td>    
+    </tr>
+    <tr>
+      <td>£5</td>
+      <td><p style="color:green">{{quantity1}}</p></td>    
+    </tr>
+    <tr>
+      <td>£10</td>
+      <td><p style="color:green">{{quantity2}}</p></td>    
+    </tr>
+    <tr>
+      <td>£15</td>
+      <td><p style="color:green">{{quantity3}}</p></td>    
+    </tr>
+    <tr>
+      <td>£20</td>
+      <td><p style="color:green">{{quantity4}}</p></td>    
+    </tr>
+  </table>
+  </div>
+
+</ion-content>
+<footer sid="3"></footer>
+</ion-view>
+
+

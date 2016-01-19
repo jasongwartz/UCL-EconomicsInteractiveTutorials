@@ -1,0 +1,26 @@
+<ion-view title="The Von Neumann-Morgenstern Theory">
+    <ion-content padding="true" class="has-header has-footer">
+		
+	<blockquote>(The pictures say "Applet" because they are screen shots from the Java applet that used to be here.)</blockquote>
+
+	<p>Click the button below the graph for what would tempt you to risk your £10,000 in return for a &frac12; chance of winning that amount.</p>
+
+	<img src="img/{{imgname}}.jpg" width="1200" height="678" border="0" alt="power function">
+
+	<p>The buttons:
+	<button ng-click="imgname = 420" ng-init="imgname = 420">£20000</button>
+	<button ng-click="imgname = 430">£30000</button>
+	<button ng-click="imgname = 440">£40000</button>
+	<button ng-click="imgname = 450">£50000</button>
+	<button ng-click="imgname = 460">£60000</button>
+	<button ng-click="imgname = 470">£70000</button>
+	<button ng-click="imgname = 480">£80000</button>
+	<button ng-click="imgname = 490">£90000</button>
+	<button ng-click="imgname = 4100">£100000</button>
+	</p>
+
+	<p>Note: If, for example, you click £40000, the graph says, "Getting 1% more income raises your utility by only 0.5%". This is the <a href="#sambakerChapterschapter5section1">elasticity</a> idea. The elasticity is how many percentage points one thing changes when something that affects it changes by 1%.</p>
+
+</ion-content>
+<footer sid="13"></footer>
+</ion-view>

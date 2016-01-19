@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <button class="button button-icon icon ion-close-round" ng-click="closeModal()"></button>
+        <h1 class="title">Choose Section</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset">
+            <div ng-repeat="n in modalResults track by $index">
+                <div class="item">
+                    <a href="#{{baseDirectory}}chapter{{currentChapterID}}section{{$index + 1}}" ng-click="closeModal()">
+                        <button class="button button-block button-positive">{{modalResults[$index].message}}</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,157 @@
+<ion-view title="Monopoly">
+	<ion-content padding="true" ng-controller="ch8Controller" class="has-header has-footer">
+		
+		<h3>
+A Price Maker's Demand Curve</h3>
+Now we're ready to compare the price maker situation. To do this, we just
+give the firm's demand curve a downward slope. Now our firm is no longer
+a passive price taker. It can choose what price to charge. Sales go down
+if the price goes up, and vice-versa.
+<pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEMAND TABLE -- Price Maker (Monopoly)
+
+Price per visit:
+$&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 10
+
+Quantity of visits demanded per hour:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+</pre>
+In economic theory, any price maker is, is effect, a monopolist. Suppose
+yours is the only clinic in your area. You don't have to charge the going
+price because there is no going price. You can charge what you want, but
+what you charge determines how many visits you get. To get more patients
+you must charge less. Raise your price, and you get fewer patients. Your
+happy problem is to jack up the price to the optimal level. You can find
+the optimal level by using the marginal decision rule. To do this you must
+calculate the marginal revenue. But first, let's see a graph of this demand
+table.
+<p>Here's the demand table translated into a graph. Each price-quantity
+pair in the table corresponds to a point "*" on the graph.</p>
+<pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Demand Curve -- Price Maker
+
+PRICE
+
+100&nbsp;&nbsp;&nbsp; *
+&nbsp;90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp; 0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 1&nbsp;&nbsp; 2&nbsp;&nbsp; 3&nbsp;&nbsp; 4&nbsp;&nbsp; 5&nbsp;&nbsp; 6&nbsp;&nbsp; 7&nbsp;&nbsp; 8&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; QUANTITY DEMANDED
+</pre>
+The points "*" form a descending line in this price maker case.
+<p>Before we go further I need to point out a crucial hidden assumption,
+namely that at any given price, you sell as much as people will buy at
+that price.</p>
+<p>In reality, most businesses decide both the prices they want to charge
+and the quantities they'll produce for sale. For example, here you could
+decide to charge $40 per visit, but only see 3 patients per hour. There
+would be excess demand, because at that price people would want 6 visits,
+but you could turn the extras away or make them wait.</p>
+<p>The crucial assumption is that you do not turn sales away. Instead you
+always charge what the market will bear. If you want 3 visits, you charge
+no less than $70 each. If you want to charge $40 you expand your capacity
+to accommodate the demanded quantity, which is 6.</p>
+<p>This implies, for example, that if you are providing 4 visits per hour,
+you must be charging what price? (Here's the demand table again, for reference.)</p>
+<pre>Price per visit:
+$&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; 10
+Quantity of visits demanded per hour:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+</pre>
+
+<input type="text" ng-model="inputMon05"/>
+
+<button class="button button-balanced button-full" ng-click="btnMon05()">Submit</button>
+
+<p style="color:blue">{{ansMon05}}</p>
+
+<p>And the only way to expand service to 5 visits per hour would be to
+drop the price to what?</p>
+
+<input type="text" ng-model="inputMon06"/>
+
+<button class="button button-balanced button-full" ng-click="btnMon06()">Submit</button>
+
+<p style="color:blue">{{ansMon06}}</p>
+
+<br>&nbsp;
+<h4>
+Price-Maker's (Monopolist's) Total Revenue</h4>
+The first step to getting marginal revenue is getting total revenue, as
+before.&nbsp; The total revenues form a pattern I'd like you to notice,
+so please fill in the blanks in this table:
+
+	<table>
+    <tr>
+        <td colspan="10">Price per visit:</td>
+    </tr>
+    <tr>
+        <td>£100</td>
+        <td>£90</td>
+        <td>£80</td>
+        <td>£70</td>
+        <td>£60</td>
+        <td>£50</td>
+        <td>£40</td>
+        <td>£30</td>
+        <td>£20</td>
+        <td>£10</td>
+    </tr>
+    <tr>
+        <td colspan="10">Quantity of visits demanded per hour:</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td colspan="10">Total Revenue: (Type a number in a box below. Press the button below to see if you're right)</td>
+    </tr>
+    <tr>
+        <td><input type="text" ng-model="inputT0"/></td>
+        <td><input type="text" ng-model="inputT1"/></td>
+        <td><input type="text" ng-model="inputT2"/></td>
+        <td><input type="text" ng-model="inputT3"/></td>
+        <td><input type="text" ng-model="inputT4"/></td>
+        <td><input type="text" ng-model="inputT5"/></td>
+        <td><input type="text" ng-model="inputT6"/></td>
+        <td><input type="text" ng-model="inputT7"/></td>
+        <td><input type="text" ng-model="inputT8"/></td>
+        <td><input type="text" ng-model="inputT9"/></td>
+    </tr>
+    <tr>
+		<td><button ng-click="btnMon07xx(inputT0, 0)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT1, 1)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT2, 2)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT3, 3)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT4, 4)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT5, 5)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT6, 6)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT7, 7)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT8, 8)">Click here</button></td>
+		<td><button ng-click="btnMon07xx(inputT9, 9)">Click here</button></td>
+	</tr>
+	</table>
+
+	<p style="color:blue">{{ansMon07}}</p>
+
+<p>&nbsp;</p>
+
+</ion-content>
+<footer sid="8"></footer>
+</ion-view>

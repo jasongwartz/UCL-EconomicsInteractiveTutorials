@@ -1,0 +1,70 @@
+<ion-view title="The Law of Large Numbers">
+    <ion-content padding="true" class="has-header has-footer">
+		
+	<h4>The Law of Large Numbers</h4>
+
+	<p>If a trial (such a play of a game of chance) is repeated many times, then the more times the trial is repeated, the more likely it is that the frequency of any particular event will be close to the probability of that event. For example, if we flip a fair coin many times, the more times we flip it, the more likely it is that the number of "heads" divided by the total number of tosses will be close to 1/2. This may be taken as the definition of probability, or it can be taken as a theorem, in which case it is called the <b>Law of Large Numbers</b>.</p>
+
+	<br><h4>Evaluating a game of chance</h4>
+
+	<p>A casino with a roulette wheel will typically pay "1 to 1" if you bet that a red number will come up and a red number does come up. "1 to 1" means that if you win they give you an amount of money equal to what you bet. If you bet £1 and win, you get to keep your original £1, plus they give you £1 more. If a black or green number comes up, you lose your £1 to the casino.</p>
+
+	<p>To figure out whether this kind of gamble is likely to make you money, you can use the concept of expected value.</p>
+
+	<br><h4>Expected Value</h4>
+
+	<p>The <b>expected value</b> is calculated by taking each outcome and multiplying its value by the probability of that outcome, then adding all the products up.</p>
+
+	<p>For the roulette wheel, the expected value of betting £1 on Red at 1-1 odds is:</p>
+
+  <div class="tborders">
+	<table>
+      <tr>
+        <td>Red numbers/All numbers<br>18/38</td>
+        <td>times</td>    
+        <td>What you get £1</td>
+        <td>equals</td>
+        <td>£18/38</td>
+      </tr>
+      <tr>
+        <td>Black numbers/All numbers<br>18/38</td>
+        <td>times</td>    
+        <td>What you get £-1</td>
+        <td>equals</td>
+        <td>£-18/38</td>
+      </tr>
+      <tr>
+        <td>0 and 00/All numbers<br>2/38</td>
+        <td>times</td>    
+        <td>What you get £-1</td>
+        <td>equals</td>
+        <td>£-2/38</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>    
+        <td></td>
+        <td>Total:</td>
+        <td>£-2/38</td>
+      </tr>
+  	</table>
+  </div>
+
+	<br><p>£18/38 + £-18/38 + £-2/38 = £-2/38, or approximately £-0.0528.</p>
+
+	<p>For each £1 you bet, your expected loss (it's a loss because the sign is negative) is just over 5 cents.</p>
+
+	<p>Casinos set all of the payoff odds as if the two green zero numbers were not there. Consequently, all roulette bets have the same expectation, £-0.0528 per dollar bet.</p>
+
+	<p>For example, if you bet on a single number, the payoff is 35 to 1, as if there were 35 losing numbers and 1 winning number. Really, though, there are 37 losing numbers, so your expected value is:
+	<br>1/38 times £35 (for when you win), plus
+	<br>37/38 times £-1 (for when you lose),
+	<br>which equals (£35 - £37)/38 = £-2/38.</p>
+
+	<p>This is how the casino makes money, even though the wheel itself is fair, in the sense that the casino doesn't manipulate it to make you lose. The wheel is fair, but the game is not.</p>
+
+	<blockquote>European roulette wheels ("roulette" is from the French for small ball) have a 0 but no 00. Your expected loss over there would be &euro;-0.027 per Euro bet.</blockquote>
+
+</ion-content>
+<footer sid="12"></footer>
+</ion-view>

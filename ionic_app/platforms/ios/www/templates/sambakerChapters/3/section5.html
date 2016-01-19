@@ -1,0 +1,181 @@
+<ion-view title="Innovation to stay ahead">
+	<ion-content padding="true" ng-controller="ch3Controller" class="has-header has-footer">
+		
+<h1>Innovation to stay ahead, temporarily</h1>
+<p>There's another way that Joan's might deal with a low price for her product.
+That would be to reduce her minimum average cost below $2900. A typical
+way to do that would be to buy labor-saving equipment. Her fixed cost would
+go up (paying off the loan that enabled her to buy the equipment), but
+variable cost would go down (less labor means less paying less in total
+wages.)</p>
+<p>Below is what Joan's costs might look like now:</p>
+
+<div class="tborders">
+<table cellspacing="2" cellpadding="2" border="2" align="left">
+
+<tr>
+    <td colspan="10"><strong>Number of Patients</strong></td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Cost:</strong></td>
+</tr>
+<tr>
+    <td>$2000</td>
+    <td>5600</td>
+    <td>8500</td>
+    <td>10700</td>
+    <td>12200</td>
+    <td>14000</td>
+    <td>16100</td>
+    <td>18500</td>
+    <td>21200</td>
+    <td>24700</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Marginal Cost:&nbsp; = difference in Total Cost</strong></td>
+</tr>
+<tr>
+    <td>$</td>
+    <td>3600</td>
+    <td>2900</td>
+    <td>2200</td>
+    <td>1500</td>
+    <td>1800</td>
+    <td>2100</td>
+    <td>2400</td>
+    <td>2700</td>
+    <td>3500</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
+Patients</strong></td>
+</tr>
+<tr>
+    <td>$---</td>
+    <td>5600</td>
+    <td>4250</td>
+    <td>3567</td>
+    <td>3050</td>
+    <td>2800</td>
+    <td>2683</td>
+    <td>2643</td>
+    <td>2650</td>
+    <td>2744</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+<question qid="ACost15"></question>
+
+<p>How many patients should Joan's serve to maximize profit at the £2900 price?</p>
+
+<input type="text" ng-model="inputACost16"/>
+
+<button class="button button-balanced button-full" ng-click="btnACost16()">Submit</button>
+
+<p style="color:blue">{{ansACost16}}</p>
+
+<p>With the old technology, Joan's treated 5 patients and just broke even, when the price was $2900. With the new cost-cutting technology, Joan's expands her output rate to 8.</p>
+
+<p>If all the firms in the industry adopt the new technology, so that all the firms have costs just like Joan's, then every firm will try to expand its output just as Joan's did.</p>
+
+<question qid="ACost17"></question>
+
+<p>My analysis assumes that there is price competition in this market. By contrast, Brown, M.L., Kessler, L.G., Reuter, F.G., "Is the
+Supply of Mammography Machines Outstripping Need and Demand?" Annals
+of Internal Medicine, October, 1, 1990, 113(7), pp. 547-552, found that prices of screening mammograms stayed high despite a great increase in supply, because there was no price competition. I am assuming a textbook type of perfect competition in the market that Joan's is in.</p>
+
+<p>Suppose, though, that competition doesn't work, and the price stays up at $2900.  In that case, the firms will want to treat 8 patients each, but there won't be enough patients to go around.  Many will have to settle for fewer than 8 patients.  What is Joan's minimum break even output rate?</p>
+
+<div class="tborders">
+<table cellspacing="2" cellpadding="2" border="2" align="left">
+
+<tr>
+    <td colspan="10"><strong>Number of Patients</strong></td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Total Cost:</strong></td>
+</tr>
+<tr>
+    <td>$2000</td>
+    <td>5600</td>
+    <td>8500</td>
+    <td>10700</td>
+    <td>12200</td>
+    <td>14000</td>
+    <td>16100</td>
+    <td>18500</td>
+    <td>21200</td>
+    <td>24700</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Marginal Cost:&nbsp; = difference in Total Cost</strong></td>
+</tr>
+<tr>
+    <td>$</td>
+    <td>3600</td>
+    <td>2900</td>
+    <td>2200</td>
+    <td>1500</td>
+    <td>1800</td>
+    <td>2100</td>
+    <td>2400</td>
+    <td>2700</td>
+    <td>3500</td>
+</tr>
+<tr>
+    <td colspan="10"><strong>Average Cost:&nbsp; = Total Cost&nbsp; &divide;&nbsp; Number of
+Patients</strong></td>
+</tr>
+<tr>
+    <td>£---</td>
+    <td>5600</td>
+    <td>4250</td>
+    <td>3567</td>
+    <td>3050</td>
+    <td>2800</td>
+    <td>2683</td>
+    <td>2643</td>
+    <td>2650</td>
+    <td>2744</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+<input type="text" ng-model="inputACost18"/>
+
+<button class="button button-balanced button-full" ng-click="btnACost18()">Submit</button>
+
+<p style="color:blue">{{ansACost188}}</p>
+
+</ion-content>
+
+<footer sid="3"></footer>
+
+</ion-view>
