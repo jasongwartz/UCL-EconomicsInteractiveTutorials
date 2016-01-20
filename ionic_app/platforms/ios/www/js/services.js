@@ -17,11 +17,11 @@ angular.module('app.services', [])
             });
         }
         return {
-            
-            setFilename: function(name) {
+
+            setFilename: function (name) {
                 filename = name;
             },
-                
+
             getChapters: function () {
                 getChapterData().then(function (returndata) {
                     chapters = returndata;
@@ -34,11 +34,11 @@ angular.module('app.services', [])
                 getChapterData().then(function (c) { // c is returned chapter data        
                     for (var key in c) {
                         if (c.hasOwnProperty(key)) {
-                            titles.push( [ key, c[key]["name"] ] )
+                            titles.push([key, c[key]["name"]])
                         }
                     }
                 })
-                return titles;    
+                return titles;
             },
 
             getSections: function () {
@@ -50,11 +50,11 @@ angular.module('app.services', [])
                         }
                     }
                 }
-                )
+                    )
                 return sections;
             },
 
-            getSectionNumber: function(theSectionID) {
+            getSectionNumber: function (theSectionID) {
                 return chapters[theSectionID].sections;
             }
         }
@@ -70,25 +70,25 @@ angular.module('app.services', [])
         return {
 
             questionText: function (question) {
-                return questions[question].text; 
+                return questions[question].text;
             },
             questionType: function (question) {
                 return questions[question].type;
             },
-            questionChoices: function(question) {
+            questionChoices: function (question) {
                 return questions[question].choices;
             },
-            rangeMax: function(question) {
+            rangeMax: function (question) {
                 return questions[question].max;
             },
-            rangeMin: function(question) {
+            rangeMin: function (question) {
                 if (typeof questions[question].min != 'undefined') {
                     return questions[question].min;
                 } else {
                     return 0;
                 }
             },
-            rangeStep: function(question) {
+            rangeStep: function (question) {
                 if (typeof questions[question].step != 'undefined') {
                     return questions[question].step;
                 } else {
@@ -97,47 +97,47 @@ angular.module('app.services', [])
             },
 
             answerMachine: function (question, submission) {
-                
-              
-                
+
+
+
                 var q = questions[question]
-                    
-                    if (q.type == "SingleAnswer") {
-                        if (q.answer == submission) {
-                            return [true, q.correct];  
-                        } else {
-                            return [false, q.incorrect];
-                        }
-                   }
-                    if (q.type == "MultipleChoice") {
-                        if (q.choices[submission].solution) {
-                            return [true, q.choices[submission].message];                   
-                        } else {
-                            return [false, q.choices[submission].message];
-                        }
+
+                if (q.type == "SingleAnswer") {
+                    if (q.answer == submission) {
+                        return [true, q.correct];
+                    } else {
+                        return [false, q.incorrect];
                     }
-                    if (q.type == "TrueFalse") {
-                       if (q.answer == submission) {
-                            return [true, q.correct];
-                            
-                        } else {
-                            return [false, q.incorrect];
-                        }
+                }
+                if (q.type == "MultipleChoice") {
+                    if (q.choices[submission].solution) {
+                        return [true, q.choices[submission].message];
+                    } else {
+                        return [false, q.choices[submission].message];
                     }
-                    if (q.type == "Range") {
-                        if (q.answer == submission) {
-                            return [true, q.correct];
-                        }
-                        else if (q.answer < submission) {                            
-                            return [false, q.highmessage];                               
-                        }
-                        else if (q.answer > submission) {                             
-                            return [false, q.lowmessage]; 
-                        }
+                }
+                if (q.type == "TrueFalse") {
+                    if (q.answer == submission) {
+                        return [true, q.correct];
+
+                    } else {
+                        return [false, q.incorrect];
                     }
+                }
+                if (q.type == "Range") {
+                    if (q.answer == submission) {
+                        return [true, q.correct];
+                    }
+                    else if (q.answer < submission) {
+                        return [false, q.highmessage];
+                    }
+                    else if (q.answer > submission) {
+                        return [false, q.lowmessage];
+                    }
+                }
                 return [false, "An error occured."] // if  no match for q
             }
-       }
+        }
     }])
 
     .service('SectionNavigation', [function ($scope) {

@@ -188,6 +188,9 @@ angular.module('app.controllers', [])
         var stringUrl = $location.absUrl()
         // source: http://www.sitepoint.com/javascript-truthy-falsy/
       
+       // Fixed a bug where links would previously skip to incorrect section
+       // which was caused by searching for a substring of 'x', would match if
+       // any 'x' was found - ie 'index.html'
         if (stringUrl.indexOf('extraChapters') !== -1) { // checks if the result of indexOf is 'truthy'
             $scope.baseDirectory = "extraChapters";
         } else {
