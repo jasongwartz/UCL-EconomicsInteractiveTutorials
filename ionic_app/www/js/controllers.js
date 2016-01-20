@@ -188,7 +188,7 @@ angular.module('app.controllers', [])
         var stringUrl = $location.absUrl()
         // source: http://www.sitepoint.com/javascript-truthy-falsy/
       
-        if (~(stringUrl.indexOf('x'))) { // checks if the result of indexOf is 'truthy'
+        if (stringUrl.indexOf('extraChapters') !== -1) { // checks if the result of indexOf is 'truthy'
             $scope.baseDirectory = "extraChapters";
         } else {
             $scope.baseDirectory = "sambakerChapters";
