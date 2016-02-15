@@ -12,32 +12,33 @@
 	<p>If we bet on Odd, there are 18 numbers that win for us: 1, 3, 5, 7, 9, and so forth, up through 35. Twenty numbers lose for us: 2, 4, 6, 8, and so forth through 36, plus 0 and 00, which are neither even nor odd in roulette. Winning pays 1-1, meaning that we get £1 if we win and lose £1 if we don't. Our expected loss per bet is (18-20)/38 = £-0.0528 per pound bet. The law of large numbers implies that, the more times we spin, the closer we should get to £-0.0528 per pound bet.</p>
 
   <div class="tborders">
-	<table>
+  <table>
       <tr>
         <td>The number that last came up</td>
         <td>{{num}}</td>
       </tr>
       <tr>
-      	<td>How many times we won</td>
-      	<td>{{win}}</td>
-  	  </tr>
-  	  <tr>
-      	<td>How many times we lost</td>
-      	<td>{{loss}}</td>
-  	  </tr>
-  	  <tr>
-      	<td>Our net gain (minus means loss)</td>
-      	<td>{{net}}</td>
-  	  </tr>
-  	  <tr>
-      	<td>Total bets</td>
-      	<td>{{bets}}</td>
-  	  </tr>
-  	  <tr>
-      	<td>Gain per pound bet</td>
-      	<td>{{ratio}}</td>
-  	  </tr>
+        <td>How many times we won</td>
+        <td>{{win}}</td>
+      </tr>
+      <tr>
+        <td>How many times we lost</td>
+        <td>{{loss}}</td>
+      </tr>
+      <tr>
+        <td>Our net gain (minus means loss)</td>
+        <td>{{net}}</td>
+      </tr>
+      <tr>
+        <td>Total bets</td>
+        <td>{{bets}}</td>
+      </tr>
+      <tr>
+        <td>Gain per pound bet</td>
+        <td>{{ratio}}</td>
+      </tr>
   </table>
+  </div>
 
   <br>
   <button class="button button-balanced" ng-click="spin1()">Click to spin once</button><br><br>
@@ -101,7 +102,7 @@
       <td>Outcome</td>
       <td>Present value of payoff</td>
       <td>Probability of outcome</td>
-      <td>{{both0}}</td>s
+      <td>{{both0}}</td>
     </tr>
     <tr>
       <td>The bond will pay £10,000 next year.</td>
@@ -116,9 +117,9 @@
     <td>{{both2}}</td>
     </tr>
   </table> 
-</div>
+  </div>
 
-  <p style="color:blue">
+  <br><p style="color:blue">
   {{box1answeru}}<br>
   {{box2answeru}}<br>
   {{both}}</p>
