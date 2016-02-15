@@ -690,40 +690,6 @@
         "type": "MultipleChoice", 
         "id": "sd20"
     }, 
-    "riska1": {
-        "text": "Which do you chose?", 
-        "type": "MultipleChoice", 
-        "id": "riska1", 
-        "choices": {
-            "Keep the £10,000. Don't take the 50-50 chance to get £20,000.": {
-                "message": "This is the prudent choice. It is also the risk averse choice. The expected value of playing again is £10,000, but you only get to play once, so the law of large numbers does not help you. You prefer a sure £10,000.", 
-                "solution": false
-            }, 
-            "Play again, with an 0.5 chance of getting £20,000, and an 0.5 chance of going back to £0.": {
-                "message": "You are not risk averse. You prefer risk. You are happy to risk your £10,000 to make £20,000, even though your expected value for going on is the same as what you have for sure.", 
-                "solution": false
-            }, 
-            "I could go either way. They are worth the same to me.": {
-                "message": "You are risk-neutral. Taking a chance or not does not matter to you, if the expected value of taking a chance is the same as the value of the £10,000 you have.", 
-                "solution": false
-            }
-        }
-    }, 
-    "riska2": {
-        "text": "Which do you chose?", 
-        "type": "MultipleChoice", 
-        "id": "riska2", 
-        "choices": {
-            "Stop with £10,000.": {
-                "message": "This is risk aversion, definitely. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to forgo £1000 in expected value to avoid risking your £10,000.", 
-                "solution": false
-            }, 
-            "Play again, with an 0.5 chance of getting £22,000, and an 0.5 chance of going back to £0.": {
-                "message": "You are not very risk averse. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to risk your £10,000 to get £1000 in expected additional value.", 
-                "solution": false
-            }
-        }
-    }, 
     "riska5": {
         "text": "Which would you choose?", 
         "type": "MultipleChoice", 
@@ -892,16 +858,6 @@
         "answer": "no", 
         "type": "SingleAnswer", 
         "id": "irr10"
-    }, 
-    "riska3": {
-        "text":"Let's take the next step: How high would the payoff on the second game have to be to entice you to take the risk, rather than keep the sure £10,000?",
-        "correct":"You are risk preferring. For you, £10000 is worth twice as much as £10000",
-        "highmessage":"You are very risk averse. For you, $num is worth only twice as much as £10000",
-        "lowmessage":"You are risk preferring. For you, your answer is worth twice as much as £10000",
-        "type":"Range",
-        "max":20000,
-        "answer":10000
-
     }, 
     "MC5": {
         "incorrect": "What is the marginal cost at this number? Bigger than $3700? If not, add that patient.", 

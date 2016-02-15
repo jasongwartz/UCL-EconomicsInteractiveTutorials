@@ -1093,6 +1093,41 @@ angular.module('app.controllers', [])
         };
     })
 
+    .controller('ch13Controller', function ($scope) {
+        $scope.riska1 = "My comments will be here";
+        $scope.riska1a = function () {
+            $scope.riska1 = "This is the prudent choice. It is also the risk averse choice. The expected value of playing again is £10,000, but you only get to play once, so the law of large numbers does not help you. You prefer a sure £10,000.";
+        }
+        $scope.riska1b = function () {
+            $scope.riska1 = "You are not risk averse. You prefer risk. You are happy to risk your £10,000 to make £20,000, even though your expected value for going on is the same as what you have for sure.";
+        }
+        $scope.riska1c = function () {
+            $scope.riska1 = "You are risk-neutral. Taking a chance or not does not matter to you, if the expected value of taking a chance is the same as the value of the £10,000 you have.";
+        }
+
+        $scope.riska2 = "My comments will be here";
+        $scope.riska2a = function () {
+            $scope.riska2 = "This is risk aversion, definitely. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to forgo £1000 in expected value to avoid risking your £10,000.";
+        }
+        $scope.riska2b = function () {
+            $scope.riska2 = "You are not very risk averse. The expected value of playing again is one-half times £22,000, which is £11,000. Stopping now has a value of £10,000. You are willing to risk your £10,000 to get £1000 in expected additional value.";
+        }
+
+        $scope.riska3box = "Type here";
+        $scope.riska3 = "My comments will be here";
+        $scope.riska3f = function () {
+            if ($scope.riska3box < 20000) {
+                $scope.riska3 = "You are risk preferring. For you, £" + $scope.riska3box + " is worth twice as much as £10000";
+            } else if ($scope.riska3box == 20000) {
+                $scope.riska3 = "You are risk neutral. For you, £20000 is worth twice as much as £10000";
+            } else if ((20000 < $scope.riska3box) && ($scope.riska3box < 100000)) {
+                $scope.riska3 = "Good. In effect, £" + $scope.riska3box + " is worth just twice as £10000 to you.";
+            } else if ($scope.riska3box >= 100000) {
+                $scope.riska3 = "You are very risk averse. For you, £" + $scope.riska3box + " is worth only twice as much as £10000";
+            }
+        }
+    })
+
     .controller('ch14Controller', function ($scope) {
         $scope.demandGraph = "demandGraphDefault";
 
