@@ -852,11 +852,18 @@
         "id": "risk2-button"
     }, 
     "irr10": {
-        "incorrect": "Correct!  A price cut of £33 each on 10,000 machines is £330,000.  More than enough to cover the £100,000. TODO", 
-        "text": "", 
-        "correct": "\tYes, they could.  A price cut of £33 each on 10,000 machines is £330,000.  More than enough to make delaying the regulations a profitable strategy.", 
-        "answer": "no", 
-        "type": "SingleAnswer", 
+        "text": "Suppose that the machine manufacturer had been expecting to sell 10,000 machines this year. Would it spend $100,000 on lawyers who would tie up the FDA and prevent the regulations from being written for six years?", 
+        "choices": {
+            "You betcha!": {
+                "message": "Correct!  A price cut of £33 each on 10,000 machines is £330,000.  More than enough to cover the £100,000.",
+                "solution": true
+            },
+            "They could, but it would be wrong.": {
+                "message": "Yes, they could.  A price cut of £33 each on 10,000 machines is £330,000.  More than enough to make delaying the regulations a profitable strategy.", 
+                "solution": true
+            }
+        },
+        "type": "MultipleChoice", 
         "id": "irr10"
     }, 
     "MC5": {
@@ -1014,9 +1021,9 @@
         "correct": "Correct!  This is from the bottom line of the table.", 
         "answer":1000,
         "type": "Range",
-        "max":1500,
-        "min":500,
-        "step":100,
+        "max":1600,
+        "min":400,
+        "step":200,
         "id": "sd6"
     }, 
     "sd7": {
@@ -1101,6 +1108,7 @@
         "id": "sd8", 
         "answer": 35, 
         "max": 70,
+        "step": 5,
         "type": "Range", 
         "correct": "Correct!  At $35, the demand quantity and the supply quantity are both 500."
     }, 
@@ -1110,6 +1118,7 @@
         "text": "Set the range slider to the price at which there is an excess demand of 400 visits/day.", 
         "id": "sd9", 
         "answer": 25, 
+        "step": 5,
         "max": 70,
         "type": "Range", 
         "correct": "Correct!  At $25, demand quantity exceeds supply quantity by 400."
@@ -1647,6 +1656,7 @@
         "text": "Set the range slider to the price at which there is an excess supply of 200 visits/day.", 
         "id": "sd9", 
         "answer": 40, 
+        "step": 5,
         "max": 70,
         "type": "Range", 
         "correct": "Correct!  At $40, supply quantity exceeds demand quantity by 200."
